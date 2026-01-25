@@ -1,0 +1,7 @@
+{
+    "$schema": "../schemas/roster.schema.json",
+    "slug": "nip-impact-2025-1",
+    "team": "NIP Impact",
+    "players": ["aim", "nayomy", "qiyarah", "vilga", "zana"],
+    "duration": { "start": "2025-07-01", "end": "2025-12-15" }
+}

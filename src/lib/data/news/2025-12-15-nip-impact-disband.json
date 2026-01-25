@@ -1,0 +1,17 @@
+{
+    "$schema": "../schemas/news.schema.json",
+
+    "slug": "nip-impact-disband",
+    "title": "NIP part ways with Impact roster",
+    "date": "2025-12-15",
+    "involved": ["aim", "nayomy", "qiyarah", "vilga", "zana"],
+    "urls": {
+        "NIPCS Tweet": "https://x.com/NIPCS/status/2000581814113456483",
+        "aiM Retweet": "https://x.com/aiMCS2_/status/2000584156321857601",
+        "Nayomy Retweet": "https://x.com/Nayomy_cs/status/2000608323641786500",
+        "Qiyarah Retweet": "https://x.com/Qiyarahcs/status/2000608325122077152",
+        "vilga Retweet": "https://x.com/vilgaCS/status/2000604256601293186",
+        "zana Retweet": "https://x.com/zanaCS2/status/2000582663506211183",
+        "HLTV News": "https://www.hltv.org/news/43455/nip-part-ways-with-impact-roster"
+    }
+}

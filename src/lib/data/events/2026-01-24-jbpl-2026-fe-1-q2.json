@@ -1,0 +1,57 @@
+{
+    "$schema": "../schemas/event.schema.json",
+
+    "slug": "jbpl-2026-fe-1-q2",
+    "name": "JB Pro League 2026 Female #1 Qualifier 2",
+    "duration": { "start": "2026-01-24", "end": "2026-01-25" },
+    "urls": {
+        "Officail Website": "https://jbproleague.com/news/11b110d1-1125-483a-b5bd-bcbd115afac4",
+        "Bracket": "https://www.challengermode.com/s/JBProLeague/tournaments/af8accf4-262d-44fb-1876-08de40692357"
+    },
+    "participants": { "pkb": "peekaboo-2026-1", "lhc": "let-her-cook-2026-2" },
+    "matches": [
+        {
+            "slug": "s1q2m17",
+            "bracket": ["Qualifier 2", "Round of 16", "Match 1"],
+            "date": "2026-01-24",
+            "matchup": { "team1": "lhc", "team2": "FUTURE W" },
+            "maps": [
+                { "slug": "map1", "map": "d2", "result": "13:3", "url": "https://www.challengermode.com/s/JBProLeague/games/b24dec54-ce34-4b17-d815-08de5760407c" },
+                { "slug": "map2", "map": "anc", "result": "13:7", "url": "https://www.challengermode.com/s/JBProLeague/games/f886aeb0-3e71-45cd-d87f-08de5760407c" }
+            ]
+        },
+        {
+            "slug": "s1q2m23",
+            "bracket": ["Qualifier 2", "Round of 16", "Match 7"],
+            "date": "2026-01-24",
+            "matchup": { "team1": "pkb", "team2": "confidence" },
+            "maps": [
+                { "slug": "map1", "map": "anc", "result": "13:2", "url": "https://www.challengermode.com/s/JBProLeague/games/a1e1b576-71d9-4682-d87b-08de5760407c" },
+                { "slug": "map2", "map": "mrg", "result": "17:19", "url": "https://www.challengermode.com/s/JBProLeague/games/a9c5bf63-7395-4ac7-d8de-08de5760407c" },
+                { "slug": "map3", "map": "d2", "result": "13:10", "url": "https://www.challengermode.com/s/JBProLeague/games/ac782289-ad13-4385-d9f9-08de5760407c" }
+            ]
+        },
+        {
+            "slug": "s1q2m25",
+            "bracket": ["Qualifier 2", "Quarter finals", "Match 1"],
+            "date": "2026-01-25",
+            "matchup": { "team1": "lhc", "team2": "imodium" },
+            "maps": [
+                { "slug": "map1", "map": "", "result": "", "url": "" },
+                { "slug": "map2", "map": "", "result": "", "url": "" },
+                { "slug": "map3", "map": "", "result": "", "url": "" }
+            ]
+        },
+        {
+            "slug": "s1q2m28",
+            "bracket": ["Qualifier 2", "Quarter finals", "Match 4"],
+            "date": "2026-01-25",
+            "matchup": { "team1": "pkb", "team2": "chicken friday" },
+            "maps": [
+                { "slug": "map1", "map": "", "result": "", "url": "" },
+                { "slug": "map2", "map": "", "result": "", "url": "" },
+                { "slug": "map3", "map": "", "result": "", "url": "" }
+            ]
+        }
+    ]
+}

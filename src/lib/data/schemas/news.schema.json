@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+
+    "type": "object",
+    "required": ["slug", "title", "date", "involved", "urls"],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": { "type": "string", "format": "uri-reference" },
+
+        "slug": { "$ref": "../schemas/slug.schema.json" },
+        "title": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "involved": { "type": "array", "items": { "$ref": "../schemas/slug.schema.json" } },
+        "urls": { "type": "object", "propertyNames": { "type": "string" }, "additionalProperties": { "type": "string", "format": "uri" } }
+    }
+}
