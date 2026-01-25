@@ -21,8 +21,7 @@
     }
 
     a {
-        @apply text-3xl font-bold text-prim-500;
-        font-variant: small-caps;
+        @apply text-3xl font-bold font-sans-sc text-prim-500;
     }
 
     a.home {

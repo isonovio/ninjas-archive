@@ -197,3 +197,12 @@
     font-weight: 900;
     font-style: italic;
 }
+
+/* Maple Mono */
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("/fonts/MapleMono[wght].ttf") format("truetype");
+    font-weight: 100 800;
+    font-style: normal;
+}

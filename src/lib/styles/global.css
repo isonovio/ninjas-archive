@@ -2,6 +2,12 @@
 @import "./fonts.css";
 
 @theme {
+    --font-sans: "Alegreya Sans", ui-sans-serif, system-ui, sans-serif;
+
+    --font-sans-sc: "Alegreya Sans SC", ui-sans-serif, system-ui, sans-serif;
+
+    --font-mono: "Maple Mono", ui-monospace, system-ui, monospace;
+
     /* green: #608000 */
     --color-prim-50: #d5ff8e;
     --color-prim-100: #bbf600;
@@ -30,13 +36,11 @@
 }
 
 :root {
-    font-family:
-        "Alegreya Sans", "Alegreya Sans SC", ui-sans-serif, system-ui,
-        sans-serif;
+    @apply font-sans;
 }
 
 svg {
-    max-width: 1em;
-    max-height: 1em;
+    max-width: 0.8em;
+    max-height: 0.8em;
     display: inline;
 }

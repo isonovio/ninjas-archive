@@ -1,16 +1,17 @@
 import { Temporal } from "$lib/utils/temporal";
 
 import { news, type NewsEntry } from "$lib/types/news";
+import { matches, type Match } from "$lib/types/match";
 
 export interface TimelineItemBase {
-    genre: NewsEntry["genre"] | "birthday";
+    genre: "news-entry" | "match";
     involves: string[];
     date: Temporal.PlainDate;
 }
 
-type TimelineItem = NewsEntry;
+export type TimelineItem = NewsEntry | Match;
 
-export const timeline: TimelineItem[] = news;
+export const timeline: TimelineItem[] = [...news, ...matches];
 
 export function timelineGroupSortByDate(
     items: TimelineItem[],

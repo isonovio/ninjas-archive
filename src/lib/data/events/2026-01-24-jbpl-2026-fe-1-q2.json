@@ -12,7 +12,7 @@
     "matches": [
         {
             "slug": "s1q2m17",
-            "bracket": ["Qualifier 2", "Round of 16", "Match 1"],
+            "bracket": ["Round of 16", "Match 1"],
             "date": "2026-01-24",
             "matchup": { "team1": "lhc", "team2": "FUTURE W" },
             "maps": [
@@ -22,7 +22,7 @@
         },
         {
             "slug": "s1q2m23",
-            "bracket": ["Qualifier 2", "Round of 16", "Match 7"],
+            "bracket": ["Round of 16", "Match 7"],
             "date": "2026-01-24",
             "matchup": { "team1": "pkb", "team2": "confidence" },
             "maps": [
@@ -33,7 +33,7 @@
         },
         {
             "slug": "s1q2m25",
-            "bracket": ["Qualifier 2", "Quarter finals", "Match 1"],
+            "bracket": ["Quarter finals", "Match 1"],
             "date": "2026-01-25",
             "matchup": { "team1": "lhc", "team2": "imodium" },
             "maps": [
@@ -44,7 +44,7 @@
         },
         {
             "slug": "s1q2m28",
-            "bracket": ["Qualifier 2", "Quarter finals", "Match 4"],
+            "bracket": ["Quarter finals", "Match 4"],
             "date": "2026-01-25",
             "matchup": { "team1": "pkb", "team2": "chicken friday" },
             "maps": [

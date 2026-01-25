@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { timeline } from "$lib/types/timeline";
     import Timeline from "$lib/components/Timeline.svelte";
 </script>
 
@@ -6,4 +7,4 @@
     <title>Ninjas Archive</title>
 </svelte:head>
 
-<Timeline />
+<Timeline {timeline} />
