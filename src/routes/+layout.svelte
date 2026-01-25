@@ -12,7 +12,7 @@
 
 <Header />
 
-<div class="w-5xl mx-auto">
+<div>
     {@render children()}
 </div>
 

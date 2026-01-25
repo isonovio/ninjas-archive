@@ -88,9 +88,9 @@
             "date": "2026-01-25",
             "matchup": { "team1": "hindsight", "team2": "pkb" },
             "maps": [
-                { "slug": "map1", "map": "", "result": "0:0", "url": "" },
-                { "slug": "map2", "map": "", "result": "0:0", "url": "" },
-                { "slug": "map3", "map": "", "result": "0:0", "url": "" }
+                { "slug": "map1", "map": "nuke", "result": "8:13", "url": "https://www.challengermode.com/s/JBProLeague/games/3a1a16d1-dcab-4dd2-edae-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "06:59:23-02:09:02", "tags": ["official"] }] },
+                { "slug": "map2", "map": "anc", "result": "13:7", "url": "https://www.challengermode.com/s/JBProLeague/games/f6410531-8ec7-46b8-ee60-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "07:53:05-08:29:42", "tags": ["official"] }] },
+                { "slug": "map3", "map": "mrg", "result": "0:0", "url": "https://www.challengermode.com/s/JBProLeague/games/4b904974-0fe1-4a2c-ef20-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "", "tags": ["official"] }] }
             ]
         }
     ]

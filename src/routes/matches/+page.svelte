@@ -1,8 +1,8 @@
 <script lang="ts">
-    import { type TimelineFilter } from "$lib/types/timeline";
+    import { TimelineFilter } from "$lib/types/timeline";
     import Timeline from "$lib/components/Timeline.svelte";
 
-    const prefilter: TimelineFilter = { genres: new Set(["match"]) };
+    const prefilter = new TimelineFilter(["match"]);
 </script>
 
 <svelte:head>
