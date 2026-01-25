@@ -3,6 +3,7 @@
     import { players } from "$lib/types/player";
     import { page } from "$app/state";
     import { goto } from "$app/navigation";
+    import { Temporal } from "$lib/utils/temporal";
 
     import NewsEntry from "$lib/components/NewsEntry.svelte";
     import Match from "$lib/components/Match.svelte";
@@ -62,13 +63,16 @@
         })(),
     );
 
+    function refreshParams(): void {
+        goto(`?${searchParams.toString()}`, { noScroll: true, keepFocus: true });
+    }
     function toggleGenre(genre: Genre, prev: Boolean): void {
         if (prev) {
             searchParams.delete("genre", genre);
         } else {
             searchParams.append("genre", genre);
         }
-        goto(`?${searchParams.toString()}`);
+        refreshParams();
     }
     function togglePlayer(player: string, prev: Boolean): void {
         if (prev) {
@@ -76,14 +80,44 @@
         } else {
             searchParams.append("player", player);
         }
-        goto(`?${searchParams.toString()}`);
+        refreshParams();
+    }
+    let dateInputError = $state("");
+    let fromDateInput = $state("");
+    let toDateInput = $state("");
+    function submitDateFilter(): void {
+        dateInputError = "";
+        if (fromDateInput != "") {
+            try {
+                Temporal.PlainDate.from(fromDateInput);
+            } catch {
+                dateInputError += `${fromDateInput} is not a valid date. `;
+            }
+        }
+        if (toDateInput != "") {
+            try {
+                Temporal.PlainDate.from(toDateInput);
+            } catch {
+                dateInputError += `${toDateInput} is not a valid date. `;
+            }
+        }
+        if (dateInputError != "") {
+            return;
+        }
+        if (fromDateInput != "") {
+            searchParams.set("from", fromDateInput);
+        }
+        if (toDateInput != "") {
+            searchParams.set("to", toDateInput);
+        }
+        refreshParams();
     }
     function clearFilter(): void {
         searchParams.delete("genre");
         searchParams.delete("player");
         searchParams.delete("from");
         searchParams.delete("to");
-        goto(`?${searchParams.toString()}`);
+        refreshParams();
     }
     const hasFilter = $derived(searchParams.size > 0);
 
@@ -110,7 +144,7 @@
         <div class="flex justify-between">
             <div class="text-2xl font-bold">Filters</div>
             {#if hasFilter}
-                <button class="block cursor-pointer text-xl pt-1/2" onclick={() => clearFilter()}>[clear]</button>
+                <button class="block cursor-pointer text-xl pt-1/2" onclick={() => clearFilter()}>[Clear]</button>
             {/if}
         </div>
         {#if filterCandidates.genres.length > 1}
@@ -126,13 +160,26 @@
         {#if filterCandidates.players.length > 1}
             <div class="relative pt-3 pl-6">
                 <div class="absolute top-0 left-2 bg-white px-2 text-xl font-semibold">Players</div>
-                <div class="pt-4 pb-1 pl-3 pr-5 border rounded-lg">
+                <div class="pt-4 pb-2 pl-3 pr-5 border rounded-lg">
                     {#each filterCandidates.players as [player, toggle]}
                         <button class="block cursor-pointer {toggle ? 'filter-on' : ''}" onclick={() => togglePlayer(player, toggle)}>{displayPlayer(player)}</button>
                     {/each}
                 </div>
             </div>
         {/if}
+        <div class="relative w-48 pt-3 pl-6">
+            <div class="absolute top-0 left-2 bg-white px-2 text-xl font-semibold">Date</div>
+            <div class="pt-4 pb-2 pl-3 pr-5 border rounded-lg flex flex-col">
+                <input class="inline-block border-b px-1 pt-2" placeholder="from: yyyy-mm-dd" bind:value={fromDateInput} />
+                <input class="inline-block border-b px-1 pt-2" placeholder="to: yyyy-mm-dd" bind:value={toDateInput} />
+                <button class="block cursor-pointer pt-2 text-left text-lg" onclick={() => submitDateFilter()}>[Confirm]</button>
+                {#if dateInputError != ""}
+                    <div class="text-red-500">
+                        {dateInputError}
+                    </div>
+                {/if}
+            </div>
+        </div>
     </div>
 
     <div class="pt-6 pl-6 flex flex-col gap-4">
