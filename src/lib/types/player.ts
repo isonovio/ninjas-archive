@@ -18,7 +18,7 @@ export type Player = {
     birthday: Temporal.PlainDate;
 };
 
-export const players: Map<string, Player[]> = Object.values(playersRaw)
+export const players: Map<string, Player> = Object.values(playersRaw)
     .map((v) => {
         return {
             ...v,

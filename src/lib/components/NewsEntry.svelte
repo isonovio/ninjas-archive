@@ -4,7 +4,7 @@
     export let entry: NewsEntry;
 </script>
 
-<div class="flex justify-between gap-2">
+<div class="pt-3 flex justify-between gap-2">
     <div class="shrink-0 font-bold text-xl text-sky-700">
         {entry.title}
     </div>

@@ -47,10 +47,14 @@ export interface Match extends TimelineItemBase {
     genre: "match";
     involves: string[];
     date: Temporal.PlainDate;
+    slug: string;
+    eventSlug: string;
     eventName: string;
     bracket: string[];
+    title: string;
     matchup: [string, string];
     result: [number, number];
+    outcomes: [Outcome, Outcome];
     url?: string;
     maps: MatchMap[];
     note?: string;
@@ -60,6 +64,7 @@ type MatchMap = {
     slug: string;
     map: string;
     result: [number, number];
+    outcomes: [Outcome, Outcome];
     url?: string;
     streams?: Stream[];
     note?: string;
@@ -72,6 +77,8 @@ type Stream = {
     duration?: string;
     tags?: string[];
 };
+
+type Outcome = "win" | "draw" | "lose";
 
 export const matches: Match[] = (() => {
     var result: Match[] = [];
@@ -91,13 +98,25 @@ export const matches: Match[] = (() => {
                 .flat();
             const team1 = teams.get(m.matchup.team1)?.team ?? m.matchup.team1;
             const team2 = teams.get(m.matchup.team2)?.team ?? m.matchup.team2;
-            const maps: MatchMap[] = m.maps.map((mm) => {
-                const [a, b] = mm.result.split(":").map(Number);
-                return {
-                    ...mm,
-                    result: [a, b],
-                };
-            });
+            const maps: MatchMap[] = m.maps
+                .map((mm) => {
+                    const [team1s, team2s] = mm.result.split(":").map(Number);
+                    const outcomes: [Outcome, Outcome] = (() => {
+                        if (team1s > team2s) {
+                            return ["win", "lose"];
+                        } else if (team1s < team2s) {
+                            return ["lose", "win"];
+                        } else {
+                            return ["draw", "draw"];
+                        }
+                    })();
+                    return {
+                        ...mm,
+                        result: [team1s, team2s],
+                        outcomes: outcomes,
+                    };
+                })
+                .sort((a, b) => b.slug.localeCompare(a.slug)) as MatchMap[];
             var team1w = 0;
             var team2w = 0;
             maps.forEach((mm) => {
@@ -107,19 +126,40 @@ export const matches: Match[] = (() => {
                     team2w++;
                 }
             });
+            const outcomes: [Outcome, Outcome] = (() => {
+                if (team1w > team2w) {
+                    return ["win", "lose"];
+                } else if (team1w < team2w) {
+                    return ["lose", "win"];
+                } else {
+                    return ["draw", "draw"];
+                }
+            })();
+            const title = `${e.name} - ${m.bracket.join(" - ")}`;
 
             const match: Match = {
                 ...m,
                 genre: "match",
                 involves: involves,
                 date: Temporal.PlainDate.from(m.date),
+                eventSlug: e.slug,
                 eventName: e.name,
+                title: title,
                 matchup: [team1, team2],
                 result: [team1w, team2w],
+                outcomes: outcomes,
                 maps: maps,
             };
             result.push(match);
         });
+    });
+
+    result.sort((a, b) => {
+        const compEvent = b.eventSlug.localeCompare(a.eventSlug);
+        if (compEvent !== 0) {
+            return compEvent;
+        }
+        return b.slug.localeCompare(a.slug);
     });
 
     return result;

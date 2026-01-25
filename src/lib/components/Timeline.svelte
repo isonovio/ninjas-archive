@@ -1,5 +1,6 @@
 <script lang="ts">
     import { timelineGroupSortByDate, type TimelineItem } from "$lib/types/timeline";
+    import { players } from "$lib/types/player";
 
     import NewsEntry from "$lib/components/NewsEntry.svelte";
     import Match from "$lib/components/Match.svelte";
@@ -17,13 +18,24 @@
             </div>
             <div class="pl-12 py-6 flex flex-col gap-2">
                 {#each items as item}
-                    {#if item.genre == "news-entry"}
-                        <NewsEntry entry={item} />
-                    {:else if item.genre == "match"}
-                        <Match match={item} />
-                    {:else}
-                        {item}
-                    {/if}
+                    <div class="relative">
+                        <div class="absolute flex gap-2">
+                            {#each item.involves as player}
+                                {#if players.has(player)}
+                                    <div class="text-sm text-gray-500">
+                                        @{players.get(player)!.nickname}
+                                    </div>
+                                {/if}
+                            {/each}
+                        </div>
+                        {#if item.genre == "news-entry"}
+                            <NewsEntry entry={item} />
+                        {:else if item.genre == "match"}
+                            <Match match={item} />
+                        {:else}
+                            {item}
+                        {/if}
+                    </div>
                 {/each}
             </div>
         </div>

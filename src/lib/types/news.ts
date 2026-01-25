@@ -22,11 +22,15 @@ export interface NewsEntry extends TimelineItemBase {
     urls: Map<string, string>;
 }
 
-export const news: NewsEntry[] = Object.values(newsRaw).map((v) => {
-    return {
-        ...v,
-        genre: "news-entry",
-        date: Temporal.PlainDate.from(v.date),
-        urls: new Map(Object.entries(v.urls)),
-    };
-});
+export const news: NewsEntry[] = Object.values(newsRaw)
+    .map((v) => {
+        return {
+            ...v,
+            genre: "news-entry" as const,
+            date: Temporal.PlainDate.from(v.date),
+            urls: new Map(Object.entries(v.urls)),
+        };
+    })
+    .sort((a, b) => {
+        return b.slug.localeCompare(a.slug);
+    });
