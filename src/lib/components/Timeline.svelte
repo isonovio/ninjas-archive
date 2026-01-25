@@ -9,9 +9,9 @@
     import Match from "$lib/components/Match.svelte";
 
     interface Props {
-        prefilter: TimelineFilter;
+        prefilter?: TimelineFilter;
     }
-    let { prefilter }: Props = $props();
+    let { prefilter = new TimelineFilter() }: Props = $props();
 
     const prefilteredTimeline = $derived(filterTimeline(timeline, prefilter));
     const searchParams = $derived(page.url.searchParams);
