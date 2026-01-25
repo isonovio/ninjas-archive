@@ -7,78 +7,130 @@
     import NewsEntry from "$lib/components/NewsEntry.svelte";
     import Match from "$lib/components/Match.svelte";
 
-    export let prefilter = new TimelineFilter();
-    const prefilteredTimeline = filterTimeline(timeline, prefilter);
-    const searchParams = page.url.searchParams;
-    const filterFromParams: TimelineFilter = timelineFilterFromParams(searchParams);
-    const filteredTimeline = filterTimeline(prefilteredTimeline, filterFromParams);
-    const sortedTimeline = timelineGroupSortByDate(filteredTimeline);
+    interface Props {
+        prefilter: TimelineFilter;
+    }
+    let { prefilter }: Props = $props();
 
-    const filterCandidates = (() => {
-        const genreCandidates: Map<Genre, Boolean> | undefined = (() => {
-            const uniqueGenres = new Set(
-                prefilteredTimeline.map((i) => {
-                    return i.genre;
-                }),
-            );
-            if (uniqueGenres.size < 2) {
-                return undefined;
-            }
-            const genreToggles = [...uniqueGenres].map((g) => {
-                if (filterFromParams.genres) {
-                    return [g, filterFromParams.genres.has(g)] as [Genre, Boolean];
-                } else {
-                    return [g, false] as [Genre, Boolean];
-                }
-            });
-            return new Map(genreToggles);
-        })();
+    const prefilteredTimeline = $derived(filterTimeline(timeline, prefilter));
+    const searchParams = $derived(page.url.searchParams);
+    const filterFromParams: TimelineFilter = $derived(timelineFilterFromParams(searchParams));
+    const filteredTimeline = $derived(filterTimeline(prefilteredTimeline, filterFromParams));
+    const sortedTimeline = $derived(timelineGroupSortByDate(filteredTimeline));
 
-        const playerCandidates: Map<string, Boolean> | undefined = (() => {
-            const uniquePlayers: Set<string> = new Set(
-                prefilteredTimeline
-                    .map((i) => {
-                        return i.involves;
-                    })
-                    .flat(),
-            );
-            if (uniquePlayers.size < 2) {
-                return undefined;
-            }
-            const playerToggles = [...uniquePlayers].map((p) => {
-                if (filterFromParams.players) {
-                    return [p, filterFromParams.players.has(p)] as [string, Boolean];
-                } else {
-                    return [p, false] as [string, Boolean];
-                }
-            });
-            return new Map(playerToggles);
-        })();
+    const filterCandidates = $derived(
+        (() => {
+            const genreCandidates: [Genre, Boolean][] = (() => {
+                return [
+                    ...new Set(
+                        prefilteredTimeline.map((i) => {
+                            return i.genre;
+                        }),
+                    ),
+                ]
+                    .sort((a, b) => a.localeCompare(b))
+                    .map((g) => {
+                        if (filterFromParams.genres) {
+                            return [g, filterFromParams.genres.has(g)] as [Genre, Boolean];
+                        } else {
+                            return [g, false] as [Genre, Boolean];
+                        }
+                    });
+            })();
 
-        return { genres: genreCandidates, players: playerCandidates };
-    })();
-    let temp = true;
+            const playerCandidates: [string, Boolean][] = (() => {
+                return [
+                    ...new Set(
+                        prefilteredTimeline
+                            .map((i) => {
+                                return i.involves;
+                            })
+                            .flat(),
+                    ),
+                ]
+                    .sort((a, b) => a.localeCompare(b))
+                    .map((p) => {
+                        if (filterFromParams.players) {
+                            return [p, filterFromParams.players.has(p)] as [string, Boolean];
+                        } else {
+                            return [p, false] as [string, Boolean];
+                        }
+                    });
+            })();
+
+            return { genres: genreCandidates, players: playerCandidates };
+        })(),
+    );
+
+    function toggleGenre(genre: Genre, prev: Boolean): void {
+        if (prev) {
+            searchParams.delete("genre", genre);
+        } else {
+            searchParams.append("genre", genre);
+        }
+        goto(`?${searchParams.toString()}`);
+    }
+    function togglePlayer(player: string, prev: Boolean): void {
+        if (prev) {
+            searchParams.delete("player", player);
+        } else {
+            searchParams.append("player", player);
+        }
+        goto(`?${searchParams.toString()}`);
+    }
+    function clearFilter(): void {
+        searchParams.delete("genre");
+        searchParams.delete("player");
+        searchParams.delete("from");
+        searchParams.delete("to");
+        goto(`?${searchParams.toString()}`);
+    }
+    const hasFilter = $derived(searchParams.size > 0);
+
+    function displayGenre(genre: Genre): string {
+        if (genre === "match") {
+            return "Matches";
+        } else if (genre === "news") {
+            return "News";
+        } else {
+            return genre;
+        }
+    }
+    function displayPlayer(player: string): string {
+        if (players.has(player)) {
+            return players.get(player)!.nickname;
+        } else {
+            return player;
+        }
+    }
 </script>
 
-<div class="w-7xl mx-auto flex">
-    <div class="sticky top-0 h-screen w-64 bg-gray-200">
-        <div>Filters</div>
-        {#if filterCandidates.genres}
-            <div>Genres</div>
-            <div class="pl-2">
-                {#each filterCandidates.genres as [genre, toggle]}
-                    <button
-                        class="block {toggle ? 'font-bold' : 'font-normal'}"
-                        on:click={() => {
-                            if (toggle) {
-                                searchParams.delete("genre", genre);
-                            } else {
-                                searchParams.append("genre", genre);
-                            }
-                            goto(`?${searchParams.toString()}`, { replaceState: true });
-                        }}>{genre}</button
-                    >
-                {/each}
+<div class="w-7xl mx-auto flex gap-4">
+    <div class="sticky top-0 flex flex-col gap-3 pt-10">
+        <div class="flex justify-between">
+            <div class="text-2xl font-bold">Filters</div>
+            {#if hasFilter}
+                <button class="block cursor-pointer text-xl pt-1/2" onclick={() => clearFilter()}>[clear]</button>
+            {/if}
+        </div>
+        {#if filterCandidates.genres.length > 1}
+            <div class="relative pt-3 pl-6">
+                <div class="absolute top-0 left-2 bg-white px-2 text-xl font-semibold">Genres</div>
+                <div class="pt-4 pl-3 p-1 border rounded-lg">
+                    {#each filterCandidates.genres as [genre, toggle]}
+                        <button class="block cursor-pointer {toggle ? 'filter-on' : ''}" onclick={() => toggleGenre(genre, toggle)}>{displayGenre(genre)}</button>
+                    {/each}
+                </div>
+            </div>
+        {/if}
+        {#if filterCandidates.players.length > 1}
+            <div class="relative pt-3 pl-6">
+                <div class="absolute top-0 left-2 bg-white px-2 text-xl font-semibold">Players</div>
+                <div class="pt-4 pb-1 pl-3 pr-5 border rounded-lg">
+                    {#each filterCandidates.players as [player, toggle]}
+                        <button class="block cursor-pointer {toggle ? 'filter-on' : ''}" onclick={() => togglePlayer(player, toggle)}>{displayPlayer(player)}</button>
+                    {/each}
+                </div>
             </div>
         {/if}
     </div>
@@ -118,4 +170,8 @@
 
 <style lang="postcss">
     @reference "$lib/styles/global.css";
+
+    .filter-on {
+        @apply font-extrabold font-sans-sc text-prim-500;
+    }
 </style>

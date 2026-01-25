@@ -5,7 +5,7 @@
 </script>
 
 <div class="relative">
-    <div class="absolute -top-4 grid grid-cols-[200px_50px_auto] font-bold text-xl">
+    <div class="absolute -top-4 grid grid-cols-[240px_50px_auto] font-bold text-xl">
         <div class="inline-block ml-auto pl-2 bg-white text-right team-{match.outcomes[0]}">
             {match.matchup[0]}
         </div>
@@ -39,17 +39,17 @@
                         <div class="inline-block min-w-10">
                             {map.map}
                         </div>
-                        <div class="inline-block min-w-20 text-right team-{map.outcomes[0]}">
+                        <div class="inline-block min-w-30 text-right team-{map.outcomes[0]}">
                             {match.matchup[0]}
                         </div>
-                        <div class="inline-block min-w-8 text-right font-mono team-{map.outcomes[0]}">
+                        <div class="inline-block min-w-8 text-right font-semibold font-mono team-{map.outcomes[0]}">
                             {map.result[0]}
                         </div>
-                        <span>:</span>
-                        <div class="inline-block min-w-8 font-mono team-{map.outcomes[1]}">
+                        <span class="font-semibold font-mono"> : </span>
+                        <div class="inline-block min-w-8 font-semibold font-mono team-{map.outcomes[1]}">
                             {map.result[1]}
                         </div>
-                        <div class="inline-block min-w-20 team-{map.outcomes[1]}">
+                        <div class="inline-block min-w-30 team-{map.outcomes[1]}">
                             {match.matchup[1]}
                         </div>
                     </div>

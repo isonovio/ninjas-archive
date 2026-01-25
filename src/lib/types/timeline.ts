@@ -39,16 +39,18 @@ export function timelineGroupSortByDate(
 
 export function filterTimeline(
     timeline: TimelineItem[],
-    filter: TimelineFilter,
+    filter: TimelineFilter | undefined,
 ) {
+    if (!filter) return timeline;
+
     return timeline.filter((item) => {
         const { genres, players, dates } = filter;
         if (genres.size > 0) return genres.has(item.genre);
         if (players.size > 0)
             return item.involves.some((p) => new Set(players).has(p));
         const { from, to } = dates;
-        if (from) return item.date >= from;
-        if (to) return item.date <= to;
+        if (from) return Temporal.PlainDate.compare(item.date, from) >= 0;
+        if (to) return Temporal.PlainDate.compare(item.date, to) <= 0;
         return true;
     });
 }
