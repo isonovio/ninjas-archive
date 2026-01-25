@@ -25,6 +25,6 @@
     }
 
     a.home {
-        @apply font-extrabold;
+        @apply font-black;
     }
 </style>
