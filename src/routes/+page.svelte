@@ -1,5 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>
-    Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the
-    documentation
-</p>
+<script lang="ts">
+    import Timeline from "$lib/components/Timeline.svelte";
+</script>
+
+<svelte:head>
+    <title>Ninjas Archive</title>
+</svelte:head>
+
+<Timeline />

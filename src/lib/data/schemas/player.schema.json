@@ -6,6 +6,7 @@
     "additionalProperties": false,
     "properties": {
         "$schema": { "type": "string", "format": "uri-reference" },
+
         "slug": { "$ref": "../schemas/slug.schema.json" },
         "nickname": { "type": "string" },
         "name": { "type": "string" },

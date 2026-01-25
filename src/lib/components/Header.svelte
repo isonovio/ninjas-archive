@@ -1,0 +1,31 @@
+<header>
+    <nav>
+        <a href="/" class="home"> Ninjas Archive </a>
+        <a href="/matches"> Matches </a>
+        <a href="/news"> News </a>
+    </nav>
+
+    <nav></nav>
+</header>
+
+<style lang="postcss">
+    @reference "$lib/styles/global.css";
+
+    header {
+        @apply px-6 py-4;
+        @apply flex justify-between;
+    }
+
+    nav {
+        @apply flex gap-8;
+    }
+
+    a {
+        @apply text-3xl font-bold text-prim-500;
+        font-variant: small-caps;
+    }
+
+    a.home {
+        @apply font-extrabold;
+    }
+</style>
