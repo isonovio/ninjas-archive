@@ -44,8 +44,8 @@
                     "result": "13:11",
                     "url": "https://www.challengermode.com/s/JBProLeague/games/8ca13aa8-8d3d-44d7-e8ac-08de5760407c",
                     "streams": [
-                        { "url": "https://www.twitch.tv/videos/2679643351", "caster": "LucyLuce", "language": "en", "duration": "01:03:55-01:31:50", "tags": ["official"] },
-                        { "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "00:00:00-00:20:55", "tags": ["official"] }
+                        { "url": "https://www.twitch.tv/videos/2679643351", "caster": "LucyLuce", "language": "en", "duration": "01:03:55-01:31:50", "tags": ["official", "part1"] },
+                        { "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "00:00:00-00:20:55", "tags": ["official", "part2"] }
                     ]
                 }
             ]

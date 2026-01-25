@@ -70,7 +70,7 @@
         },
         "stream-tag": {
             "type": "string",
-            "enum": ["official", "incomplete"]
+            "enum": ["official", "incomplete", "part1", "part2"]
         }
     }
 }

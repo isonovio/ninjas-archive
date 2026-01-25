@@ -38,8 +38,8 @@
                     "map": "anc",
                     "result": "13:8",
                     "streams": [
-                        { "url": "https://youtu.be/3xytqxqpwM0", "caster": "Affinity", "language": "en", "duration": "00:00:00-00:14:13", "tags": ["incomplete"] },
-                        { "url": "https://youtu.be/_7m5et_Gd9w", "caster": "Affinity", "language": "en", "duration": "01:18:06-01:34:21", "tags": ["incomplete"] }
+                        { "url": "https://youtu.be/_7m5et_Gd9w", "caster": "Affinity", "language": "en", "duration": "01:18:06-01:34:21", "tags": ["incomplete", "part1"] },
+                        { "url": "https://youtu.be/3xytqxqpwM0", "caster": "Affinity", "language": "en", "duration": "00:00:00-00:14:13", "tags": ["incomplete", "part2"] }
                     ]
                 },
                 { "slug": "map1", "map": "mrg", "result": "16:13", "streams": [{ "url": "https://youtu.be/_7m5et_Gd9w", "caster": "Affinity", "language": "en", "duration": "00:12:46-01:08:32" }] }

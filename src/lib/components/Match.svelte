@@ -33,10 +33,10 @@
             {#each match.maps as map, idx}
                 <div class="flex justify-between">
                     <div class="shrink-0">
-                        <div class="inline-block min-w-10">
+                        <div class="inline-block min-w-10 text-prim-700">
                             {map.slug}
                         </div>
-                        <div class="inline-block min-w-10">
+                        <div class="inline-block min-w-10 text-prim-800 font-bold">
                             {map.map}
                         </div>
                         <div class="inline-block min-w-30 text-right team-{map.outcomes[0]}">
@@ -71,7 +71,7 @@
                                     {/if}
                                     {#if stream.tags}
                                         {#each stream.tags as tag}
-                                            #{tag}
+                                            {` #${tag}`}
                                         {/each}
                                     {/if}
                                 </a>
