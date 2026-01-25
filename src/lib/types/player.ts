@@ -1,3 +1,5 @@
+import { Temporal } from "$lib/utils/temporal";
+
 type PlayerRaw = {
     slug: string;
     nickname: string;
@@ -13,12 +15,12 @@ export type Player = {
     slug: string;
     nickname: string;
     name: string;
-    birthday: Date;
+    birthday: Temporal.PlainDate;
 };
 
 export const players: Player[] = Object.values(playersRaw).map((v) => {
     return {
         ...v,
-        birthday: new Date(v.birthday),
+        birthday: Temporal.PlainDate.from(v.birthday),
     };
 });

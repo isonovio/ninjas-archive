@@ -1,17 +1,25 @@
 <script lang="ts">
     import { timeline, timelineGroupSortByDate } from "$lib/types/timeline";
+    import NewsEntry from "$lib/components/NewsEntry.svelte";
+
     const sortedTimeline = timelineGroupSortByDate(timeline);
 </script>
 
-<div>
+<div class="pt-6 pl-6 flex flex-col gap-4">
     {#each sortedTimeline as [date, items]}
-        <div class="border p-2">
-            <div>
-                {date.toLocaleDateString()}
+        <div class="relative border-t-2 border-l-2">
+            <div
+                class="absolute -top-6 -left-6 p-2 bg-white font-bold text-xl text-sec-700"
+            >
+                {date.toString()}
+            </div>
+            <div class="pl-12 py-6 flex flex-col gap-2">
                 {#each items as item}
-                    <div>
+                    {#if item.genre == "news-entry"}
+                        <NewsEntry entry={item} />
+                    {:else}
                         {item}
-                    </div>
+                    {/if}
                 {/each}
             </div>
         </div>

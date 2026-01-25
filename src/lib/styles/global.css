@@ -34,3 +34,9 @@
         "Alegreya Sans", "Alegreya Sans SC", ui-sans-serif, system-ui,
         sans-serif;
 }
+
+svg {
+    max-width: 1em;
+    max-height: 1em;
+    display: inline;
+}

@@ -1,24 +1,35 @@
+import { Temporal } from "$lib/utils/temporal";
+
 import { news, type NewsEntry } from "$lib/types/news";
 
-interface TimelineItem {
+export interface TimelineItemBase {
     genre: NewsEntry["genre"] | "birthday";
     involves: string[];
-    date: Date;
+    date: Temporal.PlainDate;
 }
+
+type TimelineItem = NewsEntry;
 
 export const timeline: TimelineItem[] = news;
 
 export function timelineGroupSortByDate(
     items: TimelineItem[],
-): [Date, TimelineItem[]][] {
-    const map = new Map<Date, TimelineItem[]>();
+): [Temporal.PlainDate, TimelineItem[]][] {
+    const map = new Map<
+        string,
+        { date: Temporal.PlainDate; items: TimelineItem[] }
+    >();
     items.forEach((item) => {
-        const date = item.date;
-        const group = map.get(date) || [];
-        group.push(item);
-        map.set(date, group);
+        const dateKey = item.date.toString();
+        if (!map.has(dateKey)) {
+            map.set(dateKey, { date: item.date, items: [] });
+        }
+        map.get(dateKey)!.items.push(item);
     });
-    return [...map].sort(
-        ([dateA], [dateB]) => dateB.getTime() - dateA.getTime(),
-    );
+    return [...map.values()]
+        .map(
+            ({ date, items }) =>
+                [date, items] as [Temporal.PlainDate, TimelineItem[]],
+        )
+        .sort(([dateA], [dateB]) => Temporal.PlainDate.compare(dateB, dateA));
 }
