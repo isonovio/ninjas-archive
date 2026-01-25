@@ -68,8 +68,7 @@
             "matchup": { "team1": "lhc", "team2": "hindsight" },
             "maps": [
                 { "slug": "map1", "map": "inf", "result": "13:16", "url": "https://www.challengermode.com/s/JBProLeague/games/50da2161-6e7c-4be6-ebe7-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "04:31:48-05:40:11", "tags": ["official"] }] },
-                { "slug": "map2", "map": "anc", "result": "0:0", "url": "https://www.challengermode.com/s/JBProLeague/games/f6d6404a-d98d-48a4-eccf-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "05:52:11-", "tags": ["official"] }] },
-                { "slug": "map3", "map": "anb", "result": "0:0", "url": "" }
+                { "slug": "map2", "map": "anc", "result": "7:13", "url": "https://www.challengermode.com/s/JBProLeague/games/f6d6404a-d98d-48a4-eccf-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "05:52:11-06:34:54", "tags": ["official"] }] }
             ]
         },
         {
@@ -87,7 +86,7 @@
             "slug": "m31",
             "bracket": ["Final", "Match 1"],
             "date": "2026-01-25",
-            "matchup": { "team1": "", "team2": "pkb" },
+            "matchup": { "team1": "hindsight", "team2": "pkb" },
             "maps": [
                 { "slug": "map1", "map": "", "result": "0:0", "url": "" },
                 { "slug": "map2", "map": "", "result": "0:0", "url": "" },

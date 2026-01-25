@@ -3,8 +3,10 @@ import { Temporal } from "$lib/utils/temporal";
 import { news, type NewsEntry } from "$lib/types/news";
 import { matches, type Match } from "$lib/types/match";
 
+type Genre = "news-entry" | "match";
+
 export interface TimelineItemBase {
-    genre: "news-entry" | "match";
+    genre: Genre;
     involves: string[];
     date: Temporal.PlainDate;
 }
@@ -34,3 +36,27 @@ export function timelineGroupSortByDate(
         )
         .sort(([dateA], [dateB]) => Temporal.PlainDate.compare(dateB, dateA));
 }
+
+export function timelineFiltered(filter: TimelineFilter) {
+    const { genres, players, dates } = filter;
+    return timeline.filter((item) => {
+        if (genres && !genres.has(item.genre)) return false;
+        if (players && !item.involves.some((p) => new Set(players).has(p)))
+            return false;
+        if (dates) {
+            const { from, to } = dates;
+            if (from && item.date < from) return false;
+            if (to && item.date > to) return false;
+        }
+        return true;
+    });
+}
+
+export type TimelineFilter = {
+    genres?: Set<Genre>;
+    players?: Set<string>;
+    dates?: {
+        from?: Temporal.PlainDate;
+        to?: Temporal.PlainDate;
+    };
+};
