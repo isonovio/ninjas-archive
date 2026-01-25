@@ -14,7 +14,7 @@ const newsRaw = import.meta.glob<NewsEntryRaw>("$lib/data/news/*.json", {
 });
 
 export interface NewsEntry extends TimelineItemBase {
-    genre: "news-entry";
+    genre: "news";
     slug: string;
     title: string;
     date: Temporal.PlainDate;
@@ -26,7 +26,7 @@ export const news: NewsEntry[] = Object.values(newsRaw)
     .map((v) => {
         return {
             ...v,
-            genre: "news-entry" as const,
+            genre: "news" as const,
             date: Temporal.PlainDate.from(v.date),
             urls: new Map(Object.entries(v.urls)),
         };

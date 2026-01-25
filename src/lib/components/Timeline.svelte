@@ -1,13 +1,17 @@
 <script lang="ts">
-    import { timelineGroupSortByDate, type TimelineItem } from "$lib/types/timeline";
+    import { timelineGroupSortByDate, type TimelineItem, type TimelineFilter, filterTimeline, timeline, timelineFilterFromParams } from "$lib/types/timeline";
     import { players } from "$lib/types/player";
+    import { page } from "$app/state";
 
     import NewsEntry from "$lib/components/NewsEntry.svelte";
     import Match from "$lib/components/Match.svelte";
 
-    export let timeline: TimelineItem[];
+    export let prefilter: TimelineFilter = {};
+    const prefilteredTimeline = filterTimeline(timeline, prefilter);
+    const filterFromParams: TimelineFilter = timelineFilterFromParams(page.url.searchParams);
+    const filteredTimeline = filterTimeline(prefilteredTimeline, filterFromParams);
 
-    const sortedTimeline = timelineGroupSortByDate(timeline);
+    const sortedTimeline = timelineGroupSortByDate(filteredTimeline);
 </script>
 
 <div class="pt-6 pl-6 flex flex-col gap-4">
@@ -28,7 +32,7 @@
                                 {/if}
                             {/each}
                         </div>
-                        {#if item.genre == "news-entry"}
+                        {#if item.genre == "news"}
                             <NewsEntry entry={item} />
                         {:else if item.genre == "match"}
                             <Match match={item} />

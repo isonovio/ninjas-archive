@@ -3,7 +3,7 @@ import { Temporal } from "$lib/utils/temporal";
 import { news, type NewsEntry } from "$lib/types/news";
 import { matches, type Match } from "$lib/types/match";
 
-type Genre = "news-entry" | "match";
+type Genre = "news" | "match";
 
 export interface TimelineItemBase {
     genre: Genre;
@@ -37,7 +37,10 @@ export function timelineGroupSortByDate(
         .sort(([dateA], [dateB]) => Temporal.PlainDate.compare(dateB, dateA));
 }
 
-export function timelineFiltered(filter: TimelineFilter) {
+export function filterTimeline(
+    timeline: TimelineItem[],
+    filter: TimelineFilter,
+) {
     const { genres, players, dates } = filter;
     return timeline.filter((item) => {
         if (genres && !genres.has(item.genre)) return false;
@@ -60,3 +63,36 @@ export type TimelineFilter = {
         to?: Temporal.PlainDate;
     };
 };
+
+export function timelineFilterFromParams(params: URLSearchParams) {
+    const genres = params.getAll("genre").map((g) => g as Genre);
+    const players = params.getAll("player");
+    const fromDate = params.get("from")
+        ? Temporal.PlainDate.from(params.get("from")!)
+        : undefined;
+    const toDate = params.get("to")
+        ? Temporal.PlainDate.from(params.get("to")!)
+        : undefined;
+    const dates =
+        fromDate || toDate ? { from: fromDate, to: toDate } : undefined;
+    return {
+        genres: genres.length > 0 ? new Set(genres) : undefined,
+        players: players.length > 0 ? new Set(players) : undefined,
+        dates,
+    };
+}
+
+export function timelineFilterToParams(filter: TimelineFilter) {
+    const params = new URLSearchParams();
+    if (filter.genres) {
+        filter.genres.forEach((genre) => params.append("genre", genre));
+    }
+    if (filter.players) {
+        filter.players.forEach((player) => params.append("player", player));
+    }
+    if (filter.dates) {
+        if (filter.dates.from) params.set("from", filter.dates.from.toString());
+        if (filter.dates.to) params.set("to", filter.dates.to.toString());
+    }
+    return params.toString();
+}
