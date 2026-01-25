@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+    /* green: #608000 */
+    --color-prim-50: #d5ff8e;
+    --color-prim-100: #bbf600;
+    --color-prim-200: #a4d700;
+    --color-prim-300: #8dba00;
+    --color-prim-400: #779d00;
+    --color-prim-500: #608000;
+    --color-prim-600: #4d6700;
+    --color-prim-700: #394d00;
+    --color-prim-800: #263500;
+    --color-prim-900: #151f00;
+    --color-prim-950: #0c1300;
+
+    /* brown: #907050 */
+    --color-sec-50: #f8efe8;
+    --color-sec-100: #f2dfd0;
+    --color-sec-200: #e8bf9a;
+    --color-sec-300: #d0a376;
+    --color-sec-400: #b08963;
+    --color-sec-500: #907050;
+    --color-sec-600: #74593f;
+    --color-sec-700: #57432e;
+    --color-sec-800: #3d2d1e;
+    --color-sec-900: #241a10;
+    --color-sec-950: #170f08;
+}
+
+:root {
+    font-family:
+        "Alegreya Sans", "Alegreya Sans SC", ui-sans-serif, system-ui,
+        sans-serif;
+}
