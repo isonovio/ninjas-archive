@@ -1,9 +1,11 @@
 <script lang="ts">
-    import { timelineGroupSortByDate, type TimelineItem, TimelineFilter, filterTimeline, timeline, timelineFilterFromParams, type Genre } from "$lib/types/timeline";
-    import { players } from "$lib/types/player";
     import { page } from "$app/state";
     import { goto } from "$app/navigation";
+    import { browser } from "$app/environment";
     import { Temporal } from "$lib/utils/temporal";
+
+    import { timelineGroupSortByDate, type TimelineItem, TimelineFilter, filterTimeline, timeline, timelineFilterFromParams, type Genre } from "$lib/types/timeline";
+    import { players } from "$lib/types/player";
 
     import NewsEntry from "$lib/components/NewsEntry.svelte";
     import Match from "$lib/components/Match.svelte";
@@ -14,7 +16,7 @@
     let { prefilter = new TimelineFilter() }: Props = $props();
 
     const prefilteredTimeline = $derived(filterTimeline(timeline, prefilter));
-    const searchParams = $derived(page.url.searchParams);
+    const searchParams = $derived(browser ? page.url.searchParams : new URLSearchParams());
     const filterFromParams: TimelineFilter = $derived(timelineFilterFromParams(searchParams));
     const filteredTimeline = $derived(filterTimeline(prefilteredTimeline, filterFromParams));
     const sortedTimeline = $derived(timelineGroupSortByDate(filteredTimeline));
