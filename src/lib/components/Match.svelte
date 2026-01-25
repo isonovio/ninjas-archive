@@ -16,15 +16,16 @@
             {match.matchup[1]}
         </div>
     </div>
-    <div class="absolute -top-3 right-0 bg-white px-2 text-amber-700">
+    <div class="absolute -top-3 right-0 bg-white px-2 flex gap-3">
         {#if match.url}
-            <a href={match.url} class="text-sec-600 hover:text-sec-400">
+            <a href={match.url} class="block text-sec-600 hover:text-sec-400">
                 <svelte:component this={LinkExternal} />
-                {match.title}
+                Match Page
             </a>
-        {:else}
-            {match.title}
         {/if}
+        <div class="text-amber-700">
+            {match.title}
+        </div>
     </div>
 
     <div class="mt-4 pt-3 pl-4 border-t border-l border-prim-700">
@@ -56,7 +57,7 @@
                         {#if map.url}
                             <a href={map.url} class="inline-block text-sec-600 hover:text-sec-400">
                                 <svelte:component this={LinkExternal} />
-                                Result
+                                Map Page
                             </a>
                         {/if}
                         {#if map.streams}

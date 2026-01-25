@@ -11,7 +11,7 @@
     "participants": { "pkb": "peekaboo-2026-1", "lhc": "let-her-cook-2026-2" },
     "matches": [
         {
-            "slug": "s1q2m17",
+            "slug": "m17",
             "bracket": ["Round of 16", "Match 1"],
             "date": "2026-01-24",
             "matchup": { "team1": "lhc", "team2": "FUTURE W" },
@@ -21,7 +21,7 @@
             ]
         },
         {
-            "slug": "s1q2m23",
+            "slug": "m23",
             "bracket": ["Round of 16", "Match 7"],
             "date": "2026-01-24",
             "matchup": { "team1": "pkb", "team2": "confidence" },
@@ -32,25 +32,66 @@
             ]
         },
         {
-            "slug": "s1q2m25",
+            "slug": "m25",
             "bracket": ["Quarter finals", "Match 1"],
             "date": "2026-01-25",
             "matchup": { "team1": "lhc", "team2": "imodium" },
             "maps": [
-                { "slug": "map1", "map": "", "result": "", "url": "" },
-                { "slug": "map2", "map": "", "result": "", "url": "" },
-                { "slug": "map3", "map": "", "result": "", "url": "" }
+                { "slug": "map1", "map": "nuke", "result": "13:2", "url": "https://www.challengermode.com/s/JBProLeague/games/0d2a2a93-6bf1-4b3e-e84d-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679643351", "caster": "LucyLuce", "language": "en", "duration": "00:16:11-00:50:40", "tags": ["official"] }] },
+                {
+                    "slug": "map2",
+                    "map": "anc",
+                    "result": "13:11",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/8ca13aa8-8d3d-44d7-e8ac-08de5760407c",
+                    "streams": [
+                        { "url": "https://www.twitch.tv/videos/2679643351", "caster": "LucyLuce", "language": "en", "duration": "01:03:55-01:31:50", "tags": ["official"] },
+                        { "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "00:00:00-00:20:55", "tags": ["official"] }
+                    ]
+                }
             ]
         },
         {
-            "slug": "s1q2m28",
+            "slug": "m28",
             "bracket": ["Quarter finals", "Match 4"],
             "date": "2026-01-25",
             "matchup": { "team1": "pkb", "team2": "chicken friday" },
             "maps": [
-                { "slug": "map1", "map": "", "result": "", "url": "" },
-                { "slug": "map2", "map": "", "result": "", "url": "" },
-                { "slug": "map3", "map": "", "result": "", "url": "" }
+                { "slug": "map1", "map": "anb", "result": "13:9", "url": "https://www.challengermode.com/s/JBProLeague/games/740d33e2-4e19-4ff9-e858-08de5760407c" },
+                { "slug": "map2", "map": "anc", "result": "10:13", "url": "https://www.challengermode.com/s/JBProLeague/games/0528e915-fba2-4596-e8c2-08de5760407c" },
+                { "slug": "map3", "map": "mrg", "result": "13:8", "url": "https://www.challengermode.com/s/JBProLeague/games/f6b2469f-fa2a-4c6c-e98c-08de5760407c" }
+            ]
+        },
+        {
+            "slug": "m29",
+            "bracket": ["Semi finals", "Match 1"],
+            "date": "2026-01-25",
+            "matchup": { "team1": "lhc", "team2": "hindsight" },
+            "maps": [
+                { "slug": "map1", "map": "inf", "result": "13:16", "url": "https://www.challengermode.com/s/JBProLeague/games/50da2161-6e7c-4be6-ebe7-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "04:31:48-05:40:11", "tags": ["official"] }] },
+                { "slug": "map2", "map": "anc", "result": "0:0", "url": "https://www.challengermode.com/s/JBProLeague/games/f6d6404a-d98d-48a4-eccf-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "05:52:11-", "tags": ["official"] }] },
+                { "slug": "map3", "map": "anb", "result": "0:0", "url": "" }
+            ]
+        },
+        {
+            "slug": "m30",
+            "bracket": ["Semi finals", "Match 2"],
+            "date": "2026-01-25",
+            "matchup": { "team1": "DONT WORRY", "team2": "pkb" },
+            "maps": [
+                { "slug": "map1", "map": "nuke", "result": "7:13", "url": "https://www.challengermode.com/s/JBProLeague/games/e675b1a0-1d12-40ab-ea38-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "01:32:08-02:09:02", "tags": ["official"] }] },
+                { "slug": "map2", "map": "anc", "result": "13:10", "url": "https://www.challengermode.com/s/JBProLeague/games/aac161c6-f947-4090-eaa5-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "02:22:12-03:02:14", "tags": ["official"] }] },
+                { "slug": "map3", "map": "anb", "result": "13:16", "url": "https://www.challengermode.com/s/JBProLeague/games/89d68884-d0df-4326-eb1f-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "03:12:50-04:05:48", "tags": ["official"] }] }
+            ]
+        },
+        {
+            "slug": "m31",
+            "bracket": ["Final", "Match 1"],
+            "date": "2026-01-25",
+            "matchup": { "team1": "", "team2": "pkb" },
+            "maps": [
+                { "slug": "map1", "map": "", "result": "0:0", "url": "" },
+                { "slug": "map2", "map": "", "result": "0:0", "url": "" },
+                { "slug": "map3", "map": "", "result": "0:0", "url": "" }
             ]
         }
     ]
