@@ -4,11 +4,11 @@
     import { browser } from "$app/environment";
     import { Temporal } from "$lib/utils/temporal";
 
-    import { timelineGroupSortByDate, type TimelineItem, TimelineFilter, filterTimeline, timeline, timelineFilterFromParams, type Genre } from "$lib/types/timeline";
+    import { timelineGroupSortByDate, TimelineFilter, filterTimeline, timeline, timelineFilterFromParams, type Genre } from "$lib/types/timeline";
     import { players } from "$lib/types/player";
 
-    import NewsEntry from "$lib/components/NewsEntry.svelte";
-    import Match from "$lib/components/Match.svelte";
+    import NewsEntry from "./NewsEntry.svelte";
+    import Match from "./Match.svelte";
 
     interface Props {
         prefilter?: TimelineFilter;
@@ -85,9 +85,11 @@
         refreshParams();
     }
     let dateInputError = $state("");
-    let fromDateInput = $state("");
-    let toDateInput = $state("");
-    function submitDateFilter(): void {
+    let fromDateInput = $derived(searchParams.get("from") || "");
+    let toDateInput = $derived(searchParams.get("to") || "");
+    function submitDateFilter(e: Event): void {
+        e.preventDefault();
+
         dateInputError = "";
         if (fromDateInput != "") {
             try {
@@ -106,11 +108,16 @@
         if (dateInputError != "") {
             return;
         }
+
         if (fromDateInput != "") {
             searchParams.set("from", fromDateInput);
+        } else {
+            searchParams.delete("from");
         }
         if (toDateInput != "") {
             searchParams.set("to", toDateInput);
+        } else {
+            searchParams.delete("to");
         }
         refreshParams();
     }
@@ -171,49 +178,55 @@
         {/if}
         <div class="relative w-48 pt-3 pl-6">
             <div class="absolute top-0 left-2 bg-white px-2 text-xl font-semibold">Date</div>
-            <div class="pt-4 pb-2 pl-3 pr-5 border rounded-lg flex flex-col">
-                <input class="inline-block border-b px-1 pt-2" placeholder="from: yyyy-mm-dd" bind:value={fromDateInput} />
-                <input class="inline-block border-b px-1 pt-2" placeholder="to: yyyy-mm-dd" bind:value={toDateInput} />
-                <button class="block cursor-pointer pt-2 text-left text-lg" onclick={() => submitDateFilter()}>[Confirm]</button>
-                {#if dateInputError != ""}
-                    <div class="text-red-500">
-                        {dateInputError}
-                    </div>
-                {/if}
+            <div class="pt-4 pb-2 pl-3 pr-5 border rounded-lg">
+                <form class="flex flex-col" onsubmit={submitDateFilter}>
+                    <input class="inline-block border-b px-1 pt-2" placeholder="from: yyyy-mm-dd" bind:value={fromDateInput} />
+                    <input class="inline-block border-b px-1 pt-2" placeholder="to: yyyy-mm-dd" bind:value={toDateInput} />
+                    <button class="block cursor-pointer pt-2 text-left text-lg">[Confirm]</button>
+                    {#if dateInputError != ""}
+                        <div class="text-red-500">
+                            {dateInputError}
+                        </div>
+                    {/if}
+                </form>
             </div>
         </div>
     </div>
 
     <div class="pt-6 pl-6 flex flex-col gap-4">
-        {#each sortedTimeline as [date, items]}
-            <div class="relative border-t-2 border-l-2">
-                <div class="absolute -top-6 -left-6 p-2 bg-white font-bold text-xl text-sec-700">
-                    {date.toString()}
-                </div>
-                <div class="pl-12 py-6 flex flex-col gap-2">
-                    {#each items as item}
-                        <div class="relative">
-                            <div class="absolute flex gap-2">
-                                {#each item.involves as player}
-                                    {#if players.has(player)}
-                                        <a href={`/player/${player}`} class="z-10 text-sm text-gray-500">
-                                            @{players.get(player)!.nickname}
-                                        </a>
-                                    {/if}
-                                {/each}
+        {#if sortedTimeline.length === 0}
+            <div class="text-5xl text-sec-600 font-sans-sc font-bold">History has not witnessed anything yet.</div>
+        {:else}
+            {#each sortedTimeline as [date, items]}
+                <div class="relative border-t-2 border-l-2">
+                    <div class="absolute -top-6 -left-6 p-2 bg-white font-bold text-xl text-sec-700">
+                        {date.toString()}
+                    </div>
+                    <div class="pl-12 py-6 flex flex-col gap-2">
+                        {#each items as item}
+                            <div class="relative">
+                                <div class="absolute flex gap-2">
+                                    {#each item.involves as player}
+                                        {#if players.has(player)}
+                                            <a href={`/player/${player}`} class="z-10 text-sm text-gray-500">
+                                                @{players.get(player)!.nickname}
+                                            </a>
+                                        {/if}
+                                    {/each}
+                                </div>
+                                {#if item.genre == "news"}
+                                    <NewsEntry entry={item} />
+                                {:else if item.genre == "match"}
+                                    <Match match={item} />
+                                {:else}
+                                    {item}
+                                {/if}
                             </div>
-                            {#if item.genre == "news"}
-                                <NewsEntry entry={item} />
-                            {:else if item.genre == "match"}
-                                <Match match={item} />
-                            {:else}
-                                {item}
-                            {/if}
-                        </div>
-                    {/each}
+                        {/each}
+                    </div>
                 </div>
-            </div>
-        {/each}
+            {/each}
+        {/if}
     </div>
 </div>
 

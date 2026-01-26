@@ -1,6 +1,6 @@
 <script lang="ts">
     import { TimelineFilter } from "$lib/types/timeline";
-    import Timeline from "$lib/components/Timeline.svelte";
+    import Timeline from "$lib/components/timeline/Timeline.svelte";
     import type { PageProps } from "./$types";
 
     let { data }: PageProps = $props();
