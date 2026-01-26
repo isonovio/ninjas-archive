@@ -142,7 +142,7 @@
 </script>
 
 <div class="w-7xl mx-auto flex gap-4">
-    <div class="sticky top-0 flex flex-col gap-3 pt-10">
+    <div class="sticky top-0 max-h-screen flex flex-col gap-3 pt-10">
         <div class="flex justify-between">
             <div class="text-2xl font-bold">Filters</div>
             {#if hasFilter}
