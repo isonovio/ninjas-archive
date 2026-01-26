@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-    <title>Ninjas Archive - News</title>
+    <title>News | Ninjas Archive</title>
 </svelte:head>
 
 <Timeline {prefilter} />

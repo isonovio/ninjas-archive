@@ -7,6 +7,7 @@
 
 ## Todos:
 - UI
+    - [ ] Change main from from Alegreya Sans to Signika
     - [ ] `Map` should take `URLS` instead of `URL`; `STREAMS` need a different `svg`
     - [ ] `h1` title of each page
 - Filter

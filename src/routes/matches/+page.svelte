@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-    <title>Ninjas Archive - Matches</title>
+    <title>Matches | Ninjas Archive</title>
 </svelte:head>
 
 <Timeline {prefilter} />
