@@ -1,3 +1,10 @@
+# Ninjas Archive
+
+## Credits:
+- SVGs: [Windmill](https://www.svgrepo.com/svg/336146/windmill), [External Link](https://www.svgrepo.com/svg/423732/link-external)
+- Fonts: [Alegreya Sans](https://www.huertatipografica.com/en/fonts/alegreya-sans-ht), [Maple Mono](https://font.subf.dev/)
+- Deployment: CDN, DNS, and static file hosting: [Bunny.net](https://bunny.net/)
+
 ## Todos:
 - UI
     - [ ] `Map` should take `URLS` instead of `URL`; `STREAMS` need a different `svg`
@@ -14,10 +21,14 @@
 - Content
     - [ ] Why? Page
     - [ ] Credits Page
-- Deploy
-    - [ ] Static custom 404 page
 
-## Credits:
-- SVGs: [Windmill](https://www.svgrepo.com/svg/336146/windmill), [External Link](https://www.svgrepo.com/svg/423732/link-external)
-- Fonts: [Alegreya Sans](https://www.huertatipografica.com/en/fonts/alegreya-sans-ht), [Maple Mono](https://font.subf.dev/)
-- Deployment: CDN, DNS, and static file hosting: [Bunny.net](https://bunny.net/)
+## Howtos
+
+### Deploy
+- build: `npm run build`
+- upload static files to Bunny Storage
+- optional: purge Bunny CDN cache
+
+### Deploy: Setup
+- set 404 redirection to `/404.html`
+- set CNAME DNS record to CDN
