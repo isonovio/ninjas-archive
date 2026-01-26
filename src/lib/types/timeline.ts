@@ -45,12 +45,13 @@ export function filterTimeline(
 
     return timeline.filter((item) => {
         const { genres, players, dates } = filter;
-        if (genres.size > 0) return genres.has(item.genre);
-        if (players.size > 0)
-            return item.involves.some((p) => new Set(players).has(p));
+        if (genres.size > 0 && !genres.has(item.genre)) return false;
+        if (players.size > 0 && !item.involves.some((p) => players.has(p)))
+            return false;
         const { from, to } = dates;
-        if (from) return Temporal.PlainDate.compare(item.date, from) >= 0;
-        if (to) return Temporal.PlainDate.compare(item.date, to) <= 0;
+        if (from && Temporal.PlainDate.compare(item.date, from) < 0)
+            return false;
+        if (to && Temporal.PlainDate.compare(item.date, to) > 0) return false;
         return true;
     });
 }
