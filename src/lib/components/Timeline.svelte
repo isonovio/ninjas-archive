@@ -196,9 +196,9 @@
                             <div class="absolute flex gap-2">
                                 {#each item.involves as player}
                                     {#if players.has(player)}
-                                        <div class="text-sm text-gray-500">
+                                        <a href={`/player/${player}`} class="z-10 text-sm text-gray-500">
                                             @{players.get(player)!.nickname}
-                                        </div>
+                                        </a>
                                     {/if}
                                 {/each}
                             </div>

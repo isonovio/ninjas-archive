@@ -1,7 +1,6 @@
 ## Todos:
 - [ ] Why? Page
 - [ ] Credits Page
-- [ ] Player Profile Pages
 - [ ] `h1` title of each page
 
 ## Credits:

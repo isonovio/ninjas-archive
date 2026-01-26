@@ -47,4 +47,4 @@ jobs:
 
             - name: Deploy build via rclone
               run: |
-                  rclone sync ./build bunny: --delete-during --inplace --size-only --fast-list --transfers 8 --checkers 16 --progress
+                  rclone sync ./build bunny: --delete-during --inplace --size-only --fast-list --transfers 4 --checkers 8 --progress --ignore-errors

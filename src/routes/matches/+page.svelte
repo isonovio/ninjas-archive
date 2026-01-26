@@ -2,7 +2,7 @@
     import { TimelineFilter } from "$lib/types/timeline";
     import Timeline from "$lib/components/Timeline.svelte";
 
-    const prefilter = new TimelineFilter(["match"]);
+    const prefilter = new TimelineFilter({ genres: ["match"] });
 </script>
 
 <svelte:head>

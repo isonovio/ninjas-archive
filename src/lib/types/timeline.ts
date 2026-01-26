@@ -63,16 +63,16 @@ export class TimelineFilter {
         to?: Temporal.PlainDate;
     } = { from: undefined, to: undefined };
 
-    constructor(
-        genres?: Genre[],
-        players?: string[],
-        fromDate?: Temporal.PlainDate,
-        toDate?: Temporal.PlainDate,
-    ) {
-        if (genres) this.genres = new Set(genres);
-        if (players) this.players = new Set(players);
-        if (fromDate) this.dates.from = fromDate;
-        if (toDate) this.dates.to = toDate;
+    constructor(ops?: {
+        genres?: Genre[];
+        players?: string[];
+        fromDate?: Temporal.PlainDate;
+        toDate?: Temporal.PlainDate;
+    }) {
+        if (ops?.genres) this.genres = new Set(ops.genres);
+        if (ops?.players) this.players = new Set(ops.players);
+        if (ops?.fromDate) this.dates.from = ops.fromDate;
+        if (ops?.toDate) this.dates.to = ops.toDate;
     }
 }
 
