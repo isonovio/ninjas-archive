@@ -159,7 +159,6 @@
         <div class="relative mt-3 ml-6 border rounded-lg pt-3 pb-1 px-4 text-nowrap">
             <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Date</div>
             <form onsubmit={submitDateFilter}>
-                <button class="absolute -top-3 right-2 cursor-pointer bg-white px-1 hover:text-gray-400">[Confirm]</button>
                 <div class="my-1">
                     <label for="from" class="inline-block w-10">from: </label>
                     <input id="from" placeholder="yyyy-mm-dd" bind:value={fromDateInput} class="inline-block w-25 border-b px-1 leading-none" />
@@ -173,6 +172,7 @@
                         {dateInputError}
                     </div>
                 {/if}
+                <button class="absolute -top-3 right-2 cursor-pointer bg-white px-1 hover:text-gray-400">[Confirm]</button>
             </form>
         </div>
         {#if filterCandidates.genres.length > 1}
