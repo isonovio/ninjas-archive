@@ -14,6 +14,7 @@
         - [ ] UI: `STREAMS` need a different `svg`
     - [ ] `MatchMap` should take `links` instead of a single `url`; 
 - UI
+    - [ ] Everything Clickable need to have hover color change
     - [ ] Change main font from Alegreya Sans to Signika
     - [ ] `h1` title of each page
 - Filter
@@ -32,11 +33,12 @@
 - Content
     - [ ] Why? Page
     - [ ] Credits Page
+    - [ ] Streams
 
 ## Todos: Long-Term
 - Advanced Searching/Filtering: Allows complex logic AND and OR
 
-## Howtos
+## Howtos:
 
 ### Deploy
 - build: `npm run build`
