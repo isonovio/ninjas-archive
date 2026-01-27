@@ -41,8 +41,8 @@
 
     <div class="mt-4 pt-5 pb-2 pl-4 border-t border-l border-prim-700">
         <div>
-            {#each match.maps as map, idx}
-                <div class="flex justify-between">
+            {#each match.maps as map}
+                <div class="flex justify-between border-b border-dashed border-gray-300">
                     <div class="text-nowrap">
                         <span class="inline-block w-14 text-prim-700 font-light">
                             {#if map.url}

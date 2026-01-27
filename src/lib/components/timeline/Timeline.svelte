@@ -193,7 +193,7 @@
         {/if}
     </div>
 
-    <div class="pt-6 pl-6 flex flex-col gap-4">
+    <div class="pt-6 pl-6 flex-1 flex flex-col gap-4">
         {#if sortedTimeline.length === 0}
             <div class="text-5xl text-sec-600 font-sc font-bold">History has not witnessed anything yet.</div>
         {:else}

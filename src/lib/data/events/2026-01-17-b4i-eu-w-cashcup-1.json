@@ -24,7 +24,9 @@
             "date": "2026-01-17",
             "matchup": { "team1": "pkb", "team2": "LUNAR FE" },
             "url": "https://www.faceit.com/en/cs2/room/1-f9834dd3-39b7-4177-8fc1-ca98a4502df5",
-            "maps": [{ "slug": "map1", "map": "mrg", "result": "13:10", "streams": [{ "url": "https://www.twitch.tv/videos/2672696713", "caster": "Affinity", "language": "en", "duration": "01:03:52-01:40:39" }] }]
+            "maps": [
+                { "slug": "map1", "map": "mrg", "result": "13:10", "streams": [{ "caster": "Affinity", "language": "en", "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2672696713", "duration": "01:03:52-01:40:39" }] }] }
+            ]
         },
         {
             "slug": "match29",
@@ -38,11 +40,18 @@
                     "map": "anc",
                     "result": "13:8",
                     "streams": [
-                        { "url": "https://youtu.be/_7m5et_Gd9w", "caster": "Affinity", "language": "en", "duration": "01:18:06-01:34:21", "tags": ["incomplete", "part1"] },
-                        { "url": "https://youtu.be/3xytqxqpwM0", "caster": "Affinity", "language": "en", "duration": "00:00:00-00:14:13", "tags": ["incomplete", "part2"] }
+                        {
+                            "caster": "Affinity",
+                            "language": "en",
+                            "tags": ["incomplete"],
+                            "parts": [
+                                { "name": "Part 1", "url": "https://youtu.be/_7m5et_Gd9w", "duration": "01:18:06-01:34:21" },
+                                { "name": "Part 2", "url": "https://youtu.be/3xytqxqpwM0", "duration": "00:00:00-00:14:13" }
+                            ]
+                        }
                     ]
                 },
-                { "slug": "map1", "map": "mrg", "result": "16:13", "streams": [{ "url": "https://youtu.be/_7m5et_Gd9w", "caster": "Affinity", "language": "en", "duration": "00:12:46-01:08:32" }] }
+                { "slug": "map1", "map": "mrg", "result": "16:13", "streams": [{ "caster": "Affinity", "language": "en", "parts": [{ "name": "VOD", "url": "https://youtu.be/_7m5et_Gd9w", "duration": "00:12:46-01:08:32" }] }] }
             ]
         },
         {
@@ -52,9 +61,9 @@
             "matchup": { "team1": "mix", "team2": "pkb" },
             "url": "https://www.faceit.com/en/cs2/room/1-4278b716-4121-4243-9ff1-f35c19059b38",
             "maps": [
-                { "slug": "map3", "map": "anc", "result": "8:13", "streams": [{ "url": "https://youtu.be/UhXPHIRoxKs", "caster": "Affinity", "language": "en", "duration": "00:07:19-00:49:37" }] },
-                { "slug": "map2", "map": "trn", "result": "13:9", "streams": [{ "url": "https://youtu.be/UhXPHIRoxKs", "caster": "Affinity", "language": "en", "duration": "00:58:42-01:40:53" }] },
-                { "slug": "map1", "map": "inf", "result": "11:13", "streams": [{ "url": "https://youtu.be/UhXPHIRoxKs", "caster": "Affinity", "language": "en", "duration": "01:50:26-02:28:58" }] }
+                { "slug": "map3", "map": "anc", "result": "8:13", "streams": [{ "caster": "Affinity", "language": "en", "parts": [{ "name": "VOD", "url": "https://youtu.be/UhXPHIRoxKs", "duration": "00:07:19-00:49:37" }] }] },
+                { "slug": "map2", "map": "trn", "result": "13:9", "streams": [{ "caster": "Affinity", "language": "en", "parts": [{ "name": "VOD", "url": "https://youtu.be/UhXPHIRoxKs", "duration": "00:58:42-01:40:53" }] }] },
+                { "slug": "map1", "map": "inf", "result": "11:13", "streams": [{ "caster": "Affinity", "language": "en", "parts": [{ "name": "VOD", "url": "https://youtu.be/UhXPHIRoxKs", "duration": "01:50:26-02:28:58" }] }] }
             ]
         }
     ]

@@ -16,8 +16,20 @@
             "date": "2026-01-17",
             "matchup": { "team1": "big", "team2": "chicken friday" },
             "maps": [
-                { "slug": "map1", "map": "mrg", "result": "13:11", "url": "https://www.challengermode.com/s/JBProLeague/games/f9c84d20-cf58-4409-4eaf-08de50e4e82f", "streams": [{ "url": "https://www.twitch.tv/videos/2672352294", "caster": "Affinity", "language": "en", "duration": "00:22:26-01:12:32" }] },
-                { "slug": "map2", "map": "anc", "result": "13:9", "url": "https://www.challengermode.com/s/JBProLeague/games/45499927-1f28-43e9-4f58-08de50e4e82f", "streams": [{ "url": "https://www.twitch.tv/videos/2672352294", "caster": "Affinity", "language": "en", "duration": "01:25:11-02:04:33" }] }
+                {
+                    "slug": "map1",
+                    "map": "mrg",
+                    "result": "13:11",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/f9c84d20-cf58-4409-4eaf-08de50e4e82f",
+                    "streams": [{ "caster": "Affinity", "language": "en", "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2672352294", "duration": "00:22:26-01:12:32" }] }]
+                },
+                {
+                    "slug": "map2",
+                    "map": "anc",
+                    "result": "13:9",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/45499927-1f28-43e9-4f58-08de50e4e82f",
+                    "streams": [{ "caster": "Affinity", "language": "en", "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2672352294", "duration": "01:25:11-02:04:33" }] }]
+                }
             ]
         },
         {
@@ -27,8 +39,20 @@
             "matchup": { "team1": "lhc", "team2": "DONT WORRY" },
             "maps": [
                 { "slug": "map1", "map": "mrg", "result": "13:11", "url": "https://www.challengermode.com/s/JBProLeague/games/d9b053bf-4778-4cbf-4ef4-08de50e4e82f" },
-                { "slug": "map2", "map": "ovp", "result": "8:13", "url": "https://www.challengermode.com/s/JBProLeague/games/a1a45b5e-b61f-406c-4f8c-08de50e4e82f", "streams": [{ "url": "https://www.twitch.tv/videos/2672352294", "caster": "Affinity", "language": "en", "duration": "02:08:05-02:08:10", "tags": ["incomplete"] }] },
-                { "slug": "map3", "map": "anc", "result": "13:9", "url": "https://www.challengermode.com/s/JBProLeague/games/156b5721-df54-4fc7-502b-08de50e4e82f", "streams": [{ "url": "https://www.twitch.tv/videos/2672352294", "caster": "Affinity", "language": "en", "duration": "02:29:26-03:01:16" }] }
+                {
+                    "slug": "map2",
+                    "map": "ovp",
+                    "result": "8:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/a1a45b5e-b61f-406c-4f8c-08de50e4e82f",
+                    "streams": [{ "caster": "Affinity", "language": "en", "tags": ["incomplete"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2672352294", "duration": "02:08:05-02:08:10" }] }]
+                },
+                {
+                    "slug": "map3",
+                    "map": "anc",
+                    "result": "13:9",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/156b5721-df54-4fc7-502b-08de50e4e82f",
+                    "streams": [{ "caster": "Affinity", "language": "en", "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2672352294", "duration": "02:29:26-03:01:16" }] }]
+                }
             ]
         },
         {
@@ -38,8 +62,20 @@
             "matchup": { "team1": "pkb", "team2": "LUNAR FE" },
             "maps": [
                 { "slug": "map1", "map": "d2", "result": "16:12", "url": "https://www.challengermode.com/s/JBProLeague/games/5a508d64-c21c-4961-4fd5-08de50e4e82f" },
-                { "slug": "map2", "map": "nuke", "result": "7:13", "url": "https://www.challengermode.com/s/JBProLeague/games/d1e60e0d-a11d-469d-50b3-08de50e4e82f", "streams": [{ "url": "https://www.twitch.tv/videos/2672352294", "caster": "Affinity", "language": "en", "duration": "03:02:52-03:26:32", "tags": ["incomplete"] }] },
-                { "slug": "map3", "map": "anc", "result": "16:13", "url": "https://www.challengermode.com/s/JBProLeague/games/c9b970db-ae4f-4638-5164-08de50e4e82f", "streams": [{ "url": "https://www.twitch.tv/videos/2672352294", "caster": "Affinity", "language": "en", "duration": "03:46:52-04:32:28" }] }
+                {
+                    "slug": "map2",
+                    "map": "nuke",
+                    "result": "7:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/d1e60e0d-a11d-469d-50b3-08de50e4e82f",
+                    "streams": [{ "caster": "Affinity", "language": "en", "tags": ["incomplete"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2672352294", "duration": "03:02:52-03:26:32" }] }]
+                },
+                {
+                    "slug": "map3",
+                    "map": "anc",
+                    "result": "16:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/c9b970db-ae4f-4638-5164-08de50e4e82f",
+                    "streams": [{ "caster": "Affinity", "language": "en", "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2672352294", "duration": "03:46:52-04:32:28" }] }]
+                }
             ]
         },
         {
@@ -58,9 +94,27 @@
             "date": "2026-01-18",
             "matchup": { "team1": "lhc", "team2": "pkb" },
             "maps": [
-                { "slug": "map1", "map": "mrg", "result": "13:4", "url": "https://www.challengermode.com/s/JBProLeague/games/d3ecde69-91a9-48e1-1af6-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Affinity", "language": "en", "duration": "00:33:35-00:59:59", "tags": ["official"] }] },
-                { "slug": "map2", "map": "anc", "result": "11:13", "url": "https://www.challengermode.com/s/JBProLeague/games/6ddc02df-3a4b-4279-1b4b-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Affinity", "language": "en", "duration": "01:15:14-01:51:27", "tags": ["official"] }] },
-                { "slug": "map3", "map": "d2", "result": "11:13", "url": "https://www.challengermode.com/s/JBProLeague/games/39176e60-4a9b-41cf-1bca-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Affinity", "language": "en", "duration": "02:04:02-02:44:55", "tags": ["official"] }] }
+                {
+                    "slug": "map1",
+                    "map": "mrg",
+                    "result": "13:4",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/d3ecde69-91a9-48e1-1af6-08de5669da63",
+                    "streams": [{ "caster": "Affinity", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "00:33:35-00:59:59" }] }]
+                },
+                {
+                    "slug": "map2",
+                    "map": "anc",
+                    "result": "11:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/6ddc02df-3a4b-4279-1b4b-08de5669da63",
+                    "streams": [{ "caster": "Affinity", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "01:15:14-01:51:27" }] }]
+                },
+                {
+                    "slug": "map3",
+                    "map": "d2",
+                    "result": "11:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/39176e60-4a9b-41cf-1bca-08de5669da63",
+                    "streams": [{ "caster": "Affinity", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "02:04:02-02:44:55" }] }]
+                }
             ]
         },
         {
@@ -69,8 +123,20 @@
             "date": "2026-01-18",
             "matchup": { "team1": "big", "team2": "Fingers Crossed Fe" },
             "maps": [
-                { "slug": "map1", "map": "d2", "result": "13:3", "url": "https://www.challengermode.com/s/JBProLeague/games/ab08bc9e-faa4-4a2b-1cb5-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Affinity", "language": "en", "duration": "03:28:36-03:59:23", "tags": ["official"] }] },
-                { "slug": "map2", "map": "mrg", "result": "16:13", "url": "https://www.challengermode.com/s/JBProLeague/games/0575363b-3800-4e1a-1ef1-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Affinity", "language": "en", "duration": "04:13:09-05:09:58", "tags": ["official"] }] }
+                {
+                    "slug": "map1",
+                    "map": "d2",
+                    "result": "13:3",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/ab08bc9e-faa4-4a2b-1cb5-08de5669da63",
+                    "streams": [{ "caster": "Affinity", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "03:28:36-03:59:23" }] }]
+                },
+                {
+                    "slug": "map2",
+                    "map": "mrg",
+                    "result": "16:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/0575363b-3800-4e1a-1ef1-08de5669da63",
+                    "streams": [{ "caster": "Affinity", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "04:13:09-05:09:58" }] }]
+                }
             ]
         },
         {
@@ -79,8 +145,20 @@
             "date": "2026-01-18",
             "matchup": { "team1": "Pigeons", "team2": "pkb" },
             "maps": [
-                { "slug": "map1", "map": "anc", "result": "16:14", "url": "https://www.challengermode.com/s/JBProLeague/games/7da54e7c-f15c-41f4-20be-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Sxstem", "language": "en", "duration": "06:20:52-07:21:37", "tags": ["official"] }] },
-                { "slug": "map2", "map": "mrg", "result": "13:11", "url": "https://www.challengermode.com/s/JBProLeague/games/ad1c0aad-f30d-4217-2171-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Sxstem", "language": "en", "duration": "07:31:43-08:19:43", "tags": ["official"] }] }
+                {
+                    "slug": "map1",
+                    "map": "anc",
+                    "result": "16:14",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/7da54e7c-f15c-41f4-20be-08de5669da63",
+                    "streams": [{ "caster": "Sxstem", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "06:20:52-07:21:37" }] }]
+                },
+                {
+                    "slug": "map2",
+                    "map": "mrg",
+                    "result": "13:11",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/ad1c0aad-f30d-4217-2171-08de5669da63",
+                    "streams": [{ "caster": "Sxstem", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "07:31:43-08:19:43" }] }]
+                }
             ]
         },
         {
@@ -89,9 +167,27 @@
             "date": "2026-01-18",
             "matchup": { "team1": "big", "team2": "Pigeons" },
             "maps": [
-                { "slug": "map1", "map": "d2", "result": "2:13", "url": "https://www.challengermode.com/s/JBProLeague/games/dccb7b58-b8a9-4258-2320-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Sxstem", "language": "en", "duration": "08:51:40-09:19:03", "tags": ["official"] }] },
-                { "slug": "map2", "map": "mrg", "result": "13:8", "url": "https://www.challengermode.com/s/JBProLeague/games/9e626949-f099-4c38-23bd-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Sxstem", "language": "en", "duration": "09:29:13-10:17:02", "tags": ["official"] }] },
-                { "slug": "map3", "map": "anc", "result": "9:13", "url": "https://www.challengermode.com/s/JBProLeague/games/9ccd16a4-2577-4486-2500-08de5669da63", "streams": [{ "url": "https://www.twitch.tv/videos/2673270257", "caster": "Sxstem", "language": "en", "duration": "10:26:57-11:05:30", "tags": ["official"] }] }
+                {
+                    "slug": "map1",
+                    "map": "d2",
+                    "result": "2:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/dccb7b58-b8a9-4258-2320-08de5669da63",
+                    "streams": [{ "caster": "Sxstem", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "08:51:40-09:19:03" }] }]
+                },
+                {
+                    "slug": "map2",
+                    "map": "mrg",
+                    "result": "13:8",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/9e626949-f099-4c38-23bd-08de5669da63",
+                    "streams": [{ "caster": "Sxstem", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "09:29:13-10:17:02" }] }]
+                },
+                {
+                    "slug": "map3",
+                    "map": "anc",
+                    "result": "9:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/9ccd16a4-2577-4486-2500-08de5669da63",
+                    "streams": [{ "caster": "Sxstem", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2673270257", "duration": "10:26:57-11:05:30" }] }]
+                }
             ]
         }
     ]

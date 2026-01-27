@@ -26,10 +26,13 @@ type EventRaw = {
             result: string;
             url?: string;
             streams?: {
-                url: string;
                 caster: string;
                 language: string;
-                duration?: string;
+                parts: {
+                    name: string;
+                    url: string;
+                    duration?: string;
+                }[];
                 tags?: string[];
             }[];
             note?: string;
@@ -72,12 +75,32 @@ type MatchMap = {
 };
 
 export type Stream = {
-    url: string;
     caster: string;
     language: string;
-    duration?: string;
+    parts: {
+        name: string;
+        url: string;
+        duration?: string;
+    }[];
     tags?: string[];
 };
+
+export function streamTimedUrl(url: string, duration?: string): string {
+    if (!duration) return url;
+
+    const [start, _] = duration.split("-");
+    const [startHour, startMinute, startSecond] = start.split(":").map(Number);
+
+    if (url.includes("youtu.be")) {
+        const startBySeconds =
+            startHour * 3600 + startMinute * 60 + startSecond;
+        return `${url}?t=${startBySeconds}`;
+    } else if (url.includes("twitch.tv")) {
+        return `${url}?t=${startHour}h${startMinute}m${startSecond}s`;
+    } else {
+        return url;
+    }
+}
 
 type Outcome = "win" | "draw" | "lose";
 

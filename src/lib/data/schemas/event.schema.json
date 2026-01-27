@@ -58,19 +58,27 @@
 
         "stream": {
             "type": "object",
-            "required": ["url", "caster", "language"],
+            "required": ["caster", "language", "parts"],
             "additionalProperties": false,
             "properties": {
-                "url": { "type": "string", "format": "uri" },
                 "caster": { "type": "string" },
                 "language": { "$ref": "../schemas/language.schema.json" },
-                "duration": { "$ref": "../schemas/timerange.schema.json" },
+                "parts": { "type": "array", "items": { "$ref": "#/$defs/stream-part" } },
                 "tags": { "type": "array", "items": { "$ref": "#/$defs/stream-tag" } }
+            }
+        },
+        "stream-part": {
+            "type": "object",
+            "required": ["name", "url"],
+            "properties": {
+                "name": { "type": "string" },
+                "url": { "type": "string", "format": "uri" },
+                "duration": { "$ref": "../schemas/timerange.schema.json" }
             }
         },
         "stream-tag": {
             "type": "string",
-            "enum": ["official", "incomplete", "part1", "part2"]
+            "enum": ["official", "incomplete"]
         }
     }
 }

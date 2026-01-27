@@ -37,15 +37,28 @@
             "date": "2026-01-25",
             "matchup": { "team1": "lhc", "team2": "imodium" },
             "maps": [
-                { "slug": "map1", "map": "nuke", "result": "13:2", "url": "https://www.challengermode.com/s/JBProLeague/games/0d2a2a93-6bf1-4b3e-e84d-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679643351", "caster": "LucyLuce", "language": "en", "duration": "00:16:11-00:50:40", "tags": ["official"] }] },
+                {
+                    "slug": "map1",
+                    "map": "nuke",
+                    "result": "13:2",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/0d2a2a93-6bf1-4b3e-e84d-08de5760407c",
+                    "streams": [{ "caster": "LucyLuce", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2679643351", "duration": "00:16:11-00:50:40" }] }]
+                },
                 {
                     "slug": "map2",
                     "map": "anc",
                     "result": "13:11",
                     "url": "https://www.challengermode.com/s/JBProLeague/games/8ca13aa8-8d3d-44d7-e8ac-08de5760407c",
                     "streams": [
-                        { "url": "https://www.twitch.tv/videos/2679643351", "caster": "LucyLuce", "language": "en", "duration": "01:03:55-01:31:50", "tags": ["official", "part1"] },
-                        { "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "00:00:00-00:20:55", "tags": ["official", "part2"] }
+                        {
+                            "caster": "LucyLuce",
+                            "language": "en",
+                            "tags": ["official"],
+                            "parts": [
+                                { "name": "Part 1", "url": "https://www.twitch.tv/videos/2679643351", "duration": "01:03:55-01:31:50" },
+                                { "name": "Part 2", "url": "https://www.twitch.tv/videos/2679681744", "duration": "00:00:00-00:20:55" }
+                            ]
+                        }
                     ]
                 }
             ]
@@ -67,8 +80,20 @@
             "date": "2026-01-25",
             "matchup": { "team1": "lhc", "team2": "hindsight" },
             "maps": [
-                { "slug": "map1", "map": "inf", "result": "13:16", "url": "https://www.challengermode.com/s/JBProLeague/games/50da2161-6e7c-4be6-ebe7-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "04:31:48-05:40:11", "tags": ["official"] }] },
-                { "slug": "map2", "map": "anc", "result": "7:13", "url": "https://www.challengermode.com/s/JBProLeague/games/f6d6404a-d98d-48a4-eccf-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "05:52:11-06:34:54", "tags": ["official"] }] }
+                {
+                    "slug": "map1",
+                    "map": "inf",
+                    "result": "13:16",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/50da2161-6e7c-4be6-ebe7-08de5760407c",
+                    "streams": [{ "caster": "NaoriMizuki", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2679681744", "duration": "04:31:48-05:40:11" }] }]
+                },
+                {
+                    "slug": "map2",
+                    "map": "anc",
+                    "result": "7:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/f6d6404a-d98d-48a4-eccf-08de5760407c",
+                    "streams": [{ "caster": "NaoriMizuki", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2679681744", "duration": "05:52:11-06:34:54" }] }]
+                }
             ]
         },
         {
@@ -77,9 +102,27 @@
             "date": "2026-01-25",
             "matchup": { "team1": "DONT WORRY", "team2": "pkb" },
             "maps": [
-                { "slug": "map1", "map": "nuke", "result": "7:13", "url": "https://www.challengermode.com/s/JBProLeague/games/e675b1a0-1d12-40ab-ea38-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "01:32:08-02:09:02", "tags": ["official"] }] },
-                { "slug": "map2", "map": "anc", "result": "13:10", "url": "https://www.challengermode.com/s/JBProLeague/games/aac161c6-f947-4090-eaa5-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "02:22:12-03:02:14", "tags": ["official"] }] },
-                { "slug": "map3", "map": "anb", "result": "13:16", "url": "https://www.challengermode.com/s/JBProLeague/games/89d68884-d0df-4326-eb1f-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "LucyLuce", "language": "en", "duration": "03:12:50-04:05:48", "tags": ["official"] }] }
+                {
+                    "slug": "map1",
+                    "map": "nuke",
+                    "result": "7:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/e675b1a0-1d12-40ab-ea38-08de5760407c",
+                    "streams": [{ "caster": "LucyLuce", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2679681744", "duration": "01:32:08-02:09:02" }] }]
+                },
+                {
+                    "slug": "map2",
+                    "map": "anc",
+                    "result": "13:10",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/aac161c6-f947-4090-eaa5-08de5760407c",
+                    "streams": [{ "caster": "LucyLuce", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2679681744", "duration": "02:22:12-03:02:14" }] }]
+                },
+                {
+                    "slug": "map3",
+                    "map": "anb",
+                    "result": "13:16",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/89d68884-d0df-4326-eb1f-08de5760407c",
+                    "streams": [{ "caster": "LucyLuce", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2679681744", "duration": "03:12:50-04:05:48" }] }]
+                }
             ]
         },
         {
@@ -88,9 +131,27 @@
             "date": "2026-01-25",
             "matchup": { "team1": "hindsight", "team2": "pkb" },
             "maps": [
-                { "slug": "map1", "map": "nuke", "result": "8:13", "url": "https://www.challengermode.com/s/JBProLeague/games/3a1a16d1-dcab-4dd2-edae-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "06:59:23-02:09:02", "tags": ["official"] }] },
-                { "slug": "map2", "map": "anc", "result": "13:7", "url": "https://www.challengermode.com/s/JBProLeague/games/f6410531-8ec7-46b8-ee60-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "07:53:05-08:29:42", "tags": ["official"] }] },
-                { "slug": "map3", "map": "mrg", "result": "13:11", "url": "https://www.challengermode.com/s/JBProLeague/games/4b904974-0fe1-4a2c-ef20-08de5760407c", "streams": [{ "url": "https://www.twitch.tv/videos/2679681744", "caster": "NaoriMizuki", "language": "en", "duration": "08:41:21-09:30:43", "tags": ["official"] }] }
+                {
+                    "slug": "map1",
+                    "map": "nuke",
+                    "result": "8:13",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/3a1a16d1-dcab-4dd2-edae-08de5760407c",
+                    "streams": [{ "caster": "NaoriMizuki", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2679681744", "duration": "06:59:23-02:09:02" }] }]
+                },
+                {
+                    "slug": "map2",
+                    "map": "anc",
+                    "result": "13:7",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/f6410531-8ec7-46b8-ee60-08de5760407c",
+                    "streams": [{ "caster": "NaoriMizuki", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2679681744", "duration": "07:53:05-08:29:42" }] }]
+                },
+                {
+                    "slug": "map3",
+                    "map": "mrg",
+                    "result": "13:11",
+                    "url": "https://www.challengermode.com/s/JBProLeague/games/4b904974-0fe1-4a2c-ef20-08de5760407c",
+                    "streams": [{ "caster": "NaoriMizuki", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2679681744", "duration": "08:41:21-09:30:43" }] }]
+                }
             ]
         }
     ]

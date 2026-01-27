@@ -5,6 +5,6 @@
     export let url: string;
 </script>
 
-<a href={url} class="text-sec-600 hover:text-sec-200 text-nowrap">
+<a href={url} class="inline-block text-sec-600 hover:text-sec-200">
     {name}<LinkExternalSVG />
 </a>
