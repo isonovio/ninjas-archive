@@ -1,11 +1,12 @@
 <script lang="ts">
     import { type Match } from "$lib/types/match";
-    import LinkExternal from "$lib/assets/link-external.svelte";
+    import LinkExternal from "$lib/components/snippets/LinkExternal.svelte";
+    import Stream from "$lib/components/snippets/Stream.svelte";
     export let match: Match;
 </script>
 
 <div class="relative">
-    <div class="absolute -top-4 grid grid-cols-[250px_60px_auto] font-bold text-xl">
+    <div class="absolute -top-4 z-10 grid grid-cols-[250px_60px_auto] font-bold text-xl">
         <div class="inline-block ml-auto pl-2 bg-white text-right team-{match.outcomes[0]}">
             {match.matchup[0]}
         </div>
@@ -17,22 +18,19 @@
         </div>
     </div>
     <div class="absolute -top-3 right-0 bg-white px-2 flex gap-3">
-        {#if match.url}
-            <a href={match.url} class="block text-sec-600 hover:text-sec-400">
-                <svelte:component this={LinkExternal} />
-                Match Page
-            </a>
-        {/if}
         <div class="text-amber-700">
             {match.title}
         </div>
+        {#if match.url}
+            <LinkExternal name="Info" url={match.url} />
+        {/if}
     </div>
 
     <div class="mt-4 pt-3 pl-4 border-t border-l border-prim-700">
         <div>
             {#each match.maps as map, idx}
                 <div class="flex justify-between">
-                    <div class="shrink-0">
+                    <div class="text-nowrap">
                         <span class="inline-block min-w-10 text-prim-700 font-light">
                             {map.slug}
                         </span>
@@ -55,26 +53,11 @@
                     </div>
                     <div class="flex justify-end flex-wrap gap-x-4">
                         {#if map.url}
-                            <a href={map.url} class="inline-block text-sec-600 hover:text-sec-400">
-                                <svelte:component this={LinkExternal} />
-                                Map Page
-                            </a>
+                            <LinkExternal name="Info" url={map.url} />
                         {/if}
                         {#if map.streams}
                             {#each map.streams as stream}
-                                <a href={stream.url} class="inline-block text-sec-600 hover:text-sec-400">
-                                    <svelte:component this={LinkExternal} />
-                                    VOD: {stream.caster}
-                                    [{stream.language}]
-                                    {#if stream.duration}
-                                        ({stream.duration})
-                                    {/if}
-                                    {#if stream.tags}
-                                        {#each stream.tags as tag}
-                                            {` #${tag}`}
-                                        {/each}
-                                    {/if}
-                                </a>
+                                <Stream {stream} />
                             {/each}
                         {/if}
                     </div>

@@ -1,7 +1,7 @@
 # Ninjas Archive
 
 ## Credits:
-- SVGs: [Windmill](https://www.svgrepo.com/svg/336146/windmill), [External Link](https://www.svgrepo.com/svg/423732/link-external)
+- SVGs: [Windmill](https://www.svgrepo.com/svg/336146/windmill), [External Link](https://www.svgrepo.com/svg/423732/link-external), [Video Streaming](https://www.svgrepo.com/svg/383581/online-movie-streaming-player-video)
 - Fonts: [Signika](https://github.com/googlefonts/Signika), [Maple Mono](https://font.subf.dev/)
 - Deployment: CDN, DNS, and static file hosting: [Bunny.net](https://bunny.net/)
 

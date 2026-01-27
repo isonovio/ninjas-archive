@@ -70,7 +70,7 @@ type MatchMap = {
     note?: string;
 };
 
-type Stream = {
+export type Stream = {
     url: string;
     caster: string;
     language: string;

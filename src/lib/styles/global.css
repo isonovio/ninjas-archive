@@ -3,7 +3,6 @@
 
 @theme {
     --font-sans: "Signika", ui-sans-serif, system-ui, sans-serif;
-    /*--font-sans: "Alegreya Sans", ui-sans-serif, system-ui, sans-serif;*/
 
     --font-mono: "Maple Mono", ui-monospace, system-ui, monospace;
 
@@ -39,12 +38,9 @@
 }
 
 svg {
-    max-width: 0.8em;
-    max-height: 0.8em;
-    display: inline;
+    @apply w-[0.8em] h-[0.8em] inline align-[-0.08rem];
 }
 
 @utility font-sc {
     font-variant-caps: small-caps;
-    /*font-family: "Alegreya Sans SC";*/
 }
