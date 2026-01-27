@@ -5,7 +5,7 @@
 </script>
 
 <div class="relative">
-    <div class="absolute -top-4 grid grid-cols-[240px_50px_auto] font-bold text-xl">
+    <div class="absolute -top-4 grid grid-cols-[250px_60px_auto] font-bold text-xl">
         <div class="inline-block ml-auto pl-2 bg-white text-right team-{match.outcomes[0]}">
             {match.matchup[0]}
         </div>
@@ -33,25 +33,25 @@
             {#each match.maps as map, idx}
                 <div class="flex justify-between">
                     <div class="shrink-0">
-                        <div class="inline-block min-w-10 text-prim-700">
+                        <span class="inline-block min-w-10 text-prim-700 font-light">
                             {map.slug}
-                        </div>
-                        <div class="inline-block min-w-10 text-prim-800 font-bold">
+                        </span>
+                        <span class="inline-block min-w-10 text-prim-800 font-medium">
                             {map.map}
-                        </div>
-                        <div class="inline-block min-w-30 text-right team-{map.outcomes[0]}">
+                        </span>
+                        <span class="inline-block min-w-35 text-right team-{map.outcomes[0]}">
                             {match.matchup[0]}
-                        </div>
-                        <div class="inline-block min-w-8 text-right font-semibold font-mono team-{map.outcomes[0]}">
+                        </span>
+                        <span class="inline-block min-w-6 text-right font-extrabold font-mono team-{map.outcomes[0]}">
                             {map.result[0]}
-                        </div>
-                        <span class="font-semibold font-mono"> : </span>
-                        <div class="inline-block min-w-8 font-semibold font-mono team-{map.outcomes[1]}">
+                        </span>
+                        <span class="inline-block font-extrabold font-mono">:</span>
+                        <span class="inline-block min-w-6 font-extrabold font-mono team-{map.outcomes[1]}">
                             {map.result[1]}
-                        </div>
-                        <div class="inline-block min-w-30 team-{map.outcomes[1]}">
+                        </span>
+                        <span class="inline-block min-w-35 team-{map.outcomes[1]}">
                             {match.matchup[1]}
-                        </div>
+                        </span>
                     </div>
                     <div class="flex justify-end flex-wrap gap-x-4">
                         {#if map.url}
@@ -88,12 +88,12 @@
     @reference "$lib/styles/global.css";
 
     .team-win {
-        @apply text-green-600;
+        @apply text-green-700;
     }
     .team-lose {
-        @apply text-red-600;
+        @apply text-red-700;
     }
     .team-draw {
-        @apply text-gray-600;
+        @apply text-gray-700;
     }
 </style>

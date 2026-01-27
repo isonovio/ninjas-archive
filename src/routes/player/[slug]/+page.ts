@@ -5,7 +5,7 @@ import { players } from "$lib/types/player";
 export const load: PageLoad = ({ params }) => {
     if (players.has(params.slug)) {
         return {
-            player: params.slug,
+            player: players.get(params.slug)!,
         };
     }
 

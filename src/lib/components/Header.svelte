@@ -21,10 +21,10 @@
     }
 
     a {
-        @apply text-3xl font-bold font-sans-sc text-prim-500;
+        @apply text-3xl font-semibold font-sc text-prim-500;
     }
 
     a.home {
-        @apply font-black;
+        @apply font-bold;
     }
 </style>

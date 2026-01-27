@@ -4,12 +4,13 @@
     import type { PageProps } from "./$types";
 
     let { data }: PageProps = $props();
+    let { player } = $derived(data);
 
-    const prefilter = $derived(new TimelineFilter({ players: [data.player] }));
+    const prefilter = $derived(new TimelineFilter({ players: [player.slug] }));
 </script>
 
 <svelte:head>
-    <title>Ninjas Archive - News</title>
+    <title>{player.nickname} | Ninjas Archive</title>
 </svelte:head>
 
 <Timeline {prefilter} />

@@ -149,53 +149,53 @@
 </script>
 
 <div class="w-7xl mx-auto flex gap-4">
-    <div class="sticky top-0 max-h-screen flex flex-col gap-3 pt-10">
+    <div class="sticky top-0 max-h-screen pt-10 flex flex-col gap-4">
         <div class="flex justify-between">
             <div class="text-2xl font-bold">Filters</div>
             {#if hasFilter}
-                <button class="block cursor-pointer text-xl pt-1/2" onclick={() => clearFilter()}>[Clear]</button>
+                <button class="cursor-pointer text-xl pt-1/2 hover:text-gray-400" onclick={() => clearFilter()}>[Clear]</button>
             {/if}
         </div>
-        {#if filterCandidates.genres.length > 1}
-            <div class="relative pt-3 pl-6">
-                <div class="absolute top-0 left-2 bg-white px-2 text-xl font-semibold">Genres</div>
-                <div class="pt-4 pl-3 p-1 border rounded-lg">
-                    {#each filterCandidates.genres as [genre, toggle]}
-                        <button class="block cursor-pointer {toggle ? 'filter-on' : ''}" onclick={() => toggleGenre(genre, toggle)}>{displayGenre(genre)}</button>
-                    {/each}
+        <div class="relative mt-3 ml-6 border rounded-lg pt-3 pb-1 px-4 text-nowrap">
+            <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Date</div>
+            <form onsubmit={submitDateFilter}>
+                <button class="absolute -top-3 right-2 cursor-pointer bg-white px-1 hover:text-gray-400">[Confirm]</button>
+                <div class="my-1">
+                    <label for="from" class="inline-block w-10">from: </label>
+                    <input id="from" placeholder="yyyy-mm-dd" bind:value={fromDateInput} class="inline-block w-25 border-b px-1 leading-none" />
                 </div>
+                <div class="my-1">
+                    <label for="to" class="inline-block min-w-10">to: </label>
+                    <input id="to" placeholder="yyyy-mm-dd" bind:value={toDateInput} class="inline-block w-25 border-b px-1 leading-none" />
+                </div>
+                {#if dateInputError != ""}
+                    <div class="text-red-500">
+                        {dateInputError}
+                    </div>
+                {/if}
+            </form>
+        </div>
+        {#if filterCandidates.genres.length > 1}
+            <div class="relative mt-3 ml-6 border rounded-lg pt-3 pb-1 px-4 text-nowrap">
+                <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Genres</div>
+                {#each filterCandidates.genres as [genre, toggle]}
+                    <button class="filter {toggle ? 'filter-on' : 'filter-off'}" onclick={() => toggleGenre(genre, toggle)}>{displayGenre(genre)}</button>
+                {/each}
             </div>
         {/if}
         {#if filterCandidates.players.length > 1}
-            <div class="relative pt-3 pl-6">
-                <div class="absolute top-0 left-2 bg-white px-2 text-xl font-semibold">Players</div>
-                <div class="pt-4 pb-2 pl-3 pr-5 border rounded-lg">
-                    {#each filterCandidates.players as [player, toggle]}
-                        <button class="block cursor-pointer {toggle ? 'filter-on' : ''}" onclick={() => togglePlayer(player, toggle)}>{displayPlayer(player)}</button>
-                    {/each}
-                </div>
+            <div class="relative mt-3 ml-6 border rounded-lg pt-3 pb-1 px-4 text-nowrap">
+                <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Players</div>
+                {#each filterCandidates.players as [player, toggle]}
+                    <button class="filter {toggle ? 'filter-on' : 'filter-off'}" onclick={() => togglePlayer(player, toggle)}>{displayPlayer(player)}</button>
+                {/each}
             </div>
         {/if}
-        <div class="relative w-48 pt-3 pl-6">
-            <div class="absolute top-0 left-2 bg-white px-2 text-xl font-semibold">Date</div>
-            <div class="pt-4 pb-2 pl-3 pr-5 border rounded-lg">
-                <form class="flex flex-col" onsubmit={submitDateFilter}>
-                    <input class="inline-block border-b px-1 pt-2" placeholder="from: yyyy-mm-dd" bind:value={fromDateInput} />
-                    <input class="inline-block border-b px-1 pt-2" placeholder="to: yyyy-mm-dd" bind:value={toDateInput} />
-                    <button class="block cursor-pointer pt-2 text-left text-lg">[Confirm]</button>
-                    {#if dateInputError != ""}
-                        <div class="text-red-500">
-                            {dateInputError}
-                        </div>
-                    {/if}
-                </form>
-            </div>
-        </div>
     </div>
 
     <div class="pt-6 pl-6 flex flex-col gap-4">
         {#if sortedTimeline.length === 0}
-            <div class="text-5xl text-sec-600 font-sans-sc font-bold">History has not witnessed anything yet.</div>
+            <div class="text-5xl text-sec-600 font-sc font-bold">History has not witnessed anything yet.</div>
         {:else}
             {#each sortedTimeline as [date, items]}
                 <div class="relative border-t-2 border-l-2">
@@ -233,7 +233,13 @@
 <style lang="postcss">
     @reference "$lib/styles/global.css";
 
-    .filter-on {
-        @apply font-extrabold font-sans-sc text-prim-500;
+    button.filter {
+        @apply block cursor-pointer rounded-sm my-2 leading-none px-0.5;
+    }
+    button.filter-on {
+        @apply bg-prim-600 hover:bg-prim-400 font-semibold font-sc text-white hover:text-gray-800;
+    }
+    button.filter-off {
+        @apply hover:text-gray-400;
     }
 </style>

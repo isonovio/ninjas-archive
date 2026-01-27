@@ -15,7 +15,6 @@
     - [ ] `MatchMap` should take `links` instead of a single `url`; 
 - UI
     - [ ] Everything Clickable need to have hover color change
-    - [ ] Change main font from Alegreya Sans to Signika
     - [ ] `h1` title of each page
 - Filter
     - [ ] make filter logic more scalable when more genres & more dimensions to filter on are added. extra logic (including `displayPlayers`) into `timeline_filter.ts`
@@ -33,7 +32,8 @@
 - Content
     - [ ] Why? Page
     - [ ] Credits Page
-    - [ ] Streams
+    - [ ] Stream Pages
+    - [ ] Event Pages
 
 ## Todos: Long-Term
 - Advanced Searching/Filtering: Allows complex logic AND and OR
