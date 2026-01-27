@@ -46,6 +46,10 @@
     - [ ] Event Pages
 
 ## Todos: Long-Term
+- Summary Mode: can show more items on the timeline
+- Dynamic UI
+    - Filter/Search sidebar only show in full when hovered 
+- Narrow-Screen UI
 - Advanced Searching/Filtering: Allows complex logic AND and OR
 
 ## Howtos:

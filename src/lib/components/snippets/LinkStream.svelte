@@ -6,7 +6,7 @@
     export let stream: Stream;
 </script>
 
-<div class="text-nowrap text-pink-900 flex gap-1">
+<div class="text-nowrap text-pink-800 flex gap-1">
     <div class="inline-block">
         <StreamingSVG />
         {stream.caster}
