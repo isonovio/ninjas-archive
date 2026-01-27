@@ -21,7 +21,7 @@
     }
 
     a {
-        @apply text-3xl font-semibold font-sc text-prim-500;
+        @apply text-3xl font-medium font-sc text-prim-500;
     }
 
     a.home {
