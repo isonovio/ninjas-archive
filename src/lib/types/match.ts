@@ -53,6 +53,7 @@ export interface Match extends TimelineItemBase {
     bracket: string[];
     title: string;
     matchup: [string, string];
+    teamInvolves: [string[], string[]];
     result: [number, number];
     outcomes: [Outcome, Outcome];
     url?: string;
@@ -86,16 +87,14 @@ export const matches: Match[] = (() => {
         const teams: Map<string, { team: string; players: string[] }> =
             Object.entries(e.participants).reduce((map, [abbr, rosterSlug]) => {
                 const roster = rosters.get(rosterSlug)!;
-                map.set(abbr, { team: roster.team, players: roster.players });
+                map.set(abbr, roster);
                 return map;
             }, new Map());
 
         e.matches.forEach((m) => {
-            const involves: string[] = [m.matchup.team1, m.matchup.team2]
-                .map((t) => {
-                    return teams.get(t)?.players ?? [];
-                })
-                .flat();
+            const t1Involves = teams.get(m.matchup.team1)?.players ?? [];
+            const t2Involves = teams.get(m.matchup.team2)?.players ?? [];
+            const involves: string[] = [...t1Involves, ...t2Involves];
             const team1 = teams.get(m.matchup.team1)?.team ?? m.matchup.team1;
             const team2 = teams.get(m.matchup.team2)?.team ?? m.matchup.team2;
             const maps: MatchMap[] = m.maps
@@ -146,6 +145,7 @@ export const matches: Match[] = (() => {
                 eventName: e.name,
                 title: title,
                 matchup: [team1, team2],
+                teamInvolves: [t1Involves, t2Involves],
                 result: [team1w, team2w],
                 outcomes: outcomes,
                 maps: maps,

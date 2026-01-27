@@ -202,18 +202,9 @@
                     <div class="absolute -top-6 -left-6 p-2 bg-white font-bold text-xl text-sec-700">
                         {date.toString()}
                     </div>
-                    <div class="pl-12 py-6 flex flex-col gap-2">
+                    <div class="pl-12 py-6 flex flex-col gap-3">
                         {#each items as item}
                             <div class="relative">
-                                <div class="absolute flex gap-2">
-                                    {#each item.involves as player}
-                                        {#if players.has(player)}
-                                            <a href={`/player/${player}`} class="z-10 text-sm text-gray-500">
-                                                @{players.get(player)!.nickname}
-                                            </a>
-                                        {/if}
-                                    {/each}
-                                </div>
                                 {#if item.genre == "news"}
                                     <NewsEntry entry={item} />
                                 {:else if item.genre == "match"}

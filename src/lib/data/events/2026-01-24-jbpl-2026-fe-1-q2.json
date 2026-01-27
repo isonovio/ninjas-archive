@@ -11,7 +11,7 @@
     "participants": { "pkb": "peekaboo-2026-1", "lhc": "let-her-cook-2026-2" },
     "matches": [
         {
-            "slug": "m17",
+            "slug": "match17",
             "bracket": ["Round of 16", "Match 1"],
             "date": "2026-01-24",
             "matchup": { "team1": "lhc", "team2": "FUTURE W" },
@@ -21,7 +21,7 @@
             ]
         },
         {
-            "slug": "m23",
+            "slug": "match23",
             "bracket": ["Round of 16", "Match 7"],
             "date": "2026-01-24",
             "matchup": { "team1": "pkb", "team2": "confidence" },
@@ -32,7 +32,7 @@
             ]
         },
         {
-            "slug": "m25",
+            "slug": "match25",
             "bracket": ["Quarter finals", "Match 1"],
             "date": "2026-01-25",
             "matchup": { "team1": "lhc", "team2": "imodium" },
@@ -51,7 +51,7 @@
             ]
         },
         {
-            "slug": "m28",
+            "slug": "match28",
             "bracket": ["Quarter finals", "Match 4"],
             "date": "2026-01-25",
             "matchup": { "team1": "pkb", "team2": "chicken friday" },
@@ -62,7 +62,7 @@
             ]
         },
         {
-            "slug": "m29",
+            "slug": "match29",
             "bracket": ["Semi finals", "Match 1"],
             "date": "2026-01-25",
             "matchup": { "team1": "lhc", "team2": "hindsight" },
@@ -72,7 +72,7 @@
             ]
         },
         {
-            "slug": "m30",
+            "slug": "match30",
             "bracket": ["Semi finals", "Match 2"],
             "date": "2026-01-25",
             "matchup": { "team1": "DONT WORRY", "team2": "pkb" },
@@ -83,7 +83,7 @@
             ]
         },
         {
-            "slug": "m31",
+            "slug": "match31",
             "bracket": ["Final", "Match 1"],
             "date": "2026-01-25",
             "matchup": { "team1": "hindsight", "team2": "pkb" },

@@ -15,7 +15,8 @@
     - [ ] `MatchMap` should take `links` instead of a single `url`; 
     - [ ] change match slug from `mN` to `matchN`
 - UI
-    - [ ] Everything Clickable need to have hover color change
+    - [ ] Everything clickable need to have hover color change
+    - [ ] add hover texts to clickables
     - [ ] `h1` title of each page
 - Timeline Match UI
     - [ ] show player nicknames under teamnames
