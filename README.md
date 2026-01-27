@@ -16,10 +16,16 @@
 - UI
     - [ ] Everything Clickable need to have hover color change
     - [ ] `h1` title of each page
+- Timeline Match UI
+    - [ ] show player nicknames under teamnames
+    - [ ] if has note, show under the match/map
+    - [ ] map URL: show on map slug
+    - [ ] match URL: show on the last item of bracket
+    - [ ] event URLs: show next to event name
+    - [ ] MAYBE: separate events as a separate genre from matches | Color Code: Brown
 - Filter
     - [ ] make filter logic more scalable when more genres & more dimensions to filter on are added. extra logic (including `displayPlayers`) into `timeline_filter.ts`
     - [ ] in player filter section, add links to specific pages of the player
-    - [ ] UI: reorder: date -> genre -> player
     - [ ] UI: allow search in player filter sections | `searchterm.tolowercase`, show player name if slug.substring(searchterm) or player is in filter
     - [ ] player filter: can be ANY mode or OR mode
 - Search
@@ -32,7 +38,7 @@
 - Content
     - [ ] Why? Page
     - [ ] Credits Page
-    - [ ] Stream Pages
+    - [ ] Streams as a Genre in Timeline | Color Code: Purple
     - [ ] Event Pages
 
 ## Todos: Long-Term

@@ -9,7 +9,7 @@
 <div class="text-nowrap">
     <StreamingSVG />
     {stream.caster}
-    [{stream.language}]
+    [{stream.language.toUpperCase()}]
     {#if stream.duration}
         ({stream.duration})
     {/if}
