@@ -13,6 +13,7 @@
     - [ ] `stream: {streamer, language, urls, tags}; links: {name (e.g., VOD, Part1, Part 2), url (add starting time to url), duration (do not show on webpage)}`
         - [ ] UI: `STREAMS` need a different `svg`
     - [ ] `MatchMap` should take `links` instead of a single `url`; 
+    - [ ] change match slug from `mN` to `matchN`
 - UI
     - [ ] Everything Clickable need to have hover color change
     - [ ] `h1` title of each page
@@ -23,6 +24,7 @@
     - [ ] match URL: show on the last item of bracket
     - [ ] event URLs: show next to event name
     - [ ] MAYBE: separate events as a separate genre from matches | Color Code: Brown
+    - [ ] MAYBE: show match slug on the left, just like map slug
 - Filter
     - [ ] make filter logic more scalable when more genres & more dimensions to filter on are added. extra logic (including `displayPlayers`) into `timeline_filter.ts`
     - [ ] in player filter section, add links to specific pages of the player
@@ -31,6 +33,7 @@
 - Search
     - [ ] add a search section above filter section
     - [ ] add a `search_name" field to every timeline item to allow text-based searching
+    - [ ] filter: item => streamterm.toWords.map(toLower).all(isSubstring of item.search_name)
 - Code
     - [ ] organize components in folder structure
     - [ ] delegate logic of showing links to related ppl in separate genres
