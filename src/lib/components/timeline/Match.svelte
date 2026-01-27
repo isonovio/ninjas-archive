@@ -14,7 +14,7 @@
             {match.slug}
         {/if}
     </div>
-    <div class="absolute -top-4 left-16 z-20 grid grid-cols-[202px_60px_auto] font-bold text-xl">
+    <div class="absolute -top-4 left-16 z-20 grid grid-cols-[202px_60px_auto] font-medium text-xl">
         <div class="relative inline-block ml-auto pl-2 bg-white text-nowrap text-right team-{match.outcomes[0]}">
             {match.matchup[0]}
             {#if match.teamInvolves[0].length > 0}
@@ -23,7 +23,7 @@
                 </div>
             {/if}
         </div>
-        <div class="inline-block bg-white text-center font-mono">
+        <div class="inline-block bg-white text-center font-extrabold font-mono">
             <span class="team-{match.outcomes[0]}">{match.result[0]}</span>:<span class="team-{match.outcomes[1]}">{match.result[1]}</span>
         </div>
         <div class="relative inline-block pr-2 bg-white team-{match.outcomes[1]}">
@@ -39,7 +39,7 @@
         {match.title}
     </div>
 
-    <div class="mt-4 pt-5 pb-2 pl-4 border-t border-l border-prim-700">
+    <div class="mt-4 pt-6 pb-2 pl-4 border-t border-l border-prim-700">
         <div>
             {#each match.maps as map}
                 <div class="flex justify-between border-b border-dashed border-gray-300">
@@ -85,10 +85,10 @@
     @reference "$lib/styles/global.css";
 
     .team-win {
-        @apply text-green-700;
+        @apply text-green-600 font-bold;
     }
     .team-lose {
-        @apply text-red-700;
+        @apply text-red-600;
     }
     .team-draw {
         @apply text-gray-700;
