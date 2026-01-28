@@ -10,10 +10,11 @@
     - [ ] use arrays instead of maps
         - [ ] `participants: {shorthand: slug, roster: slug}`
         - [ ] all plural `urls`: rename to `links`; do not use `map`, but `array` instead: `links: [{name, url}]`
-    - [ ] `stream: {streamer, language, urls, tags}; links: {name (e.g., VOD, Part1, Part 2), url (add starting time to url), duration (do not show on webpage)}`
-        - [ ] UI: `STREAMS` need a different `svg`
-    - [ ] `MatchMap` should take `links` instead of a single `url`; 
-    - [ ] change match slug from `mN` to `matchN`
+        - [ ] `MatchMap` should take `links` instead of a single `url`; 
+    - [ ] use `zod` as a single source of truth
+        - [ ] validate json input
+        - [ ] generate Raw types
+        - [ ] generate json schemas
 - UI
     - [ ] Everything clickable need to have hover color change
     - [ ] add hover texts to clickables
@@ -44,6 +45,7 @@
     - [ ] Credits Page
     - [ ] Streams as a Genre in Timeline | Color Code: Purple
     - [ ] Event Pages
+    - [ ] Add a team type independent of roster
 
 ## Todos: Long-Term
 - Summary Mode: can show more items on the timeline
@@ -51,6 +53,8 @@
     - Filter/Search sidebar only show in full when hovered 
 - Narrow-Screen UI
 - Advanced Searching/Filtering: Allows complex logic AND and OR
+- structured timeline: date -> genre -> (if genre == match) event -> item
+- `involves` takes not only `player`s but everything that inherits `entity`, including matches, events, teams, etc. 
 
 ## Howtos:
 
