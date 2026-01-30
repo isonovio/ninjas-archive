@@ -46,6 +46,8 @@
     - [ ] Streams as a Genre in Timeline | Color Code: Purple
     - [ ] Event Pages
     - [ ] Add a team type independent of roster
+    - [ ] Editorial Page: Articles Written by me
+    - [ ] `wynd` mode: show something related to me only
 
 ## Todos: Long-Term
 - Summary Mode: can show more items on the timeline
@@ -55,6 +57,7 @@
 - Advanced Searching/Filtering: Allows complex logic AND and OR
 - structured timeline: date -> genre -> (if genre == match) event -> item
 - `involves` takes not only `player`s but everything that inherits `entity`, including matches, events, teams, etc. 
+    - Make filterable but date something of involves. A match involves its event, but not an independent event field
 
 ## Howtos:
 
