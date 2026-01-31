@@ -1,0 +1,7 @@
+{
+    "$schema": "../schemas/roster.schema.json",
+    "slug": "let-her-cook-2026-3",
+    "team": "Let Her Cook",
+    "players": ["ana", "jennyr", "pauliiee", "spike", "vilga"],
+    "duration": { "start": "2026-01-31", "end": "2026-12-31" }
+}

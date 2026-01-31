@@ -1,0 +1,32 @@
+{
+    "$schema": "../schemas/event.schema.json",
+
+    "slug": "jbpl-2026-fe-1-q3",
+    "name": "JB Pro League 2026 Female #1 Qualifier 3",
+    "duration": { "start": "2026-01-31", "end": "2026-02-01" },
+    "urls": {
+        "Officail Website": "https://jbproleague.com/news/11b110d1-1125-483a-b5bd-bcbd115afac4",
+        "Bracket": "https://www.challengermode.com/s/JBProLeague/tournaments/acd3cf54-edac-4040-1877-08de40692357"
+    },
+    "participants": { "lhc": "let-her-cook-2026-3" },
+    "matches": [
+        {
+            "slug": "match17",
+            "bracket": ["Round of 16", "Match 1"],
+            "date": "2026-01-31",
+            "matchup": { "team1": "confidence", "team2": "lhc" },
+            "maps": [
+                { "slug": "map1", "map": "nuke", "result": "13:9", "url": "https://www.challengermode.com/s/JBProLeague/games/2d619f8e-30d2-4858-3e5d-08de5760407d" },
+                { "slug": "map2", "map": "mrg", "result": "10:13", "url": "https://www.challengermode.com/s/JBProLeague/games/7175a05f-eedb-42c4-3f85-08de5760407d" },
+                { "slug": "map3", "map": "d2", "result": "13:16", "url": "https://www.challengermode.com/s/JBProLeague/games/c4c54fc4-2437-436d-40ca-08de5760407d" }
+            ]
+        },
+        {
+            "slug": "match25",
+            "bracket": ["Quarter finals", "Match 1"],
+            "date": "2026-02-01",
+            "matchup": { "team1": "lhc", "team2": "imodium" },
+            "maps": []
+        }
+    ]
+}
