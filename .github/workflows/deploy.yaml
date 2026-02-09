@@ -25,26 +25,13 @@ jobs:
             - name: Build project
               run: npm run build
 
-            - name: Install rclone
-              run: |
-                  sudo -v
-                  curl https://rclone.org/install.sh | sudo bash
-
-            - name: Configure rclone
+            - name: Deploy build via API
               env:
-                  FTP_HOST: ${{ secrets.FTP_HOST }}
-                  FTP_USER: ${{ secrets.FTP_USER }}
-                  FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+                  ACCESS_KEY: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
               run: |
-                  mkdir -p ~/.config/rclone
-                  cat > ~/.config/rclone/rclone.conf << EOF
-                  [bunny]
-                  type = ftp
-                  host = $FTP_HOST
-                  user = $FTP_USER
-                  pass = $(rclone obscure "$FTP_PASSWORD")
-                  EOF
-
-            - name: Deploy build via rclone
-              run: |
-                  rclone sync ./build bunny: --delete-after --inplace --ignore-times --ignore-size --fast-list --transfers 4 --checkers 8 --ignore-errors --log-level INFO || true
+                  find build -type f | while read file; do
+                      remote_path="${file#build/}"
+                      curl -X PUT "https://storage.bunnycdn.com/ninjas-archive/$remote_path" \
+                          -H "AccessKey: $ACCESS_KEY" \
+                          --data-binary "@$file"
+                  done
