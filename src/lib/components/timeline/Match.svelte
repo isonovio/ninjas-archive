@@ -77,6 +77,11 @@
                     </div>
                 </div>
             {/each}
+            {#if match.note}
+                <div class="pt-1 text-gray-500 text-sm">
+                    {match.note}
+                </div>
+            {/if}
         </div>
     </div>
 </div>
