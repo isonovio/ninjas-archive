@@ -35,7 +35,7 @@
             {/if}
         </div>
     </div>
-    <div class="absolute -top-3 right-0 bg-white px-2 text-amber-700">
+    <div class="absolute -top-2 right-0 bg-white px-2 text-amber-700 text-xs">
         {match.title}
     </div>
 

@@ -1,0 +1,51 @@
+{
+    "$schema": "../schemas/event.schema.json",
+
+    "slug": "jbpl-2026-fe-1-g",
+    "name": "JB Pro League 2026 Female #1 Group Stage",
+    "duration": { "start": "2026-02-09", "end": "2026-02-01" },
+    "urls": {
+        "Officail Website": "https://jbproleague.com/news/11b110d1-1125-483a-b5bd-bcbd115afac4",
+        "Rules": "https://github.com/VANTAGL/JB-Pro-League-2026-female-1",
+        "HLTV": "https://www.hltv.org/events/8929/jb-pro-league-female-season-1"
+    },
+    "participants": { "big": "big-equipa-2026-1", "pkb": "peekaboo-2026-1", "lhc": "let-her-cook-2026-2" },
+    "matches": [
+        {
+            "slug": "match2",
+            "bracket": ["Group A", "Opening round", "Match 2"],
+            "date": "2026-02-09",
+            "matchup": { "team1": "pkb", "team2": "Fingers Crossed Fe" },
+            "url": "https://www.hltv.org/matches/2390089/peekaboo-vs-fingers-crossed-fe-jb-pro-league-female-season-1",
+            "maps": [
+                { "slug": "map1", "map": "d2", "result": "13:9", "streams": [{ "caster": "LucyLuce", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2693315503", "duration": "03:49:25-04:33:26" }] }] },
+                { "slug": "map2", "map": "anc", "result": "13:11", "streams": [{ "caster": "LucyLuce", "language": "en", "tags": ["official"], "parts": [{ "name": "VOD", "url": "https://www.twitch.tv/videos/2693315503", "duration": "04:41:17-08:28:33" }] }] }
+            ],
+            "note": "Angelka stood in for Zana on map1."
+        },
+        {
+            "slug": "match3",
+            "bracket": ["Group B", "Opening round", "Match 1"],
+            "date": "2026-02-10",
+            "matchup": { "team1": "big", "team2": "confidence" },
+            "url": "https://www.hltv.org/matches/2390090/big-equipa-vs-confidence-jb-pro-league-female-season-1",
+            "maps": []
+        },
+        {
+            "slug": "match4",
+            "bracket": ["Group B", "Opening round", "Match 2"],
+            "date": "2026-02-10",
+            "matchup": { "team1": "lhc", "team2": "hindsight" },
+            "url": "https://www.hltv.org/matches/2390091/let-her-cook-vs-hindsight-jb-pro-league-female-season-1",
+            "maps": []
+        },
+        {
+            "slug": "match6",
+            "bracket": ["Group A", "Winner's match"],
+            "date": "2026-02-11",
+            "matchup": { "team1": "Pigeons", "team2": "pkb" },
+            "url": "https://www.hltv.org/matches/2390091/let-her-cook-vs-hindsight-jb-pro-league-female-season-1",
+            "maps": []
+        }
+    ]
+}
