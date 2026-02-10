@@ -1,3 +1,9 @@
+/*@import url(https://fonts.bunny.net/css?family=alegreya-sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i);*/
+/*@import url(https://fonts.bunny.net/css?family=radio-canada:300,300i,400,400i,500,500i,600,600i,700,700i);*/
+/*@import url(https://fonts.bunny.net/css?family=rem:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);*/
+/*@import url(https://fonts.bunny.net/css?family=ubuntu:300,300i,400,400i,500,500i,700,700i);*/
+/*@import url(https://fonts.bunny.net/css?family=ysabeau-office:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);*/
+
 @font-face {
     font-family: "Maple Mono";
     src: url("/fonts/MapleMono.woff2") format("woff2");
@@ -11,31 +17,5 @@
     src: url("/fonts/Signika.woff2") format("woff2");
     font-weight: 300 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Ubuntu Sans";
-    src: url("/fonts/UbuntuSans.woff2") format("woff2");
-    font-weight: 100 800;
-    font-stretch: 75% 100%;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Ubuntu Sans";
-    src: url("/fonts/UbuntuSans-Italic.woff2") format("woff2");
-    font-weight: 100 800;
-    font-stretch: 75% 100%;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Baloo 2";
-    src: url("/fonts/Baloo2.woff2") format("woff2");
-    font-weight: 400 800;
-    font-style: italic;
     font-display: swap;
 }

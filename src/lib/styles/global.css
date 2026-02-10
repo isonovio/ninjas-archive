@@ -44,3 +44,7 @@ svg {
 @utility font-sc {
     font-variant-caps: small-caps;
 }
+
+@utility font-no-sc {
+    font-variant-caps: normal;
+}

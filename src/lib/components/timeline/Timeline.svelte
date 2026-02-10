@@ -156,16 +156,16 @@
                 <button class="cursor-pointer text-xl pt-1/2 hover:text-gray-400" onclick={() => clearFilter()}>[Clear]</button>
             {/if}
         </div>
-        <div class="relative mt-3 ml-6 border rounded-lg pt-3 pb-1 px-4 text-nowrap">
+        <div class="relative mt-3 ml-6 border rounded-lg pt-3 p-1 text-nowrap">
             <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Date</div>
             <form onsubmit={submitDateFilter}>
-                <div class="my-1">
-                    <label for="from" class="inline-block w-10">from: </label>
-                    <input id="from" placeholder="yyyy-mm-dd" bind:value={fromDateInput} class="inline-block w-25 border-b px-1 leading-none" />
+                <div class="my-1 mx-2">
+                    <label for="from" class="inline-block w-13 border-l-4 border-white pl-1 leading-none" class:filter-on={filterFromParams.dates.from}>from: </label>
+                    <input id="from" placeholder="yyyy-mm-dd" bind:value={fromDateInput} class="inline-block w-25 border-b border-dashed px-1" />
                 </div>
-                <div class="my-1">
-                    <label for="to" class="inline-block min-w-10">to: </label>
-                    <input id="to" placeholder="yyyy-mm-dd" bind:value={toDateInput} class="inline-block w-25 border-b px-1 leading-none" />
+                <div class="my-1 mx-2">
+                    <label for="to" class="inline-block w-13 border-l-4 border-white pl-1 leading-none" class:filter-on={filterFromParams.dates.to}>to: </label>
+                    <input id="to" placeholder="yyyy-mm-dd" bind:value={toDateInput} class="inline-block w-25 border-b border-dashed px-1 leading-none" />
                 </div>
                 {#if dateInputError != ""}
                     <div class="text-red-500">
@@ -176,18 +176,18 @@
             </form>
         </div>
         {#if filterCandidates.genres.length > 1}
-            <div class="relative mt-3 ml-6 border rounded-lg pt-3 pb-1 px-4 text-nowrap">
+            <div class="relative mt-3 ml-6 border rounded-lg pt-3 p-1 text-nowrap">
                 <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Genres</div>
                 {#each filterCandidates.genres as [genre, toggle]}
-                    <button class="filter {toggle ? 'filter-on' : 'filter-off'}" onclick={() => toggleGenre(genre, toggle)}>{displayGenre(genre)}</button>
+                    <button class="filter" class:filter-on={toggle} onclick={() => toggleGenre(genre, toggle)}>{displayGenre(genre)}</button>
                 {/each}
             </div>
         {/if}
         {#if filterCandidates.players.length > 1}
-            <div class="relative mt-3 ml-6 border rounded-lg pt-3 pb-1 px-4 text-nowrap">
+            <div class="relative mt-3 ml-6 border rounded-lg pt-3 p-1 text-nowrap">
                 <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Players</div>
                 {#each filterCandidates.players as [player, toggle]}
-                    <button class="filter {toggle ? 'filter-on' : 'filter-off'}" onclick={() => togglePlayer(player, toggle)}>{displayPlayer(player)}</button>
+                    <button class="filter" class:filter-on={toggle} onclick={() => togglePlayer(player, toggle)}>{displayPlayer(player)}</button>
                 {/each}
             </div>
         {/if}
@@ -225,12 +225,12 @@
     @reference "$lib/styles/global.css";
 
     button.filter {
-        @apply block cursor-pointer rounded-sm my-2 leading-none px-0.5;
+        @apply block cursor-pointer m-2 border-x-4 border-white leading-none px-1 hover:text-gray-400 hover:border-gray-600 hover:font-semibold hover:font-sc;
     }
     button.filter-on {
-        @apply bg-prim-600 hover:bg-prim-400 font-semibold font-sc text-white hover:text-gray-800;
+        @apply border-black font-semibold font-sc hover:border-gray-200 hover:font-normal hover:font-no-sc;
     }
-    button.filter-off {
-        @apply hover:text-gray-400;
+    label.filter-on {
+        @apply border-black font-semibold font-sc;
     }
 </style>
