@@ -12,7 +12,7 @@
     "participants": { "big": "big-equipa-2026-1", "pkb": "peekaboo-2026-1", "lhc": "let-her-cook-2026-2" },
     "matches": [
         {
-            "slug": "match2",
+            "slug": "match02",
             "bracket": ["Group A", "Opening round", "Match 2"],
             "date": "2026-02-09",
             "matchup": { "team1": "pkb", "team2": "Fingers Crossed Fe" },
@@ -24,7 +24,7 @@
             "note": "Angelka stood in for Zana on map1."
         },
         {
-            "slug": "match3",
+            "slug": "match03",
             "bracket": ["Group B", "Opening round", "Match 1"],
             "date": "2026-02-10",
             "matchup": { "team1": "big", "team2": "confidence" },
@@ -32,7 +32,7 @@
             "maps": []
         },
         {
-            "slug": "match4",
+            "slug": "match04",
             "bracket": ["Group B", "Opening round", "Match 2"],
             "date": "2026-02-10",
             "matchup": { "team1": "lhc", "team2": "hindsight" },
@@ -40,7 +40,7 @@
             "maps": []
         },
         {
-            "slug": "match6",
+            "slug": "match05",
             "bracket": ["Group A", "Winner's match"],
             "date": "2026-02-11",
             "matchup": { "team1": "Pigeons", "team2": "pkb" },
