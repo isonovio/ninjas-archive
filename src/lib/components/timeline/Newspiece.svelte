@@ -6,7 +6,7 @@
     export let newspiece: Newspiece;
 </script>
 
-<div class="py-3 flex justify-between gap-4">
+<div class="py-2 flex justify-between gap-4">
     <div class="relative self-start shrink-0 font-bold text-xl text-sky-700">
         <span>{newspiece.title}</span>
         <div class="absolute -bottom-3">
