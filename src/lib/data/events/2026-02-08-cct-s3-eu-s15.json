@@ -4,7 +4,10 @@
     "slug": "cct-s3-eu-s15",
     "name": "CCT Season 3 Europe Series 15",
     "duration": { "start": "2026-02-08", "end": "2026-02-20" },
-    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/8959/cct-season-3-europe-series-15" }],
+    "links": [
+        { "name": "HLTV", "url": "https://www.hltv.org/events/8959/cct-season-3-europe-series-15" },
+        { "name": "Liquipedia", "url": "https://liquipedia.net/counterstrike/CCT/Season_3/Europe/Series_15" }
+    ],
     "participants": [{ "shorthand": "big", "lineup": { "roster": "big-equipa-2026-1" } }],
     "brackets": [
         {

@@ -179,11 +179,11 @@
 
     <div class="pt-6 pl-6 flex-1 flex flex-col gap-4">
         {#if sortedTimeline.length === 0}
-            <div class="text-5xl text-sec-600 font-sc font-bold">History has not witnessed anything yet.</div>
+            <div class="text-5xl text-yellow-900 font-sc font-bold">History has not witnessed anything yet.</div>
         {:else}
             {#each sortedTimeline as dailyTimeline}
                 <div class="relative border-t-2 border-l-2">
-                    <div class="absolute -top-6 -left-6 p-2 bg-white font-bold text-xl text-sec-700">
+                    <div class="absolute -top-6 -left-6 p-2 bg-white font-bold text-xl text-yellow-900">
                         {dailyTimeline.date.toString()}
                     </div>
                     <div class="pl-12 py-6 flex flex-col gap-3">

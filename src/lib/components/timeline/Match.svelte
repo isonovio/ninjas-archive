@@ -7,7 +7,6 @@
 </script>
 
 <div class="relative">
-    <!-- <div class="absolute -top-3 left-3 z-10 bg-white px-1 text-prim-700 font-light"></div> -->
     <div class="absolute -top-3.5 left-6 z-20 grid grid-cols-[172px_60px_auto] font-medium text-xl">
         <div class="relative inline-block ml-auto pl-2 bg-white text-nowrap text-right team-{match.outcomes[0]}">
             {match.lineups[0].teamname}
@@ -25,46 +24,46 @@
             </div>
         </div>
     </div>
-    <div class="absolute -top-2 right-0 bg-white px-2 flex gap-1 text-amber-700 text-sm">
-        <div>
-            <div>{match.event.name}</div>
-            <div class="flex gap-2 justify-end leading-none text-xs">
-                {#each match.event.links as link}
+    <div class="absolute -top-2.5 right-0 bg-white px-2 flex gap-1.5 text-sm">
+        <div class="relative text-lime-600">
+            {match.name}
+            <div class="absolute -bottom-3 right-0 flex gap-1.5 justify-end text-nowrap text-xs">
+                {#each match.links as link}
                     <LinkExternal {link} />
                 {/each}
             </div>
         </div>
-        <div>-</div>
-        {#each match.brackets as bracket}
-            <div>
-                <div>{bracket.name}</div>
-                <div class="flex gap-2 justify-end leading-none text-xs">
+        {#each match.brackets.toReversed() as bracket}
+            <div>&lt;</div>
+            <div class="relative text-yellow-600">
+                {bracket.name}
+                <div class="absolute -bottom-3 right-0 flex gap-1.5 justify-end text-nowrap text-xs">
                     {#each bracket.links as link}
                         <LinkExternal {link} />
                     {/each}
                 </div>
             </div>
-            <div>-</div>
         {/each}
-        <div>
-            <div>{match.name}</div>
-            <div class="flex gap-2 justify-end leading-none text-xs">
-                {#each match.links as link}
+        <div>&lt;</div>
+        <div class="relative text-amber-600">
+            {match.event.name}
+            <div class="absolute -bottom-3 right-0 flex gap-1.5 justify-end text-nowrap text-xs">
+                {#each match.event.links as link}
                     <LinkExternal {link} />
                 {/each}
             </div>
         </div>
     </div>
 
-    <div class="mt-4 pt-6 pb-2 pl-4 border-t border-l border-prim-400 text-sm">
+    <div class="mt-4 pt-6 pb-2 pl-4 border-t border-l border-lime-700 text-sm">
         <div>
             {#each match.maps as map}
-                <div class="flex justify-between border-b border-dashed border-gray-300">
+                <div class="flex justify-between border-b border-dashed border-gray-400">
                     <div class="text-nowrap">
-                        <span class="inline-block w-4 text-prim-700 font-light">
+                        <span class="inline-block w-4 text-lime-950 font-light">
                             {map.id}
                         </span>
-                        <span class="inline-block w-8 text-prim-800 font-medium">
+                        <span class="inline-block w-8 text-lime-950 font-medium">
                             {map.map}
                         </span>
                         <span class="inline-block w-30 text-right team-{map.outcomes[0]}">
