@@ -44,5 +44,5 @@ jobs:
                   PULL_ZONE_ID: ${{ secrets.BUNNY_PULL_ZONE_ID }}
               run: |
                   curl --request POST \
-                      --url https://api.bunny.net/pullzone/$PULL_ZONE_ID/purgeCache \
-                      --header 'AccessKey: $ACCESS_KEY'
+                      --url "https://api.bunny.net/pullzone/$PULL_ZONE_ID/purgeCache" \
+                      --header "AccessKey: $ACCESS_KEY"
