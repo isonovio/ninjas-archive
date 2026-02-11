@@ -995,7 +995,34 @@
                             "date": "2026-02-11",
                             "lineups": { "team1": { "shorthand": "big" }, "team2": { "shorthand": "lhc" } },
                             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390093/big-equipa-vs-let-her-cook-jb-pro-league-female-season-1" }],
-                            "maps": []
+                            "maps": [
+                                {
+                                    "id": 1,
+                                    "map": "mrg",
+                                    "result": "13:5",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "03:50:14-04:29:23" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "inf",
+                                    "result": "16:13",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "04:38:47-05:41:38" }]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
