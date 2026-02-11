@@ -1,0 +1,9 @@
+{
+    "$schema": "../schemas/player.schema.json",
+
+    "slug": "hanka",
+    "nickname": "Hanka",
+    "name": "Hanna Pudlis",
+    "birthday": "2004-03-26",
+    "nationality": "pl"
+}

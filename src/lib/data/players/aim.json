@@ -1,7 +1,10 @@
 {
     "$schema": "../schemas/player.schema.json",
+
     "slug": "aim",
     "nickname": "aiM",
     "name": "Mia Cooper",
-    "birthday": "2002-04-18"
+    "birthday": "2002-04-18",
+    "nationality": "gb",
+    "tags": ["ninja"]
 }

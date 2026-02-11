@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+
+    "type": "object",
+    "required": ["slug", "name", "duration"],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": { "type": "string", "format": "uri-reference" },
+
+        "slug": { "$ref": "../schemas/slug.schema.json" },
+        "name": { "type": "string" },
+        "duration": { "$ref": "../schemas/daterange.schema.json" },
+        "links": { "type": "array", "items": { "$ref": "../schemas/extern-link.schema.json" } },
+        "participants": { "type": "array", "items": { "$ref": "../schemas/official-lineup.schema.json#/$defs/shorthand" } },
+        "brackets": { "type": "array", "items": { "$ref": "../schemas/official-bracket.schema.json" } },
+        "note": { "type": "string" }
+    }
+}

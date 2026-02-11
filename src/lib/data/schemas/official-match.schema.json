@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+
+    "type": "object",
+    "required": ["id", "date", "lineups", "maps"],
+    "additionalProperties": false,
+    "properties": {
+        "id": { "type": "number" },
+        "name": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "lineups": { "$ref": "#/$defs/lineups" },
+        "links": { "type": "array", "items": { "$ref": "../schemas/extern-link.schema.json" } },
+        "maps": { "type": "array", "items": { "$ref": "../schemas/official-map.schema.json" } },
+        "note": { "type": "string" }
+    },
+
+    "$defs": {
+        "lineups": {
+            "type": "object",
+            "required": ["team1", "team2"],
+            "additionalProperties": false,
+            "properties": {
+                "team1": { "$ref": "../schemas/official-lineup.schema.json" },
+                "team2": { "$ref": "../schemas/official-lineup.schema.json" }
+            }
+        }
+    }
+}

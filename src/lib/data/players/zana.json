@@ -1,7 +1,10 @@
 {
     "$schema": "../schemas/player.schema.json",
+
     "slug": "zana",
     "nickname": "Zana",
     "name": "Ana Sofia Queiroz Marques",
-    "birthday": "2001-07-26"
+    "birthday": "2001-07-26",
+    "nationality": "pt",
+    "tags": ["ninja"]
 }

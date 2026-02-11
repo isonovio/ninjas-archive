@@ -1,0 +1,117 @@
+{
+    "$schema": "../schemas/official-event.schema.json",
+
+    "slug": "cct-s3-eu-s15",
+    "name": "CCT Season 3 Europe Series 15",
+    "duration": { "start": "2026-02-08", "end": "2026-02-20" },
+    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/8959/cct-season-3-europe-series-15" }],
+    "participants": [{ "shorthand": "big", "lineup": { "roster": "big-equipa-2026-1" } }],
+    "brackets": [
+        {
+            "slug": "group-play",
+            "name": "Group play",
+            "brackets": [
+                {
+                    "slug": "brac00",
+                    "name": "Bracket 0:0",
+                    "matches": [
+                        {
+                            "id": 8,
+                            "date": "2026-02-09",
+                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "los kogutos" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2389844/big-equipa-vs-los-kogutos-cct-season-3-europe-series-15" }],
+                            "maps": [
+                                {
+                                    "id": 1,
+                                    "map": "anc",
+                                    "result": "1:13",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["cmd64", "nexus"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [
+                                                {
+                                                    "link": { "name": "VOD", "url": "https://kick.com/cct_cs/videos/987e8381-d4af-42e5-b83c-843c7359d93b" },
+                                                    "duration": "04:31:57-05:05:38"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "mrg",
+                                    "result": "4:13",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["cmd64", "nexus"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [
+                                                {
+                                                    "link": { "name": "VOD", "url": "https://kick.com/cct_cs/videos/987e8381-d4af-42e5-b83c-843c7359d93b" },
+                                                    "duration": "05:19:18-05:52:39"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "slug": "brac01",
+                    "name": "Bracket 0:1",
+                    "matches": [
+                        {
+                            "id": 2,
+                            "date": "2026-02-10",
+                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "Nexus" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2389846/big-equipa-vs-nexus-cct-season-3-europe-series-15" }],
+                            "maps": [
+                                {
+                                    "id": 1,
+                                    "map": "d2",
+                                    "result": "1:13",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["nexus", "oversiard"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [
+                                                {
+                                                    "link": { "name": "VOD", "url": "https://kick.com/cct_cs/videos/026a521c-23d6-448d-bd79-14542b8fcee4" },
+                                                    "duration": "03:19:50-03:51:28"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "inf",
+                                    "result": "5:13",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["nexus", "oversiard"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [
+                                                {
+                                                    "link": { "name": "VOD", "url": "https://kick.com/cct_cs/videos/026a521c-23d6-448d-bd79-14542b8fcee4" },
+                                                    "duration": "04:03:25-04:35:32"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

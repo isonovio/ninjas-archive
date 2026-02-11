@@ -1,0 +1,9 @@
+{
+    "$schema": "../schemas/player.schema.json",
+
+    "slug": "jennyr",
+    "nickname": "JennyR",
+    "name": "Jennifer Irina Brea Rodriguez",
+    "birthday": "2001-09-10",
+    "nationality": "es"
+}

@@ -1,15 +1,15 @@
 {
-    "$schema": "../schemas/news.schema.json",
+    "$schema": "../schemas/newspiece.schema.json",
 
     "slug": "aim-sosya-join-big-equipa",
     "title": "BIG EQUIPA add aiM and sosya",
     "date": "2026-01-23",
-    "involves": ["aim", "sosya"],
-    "urls": {
-        "BIG EQUIPA Tweet": "https://x.com/BIG_EQUIPA/status/2014731328869056900",
-        "BIG Tweet": "https://x.com/BIGCLANgg/status/2014742387239596495",
-        "aim Retweet": "https://x.com/aiMCS2_/status/2014742829004661082",
-        "sosya Retweet": "https://x.com/sosyaoai/status/2014743469709787168",
-        "HLTV News": "https://www.hltv.org/news/43700/big-equipa-add-aim-and-sosya"
-    }
+    "related": { "players": ["aim", "sosya"] },
+    "links": [
+        { "name": "BIG EQUIPA Tweet", "url": "https://x.com/BIG_EQUIPA/status/2014731328869056900" },
+        { "name": "BIG Tweet", "url": "https://x.com/BIGCLANgg/status/2014742387239596495" },
+        { "name": "aim Retweet", "url": "https://x.com/aiMCS2_/status/2014742829004661082" },
+        { "name": "sosya Retweet", "url": "https://x.com/sosyaoai/status/2014743469709787168" },
+        { "name": "HLTV News", "url": "https://www.hltv.org/news/43700/big-equipa-add-aim-and-sosya" }
+    ]
 }

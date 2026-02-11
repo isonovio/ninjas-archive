@@ -1,13 +1,13 @@
 {
-    "$schema": "../schemas/news.schema.json",
+    "$schema": "../schemas/newspiece.schema.json",
 
     "slug": "qiyarah-nayomy-mixed-circuit",
     "title": "Qiyarah and Nayomy looking to compete in mixed circuit",
     "date": "2025-12-15",
-    "involves": ["nayomy", "qiyarah"],
-    "urls": {
-        "Qiyarah Tweet": "https://x.com/Qiyarahcs/status/2000608325122077152",
-        "Nayomy Tweet": "https://x.com/Nayomy_cs/status/2000608323641786500",
-        "HLTV Short News": "https://www.hltv.org/news/43456/short-news-week-51#f1"
-    }
+    "related": { "players": ["nayomy", "qiyarah"] },
+    "links": [
+        { "name": "Qiyarah Tweet", "url": "https://x.com/Qiyarahcs/status/2000608325122077152" },
+        { "name": "Nayomy Tweet", "url": "https://x.com/Nayomy_cs/status/2000608323641786500" },
+        { "name": "HLTV Short News", "url": "https://www.hltv.org/news/43456/short-news-week-51#f1" }
+    ]
 }

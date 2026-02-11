@@ -1,7 +1,7 @@
 {
     "$schema": "../schemas/roster.schema.json",
     "slug": "peekaboo-2026-1",
-    "team": "Peekaboo",
+    "team": "peekaboo",
     "players": ["hikomi", "julih", "leti", "nem1za", "zana"],
     "duration": { "start": "2026-01-17", "end": "2026-12-31" }
 }

@@ -1,0 +1,9 @@
+{
+    "$schema": "../schemas/player.schema.json",
+
+    "slug": "leti",
+    "nickname": "LETi",
+    "name": "Martyna Owsik",
+    "birthday": "1998-12-18",
+    "nationality": "pl"
+}

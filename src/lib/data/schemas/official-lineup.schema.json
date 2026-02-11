@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+
+    "type": "object",
+    "required": [],
+    "additionalProperties": false,
+    "properties": {
+        "name": { "type": "string" },
+        "team": { "$ref": "../schemas/slug.schema.json" },
+        "roster": { "$ref": "../schemas/slug.schema.json" },
+        "players": { "type": "array", "items": { "$ref": "../schemas/slug.schema.json" } },
+        "shorthand": { "$ref": "../schemas/slug.schema.json" }
+    },
+
+    "$defs": {
+        "shorthand": {
+            "type": "object",
+            "required": ["shorthand", "lineup"],
+            "additionalProperties": false,
+            "properties": {
+                "shorthand": { "$ref": "../schemas/slug.schema.json" },
+                "lineup": { "$ref": "../schemas/official-lineup.schema.json" }
+            }
+        }
+    }
+}

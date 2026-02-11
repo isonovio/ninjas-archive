@@ -1,0 +1,6 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+
+    "type": "string",
+    "enum": ["bg", "br", "ca", "de", "es", "fr", "gb", "il", "nl", "pl", "pt", "ro", "ru", "se"]
+}

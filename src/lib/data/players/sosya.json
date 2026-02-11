@@ -1,0 +1,9 @@
+{
+    "$schema": "../schemas/player.schema.json",
+
+    "slug": "sosya",
+    "nickname": "Sosya",
+    "name": "Софья Васильева",
+    "birthday": "2003-04-08",
+    "nationality": "ru"
+}

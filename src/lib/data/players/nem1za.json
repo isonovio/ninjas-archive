@@ -1,0 +1,8 @@
+{
+    "$schema": "../schemas/player.schema.json",
+
+    "slug": "nem1za",
+    "nickname": "Nem1za",
+    "name": "Анастасия Кондрашкина",
+    "nationality": "ru"
+}

@@ -1,7 +1,10 @@
 {
     "$schema": "../schemas/player.schema.json",
+
     "slug": "vilga",
     "nickname": "vilga",
     "name": "Ксения Клюенкова",
-    "birthday": "1991-08-03"
+    "birthday": "1991-08-03",
+    "nationality": "ru",
+    "tags": ["ninja"]
 }

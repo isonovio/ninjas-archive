@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+
+    "type": "object",
+    "required": ["casters", "language", "parts"],
+    "additionalProperties": false,
+    "properties": {
+        "casters": { "type": "array", "items": { "$ref": "../schemas/slug.schema.json" } },
+        "language": { "$ref": "../schemas/language.schema.json" },
+        "parts": { "type": "array", "items": { "$ref": "../schemas/video.schema.json" } },
+        "tags": { "type": "array", "items": { "$ref": "#/$defs/tag" } }
+    },
+
+    "$defs": {
+        "tag": {
+            "type": "string",
+            "enum": ["official", "incomplete"]
+        }
+    }
+}

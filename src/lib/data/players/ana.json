@@ -1,0 +1,9 @@
+{
+    "$schema": "../schemas/player.schema.json",
+
+    "slug": "ana",
+    "nickname": "ANa",
+    "name": "Ana Dumbravă",
+    "birthday": "1999-06-20",
+    "nationality": "ro"
+}
