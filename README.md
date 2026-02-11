@@ -25,7 +25,7 @@
     - [ ] add a `search_name" field to every timeline item to allow text-based searching
     - [ ] filter: item => streamterm.toWords.map(toLower).all(isSubstring of item.search_name)
 - Code
-    - [ ] use namespaces instead of flat names
+    - [ ] use module hierarchy instead of flat names
     - [ ] organize components in folder structure
     - [ ] extract reusable components: e.g., Filter Box
 - Content
