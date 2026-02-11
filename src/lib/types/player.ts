@@ -40,3 +40,7 @@ export const allPlayers: ReadonlyMap<string, Player> = playersRaw
         map.set(player.slug, player);
         return map;
     }, new Map<string, Player>());
+
+export const playerCompare = (a: Player, b: Player) => {
+    return a.slug.localeCompare(b.slug);
+};

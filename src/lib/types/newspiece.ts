@@ -24,18 +24,14 @@ export interface Newspiece extends EntryBase {
     links: ExternalLink[];
 }
 
-export const allNewspieces: Newspiece[] = Object.values(newsRaw)
-    .map((v) => {
-        return {
-            ...v,
-            genre: "newspiece" as const,
-            date: Temporal.PlainDate.from(v.date),
-            related: relatedFromRaw(v.related),
-        };
-    })
-    .sort((a, b) => {
-        return b.slug.localeCompare(a.slug);
-    });
+export const allNewspieces: Newspiece[] = Object.values(newsRaw).map((v) => {
+    return {
+        ...v,
+        genre: "newspiece" as const,
+        date: Temporal.PlainDate.from(v.date),
+        related: relatedFromRaw(v.related),
+    };
+});
 
 export const newspieceCompare = (a: Newspiece, b: Newspiece) => {
     const dateCmp = Temporal.PlainDate.compare(a.date, b.date);

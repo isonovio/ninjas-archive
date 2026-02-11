@@ -4,7 +4,7 @@
     import { browser } from "$app/environment";
     import { Temporal } from "$lib/utils/temporal";
 
-    import { entriesGroupSortByDate, allEntries, genreDisplay, type Genre } from "$lib/types/timeline";
+    import { entriesGroupSortByDate, allEntries, genreDisplay, type Genre, genreCompare } from "$lib/types/timeline";
     import {
         filterEntries,
         filterFromParams,
@@ -14,7 +14,7 @@
         paramsFilterHasToDate,
         type EntryFilter,
     } from "$lib/types/timeline-filter";
-    import { type Player } from "$lib/types/player";
+    import { playerCompare, type Player } from "$lib/types/player";
 
     import Match from "./Match.svelte";
     import Newspiece from "./Newspiece.svelte";
@@ -40,7 +40,7 @@
                         }),
                     ),
                 ]
-                    .sort((a, b) => a.localeCompare(b))
+                    .toSorted(genreCompare)
                     .map((g) => {
                         return [g, paramsFilterHasGenre(params, g)] as [Genre, Boolean];
                     });
@@ -56,7 +56,7 @@
                             .flat(),
                     ),
                 ]
-                    .sort((a, b) => a.slug.localeCompare(b.slug))
+                    .toSorted(playerCompare)
                     .map((p) => {
                         return [p, paramsFilterHasPlayer(params, p.slug)] as [Player, Boolean];
                     });

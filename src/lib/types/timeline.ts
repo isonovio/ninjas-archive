@@ -16,6 +16,10 @@ export const genreDisplay = (genre: Genre): string => {
     }
 };
 
+export const genreCompare = (a: Genre, b: Genre) => {
+    return a.localeCompare(b);
+};
+
 export interface EntryBase {
     genre: Genre;
     related: Related;
@@ -57,8 +61,8 @@ export const entriesGroupSortByDate = (entries: Entry[]): dailyTimeline[] => {
     });
     return [...map.values()]
         .map(({ date, entries }) => {
-            const sortedEntries = entries.sort(entryCompare);
+            const sortedEntries = entries.toSorted(entryCompare);
             return { date, entries: sortedEntries };
         })
-        .sort((a, b) => Temporal.PlainDate.compare(b.date, a.date));
+        .toSorted((a, b) => Temporal.PlainDate.compare(b.date, a.date));
 };

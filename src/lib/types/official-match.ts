@@ -67,7 +67,9 @@ export const matchFromRaw = (
         events: [event],
     };
 
-    const maps = raw.maps.map((map) => matchMapFromRaw(map));
+    const maps = raw.maps
+        .map((map) => matchMapFromRaw(map))
+        .toSorted((a, b) => a.id - b.id);
     const results = sumMapResults(maps);
     const outcomes = outcomesFromResults(results);
 
