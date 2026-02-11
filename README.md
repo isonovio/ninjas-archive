@@ -46,6 +46,7 @@
 - structured timeline: date -> genre -> (if genre == match) event -> item
 - `involves` takes not only `player`s but everything that inherits `entity`, including matches, events, teams, etc. 
     - Make filterable but date something of involves. A match involves its event, but not an independent event field
+- Chat spam generator
 
 ## Howtos:
 
