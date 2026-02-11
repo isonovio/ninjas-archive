@@ -28,10 +28,21 @@ jobs:
             - name: Deploy build via API
               env:
                   ACCESS_KEY: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
+                  STORAGE_ZONE_NAME: ninjas-archive
               run: |
                   find build -type f | while read file; do
                       remote_path="${file#build/}"
-                      curl -X PUT "https://storage.bunnycdn.com/ninjas-archive/$remote_path" \
-                          -H "AccessKey: $ACCESS_KEY" \
+                      curl --request PUT \
+                          --url "https://storage.bunnycdn.com/$STORAGE_ZONE_NAME/$remote_path" \
+                          --header "AccessKey: $ACCESS_KEY" \
                           --data-binary "@$file"
                   done
+
+            - name: Purge CDN cache
+              env:
+                  ACCESS_KEY: ${{ secrets.BUNNY_API_KEY }}
+                  PULL_ZONE_ID: ${{ secrets.BUNNY_PULL_ZONE_ID }}
+              run: |
+                  curl --request POST \
+                      --url https://api.bunny.net/pullzone/$PULL_ZONE_ID/purgeCache \
+                      --header 'AccessKey: $ACCESS_KEY' \
