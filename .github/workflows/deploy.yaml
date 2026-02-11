@@ -45,4 +45,4 @@ jobs:
               run: |
                   curl --request POST \
                       --url https://api.bunny.net/pullzone/$PULL_ZONE_ID/purgeCache \
-                      --header 'AccessKey: $ACCESS_KEY' \
+                      --header 'AccessKey: $ACCESS_KEY'
