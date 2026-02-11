@@ -15,9 +15,11 @@
     - [ ] MAYBE: separate events as a separate genre from matches | Color Code: Brown
     - [ ] MAYBE: show match slug on the left, just like map slug
 - Filter
-    - [ ] in player filter section, add links to specific pages of the player
+    - [ ] UI: in player filter section, add links to specific pages of the player
     - [ ] UI: allow search in player filter sections | `searchterm.tolowercase`, show player name if slug.substring(searchterm) or player is in filter
-    - [ ] player filter: can be ANY mode or OR mode
+    - [ ] feat: player filter: can be ANY mode or OR mode
+    - [ ] feat: more filter dimensions: team, event, talent
+    - [ ] UI: each filter box is default collapsed. non-selectedoptions are only shown when hovered
 - Search
     - [ ] add a search section above filter section
     - [ ] add a `search_name" field to every timeline item to allow text-based searching
