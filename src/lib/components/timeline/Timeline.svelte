@@ -4,22 +4,31 @@
     import { browser } from "$app/environment";
     import { Temporal } from "$lib/utils/temporal";
 
-    import { timelineGroupSortByDate, TimelineFilter, filterTimeline, timeline, timelineFilterFromParams, type Genre } from "$lib/types/timeline";
-    import { players } from "$lib/types/player";
+    import { entriesGroupSortByDate, allEntries, genreDisplay, type Genre } from "$lib/types/timeline";
+    import {
+        filterEntries,
+        filterFromParams,
+        paramsFilterHasGenre,
+        paramsFilterHasPlayer,
+        paramsFilterHasFromDate,
+        paramsFilterHasToDate,
+        type EntryFilter,
+    } from "$lib/types/timeline-filter";
+    import { type Player } from "$lib/types/player";
 
-    import NewsEntry from "./NewsEntry.svelte";
     import Match from "./Match.svelte";
+    import Newspiece from "./Newspiece.svelte";
 
     interface Props {
-        prefilter?: TimelineFilter;
+        prefilter?: EntryFilter;
     }
-    let { prefilter = new TimelineFilter() }: Props = $props();
+    let { prefilter }: Props = $props();
 
-    const prefilteredTimeline = $derived(filterTimeline(timeline, prefilter));
-    const searchParams = $derived(browser ? page.url.searchParams : new URLSearchParams());
-    const filterFromParams: TimelineFilter = $derived(timelineFilterFromParams(searchParams));
-    const filteredTimeline = $derived(filterTimeline(prefilteredTimeline, filterFromParams));
-    const sortedTimeline = $derived(timelineGroupSortByDate(filteredTimeline));
+    const prefilteredTimeline = $derived(prefilter ? filterEntries(allEntries, prefilter) : allEntries);
+    const params = $derived(browser ? page.url.searchParams : new URLSearchParams());
+    const paramsFilter = $derived(filterFromParams(params));
+    const filteredTimeline = $derived(filterEntries(prefilteredTimeline, paramsFilter));
+    const sortedTimeline = $derived(entriesGroupSortByDate(filteredTimeline));
 
     const filterCandidates = $derived(
         (() => {
@@ -33,31 +42,23 @@
                 ]
                     .sort((a, b) => a.localeCompare(b))
                     .map((g) => {
-                        if (filterFromParams.genres) {
-                            return [g, filterFromParams.genres.has(g)] as [Genre, Boolean];
-                        } else {
-                            return [g, false] as [Genre, Boolean];
-                        }
+                        return [g, paramsFilterHasGenre(params, g)] as [Genre, Boolean];
                     });
             })();
 
-            const playerCandidates: [string, Boolean][] = (() => {
+            const playerCandidates: [Player, Boolean][] = (() => {
                 return [
                     ...new Set(
                         prefilteredTimeline
                             .map((i) => {
-                                return i.involves;
+                                return i.related.players;
                             })
                             .flat(),
                     ),
                 ]
-                    .sort((a, b) => a.localeCompare(b))
+                    .sort((a, b) => a.slug.localeCompare(b.slug))
                     .map((p) => {
-                        if (filterFromParams.players) {
-                            return [p, filterFromParams.players.has(p)] as [string, Boolean];
-                        } else {
-                            return [p, false] as [string, Boolean];
-                        }
+                        return [p, paramsFilterHasPlayer(params, p.slug)] as [Player, Boolean];
                     });
             })();
 
@@ -66,27 +67,27 @@
     );
 
     function refreshParams(): void {
-        goto(`?${searchParams.toString()}`, { noScroll: true, keepFocus: true });
+        goto(`?${params.toString()}`, { noScroll: true, keepFocus: true });
     }
     function toggleGenre(genre: Genre, prev: Boolean): void {
         if (prev) {
-            searchParams.delete("genre", genre);
+            params.delete("genre", genre);
         } else {
-            searchParams.append("genre", genre);
+            params.append("genre", genre);
         }
         refreshParams();
     }
     function togglePlayer(player: string, prev: Boolean): void {
         if (prev) {
-            searchParams.delete("player", player);
+            params.delete("player", player);
         } else {
-            searchParams.append("player", player);
+            params.append("player", player);
         }
         refreshParams();
     }
     let dateInputError = $state("");
-    let fromDateInput = $derived(searchParams.get("from") || "");
-    let toDateInput = $derived(searchParams.get("to") || "");
+    let fromDateInput = $derived(params.get("from") || "");
+    let toDateInput = $derived(params.get("to") || "");
     function submitDateFilter(e: Event): void {
         e.preventDefault();
 
@@ -110,42 +111,25 @@
         }
 
         if (fromDateInput != "") {
-            searchParams.set("from", fromDateInput);
+            params.set("from", fromDateInput);
         } else {
-            searchParams.delete("from");
+            params.delete("from");
         }
         if (toDateInput != "") {
-            searchParams.set("to", toDateInput);
+            params.set("to", toDateInput);
         } else {
-            searchParams.delete("to");
+            params.delete("to");
         }
         refreshParams();
     }
     function clearFilter(): void {
-        searchParams.delete("genre");
-        searchParams.delete("player");
-        searchParams.delete("from");
-        searchParams.delete("to");
+        params.delete("genre");
+        params.delete("player");
+        params.delete("from");
+        params.delete("to");
         refreshParams();
     }
-    const hasFilter = $derived(searchParams.size > 0);
-
-    function displayGenre(genre: Genre): string {
-        if (genre === "match") {
-            return "Matches";
-        } else if (genre === "news") {
-            return "News";
-        } else {
-            return genre;
-        }
-    }
-    function displayPlayer(player: string): string {
-        if (players.has(player)) {
-            return players.get(player)!.nickname;
-        } else {
-            return player;
-        }
-    }
+    const hasFilter = $derived(params.size > 0);
 </script>
 
 <div class="w-7xl mx-auto flex gap-4">
@@ -160,11 +144,11 @@
             <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Date</div>
             <form onsubmit={submitDateFilter}>
                 <div class="my-1 mx-2">
-                    <label for="from" class="inline-block w-13 border-l-4 border-white pl-1 leading-none" class:filter-on={filterFromParams.dates.from}>from: </label>
+                    <label for="from" class="inline-block w-13 border-l-4 border-white pl-1 leading-none" class:filter-on={paramsFilterHasFromDate(params)}>from: </label>
                     <input id="from" placeholder="yyyy-mm-dd" bind:value={fromDateInput} class="inline-block w-25 border-b border-dashed px-1" />
                 </div>
                 <div class="my-1 mx-2">
-                    <label for="to" class="inline-block w-13 border-l-4 border-white pl-1 leading-none" class:filter-on={filterFromParams.dates.to}>to: </label>
+                    <label for="to" class="inline-block w-13 border-l-4 border-white pl-1 leading-none" class:filter-on={paramsFilterHasToDate(params)}>to: </label>
                     <input id="to" placeholder="yyyy-mm-dd" bind:value={toDateInput} class="inline-block w-25 border-b border-dashed px-1 leading-none" />
                 </div>
                 {#if dateInputError != ""}
@@ -179,7 +163,7 @@
             <div class="relative mt-3 ml-6 border rounded-lg pt-3 p-1 text-nowrap">
                 <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Genres</div>
                 {#each filterCandidates.genres as [genre, toggle]}
-                    <button class="filter" class:filter-on={toggle} onclick={() => toggleGenre(genre, toggle)}>{displayGenre(genre)}</button>
+                    <button class="filter" class:filter-on={toggle} onclick={() => toggleGenre(genre, toggle)}>{genreDisplay(genre)}</button>
                 {/each}
             </div>
         {/if}
@@ -187,7 +171,7 @@
             <div class="relative mt-3 ml-6 border rounded-lg pt-3 p-1 text-nowrap">
                 <div class="absolute -top-4 -left-4 bg-white px-2 text-xl font-semibold">Players</div>
                 {#each filterCandidates.players as [player, toggle]}
-                    <button class="filter" class:filter-on={toggle} onclick={() => togglePlayer(player, toggle)}>{displayPlayer(player)}</button>
+                    <button class="filter" class:filter-on={toggle} onclick={() => togglePlayer(player.slug, toggle)}>{player.nickname}</button>
                 {/each}
             </div>
         {/if}
@@ -197,20 +181,20 @@
         {#if sortedTimeline.length === 0}
             <div class="text-5xl text-sec-600 font-sc font-bold">History has not witnessed anything yet.</div>
         {:else}
-            {#each sortedTimeline as [date, items]}
+            {#each sortedTimeline as dailyTimeline}
                 <div class="relative border-t-2 border-l-2">
                     <div class="absolute -top-6 -left-6 p-2 bg-white font-bold text-xl text-sec-700">
-                        {date.toString()}
+                        {dailyTimeline.date.toString()}
                     </div>
                     <div class="pl-12 py-6 flex flex-col gap-3">
-                        {#each items as item}
+                        {#each dailyTimeline.entries as entry}
                             <div class="relative">
-                                {#if item.genre == "news"}
-                                    <NewsEntry entry={item} />
-                                {:else if item.genre == "match"}
-                                    <Match match={item} />
+                                {#if entry.genre == "newspiece"}
+                                    <Newspiece newspiece={entry} />
+                                {:else if entry.genre == "match"}
+                                    <Match match={entry} />
                                 {:else}
-                                    {item}
+                                    {entry}
                                 {/if}
                             </div>
                         {/each}

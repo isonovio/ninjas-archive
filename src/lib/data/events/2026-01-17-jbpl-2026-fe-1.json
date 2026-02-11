@@ -5,7 +5,7 @@
     "name": "JB Pro League 2026 Female #1",
     "duration": { "start": "2026-01-17", "end": "2026-02-15" },
     "links": [
-        { "name": "Official Website", "url": "https://jbproleague.com/news/11b110d1-1125-483a-b5bd-bcbd115afac4" },
+        { "name": "Website", "url": "https://jbproleague.com/news/11b110d1-1125-483a-b5bd-bcbd115afac4" },
         { "name": "Rules", "url": "https://github.com/VANTAGL/JB-Pro-League-2026-female-1" }
     ],
     "participants": [
@@ -60,7 +60,7 @@
                         {
                             "id": 7,
                             "date": "2026-01-17",
-                            "lineups": { "team1": { "name": "lhc" }, "team2": { "name": "DONT WORRY" } },
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "DONT WORRY" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -100,7 +100,7 @@
                         {
                             "id": 8,
                             "date": "2026-01-17",
-                            "lineups": { "team1": { "name": "pkb" }, "team2": { "name": "LUNAR FE" } },
+                            "lineups": { "team1": { "shorthand": "pkb" }, "team2": { "name": "LUNAR FE" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -146,7 +146,7 @@
                         {
                             "id": 1,
                             "date": "2026-01-18",
-                            "lineups": { "team1": { "name": "big" }, "team2": { "name": "IDA NexGen" } },
+                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "IDA NexGen" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -165,7 +165,7 @@
                         {
                             "id": 4,
                             "date": "2026-01-18",
-                            "lineups": { "team1": { "name": "lhc" }, "team2": { "name": "pkb" } },
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "shorthand": "pkb" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -220,7 +220,7 @@
                         {
                             "id": 1,
                             "date": "2026-01-18",
-                            "lineups": { "team1": { "name": "big" }, "team2": { "name": "Fingers Crossed Fe" } },
+                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "Fingers Crossed Fe" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -255,7 +255,7 @@
                         {
                             "id": 2,
                             "date": "2026-01-18",
-                            "lineups": { "team1": { "name": "Pigeons" }, "team2": { "name": "pkb" } },
+                            "lineups": { "team1": { "name": "Pigeons" }, "team2": { "shorthand": "pkb" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -296,7 +296,7 @@
                         {
                             "id": 1,
                             "date": "2026-01-18",
-                            "lineups": { "team1": { "name": "big" }, "team2": { "name": "Pigeons" } },
+                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "Pigeons" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -360,7 +360,7 @@
                         {
                             "id": 1,
                             "date": "2026-01-24",
-                            "lineups": { "team1": { "name": "lhc" }, "team2": { "name": "FUTURE W" } },
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "FUTURE W" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -379,7 +379,7 @@
                         {
                             "id": 7,
                             "date": "2026-01-24",
-                            "lineups": { "team1": { "name": "pkb" }, "team2": { "name": "confidence" } },
+                            "lineups": { "team1": { "shorthand": "pkb" }, "team2": { "name": "confidence" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -410,7 +410,7 @@
                         {
                             "id": 1,
                             "date": "2026-01-25",
-                            "lineups": { "team1": { "name": "lhc" }, "team2": { "name": "imodium" } },
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "imodium" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -448,7 +448,7 @@
                         {
                             "id": 4,
                             "date": "2026-01-25",
-                            "lineups": { "team1": { "name": "pkb" }, "team2": { "name": "chicken friday" } },
+                            "lineups": { "team1": { "shorthand": "pkb" }, "team2": { "name": "chicken friday" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -479,7 +479,7 @@
                         {
                             "id": 1,
                             "date": "2026-01-25",
-                            "lineups": { "team1": { "name": "lhc" }, "team2": { "name": "hindsight" } },
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "hindsight" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -514,7 +514,7 @@
                         {
                             "id": 2,
                             "date": "2026-01-25",
-                            "lineups": { "team1": { "name": "DONT WORRY" }, "team2": { "name": "pkb" } },
+                            "lineups": { "team1": { "name": "DONT WORRY" }, "team2": { "shorthand": "pkb" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -569,7 +569,7 @@
                         {
                             "id": 1,
                             "date": "2026-01-25",
-                            "lineups": { "team1": { "name": "hindsight" }, "team2": { "name": "pkb" } },
+                            "lineups": { "team1": { "name": "hindsight" }, "team2": { "shorthand": "pkb" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -667,7 +667,7 @@
                         {
                             "id": 1,
                             "date": "2026-02-01",
-                            "lineups": { "team1": { "name": "lhc" }, "team2": { "name": "imodium" } },
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "imodium" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -725,7 +725,7 @@
                         {
                             "id": 1,
                             "date": "2026-02-01",
-                            "lineups": { "team1": { "name": "lhc" }, "team2": { "name": "FUTURE W" } },
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "FUTURE W" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -766,7 +766,7 @@
                         {
                             "id": 1,
                             "date": "2026-02-01",
-                            "lineups": { "team1": { "name": "lhc" }, "team2": { "name": "Fingers Crossed Fe" } },
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "Fingers Crossed Fe" } },
                             "maps": [
                                 {
                                     "id": 1,
@@ -856,7 +856,7 @@
                             "id": 3,
                             "name": "Winner's match",
                             "date": "2026-02-11",
-                            "lineups": { "team1": { "name": "Pigeons" }, "team2": { "name": "pkb" } },
+                            "lineups": { "team1": { "name": "Pigeons" }, "team2": { "shorthand": "pkb" } },
                             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390092/pigeons-vs-peekaboo-jb-pro-league-female-season-1" }],
                             "maps": []
                         }
@@ -870,7 +870,7 @@
                             "id": 1,
                             "name": "Opening round match 1",
                             "date": "2026-02-10",
-                            "lineups": { "team1": { "name": "big" }, "team2": { "name": "confidence" } },
+                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "confidence" } },
                             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390090/big-equipa-vs-confidence-jb-pro-league-female-season-1" }],
                             "maps": [
                                 {
@@ -908,7 +908,7 @@
                             "id": 2,
                             "name": "Opening round match 2",
                             "date": "2026-02-10",
-                            "lineups": { "team1": { "name": "lhc" }, "team2": { "name": "hindsight" } },
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "hindsight" } },
                             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390091/let-her-cook-vs-hindsight-jb-pro-league-female-season-1" }],
                             "maps": [
                                 {
@@ -938,7 +938,7 @@
                                     ]
                                 },
                                 {
-                                    "id": 2,
+                                    "id": 3,
                                     "map": "anb",
                                     "result": "13:4",
                                     "rewatches": [
@@ -956,7 +956,7 @@
                             "id": 3,
                             "name": "Winner's match",
                             "date": "2026-02-11",
-                            "lineups": { "team1": { "name": "big" }, "team2": { "name": "lhc" } },
+                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "shorthand": "lhc" } },
                             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390093/big-equipa-vs-let-her-cook-jb-pro-league-female-season-1" }],
                             "maps": []
                         }

@@ -6,29 +6,15 @@
 - Deployment: CDN, DNS, and static file hosting: [Bunny.net](https://bunny.net/)
 
 ## Todos:
-- Rework Data API
-    - [ ] use arrays instead of maps
-        - [ ] `participants: {shorthand: slug, roster: slug}`
-        - [ ] all plural `urls`: rename to `links`; do not use `map`, but `array` instead: `links: [{name, url}]`
-        - [ ] `MatchMap` should take `links` instead of a single `url`; 
-    - [ ] use `zod` as a single source of truth
-        - [ ] validate json input
-        - [ ] generate Raw types
-        - [ ] generate json schemas
 - UI
     - [ ] Everything clickable need to have hover color change
     - [ ] add hover texts to clickables
     - [ ] `h1` title of each page
 - Timeline Match UI
     - [ ] show player nicknames under teamnames
-    - [ ] if has note, show under the match/map
-    - [ ] map URL: show on map slug
-    - [ ] match URL: show on the last item of bracket
-    - [ ] event URLs: show next to event name
     - [ ] MAYBE: separate events as a separate genre from matches | Color Code: Brown
     - [ ] MAYBE: show match slug on the left, just like map slug
 - Filter
-    - [ ] make filter logic more scalable when more genres & more dimensions to filter on are added. extra logic (including `displayPlayers`) into `timeline_filter.ts`
     - [ ] in player filter section, add links to specific pages of the player
     - [ ] UI: allow search in player filter sections | `searchterm.tolowercase`, show player name if slug.substring(searchterm) or player is in filter
     - [ ] player filter: can be ANY mode or OR mode
@@ -38,7 +24,6 @@
     - [ ] filter: item => streamterm.toWords.map(toLower).all(isSubstring of item.search_name)
 - Code
     - [ ] organize components in folder structure
-    - [ ] delegate logic of showing links to related ppl in separate genres
     - [ ] extract reusable components: e.g., Filter Box
 - Content
     - [ ] Why? Page

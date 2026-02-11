@@ -1,105 +1,64 @@
 import { Temporal } from "$lib/utils/temporal";
+import { type Related } from "./related";
+import { type Newspiece, allNewspieces, newspieceCompare } from "./newspiece";
+import { type Match, matchCompare } from "./official-match";
+import { allMatches } from "./official-event";
 
-import { news, type NewsEntry } from "$lib/types/news";
-import { matches, type Match } from "$lib/types/match";
+export type Genre = "newspiece" | "match";
 
-export type Genre = "news" | "match";
+export const genreDisplay = (genre: Genre): string => {
+    if (genre === "match") {
+        return "Officials";
+    } else if (genre === "newspiece") {
+        return "News";
+    } else {
+        throw new Error(`Unknown genre: ${genre}`);
+    }
+};
 
-export interface TimelineItemBase {
+export interface EntryBase {
     genre: Genre;
-    involves: string[];
+    related: Related;
     date: Temporal.PlainDate;
 }
 
-export type TimelineItem = NewsEntry | Match;
+export type Entry = Newspiece | Match;
 
-export const timeline: TimelineItem[] = [...news, ...matches];
+export const allEntries: Entry[] = [...allNewspieces, ...allMatches];
 
-export function timelineGroupSortByDate(
-    items: TimelineItem[],
-): [Temporal.PlainDate, TimelineItem[]][] {
-    const map = new Map<
-        string,
-        { date: Temporal.PlainDate; items: TimelineItem[] }
-    >();
-    items.forEach((item) => {
-        const dateKey = item.date.toString();
+export const entryCompare = (a: Entry, b: Entry) => {
+    const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
+    if (dateCmp !== 0) return dateCmp;
+
+    const genreCmp = a.genre.localeCompare(b.genre);
+    if (genreCmp !== 0) return genreCmp;
+
+    switch (a.genre) {
+        case "newspiece":
+            return newspieceCompare(a, b as Newspiece);
+        case "match":
+            return matchCompare(a, b as Match);
+    }
+};
+
+export type dailyTimeline = {
+    date: Temporal.PlainDate;
+    entries: Entry[];
+};
+
+export const entriesGroupSortByDate = (entries: Entry[]): dailyTimeline[] => {
+    const map = new Map<string, dailyTimeline>();
+    entries.forEach((entry) => {
+        const dateKey = entry.date.toString();
         if (!map.has(dateKey)) {
-            map.set(dateKey, { date: item.date, items: [] });
+            map.set(dateKey, { date: entry.date, entries: [] });
         }
-        map.get(dateKey)!.items.push(item);
+        map.get(dateKey)!.entries.push(entry);
     });
     return [...map.values()]
-        .map(
-            ({ date, items }) =>
-                [date, items] as [Temporal.PlainDate, TimelineItem[]],
-        )
-        .sort(([dateA], [dateB]) => Temporal.PlainDate.compare(dateB, dateA));
-}
-
-export function filterTimeline(
-    timeline: TimelineItem[],
-    filter: TimelineFilter | undefined,
-) {
-    if (!filter) return timeline;
-
-    return timeline.filter((item) => {
-        const { genres, players, dates } = filter;
-        if (genres.size > 0 && !genres.has(item.genre)) return false;
-        if (players.size > 0 && !item.involves.some((p) => players.has(p)))
-            return false;
-        const { from, to } = dates;
-        if (from && Temporal.PlainDate.compare(item.date, from) < 0)
-            return false;
-        if (to && Temporal.PlainDate.compare(item.date, to) > 0) return false;
-        return true;
-    });
-}
-
-export class TimelineFilter {
-    genres: Set<Genre> = new Set();
-    players: Set<string> = new Set();
-    dates: {
-        from?: Temporal.PlainDate;
-        to?: Temporal.PlainDate;
-    } = { from: undefined, to: undefined };
-
-    constructor(ops?: {
-        genres?: Genre[];
-        players?: string[];
-        fromDate?: Temporal.PlainDate;
-        toDate?: Temporal.PlainDate;
-    }) {
-        if (ops?.genres) this.genres = new Set(ops.genres);
-        if (ops?.players) this.players = new Set(ops.players);
-        if (ops?.fromDate) this.dates.from = ops.fromDate;
-        if (ops?.toDate) this.dates.to = ops.toDate;
-    }
-}
-
-export function timelineFilterFromParams(
-    params: URLSearchParams,
-): TimelineFilter {
-    const genres = params.getAll("genre").map((g) => g as Genre);
-    const players = params.getAll("player");
-    const fromDate = params.get("from")
-        ? Temporal.PlainDate.from(params.get("from")!)
-        : undefined;
-    const toDate = params.get("to")
-        ? Temporal.PlainDate.from(params.get("to")!)
-        : undefined;
-    return {
-        genres: new Set(genres),
-        players: new Set(players),
-        dates: { from: fromDate, to: toDate },
-    };
-}
-
-export function timelineFilterToParams(filter: TimelineFilter) {
-    const params = new URLSearchParams();
-    filter.genres.forEach((genre) => params.append("genre", genre));
-    filter.players.forEach((player) => params.append("player", player));
-    if (filter.dates.from) params.set("from", filter.dates.from.toString());
-    if (filter.dates.to) params.set("to", filter.dates.to.toString());
-    return params.toString();
-}
+        .map(({ date, entries }) => {
+            const sortedEntries = entries.sort(entryCompare);
+            return { date, entries: sortedEntries };
+        })
+        .sort((a, b) => Temporal.PlainDate.compare(b.date, a.date));
+};

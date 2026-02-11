@@ -1,79 +1,94 @@
 <script lang="ts">
-    import { type Match } from "$lib/types/match";
+    import { type Match } from "$lib/types/official-match";
     import LinkExternal from "$lib/components/snippets/LinkExternal.svelte";
-    import LinkStream from "$lib/components/snippets/LinkStream.svelte";
+    import LinkRewatch from "$lib/components/snippets/LinkRewatch.svelte";
     import LinkPlayers from "$lib/components/snippets/LinkPlayers.svelte";
     export let match: Match;
 </script>
 
 <div class="relative">
-    <div class="absolute -top-3 left-3 z-10 bg-white px-1 text-prim-700 font-light">
-        {#if match.url}
-            <LinkExternal name={match.slug} url={match.url} />
-        {:else}
-            {match.slug}
-        {/if}
-    </div>
-    <div class="absolute -top-4 left-16 z-20 grid grid-cols-[202px_60px_auto] font-medium text-xl">
+    <!-- <div class="absolute -top-3 left-3 z-10 bg-white px-1 text-prim-700 font-light"></div> -->
+    <div class="absolute -top-3.5 left-6 z-20 grid grid-cols-[172px_60px_auto] font-medium text-xl">
         <div class="relative inline-block ml-auto pl-2 bg-white text-nowrap text-right team-{match.outcomes[0]}">
-            {match.matchup[0]}
-            {#if match.teamInvolves[0].length > 0}
-                <div class="absolute -bottom-3 right-0">
-                    <LinkPlayers players={match.teamInvolves[0]} />
-                </div>
-            {/if}
+            {match.lineups[0].teamname}
+            <div class="absolute -bottom-2 right-0">
+                <LinkPlayers players={match.lineups[0].players} />
+            </div>
         </div>
         <div class="inline-block bg-white text-center font-extrabold font-mono">
-            <span class="team-{match.outcomes[0]}">{match.result[0]}</span>:<span class="team-{match.outcomes[1]}">{match.result[1]}</span>
+            <span class="team-{match.outcomes[0]}">{match.results[0]}</span>:<span class="team-{match.outcomes[1]}">{match.results[1]}</span>
         </div>
         <div class="relative inline-block pr-2 bg-white team-{match.outcomes[1]}">
-            {match.matchup[1]}
-            {#if match.teamInvolves[1].length > 0}
-                <div class="absolute -bottom-3 left-0">
-                    <LinkPlayers players={match.teamInvolves[1]} />
-                </div>
-            {/if}
+            {match.lineups[1].teamname}
+            <div class="absolute -bottom-2 left-0">
+                <LinkPlayers players={match.lineups[1].players} />
+            </div>
         </div>
     </div>
-    <div class="absolute -top-2 right-0 bg-white px-2 text-amber-700 text-xs">
-        {match.title}
+    <div class="absolute -top-2 right-0 bg-white px-2 flex gap-1 text-amber-700 text-sm">
+        <div>
+            <div>{match.event.name}</div>
+            <div class="flex gap-2 justify-end leading-none text-xs">
+                {#each match.event.links as link}
+                    <LinkExternal {link} />
+                {/each}
+            </div>
+        </div>
+        <div>-</div>
+        {#each match.brackets as bracket}
+            <div>
+                <div>{bracket.name}</div>
+                <div class="flex gap-2 justify-end leading-none text-xs">
+                    {#each bracket.links as link}
+                        <LinkExternal {link} />
+                    {/each}
+                </div>
+            </div>
+            <div>-</div>
+        {/each}
+        <div>
+            <div>{match.name}</div>
+            <div class="flex gap-2 justify-end leading-none text-xs">
+                {#each match.links as link}
+                    <LinkExternal {link} />
+                {/each}
+            </div>
+        </div>
     </div>
 
-    <div class="mt-4 pt-6 pb-2 pl-4 border-t border-l border-prim-700">
+    <div class="mt-4 pt-6 pb-2 pl-4 border-t border-l border-prim-400 text-sm">
         <div>
             {#each match.maps as map}
                 <div class="flex justify-between border-b border-dashed border-gray-300">
                     <div class="text-nowrap">
-                        <span class="inline-block w-14 text-prim-700 font-light">
-                            {#if map.url}
-                                <LinkExternal name={map.slug} url={map.url} />
-                            {:else}
-                                {map.slug}
-                            {/if}
+                        <span class="inline-block w-4 text-prim-700 font-light">
+                            {map.id}
                         </span>
-                        <span class="inline-block w-10 text-prim-800 font-medium">
+                        <span class="inline-block w-8 text-prim-800 font-medium">
                             {map.map}
                         </span>
-                        <span class="inline-block w-35 text-right team-{map.outcomes[0]}">
-                            {match.matchup[0]}
+                        <span class="inline-block w-30 text-right team-{map.outcomes[0]}">
+                            {match.lineups[0].teamname}
                         </span>
                         <span class="inline-block w-6 text-right font-extrabold font-mono team-{map.outcomes[0]}">
-                            {map.result[0]}
+                            {map.results[0]}
                         </span>
                         <span class="inline-block font-extrabold font-mono">:</span>
                         <span class="inline-block w-6 font-extrabold font-mono team-{map.outcomes[1]}">
-                            {map.result[1]}
+                            {map.results[1]}
                         </span>
-                        <span class="inline-block w-35 team-{map.outcomes[1]}">
-                            {match.matchup[1]}
+                        <span class="inline-block w-30 team-{map.outcomes[1]}">
+                            {match.lineups[1].teamname}
                         </span>
                     </div>
-                    <div class="flex justify-end flex-wrap gap-x-4">
-                        {#if map.streams}
-                            {#each map.streams as stream}
-                                <LinkStream {stream} />
-                            {/each}
-                        {/if}
+                    <div class="flex justify-center items-end flex-wrap gap-x-4 text-xs">
+                        {#if map.note}<div class="text-gray-500">{map.note}</div>{/if}
+                        {#each map.links as link}
+                            <LinkExternal {link} />
+                        {/each}
+                        {#each map.rewatches as rewatch}
+                            <LinkRewatch {rewatch} />
+                        {/each}
                     </div>
                 </div>
             {/each}

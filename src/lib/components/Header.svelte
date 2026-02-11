@@ -1,7 +1,7 @@
 <header>
     <nav>
         <a href="/" class="home"> Ninjas Archive </a>
-        <a href="/matches"> Matches </a>
+        <a href="/officials"> Officials </a>
         <a href="/news"> News </a>
     </nav>
 
