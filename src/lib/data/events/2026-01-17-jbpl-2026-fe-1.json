@@ -858,7 +858,34 @@
                             "date": "2026-02-11",
                             "lineups": { "team1": { "name": "Pigeons" }, "team2": { "shorthand": "pkb" } },
                             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390092/pigeons-vs-peekaboo-jb-pro-league-female-season-1" }],
-                            "maps": []
+                            "maps": [
+                                {
+                                    "id": 1,
+                                    "map": "anc",
+                                    "result": "13:7",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "00:33:51-01:14:44" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "d2",
+                                    "result": "13:5",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "01:23:57-01:59:59" }]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
