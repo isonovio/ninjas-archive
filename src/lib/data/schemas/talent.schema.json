@@ -7,9 +7,9 @@
     "properties": {
         "$schema": { "type": "string", "format": "uri-reference" },
 
-        "slug": { "$ref": "../schemas/slug.schema.json" },
+        "slug": { "$ref": "slug.schema.json" },
         "nickname": { "type": "string" },
         "name": { "type": "string" },
-        "socials": { "type": "array", "items": { "$ref": "../schemas/extern-link.schema.json" } }
+        "socials": { "type": "array", "items": { "$ref": "extern-link.schema.json" } }
     }
 }

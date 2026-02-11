@@ -7,11 +7,11 @@
     "properties": {
         "$schema": { "type": "string", "format": "uri-reference" },
 
-        "slug": { "$ref": "../schemas/slug.schema.json" },
+        "slug": { "$ref": "slug.schema.json" },
         "nickname": { "type": "string" },
         "name": { "type": "string" },
         "birthday": { "type": "string", "format": "date" },
-        "nationality": { "$ref": "../schemas/nationality.schema.json" },
+        "nationality": { "$ref": "nationality.schema.json" },
         "tags": { "type": "array", "items": { "$ref": "#/$defs/tag" } }
     },
 

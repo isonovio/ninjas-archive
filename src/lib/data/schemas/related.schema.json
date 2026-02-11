@@ -4,8 +4,8 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "players": { "type": "array", "items": { "$ref": "../schemas/slug.schema.json" } },
-        "events": { "type": "array", "items": { "$ref": "../schemas/slug.schema.json" } },
-        "teams": { "type": "array", "items": { "$ref": "../schemas/slug.schema.json" } }
+        "players": { "type": "array", "items": { "$ref": "slug.schema.json" } },
+        "events": { "type": "array", "items": { "$ref": "slug.schema.json" } },
+        "teams": { "type": "array", "items": { "$ref": "slug.schema.json" } }
     }
 }

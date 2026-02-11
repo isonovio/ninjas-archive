@@ -7,7 +7,7 @@
     "properties": {
         "$schema": { "type": "string", "format": "uri-reference" },
 
-        "slug": { "$ref": "../schemas/slug.schema.json" },
+        "slug": { "$ref": "slug.schema.json" },
         "name": { "type": "string" }
     }
 }

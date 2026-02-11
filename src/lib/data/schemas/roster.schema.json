@@ -6,9 +6,10 @@
     "additionalProperties": false,
     "properties": {
         "$schema": { "type": "string", "format": "uri-reference" },
-        "slug": { "$ref": "../schemas/slug.schema.json" },
-        "team": { "$ref": "../schemas/slug.schema.json" },
-        "players": { "type": "array", "items": { "$ref": "../schemas/slug.schema.json" } },
-        "duration": { "$ref": "../schemas/daterange.schema.json" }
+
+        "slug": { "$ref": "slug.schema.json" },
+        "team": { "$ref": "slug.schema.json" },
+        "players": { "type": "array", "items": { "$ref": "slug.schema.json" } },
+        "duration": { "$ref": "daterange.schema.json" }
     }
 }

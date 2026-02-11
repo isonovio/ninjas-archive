@@ -5,9 +5,9 @@
     "required": ["casters", "language", "parts"],
     "additionalProperties": false,
     "properties": {
-        "casters": { "type": "array", "items": { "$ref": "../schemas/slug.schema.json" } },
-        "language": { "$ref": "../schemas/language.schema.json" },
-        "parts": { "type": "array", "items": { "$ref": "../schemas/video.schema.json" } },
+        "casters": { "type": "array", "items": { "$ref": "slug.schema.json" } },
+        "language": { "$ref": "language.schema.json" },
+        "parts": { "type": "array", "items": { "$ref": "video.schema.json" } },
         "tags": { "type": "array", "items": { "$ref": "#/$defs/tag" } }
     },
 

@@ -6,10 +6,10 @@
     "additionalProperties": false,
     "properties": {
         "id": { "type": "number" },
-        "map": { "$ref": "../schemas/cs-map.schema.json" },
+        "map": { "$ref": "cs-map.schema.json" },
         "result": { "type": "string", "pattern": "^[0-9]+:[0-9]+$" },
-        "links": { "type": "array", "items": { "$ref": "../schemas/extern-link.schema.json" } },
-        "rewatches": { "type": "array", "items": { "$ref": "../schemas/official-rewatch.schema.json" } },
+        "links": { "type": "array", "items": { "$ref": "extern-link.schema.json" } },
+        "rewatches": { "type": "array", "items": { "$ref": "official-rewatch.schema.json" } },
         "note": { "type": "string" }
     }
 }

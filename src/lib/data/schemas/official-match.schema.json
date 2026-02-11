@@ -9,8 +9,8 @@
         "name": { "type": "string" },
         "date": { "type": "string", "format": "date" },
         "lineups": { "$ref": "#/$defs/lineups" },
-        "links": { "type": "array", "items": { "$ref": "../schemas/extern-link.schema.json" } },
-        "maps": { "type": "array", "items": { "$ref": "../schemas/official-map.schema.json" } },
+        "links": { "type": "array", "items": { "$ref": "extern-link.schema.json" } },
+        "maps": { "type": "array", "items": { "$ref": "official-map.schema.json" } },
         "note": { "type": "string" }
     },
 
@@ -20,8 +20,8 @@
             "required": ["team1", "team2"],
             "additionalProperties": false,
             "properties": {
-                "team1": { "$ref": "../schemas/official-lineup.schema.json" },
-                "team2": { "$ref": "../schemas/official-lineup.schema.json" }
+                "team1": { "$ref": "official-lineup.schema.json" },
+                "team2": { "$ref": "official-lineup.schema.json" }
             }
         }
     }

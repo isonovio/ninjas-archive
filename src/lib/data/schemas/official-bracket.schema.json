@@ -5,13 +5,13 @@
     "required": ["slug", "name"],
     "additionalProperties": false,
     "properties": {
-        "slug": { "$ref": "../schemas/slug.schema.json" },
+        "slug": { "$ref": "slug.schema.json" },
         "name": { "type": "string" },
-        "duration": { "$ref": "../schemas/daterange.schema.json" },
-        "links": { "type": "array", "items": { "$ref": "../schemas/extern-link.schema.json" } },
-        "participants": { "type": "array", "items": { "$ref": "../schemas/official-lineup.schema.json#/$defs/shorthand" } },
-        "brackets": { "type": "array", "items": { "$ref": "../schemas/official-bracket.schema.json" } },
-        "matches": { "type": "array", "items": { "$ref": "../schemas/official-match.schema.json" } },
+        "duration": { "$ref": "daterange.schema.json" },
+        "links": { "type": "array", "items": { "$ref": "extern-link.schema.json" } },
+        "participants": { "type": "array", "items": { "$ref": "official-lineup.schema.json#/$defs/shorthand" } },
+        "brackets": { "type": "array", "items": { "$ref": "official-bracket.schema.json" } },
+        "matches": { "type": "array", "items": { "$ref": "official-match.schema.json" } },
         "note": { "type": "string" }
     }
 }
