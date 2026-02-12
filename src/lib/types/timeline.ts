@@ -61,7 +61,7 @@ export const entriesGroupSortByDate = (entries: Entry[]): dailyTimeline[] => {
     });
     return [...map.values()]
         .map(({ date, entries }) => {
-            const sortedEntries = entries.toSorted(entryCompare);
+            const sortedEntries = entries.toSorted(entryCompare).toReversed();
             return { date, entries: sortedEntries };
         })
         .toSorted((a, b) => Temporal.PlainDate.compare(b.date, a.date));
