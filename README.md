@@ -10,10 +10,6 @@
     - [ ] Everything clickable need to have hover color change
     - [ ] add hover texts to clickables
     - [ ] `h1` title of each page
-- Timeline Match UI
-    - [ ] show player nicknames under teamnames
-    - [ ] MAYBE: separate events as a separate genre from matches | Color Code: Brown
-    - [ ] MAYBE: show match slug on the left, just like map slug
 - Filter
     - [ ] UI: in player filter section, add links to specific pages of the player
     - [ ] UI: allow search in player filter sections | `searchterm.tolowercase`, show player name if slug.substring(searchterm) or player is in filter
@@ -36,6 +32,8 @@
     - [ ] Add a team type independent of roster
     - [ ] Editorial Page: Articles Written by me
     - [ ] `wynd` mode: show something related to me only
+- Editor UI
+    - [ ] on `/event/[slug]`: a button to open an event data editor, can output json to copy/paste
 
 ## Todos: Long-Term
 - Summary Mode: can show more items on the timeline
