@@ -16,7 +16,6 @@ import { Genre } from "./timeline-genre";
 
 export type MatchRaw = {
     id: number;
-    name?: string;
     date: string;
     lineups: {
         team1: LineupRaw;
@@ -45,19 +44,16 @@ export interface Match extends EntryBase {
     brackets: Bracket[];
 }
 
-export const matchFromRaw = (
-    raw: MatchRaw,
-    event: CSEvent,
-    brackets: Bracket[],
-    lineupShorthands: ReadonlyMap<string, Lineup>,
-): Match => {
-    if (brackets.length === 0) {
-        throw new Error("No bracket provided");
-    }
+export type MatchContext = {
+    event: CSEvent;
+    brackets: Bracket[];
+    lineupShorthands: ReadonlyMap<string, Lineup>;
+};
 
+export const matchFromRaw = (raw: MatchRaw, ctx: MatchContext): Match => {
     const lineups: [Lineup, Lineup] = [
-        lineupFromRaw(raw.lineups.team1, lineupShorthands),
-        lineupFromRaw(raw.lineups.team2, lineupShorthands),
+        lineupFromRaw(raw.lineups.team1, ctx.lineupShorthands),
+        lineupFromRaw(raw.lineups.team2, ctx.lineupShorthands),
     ];
 
     const related: Related = {
@@ -65,7 +61,7 @@ export const matchFromRaw = (
         teams: lineups
             .filter((lineup) => lineup.team !== undefined)
             .map((lineup) => lineup.team!),
-        events: [event],
+        events: [ctx.event],
     };
 
     const maps = raw.maps
@@ -80,7 +76,7 @@ export const matchFromRaw = (
         date: Temporal.PlainDate.from(raw.date),
 
         id: raw.id,
-        name: raw.name ?? `Match ${raw.id}`,
+        name: `Match ${raw.id}`,
         lineups,
         links: raw.links ?? [],
         results,
@@ -88,14 +84,16 @@ export const matchFromRaw = (
         maps,
         note: raw.note,
 
-        event,
-        brackets,
+        event: ctx.event,
+        brackets: ctx.brackets,
     };
 };
 
 export const matchCompare = (a: Match, b: Match) => {
     const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
     if (dateCmp !== 0) return dateCmp;
+    const slugs = [];
+
     const eventCmp = a.event.slug.localeCompare(b.event.slug);
     if (eventCmp !== 0) return eventCmp;
     for (let i = 0; i < Math.min(a.brackets.length, b.brackets.length); i++) {

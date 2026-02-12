@@ -9,7 +9,7 @@ import {
     lineupShorthandFromRaw,
 } from "./official-lineup";
 import { type BracketRaw, processRawBracket } from "./official-bracket";
-import { type Match } from "./official-match";
+import { type Match, type MatchContext } from "./official-match";
 
 type CSEventRaw = {
     slug: string;
@@ -36,26 +36,27 @@ export type CSEvent = {
 };
 
 const processRawCSEvent = (raw: CSEventRaw): [CSEvent, Match[]] => {
-    const csEvent = {
+    const event = {
         slug: raw.slug,
         name: raw.name,
         duration: dateRangeFromRaw(raw.duration),
         links: raw.links ?? [],
         note: raw.note,
     };
-    const lineupShorthands = new Map();
-    if (raw.participants) {
-        raw.participants.forEach((raw) => {
-            const [shorthand, lineup] = lineupShorthandFromRaw(raw);
-            lineupShorthands.set(shorthand, lineup);
-        });
-    }
+
+    const ctx: MatchContext = {
+        event,
+        brackets: [],
+        lineupShorthands: new Map(
+            (raw.participants ?? []).map(lineupShorthandFromRaw),
+        ),
+    };
 
     const matches = raw.brackets.flatMap((bracket) =>
-        processRawBracket(bracket, csEvent, [], lineupShorthands),
+        processRawBracket(bracket, ctx),
     );
 
-    return [csEvent, matches];
+    return [event, matches];
 };
 
 export const [allCSEvents, allMatches]: [

@@ -9,7 +9,12 @@ import {
     type Lineup,
     lineupShorthandFromRaw,
 } from "./official-lineup";
-import { type MatchRaw, type Match, matchFromRaw } from "./official-match";
+import {
+    type MatchRaw,
+    type Match,
+    matchFromRaw,
+    type MatchContext,
+} from "./official-match";
 import { type CSEvent } from "./official-event";
 
 export type BracketRaw = {
@@ -18,6 +23,7 @@ export type BracketRaw = {
     duration?: DateRangeRaw;
     links?: ExternalLink[];
     participants?: LineupShorthandRaw[];
+    num_matches: number;
     brackets?: BracketRaw[];
     matches?: MatchRaw[];
     note?: string;
@@ -31,23 +37,16 @@ export type Bracket = {
     note?: string;
     event: CSEvent;
     parents: Bracket[];
+    numMatches: number;
 };
 
 export const processRawBracket = (
     raw: BracketRaw,
-    event: CSEvent,
-    parents: Bracket[],
-    lineupShorthands: ReadonlyMap<string, Lineup>,
+    ctx: MatchContext,
 ): Match[] => {
     if (raw.brackets && raw.matches) {
         throw new Error("Cannot have both brackets and matches");
     }
-
-    const newLineupShorthands: Map<string, Lineup> = new Map(lineupShorthands);
-    raw.participants?.forEach((p) => {
-        const [shorthand, lineup] = lineupShorthandFromRaw(p);
-        newLineupShorthands.set(shorthand, lineup);
-    });
 
     const bracket = {
         slug: raw.slug,
@@ -55,20 +54,25 @@ export const processRawBracket = (
         duration: raw.duration ? dateRangeFromRaw(raw.duration) : undefined,
         links: raw.links ?? [],
         note: raw.note,
-        event,
-        parents,
+        event: ctx.event,
+        parents: ctx.brackets,
+        numMatches: raw.num_matches,
     };
 
-    const newParents = [...parents, bracket];
-    if (raw.brackets) {
-        return raw.brackets.flatMap((b) =>
-            processRawBracket(b, event, newParents, newLineupShorthands),
-        );
-    } else if (raw.matches) {
-        return raw.matches.map((m) =>
-            matchFromRaw(m, event, newParents, newLineupShorthands),
-        );
+    const newCtx: MatchContext = {
+        event: ctx.event,
+        brackets: [...ctx.brackets, bracket],
+        lineupShorthands: new Map<string, Lineup>([
+            ...ctx.lineupShorthands,
+            ...(raw.participants ?? []).map(lineupShorthandFromRaw),
+        ]),
+    };
+    if (raw.num_matches === 0) {
+        if (!raw.brackets) throw new Error("Bracket has no subbrackets");
+
+        return raw.brackets.flatMap((b) => processRawBracket(b, newCtx));
     } else {
-        return [];
+        if (!raw.matches) throw new Error("Bracket has no matches");
+        return raw.matches.map((m) => matchFromRaw(m, newCtx));
     }
 };

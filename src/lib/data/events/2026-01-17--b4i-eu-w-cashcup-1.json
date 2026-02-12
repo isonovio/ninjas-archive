@@ -13,6 +13,7 @@
         {
             "slug": "r2",
             "name": "Round 2",
+            "num_matches": 8,
             "matches": [
                 {
                     "id": 3,
@@ -26,6 +27,7 @@
         {
             "slug": "r3",
             "name": "Round 3",
+            "num_matches": 4,
             "matches": [
                 {
                     "id": 2,
@@ -52,6 +54,7 @@
         {
             "slug": "r4",
             "name": "Round 4",
+            "num_matches": 2,
             "matches": [
                 {
                     "id": 1,
@@ -94,6 +97,7 @@
         {
             "slug": "r5",
             "name": "Grand finals",
+            "num_matches": 1,
             "matches": [
                 {
                     "id": 1,
