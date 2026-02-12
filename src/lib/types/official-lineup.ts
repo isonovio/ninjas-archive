@@ -25,9 +25,9 @@ export const lineupFromRaw = (
         return shorthands.get(raw.shorthand)!;
     }
 
-    var teamname: string | undefined = undefined;
-    var players: Player[] | undefined = undefined;
-    var team: Team | undefined = undefined;
+    let teamname: string | undefined = undefined;
+    let players: Player[] | undefined = undefined;
+    let team: Team | undefined = undefined;
     if (raw.roster) {
         const roster = allRosters.get(raw.roster)!;
         team = roster.team;

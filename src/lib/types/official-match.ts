@@ -12,6 +12,7 @@ import { type Related } from "./related";
 import { type CSEvent } from "./official-event";
 import { type Bracket } from "./official-bracket";
 import { type Outcome, outcomesFromResults } from "./official-outcome";
+import { Genre } from "./timeline-genre";
 
 export type MatchRaw = {
     id: number;
@@ -27,7 +28,7 @@ export type MatchRaw = {
 };
 
 export interface Match extends EntryBase {
-    genre: "match";
+    genre: Genre.MATCH;
     related: Related;
     date: Temporal.PlainDate;
 
@@ -74,7 +75,7 @@ export const matchFromRaw = (
     const outcomes = outcomesFromResults(results);
 
     return {
-        genre: "match",
+        genre: Genre.MATCH,
         related,
         date: Temporal.PlainDate.from(raw.date),
 
@@ -97,9 +98,9 @@ export const matchCompare = (a: Match, b: Match) => {
     if (dateCmp !== 0) return dateCmp;
     const eventCmp = a.event.slug.localeCompare(b.event.slug);
     if (eventCmp !== 0) return eventCmp;
-    a.brackets.forEach((bracket, i) => {
-        const bracketCmp = bracket.slug.localeCompare(b.brackets[i].slug);
+    for (let i = 0; i < Math.min(a.brackets.length, b.brackets.length); i++) {
+        const bracketCmp = a.brackets[i].slug.localeCompare(b.brackets[i].slug);
         if (bracketCmp !== 0) return bracketCmp;
-    });
+    }
     return a.id - b.id;
 };

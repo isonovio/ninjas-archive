@@ -1,13 +1,17 @@
-export type Outcome = "win" | "draw" | "lose";
+export enum Outcome {
+    WIN = "win",
+    DRAW = "draw",
+    LOSE = "lose",
+}
 
 export const outcomesFromResults = (
     results: [number, number],
 ): [Outcome, Outcome] => {
     if (results[0] > results[1]) {
-        return ["win", "lose"];
+        return [Outcome.WIN, Outcome.LOSE];
     } else if (results[0] < results[1]) {
-        return ["lose", "win"];
+        return [Outcome.LOSE, Outcome.WIN];
     } else {
-        return ["draw", "draw"];
+        return [Outcome.DRAW, Outcome.DRAW];
     }
 };

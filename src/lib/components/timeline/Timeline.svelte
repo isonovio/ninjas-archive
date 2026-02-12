@@ -4,7 +4,8 @@
     import { browser } from "$app/environment";
     import { Temporal } from "$lib/utils/temporal";
 
-    import { entriesGroupSortByDate, allEntries, genreDisplay, type Genre, genreCompare } from "$lib/types/timeline";
+    import { entriesGroupSortByDate, allEntries } from "$lib/types/timeline";
+    import { Genre, compare as genreCompare, display as genreDisplay } from "$lib/types/timeline-genre";
     import {
         filterEntries,
         filterFromParams,

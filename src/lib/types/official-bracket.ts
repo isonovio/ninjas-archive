@@ -43,7 +43,7 @@ export const processRawBracket = (
         throw new Error("Cannot have both brackets and matches");
     }
 
-    var newLineupShorthands: Map<string, Lineup> = new Map(lineupShorthands);
+    const newLineupShorthands: Map<string, Lineup> = new Map(lineupShorthands);
     raw.participants?.forEach((p) => {
         const [shorthand, lineup] = lineupShorthandFromRaw(p);
         newLineupShorthands.set(shorthand, lineup);

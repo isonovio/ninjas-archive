@@ -4,7 +4,7 @@ import {
     type RewatchRaw,
     rewatchFromRaw,
 } from "./official-rewatch";
-import { type Outcome, outcomesFromResults } from "./official-outcome";
+import { Outcome, outcomesFromResults } from "./official-outcome";
 
 export type MatchMapRaw = {
     id: number;
@@ -44,10 +44,10 @@ export const matchMapFromRaw = (raw: MatchMapRaw): MatchMap => {
 };
 
 export const sumMapResults = (maps: MatchMap[]): [number, number] => {
-    var result: [number, number] = [0, 0];
+    const result: [number, number] = [0, 0];
     for (const map of maps) {
-        result[0] += map.outcomes[0] == "win" ? 1 : 0;
-        result[1] += map.outcomes[1] == "win" ? 1 : 0;
+        result[0] += map.outcomes[0] == Outcome.WIN ? 1 : 0;
+        result[1] += map.outcomes[1] == Outcome.WIN ? 1 : 0;
     }
     return result;
 };

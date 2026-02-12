@@ -14,13 +14,10 @@ export type Team = {
     name: string;
 };
 
-export const allTeams: ReadonlyMap<string, Team> = teamsRaw
-    .map((v) => {
-        return {
-            ...v,
-        };
-    })
-    .reduce((map, team) => {
-        map.set(team.slug, team);
-        return map;
-    }, new Map<string, Team>());
+const teamFromRaw = (raw: TeamRaw): Team => {
+    return { ...raw };
+};
+
+export const allTeams: ReadonlyMap<string, Team> = new Map(
+    teamsRaw.map((team) => [team.slug, teamFromRaw(team)]),
+);

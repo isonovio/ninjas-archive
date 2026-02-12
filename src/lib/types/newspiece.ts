@@ -2,6 +2,7 @@ import { Temporal } from "$lib/utils/temporal";
 import { type EntryBase } from "./timeline";
 import { type Related, type RelatedRaw, relatedFromRaw } from "./related";
 import { type ExternalLink } from "./externlink";
+import { Genre } from "./timeline-genre";
 
 type NewspieceRaw = {
     slug: string;
@@ -16,7 +17,7 @@ const newsRaw = import.meta.glob<NewspieceRaw>("$lib/data/news/*.json", {
 });
 
 export interface Newspiece extends EntryBase {
-    genre: "newspiece";
+    genre: Genre.NEWSPIECE;
     slug: string;
     title: string;
     date: Temporal.PlainDate;
@@ -27,7 +28,7 @@ export interface Newspiece extends EntryBase {
 export const allNewspieces: Newspiece[] = Object.values(newsRaw).map((v) => {
     return {
         ...v,
-        genre: "newspiece" as const,
+        genre: Genre.NEWSPIECE,
         date: Temporal.PlainDate.from(v.date),
         related: relatedFromRaw(v.related),
     };

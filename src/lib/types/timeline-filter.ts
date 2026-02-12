@@ -1,5 +1,6 @@
 import { Temporal } from "$lib/utils/temporal";
-import { type Entry, type Genre } from "./timeline";
+import { type Entry } from "./timeline";
+import { Genre } from "./timeline-genre";
 
 export interface EntryFilter {
     filter(e: Entry): boolean;

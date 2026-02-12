@@ -62,8 +62,8 @@ export const [allCSEvents, allMatches]: [
     ReadonlyMap<string, CSEvent>,
     Match[],
 ] = (() => {
-    var csEvents: Map<string, CSEvent> = new Map();
-    var allMatches: Match[] = [];
+    const csEvents: Map<string, CSEvent> = new Map();
+    const allMatches: Match[] = [];
 
     csEventsRaw.forEach((raw) => {
         const [csEvent, matches] = processRawCSEvent(raw);

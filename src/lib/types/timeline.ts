@@ -3,22 +3,7 @@ import { type Related } from "./related";
 import { type Newspiece, allNewspieces, newspieceCompare } from "./newspiece";
 import { type Match, matchCompare } from "./official-match";
 import { allMatches } from "./official-event";
-
-export type Genre = "newspiece" | "match";
-
-export const genreDisplay = (genre: Genre): string => {
-    if (genre === "match") {
-        return "Officials";
-    } else if (genre === "newspiece") {
-        return "News";
-    } else {
-        throw new Error(`Unknown genre: ${genre}`);
-    }
-};
-
-export const genreCompare = (a: Genre, b: Genre) => {
-    return a.localeCompare(b);
-};
+import { Genre, compare as genreCompare } from "./timeline-genre";
 
 export interface EntryBase {
     genre: Genre;
@@ -34,13 +19,13 @@ export const entryCompare = (a: Entry, b: Entry) => {
     const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
     if (dateCmp !== 0) return dateCmp;
 
-    const genreCmp = a.genre.localeCompare(b.genre);
+    const genreCmp = genreCompare(a.genre, b.genre);
     if (genreCmp !== 0) return genreCmp;
 
     switch (a.genre) {
-        case "newspiece":
+        case Genre.NEWSPIECE:
             return newspieceCompare(a, b as Newspiece);
-        case "match":
+        case Genre.MATCH:
             return matchCompare(a, b as Match);
     }
 };

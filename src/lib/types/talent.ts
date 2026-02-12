@@ -23,14 +23,13 @@ export type Talent = {
     socials: ExternalLink[];
 };
 
-export const allTalents: ReadonlyMap<string, Talent> = talentsRaw
-    .map((v) => {
-        return {
-            ...v,
-            socials: v.socials ?? [],
-        };
-    })
-    .reduce((map, talent) => {
-        map.set(talent.slug, talent);
-        return map;
-    }, new Map<string, Talent>());
+const talentFromRaw = (raw: TalentRaw): Talent => {
+    return {
+        ...raw,
+        socials: raw.socials ?? [],
+    };
+};
+
+export const allTalents: ReadonlyMap<string, Talent> = new Map(
+    talentsRaw.map((talent) => [talent.slug, talentFromRaw(talent)]),
+);

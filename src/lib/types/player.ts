@@ -26,20 +26,20 @@ export type Player = {
     tags: PlayerTag[];
 };
 
-export const allPlayers: ReadonlyMap<string, Player> = playersRaw
-    .map((v) => {
-        return {
-            ...v,
-            birthday: v.birthday
-                ? Temporal.PlainDate.from(v.birthday)
-                : undefined,
-            tags: v.tags ? v.tags.map((tag) => tag as PlayerTag) : [],
-        };
-    })
-    .reduce((map, player) => {
-        map.set(player.slug, player);
-        return map;
-    }, new Map<string, Player>());
+const playerFromRaw = (raw: PlayerRaw): Player => {
+    return {
+        ...raw,
+        birthday: raw.birthday
+            ? Temporal.PlainDate.from(raw.birthday)
+            : undefined,
+        tags:
+            raw.tags?.map((tag) => tag as PlayerTag satisfies PlayerTag) || [],
+    };
+};
+
+export const allPlayers: ReadonlyMap<string, Player> = new Map(
+    playersRaw.map((raw) => [raw.slug, playerFromRaw(raw)]),
+);
 
 export const playerCompare = (a: Player, b: Player) => {
     return a.slug.localeCompare(b.slug);
