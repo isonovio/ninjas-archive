@@ -112,16 +112,16 @@
     @reference "$lib/styles/global.css";
 
     .team-win.team-score {
-        @apply text-green-600,;
+        @apply text-green-600;
     }
     .team-win.team-name {
-        @apply text-green-700, font-semibold;
+        @apply text-green-700 font-semibold;
     }
     .team-lose.team-score {
         @apply text-red-600;
     }
     .team-lose.team-name {
-        @apply text-red-400, font-light;
+        @apply text-red-400 font-light;
     }
     .team-draw {
         @apply text-gray-600;
