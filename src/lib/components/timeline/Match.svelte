@@ -4,6 +4,14 @@
     import LinkRewatch from "$lib/components/snippets/LinkRewatch.svelte";
     import LinkPlayers from "$lib/components/snippets/LinkPlayers.svelte";
     export let match: Match;
+
+    const [name, brackets] = (() => {
+        const numBrackets = match.brackets.length;
+        if (numBrackets === 0) return [match.name, []];
+        const lastBracket = match.brackets[numBrackets - 1];
+        if (lastBracket.numMatches > 1) return [match.name, match.brackets];
+        return [lastBracket.name, match.brackets.slice(0, -1)];
+    })();
 </script>
 
 <div class="relative">
@@ -26,14 +34,14 @@
     </div>
     <div class="absolute -top-2.5 right-0 bg-white px-2 flex gap-1.5 text-sm">
         <div class="relative text-lime-600">
-            {match.name}
+            {name}
             <div class="absolute -bottom-3 right-0 flex gap-1.5 justify-end text-nowrap text-xs">
                 {#each match.links as link}
                     <LinkExternal {link} />
                 {/each}
             </div>
         </div>
-        {#each match.brackets.toReversed() as bracket}
+        {#each brackets.toReversed() as bracket}
             <div>&lt;</div>
             <div class="relative text-yellow-600">
                 {bracket.name}
