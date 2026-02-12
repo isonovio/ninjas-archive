@@ -56,6 +56,11 @@ export const matchFromRaw = (raw: MatchRaw, ctx: MatchContext): Match => {
         lineupFromRaw(raw.lineups.team2, ctx.lineupShorthands),
     ];
 
+    const name =
+        ctx.brackets.length > 0 && ctx.brackets.at(-1)?.isTransparent
+            ? ctx.brackets.at(-1)!.name
+            : `Match ${raw.id}`;
+
     const related: Related = {
         players: [...lineups[0].players, ...lineups[1].players],
         teams: lineups
@@ -76,7 +81,7 @@ export const matchFromRaw = (raw: MatchRaw, ctx: MatchContext): Match => {
         date: Temporal.PlainDate.from(raw.date),
 
         id: raw.id,
-        name: `Match ${raw.id}`,
+        name,
         lineups,
         links: raw.links ?? [],
         results,

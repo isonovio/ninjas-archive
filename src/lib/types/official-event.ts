@@ -52,9 +52,10 @@ const processRawCSEvent = (raw: CSEventRaw): [CSEvent, Match[]] => {
         ),
     };
 
-    const matches = raw.brackets.flatMap((bracket) =>
-        processRawBracket(bracket, ctx),
-    );
+    const matches = raw.brackets
+        .map((bracket) => processRawBracket(bracket, ctx))
+        .map(([child, ms]) => ms)
+        .flat();
 
     return [event, matches];
 };

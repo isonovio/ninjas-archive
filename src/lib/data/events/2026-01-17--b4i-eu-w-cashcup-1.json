@@ -13,7 +13,6 @@
         {
             "slug": "r2",
             "name": "Round 2",
-            "num_matches": 8,
             "matches": [
                 {
                     "id": 3,
@@ -27,7 +26,6 @@
         {
             "slug": "r3",
             "name": "Round 3",
-            "num_matches": 4,
             "matches": [
                 {
                     "id": 2,
@@ -54,12 +52,11 @@
         {
             "slug": "r4",
             "name": "Round 4",
-            "num_matches": 2,
             "matches": [
                 {
                     "id": 1,
                     "date": "2026-01-18",
-                    "lineups": { "team1": { "shorthand": "pkb" }, "team2": { "name": "Fingers Crossed Fe" } },
+                    "lineups": { "team1": { "shorthand": "pkb" }, "team2": { "team": "fingers-crossed-fe" } },
                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-b30b6792-4ab3-43f4-b015-0d4c26001c81" }],
                     "maps": [
                         {
@@ -97,7 +94,7 @@
         {
             "slug": "r5",
             "name": "Grand finals",
-            "num_matches": 1,
+            "tags": ["transparent"],
             "matches": [
                 {
                     "id": 1,

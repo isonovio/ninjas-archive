@@ -23,11 +23,13 @@ export type BracketRaw = {
     duration?: DateRangeRaw;
     links?: ExternalLink[];
     participants?: LineupShorthandRaw[];
-    num_matches: number;
     brackets?: BracketRaw[];
     matches?: MatchRaw[];
     note?: string;
+    tags?: BracketTag[];
 };
+
+type BracketTag = "transparent";
 
 export type Bracket = {
     slug: string;
@@ -37,26 +39,29 @@ export type Bracket = {
     note?: string;
     event: CSEvent;
     parents: Bracket[];
-    numMatches: number;
+    isTransparent: boolean;
 };
 
 export const processRawBracket = (
     raw: BracketRaw,
     ctx: MatchContext,
-): Match[] => {
-    if (raw.brackets && raw.matches) {
-        throw new Error("Cannot have both brackets and matches");
-    }
+): [Bracket, Match[]] => {
+    const linksFromParent =
+        ctx.brackets.length > 0 && ctx.brackets.at(-1)!.isTransparent
+            ? ctx.brackets.at(-1)!.links
+            : [];
+    const linksFromSelf = raw.links ?? [];
+    const links = [...linksFromParent, ...linksFromSelf];
 
-    const bracket = {
+    const bracket: Bracket = {
         slug: raw.slug,
         name: raw.name,
         duration: raw.duration ? dateRangeFromRaw(raw.duration) : undefined,
-        links: raw.links ?? [],
+        links,
         note: raw.note,
         event: ctx.event,
         parents: ctx.brackets,
-        numMatches: raw.num_matches,
+        isTransparent: raw.tags ? raw.tags.includes("transparent") : false,
     };
 
     const newCtx: MatchContext = {
@@ -67,12 +72,20 @@ export const processRawBracket = (
             ...(raw.participants ?? []).map(lineupShorthandFromRaw),
         ]),
     };
-    if (raw.num_matches === 0) {
-        if (!raw.brackets) throw new Error("Bracket has no subbrackets");
 
-        return raw.brackets.flatMap((b) => processRawBracket(b, newCtx));
+    if (raw.brackets && raw.matches) {
+        throw new Error("Cannot have both brackets and matches");
+    }
+    if (raw.brackets) {
+        const matches = raw.brackets
+            .map((b) => processRawBracket(b, newCtx))
+            .map(([child, ms]) => ms)
+            .flat();
+        return [bracket, matches];
+    } else if (raw.matches) {
+        const matches = raw.matches.map((m) => matchFromRaw(m, newCtx));
+        return [bracket, matches];
     } else {
-        if (!raw.matches) throw new Error("Bracket has no matches");
-        return raw.matches.map((m) => matchFromRaw(m, newCtx));
+        return [bracket, []];
     }
 };

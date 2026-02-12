@@ -1,0 +1,5 @@
+{
+    "$schema": "../schemas/team.schema.json",
+    "slug": "fingers-crossed-fe",
+    "name": "Fingers Crossed fe"
+}
