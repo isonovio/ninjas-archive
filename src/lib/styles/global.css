@@ -4,7 +4,7 @@
 @theme {
     --font-sans: "Signika", ui-sans-serif, system-ui, sans-serif;
 
-    --font-mono: "Maple Mono", ui-monospace, system-ui, monospace;
+    --font-mono: "Kode Mono", ui-monospace, system-ui, monospace;
 
     /* green: #608000 */
     --color-prim-50: #d5ff8e;

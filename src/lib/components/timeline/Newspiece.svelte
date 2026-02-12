@@ -6,10 +6,10 @@
     export let newspiece: Newspiece;
 </script>
 
-<div class="py-2 flex justify-between gap-4">
-    <div class="relative self-start shrink-0 font-bold text-xl text-sky-700">
-        <span>{newspiece.title}</span>
-        <div class="absolute -bottom-3">
+<div class="pt-2 flex justify-between gap-4">
+    <div class="shrink-0 font-semibold text-xl text-sky-700">
+        <div class="leading-none">{newspiece.title}</div>
+        <div class="leading-none">
             <LinkPlayers players={newspiece.related.players} />
         </div>
     </div>

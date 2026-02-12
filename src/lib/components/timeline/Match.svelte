@@ -8,16 +8,16 @@
 
 <div class="relative">
     <div class="absolute -top-3.5 left-6 z-20 grid grid-cols-[172px_60px_auto] font-medium text-xl">
-        <div class="relative inline-block ml-auto pl-2 bg-white text-nowrap text-right team-{match.outcomes[0]}">
+        <div class="relative inline-block ml-auto pl-2 bg-white text-nowrap text-right team-name team-{match.outcomes[0]}">
             {match.lineups[0].teamname}
             <div class="absolute -bottom-2 right-0">
                 <LinkPlayers players={match.lineups[0].players} />
             </div>
         </div>
-        <div class="inline-block bg-white text-center font-extrabold font-mono">
-            <span class="team-{match.outcomes[0]}">{match.results[0]}</span>:<span class="team-{match.outcomes[1]}">{match.results[1]}</span>
+        <div class="inline-block bg-white text-center font-bold font-mono">
+            <span class="team-score team-{match.outcomes[0]}">{match.results[0]}</span><span>-</span><span class="team-score team-{match.outcomes[1]}">{match.results[1]}</span>
         </div>
-        <div class="relative inline-block pr-2 bg-white team-{match.outcomes[1]}">
+        <div class="relative inline-block pr-2 bg-white team-name team-{match.outcomes[1]}">
             {match.lineups[1].teamname}
             <div class="absolute -bottom-2 left-0">
                 <LinkPlayers players={match.lineups[1].players} />
@@ -66,17 +66,17 @@
                         <span class="inline-block w-8 text-lime-950 font-medium">
                             {map.map}
                         </span>
-                        <span class="inline-block w-30 text-right team-{map.outcomes[0]}">
+                        <span class="inline-block w-30 text-right team-name team-{map.outcomes[0]}">
                             {match.lineups[0].teamname}
                         </span>
-                        <span class="inline-block w-6 text-right font-extrabold font-mono team-{map.outcomes[0]}">
+                        <span class="inline-block w-6 text-right font-bold font-mono team-score team-{map.outcomes[0]}">
                             {map.results[0]}
                         </span>
-                        <span class="inline-block font-extrabold font-mono">:</span>
-                        <span class="inline-block w-6 font-extrabold font-mono team-{map.outcomes[1]}">
+                        <span class="inline-block font-bold font-mono">:</span>
+                        <span class="inline-block w-6 font-bold font-mono team-score team-{map.outcomes[1]}">
                             {map.results[1]}
                         </span>
-                        <span class="inline-block w-30 team-{map.outcomes[1]}">
+                        <span class="inline-block w-30 team-name team-{map.outcomes[1]}">
                             {match.lineups[1].teamname}
                         </span>
                     </div>
@@ -103,13 +103,21 @@
 <style lang="postcss">
     @reference "$lib/styles/global.css";
 
-    .team-win {
-        @apply text-green-600 font-bold;
+    .team-win.team-score {
+        @apply text-green-600;
     }
-    .team-lose {
+    .team-win.team-name {
+        @apply font-semibold;
+        @apply text-green-700;
+    }
+    .team-lose.team-score {
         @apply text-red-600;
     }
+    .team-lose.team-name {
+        @apply font-light;
+        @apply text-red-400;
+    }
     .team-draw {
-        @apply text-gray-700;
+        @apply text-gray-600;
     }
 </style>
