@@ -6,9 +6,13 @@
     export let newspiece: Newspiece;
 </script>
 
-<div class="pt-2 flex justify-between gap-4">
+<div class="pt-2 pb-1 flex justify-between gap-4">
     <div class="shrink-0 font-semibold text-xl text-sky-700">
-        <div class="leading-none">{newspiece.title}</div>
+        <div class="leading-none">
+            {#each newspiece.title.match(/\w+|[^\w]+/g) as token}
+                <span class:player={newspiece.related.players.some((p) => p.nickname === token)}>{token} </span>
+            {/each}
+        </div>
         <div class="leading-none">
             <LinkPlayers players={newspiece.related.players} />
         </div>
@@ -22,4 +26,8 @@
 
 <style lang="postcss">
     @reference "$lib/styles/global.css";
+
+    .player {
+        @apply font-sc;
+    }
 </style>
