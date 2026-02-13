@@ -1346,7 +1346,47 @@
                                     "date": "2026-02-13",
                                     "lineups": { "team1": { "shorthand": "big" }, "team2": { "team": "fingers-crossed-fe" } },
                                     "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390099/big-equipa-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }],
-                                    "maps": []
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "ovp",
+                                            "result": "13:5",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["bdog"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "03:28:18-04:12:24" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "anc",
+                                            "result": "9:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["bdog"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "04:23:39-05:11:56" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 3,
+                                            "map": "mrg",
+                                            "result": "0:0",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["bdog"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": []
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         }
