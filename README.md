@@ -8,6 +8,7 @@
 ## Todos:
 - Code
     - [ ] inside each module, use simplistic names instead of flatnames
+    - [ ] rename `official-` types to `OfficalEvent`, `OfficalBracket`, etc.
     - [ ] rename: `record`, `record-genre`, `record-filter`; `timeline` = `record` grouped by `date`
     - [ ] replace `Raw` types with `zod` schemas for runtime validation
     - [ ] extract reusable components: e.g., Filter Box
