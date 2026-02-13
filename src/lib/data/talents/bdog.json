@@ -1,0 +1,6 @@
+{
+    "$schema": "../schemas/talent.schema.json",
+    "slug": "bdog",
+    "nickname": "BDog",
+    "socials": [{ "name": "Twitter", "url": "https://x.com/BDogCS" }]
+}
