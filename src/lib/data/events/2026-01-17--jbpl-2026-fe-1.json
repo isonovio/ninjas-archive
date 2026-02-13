@@ -1376,17 +1376,45 @@
                                         {
                                             "id": 3,
                                             "map": "mrg",
-                                            "result": "0:0",
+                                            "result": "13:6",
                                             "rewatches": [
                                                 {
                                                     "casters": ["bdog"],
                                                     "language": "en",
                                                     "tags": ["official"],
-                                                    "parts": []
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "05:24:05-06:04:01" }]
                                                 }
                                             ]
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r2",
+                            "name": "Lower final",
+                            "tags": ["transparent"],
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-02-14",
+                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "team": "fingers-crossed-fe" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390100/let-her-cook-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }],
+                                    "maps": []
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r3",
+                            "name": "Upper final",
+                            "tags": ["transparent"],
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-02-14",
+                                    "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "big" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390101/pigeons-vs-big-equipa-jb-pro-league-female-season-1" }],
+                                    "maps": []
                                 }
                             ]
                         }
