@@ -6,6 +6,11 @@
 - Deployment: CDN, DNS, and static file hosting: [Bunny.net](https://bunny.net/)
 
 ## Todos:
+- Code
+    - [ ] inside each module, use simplistic names instead of flatnames
+    - [ ] rename: `record`, `record-genre`, `record-filter`; `timeline` = `record` grouped by `date`
+    - [ ] replace `Raw` types with `zod` schemas for runtime validation
+    - [ ] extract reusable components: e.g., Filter Box
 - UI
     - [ ] Everything clickable need to have hover color change
     - [ ] add hover texts to clickables
@@ -20,10 +25,6 @@
     - [ ] add a search section above filter section
     - [ ] add a `search_name" field to every timeline item to allow text-based searching
     - [ ] filter: item => streamterm.toWords.map(toLower).all(isSubstring of item.search_name)
-- Code
-    - [ ] use module hierarchy instead of flat names
-    - [ ] organize components in folder structure
-    - [ ] extract reusable components: e.g., Filter Box
 - Content
     - [ ] Why? Page
     - [ ] Credits Page
