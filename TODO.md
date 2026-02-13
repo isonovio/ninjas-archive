@@ -4,9 +4,17 @@
     - [ ] rename `official-` types to `OfficalEvent`, `OfficalBracket`, etc.
     - [ ] rename: `record`, `record-genre`, `record-filter`; `timeline` = `record` grouped by `date`
     - [ ] replace `Raw` types with `zod` schemas for runtime validation
-    - [ ] extract reusable components: e.g., Filter Box
+    - [ ] extract as many reusable components as possible, avoid code duplication
+        - [ ] ParamFilterBox
+        - [ ] Title: small-caps all player names
+        - [ ] NavItem: add underline on current page
 - UI
     - [ ] Everything clickable need to have hover color change
+    - [ ] ParamFilter
+        - [ ] add button on `from` and `to` in `Date` filter
+        - [ ] separate `from` and `to` logic
+        - [ ] MAYBE: remove confirm button, add text: `press enter to confirm`
+        - [ ] MAYBE: update timeline filter on update, not on submit
     - [ ] add hover texts to clickables
     - [ ] `h1` title of each page
 - Filter
