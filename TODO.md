@@ -17,6 +17,7 @@
         - [ ] MAYBE: update timeline filter on update, not on submit
     - [ ] add hover texts to clickables
     - [ ] `h1` title of each page
+    - [ ] MAYBE: exact time of timeline entries
 - Filter
     - [ ] UI: in player filter section, add links to specific pages of the player
     - [ ] UI: allow search in player filter sections | `searchterm.tolowercase`, show player name if slug.substring(searchterm) or player is in filter
