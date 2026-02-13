@@ -29,6 +29,7 @@
 - Content
     - [ ] Why? Page
     - [ ] Credits Page
+    - [ ] Vlogs/YouTube Videos as a Genre in Timeline | Color Code: Red
     - [ ] Streams as a Genre in Timeline | Color Code: Purple
     - [ ] Event Pages
     - [ ] Add a team type independent of roster
