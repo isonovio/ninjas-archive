@@ -929,6 +929,7 @@
                     "slug": "s1g",
                     "name": "Group Stage",
                     "duration": { "start": "2026-02-09", "end": "2026-02-12" },
+                    "tags": ["transparent"],
                     "brackets": [
                         {
                             "slug": "ga",
