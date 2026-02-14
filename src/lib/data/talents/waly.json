@@ -1,0 +1,6 @@
+{
+    "$schema": "../schemas/talent.schema.json",
+    "slug": "waly",
+    "nickname": "wAly",
+    "socials": [{ "name": "Twitter", "url": "https://x.com/wAlysteri" }]
+}

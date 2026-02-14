@@ -1406,18 +1406,20 @@
                                                 {
                                                     "casters": ["affinity"],
                                                     "language": "en",
+                                                    "tags": ["official"],
                                                     "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "00:41:27-01:34:40" }]
                                                 }
                                             ]
                                         },
                                         {
-                                            "id": 1,
+                                            "id": 2,
                                             "map": "nuke",
                                             "result": "13:8",
                                             "rewatches": [
                                                 {
                                                     "casters": ["affinity"],
                                                     "language": "en",
+                                                    "tags": ["official"],
                                                     "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "01:44:13-02:26:32" }]
                                                 }
                                             ]
@@ -1436,6 +1438,101 @@
                                     "date": "2026-02-14",
                                     "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "big" } },
                                     "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390101/pigeons-vs-big-equipa-jb-pro-league-female-season-1" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "inf",
+                                            "result": "13:10",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "04:12:36-05:02:34" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "inf",
+                                            "result": "13:11",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "05:12:45-05:57:02" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r4",
+                            "name": "Consolidation final",
+                            "tags": ["transparent"],
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-02-14",
+                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "shorthand": "big" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390102/let-her-cook-vs-big-equipa-jb-pro-league-female-season-1" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "inf",
+                                            "result": "16:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["waly"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "07:41:18-08:51:31" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "anc",
+                                            "result": "6:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["waly"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "09:00:26-09:37:07" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 3,
+                                            "map": "d2",
+                                            "result": "13:9",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["waly"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "09:49:40-10:37:16" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r5",
+                            "name": "Grand final",
+                            "tags": ["transparent"],
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-02-15",
+                                    "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "lhc" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390103/pigeons-vs-let-her-cook-jb-pro-league-female-season-1" }],
                                     "maps": []
                                 }
                             ]
