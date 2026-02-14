@@ -1319,10 +1319,7 @@
                                                     "casters": ["bdog"],
                                                     "language": "en",
                                                     "tags": ["official"],
-                                                    "parts": [
-                                                        { "link": { "name": "Part 1", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "00:12:59-00:28:04" },
-                                                        { "link": { "name": "Part 2", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "00:30:01-01:09:51" }
-                                                    ]
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "00:12:59-01:09:51" }]
                                                 }
                                             ]
                                         },
@@ -1400,7 +1397,32 @@
                                     "date": "2026-02-14",
                                     "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "team": "fingers-crossed-fe" } },
                                     "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390100/let-her-cook-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }],
-                                    "maps": []
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "anb",
+                                            "result": "13:11",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "00:41:27-01:34:40" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 1,
+                                            "map": "nuke",
+                                            "result": "13:8",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "01:44:13-02:26:32" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
