@@ -12,10 +12,4 @@
 
 <Header />
 
-<div>
-    {@render children()}
-</div>
-
-<style lang="postcss">
-    @reference "$lib/styles/global.css";
-</style>
+{@render children()}
