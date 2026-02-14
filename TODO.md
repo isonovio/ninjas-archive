@@ -39,7 +39,7 @@
     - [ ] Editorial Page: Articles Written by me
     - [ ] `wynd` mode: show something related to me only
 - Editor UI
-    - [ ] on `/event/[slug]`: a button to open an event data editor, can output json to copy/paste
+    - [ ] on `/event/[slug]`: a button to open an event data editor, can output json to clipboard
 
 ## long-term
 - Summary Mode: can show more items on the timeline
