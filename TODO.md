@@ -11,19 +11,20 @@
 - UI
     - [ ] Everything clickable need to have hover color change
     - [ ] ParamFilter
-        - [ ] add button on `from` and `to` in `Date` filter
-        - [ ] separate `from` and `to` logic
-        - [ ] MAYBE: remove confirm button, add text: `press enter to confirm`
-        - [ ] MAYBE: update timeline filter on update, not on submit
     - [ ] add hover texts to clickables
     - [ ] `h1` title of each page
     - [ ] MAYBE: exact time of timeline entries
 - Filter
     - [ ] UI: in player filter section, add links to specific pages of the player
     - [ ] UI: allow search in player filter sections | `searchterm.tolowercase`, show player name if slug.substring(searchterm) or player is in filter
+    - [ ] UI: 1st click include (style: green), 2nd click exclude (style: red + strikethrough)
     - [ ] feat: player filter: can be ANY mode or OR mode
     - [ ] feat: more filter dimensions: team, event, talent
     - [ ] UI: each filter box is default collapsed. non-selectedoptions are only shown when hovered
+    - [ ] feat: add button on `from` and `to` in `Date` filter
+    - [ ] feat: separate `from` and `to` logic
+    - [ ] MAYBE: remove confirm button, add text: `press enter to confirm`
+    - [ ] feat: sanitize params
 - Search
     - [ ] add a search section above filter section
     - [ ] add a `search_name" field to every timeline item to allow text-based searching
