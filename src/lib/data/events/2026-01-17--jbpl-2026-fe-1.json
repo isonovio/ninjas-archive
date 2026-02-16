@@ -1534,7 +1534,50 @@
                                     "date": "2026-02-15",
                                     "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "lhc" } },
                                     "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390103/pigeons-vs-let-her-cook-jb-pro-league-female-season-1" }],
-                                    "maps": []
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "ovp",
+                                            "result": "13:2",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["lucyluce", "bdog"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "00:09:56-00:47:09" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "anc",
+                                            "result": "4:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["lucyluce", "bdog"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "00:55:17-01:28:25" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 3,
+                                            "map": "d2",
+                                            "result": "13:11",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["lucyluce", "bdog"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        { "link": { "name": "Part 1", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "01:40:37-02:13:03" },
+                                                        { "link": { "name": "Part 2", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "02:20:34-02:43:25" }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         }
