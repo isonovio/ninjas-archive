@@ -1,7 +1,12 @@
 <script lang="ts">
     import { type Player } from "$lib/types/player";
-    export let players: Player[];
-    const ps = players.filter((p) => p.tags.includes("ninja"));
+
+    interface Props {
+        players: Player[];
+    }
+    let { players }: Props = $props();
+
+    const ps = $derived(players.filter((p) => p.tags.includes("ninja")));
 </script>
 
 <div class="flex gap-1.5">
