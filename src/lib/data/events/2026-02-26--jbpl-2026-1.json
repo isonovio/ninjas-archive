@@ -1,0 +1,73 @@
+{
+    "$schema": "../schemas/official-event.schema.json",
+
+    "slug": "jbpl-2026-1",
+    "name": "JB Pro League 2026 #1",
+    "duration": { "start": "2026-02-16", "end": "2026-03-01" },
+    "links": [
+        { "name": "JBPL", "url": "https://www.jbproleague.com/news/69a2bd6d-5f10-42e3-9655-b508568c90f5" },
+        { "name": "GitHub", "url": "https://github.com/VANTAGL/JB-Pro-League-2026--1" },
+        { "name": "Liquipedia", "url": "https://liquipedia.net/counterstrike/JB_Pro_League/Season_2" },
+        { "name": "HLTV", "url": "https://www.hltv.org/events/8923/jb-pro-league-season-2" }
+    ],
+    "participants": [{ "shorthand": "big", "lineup": { "roster": "big-equipa-2026-1" } }],
+    "brackets": [
+        {
+            "slug": "s2m",
+            "name": "Main Event",
+            "duration": { "start": "2026-02-26", "end": "2026-03-01" },
+            "brackets": [
+                {
+                    "slug": "r1",
+                    "name": "Round of 16",
+                    "matches": [
+                        {
+                            "id": 4,
+                            "date": "2026-02-26",
+                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "Fuzos" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390650/big-equipa-vs-fuzos-jb-pro-league-season-2" }],
+                            "maps": [
+                                {
+                                    "id": 1,
+                                    "map": "inf",
+                                    "result": "7:13",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [
+                                                {
+                                                    "link": { "name": "VOD", "url": "https://kick.com/jbproleague/videos/63dfe0bf-e84c-43c1-b06a-a01bd9d603d7" },
+                                                    "duration": "03:29:52-04:13:33"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "anc",
+                                    "result": "1:13",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [
+                                                {
+                                                    "link": { "name": "VOD", "url": "https://kick.com/jbproleague/videos/63dfe0bf-e84c-43c1-b06a-a01bd9d603d7" },
+                                                    "duration": "04:29:28-04:51:27"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
