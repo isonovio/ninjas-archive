@@ -16,48 +16,55 @@
             "slug": "s2m",
             "name": "Main Event",
             "duration": { "start": "2026-02-26", "end": "2026-03-01" },
+            "tags": ["transparent"],
             "brackets": [
                 {
-                    "slug": "r1",
-                    "name": "Round of 16",
-                    "matches": [
+                    "slug": "p",
+                    "name": "Playoffs",
+                    "brackets": [
                         {
-                            "id": 4,
-                            "date": "2026-02-26",
-                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "Fuzos" } },
-                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390650/big-equipa-vs-fuzos-jb-pro-league-season-2" }],
-                            "maps": [
+                            "slug": "r1",
+                            "name": "Round of 16",
+                            "matches": [
                                 {
-                                    "id": 1,
-                                    "map": "inf",
-                                    "result": "7:13",
-                                    "rewatches": [
+                                    "id": 4,
+                                    "date": "2026-02-26",
+                                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "Fuzos" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390650/big-equipa-vs-fuzos-jb-pro-league-season-2" }],
+                                    "maps": [
                                         {
-                                            "casters": ["affinity"],
-                                            "language": "en",
-                                            "tags": ["official"],
-                                            "parts": [
+                                            "id": 1,
+                                            "map": "inf",
+                                            "result": "7:13",
+                                            "rewatches": [
                                                 {
-                                                    "link": { "name": "VOD", "url": "https://kick.com/jbproleague/videos/63dfe0bf-e84c-43c1-b06a-a01bd9d603d7" },
-                                                    "duration": "03:29:52-04:13:33"
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/jbproleague/videos/63dfe0bf-e84c-43c1-b06a-a01bd9d603d7" },
+                                                            "duration": "03:29:52-04:13:33"
+                                                        }
+                                                    ]
                                                 }
                                             ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "id": 2,
-                                    "map": "anc",
-                                    "result": "1:13",
-                                    "rewatches": [
+                                        },
                                         {
-                                            "casters": ["affinity"],
-                                            "language": "en",
-                                            "tags": ["official"],
-                                            "parts": [
+                                            "id": 2,
+                                            "map": "anc",
+                                            "result": "1:13",
+                                            "rewatches": [
                                                 {
-                                                    "link": { "name": "VOD", "url": "https://kick.com/jbproleague/videos/63dfe0bf-e84c-43c1-b06a-a01bd9d603d7" },
-                                                    "duration": "04:29:28-04:51:27"
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/jbproleague/videos/63dfe0bf-e84c-43c1-b06a-a01bd9d603d7" },
+                                                            "duration": "04:29:28-04:51:27"
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         }

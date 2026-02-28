@@ -15,17 +15,24 @@
             "name": "Main Event",
             "duration": { "start": "2026-03-01", "end": "2026-03-04" },
             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/9015/exort-meteor-season-2" }],
+            "tags": ["transparent"],
             "brackets": [
                 {
-                    "slug": "r1",
-                    "name": "Round of 16",
-                    "matches": [
+                    "slug": "p",
+                    "name": "Playoffs",
+                    "brackets": [
                         {
-                            "id": 5,
-                            "date": "2026-03-01",
-                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "QWENTRY" } },
-                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2391086/big-equipa-vs-qwentry-exort-meteor-season-2" }],
-                            "maps": []
+                            "slug": "r1",
+                            "name": "Round of 16",
+                            "matches": [
+                                {
+                                    "id": 5,
+                                    "date": "2026-03-01",
+                                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "QWENTRY" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2391086/big-equipa-vs-qwentry-exort-meteor-season-2" }],
+                                    "maps": []
+                                }
+                            ]
                         }
                     ]
                 }
