@@ -30,7 +30,44 @@
                                     "date": "2026-03-01",
                                     "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "QWENTRY" } },
                                     "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2391086/big-equipa-vs-qwentry-exort-meteor-season-2" }],
-                                    "maps": []
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "anc",
+                                            "result": "2:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": [],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/exort_en/videos/1a5b29ae-064d-4cde-af01-bdeb2c08160b" },
+                                                            "duration": "03:35:42-03:59:21"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "d2",
+                                            "result": "6:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": [],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/exort_en/videos/1a5b29ae-064d-4cde-af01-bdeb2c08160b" },
+                                                            "duration": "04:16:12-04:47:14"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         }
