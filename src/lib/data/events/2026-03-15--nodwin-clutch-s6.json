@@ -1,0 +1,38 @@
+{
+    "$schema": "../schemas/official-event.schema.json",
+    "slug": "nodwin-clutch-s6",
+    "name": "NODWIN Clutch Series #6",
+    "duration": { "start": "2026-03-09", "end": "2026-04-02" },
+    "links": [{ "name": "Liquipedia", "url": "https://liquipedia.net/counterstrike/NODWIN_Gaming/Clutch_Series/6" }],
+    "participants": [{ "shorthand": "big", "lineup": { "roster": "big-equipa-2026-1" } }],
+    "brackets": [
+        {
+            "slug": "e2m",
+            "name": "Main Event",
+            "duration": { "start": "2026-03-17", "end": "2026-04-02" },
+            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/9051/nodwin-clutch-series-6" }],
+            "tags": ["transparent"],
+            "brackets": [
+                {
+                    "slug": "s1g",
+                    "name": "Group Stage",
+                    "brackets": [
+                        {
+                            "slug": "b00",
+                            "name": "Bracket 0:0",
+                            "matches": [
+                                {
+                                    "id": 2,
+                                    "date": "2026-03-17",
+                                    "lineups": { "team1": { "name": "MINLATE" }, "team2": { "shorthand": "big" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2391519/minlate-vs-big-equipa-nodwin-clutch-series-6" }],
+                                    "maps": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
