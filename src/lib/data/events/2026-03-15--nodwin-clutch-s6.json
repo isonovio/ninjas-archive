@@ -26,7 +26,44 @@
                                     "date": "2026-03-17",
                                     "lineups": { "team1": { "name": "MINLATE" }, "team2": { "shorthand": "big" } },
                                     "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2391519/minlate-vs-big-equipa-nodwin-clutch-series-6" }],
-                                    "maps": []
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "mrg",
+                                            "result": "13:3",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["wildeity", "emenjay"],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/nodwin_cs2/videos/032e8815-a5ac-40ac-9b22-a760ab61b83e" },
+                                                            "duration": "03:13:19-03:51:59"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "anc",
+                                            "result": "13:1",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["wildeity", "emenjay"],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/nodwin_cs2/videos/032e8815-a5ac-40ac-9b22-a760ab61b83e" },
+                                                            "duration": "04:05:58-04:31:56"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         }
