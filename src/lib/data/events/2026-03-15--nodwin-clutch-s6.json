@@ -66,6 +66,19 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "slug": "b01",
+                            "name": "Bracket 0:1",
+                            "matches": [
+                                {
+                                    "id": 2,
+                                    "date": "2026-03-20",
+                                    "lineups": { "team1": { "name": "Ursa" }, "team2": { "shorthand": "big" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2391531/ursa-vs-big-equipa-nodwin-clutch-series-6" }],
+                                    "maps": []
+                                }
+                            ]
                         }
                     ]
                 }
