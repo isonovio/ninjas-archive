@@ -76,9 +76,51 @@
                                     "date": "2026-03-20",
                                     "lineups": { "team1": { "name": "Ursa" }, "team2": { "shorthand": "big" } },
                                     "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2391531/ursa-vs-big-equipa-nodwin-clutch-series-6" }],
-                                    "maps": []
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "mrg",
+                                            "result": "13:5",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["wildeity", "emenjay"],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/nodwin_cs2/videos/5ba45058-dba7-49f6-9756-7373885213d5" },
+                                                            "duration": "03:08:10-03:46:09"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "d2",
+                                            "result": "13:2",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["wildeity", "emenjay"],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/nodwin_cs2/videos/5ba45058-dba7-49f6-9756-7373885213d5" },
+                                                            "duration": "03:56:07-04:24:25"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
+                        },
+                        {
+                            "slug": "b02",
+                            "name": "Bracket 0:2",
+                            "matches": [{ "id": 1, "date": "2026-03-21", "lineups": { "team1": { "name": "Leo" }, "team2": { "shorthand": "big" } }, "maps": [] }]
                         }
                     ]
                 }
