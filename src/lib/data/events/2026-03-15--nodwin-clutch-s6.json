@@ -120,7 +120,51 @@
                         {
                             "slug": "b02",
                             "name": "Bracket 0:2",
-                            "matches": [{ "id": 1, "date": "2026-03-21", "lineups": { "team1": { "name": "Leo" }, "team2": { "shorthand": "big" } }, "maps": [] }]
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-03-21",
+                                    "lineups": { "team1": { "name": "Leo" }, "team2": { "shorthand": "big" } },
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "inf",
+                                            "result": "13:4",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["theeternaljay", "dweg"],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/nodwin_cs2/videos/627cd918-1652-4fb3-9a2e-d51d6e10e168" },
+                                                            "duration": "09:22:41-10:00:47"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "d2",
+                                            "result": "13:1",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["theeternaljay", "dweg"],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "VOD", "url": "https://kick.com/nodwin_cs2/videos/627cd918-1652-4fb3-9a2e-d51d6e10e168" },
+                                                            "duration": "10:10:46-10:45:42"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
