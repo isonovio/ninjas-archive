@@ -1,0 +1,40 @@
+{
+    "$schema": "../schemas/official-event.schema.json",
+
+    "slug": "b4i-eu-w-cashcup-3",
+    "name": "Brace For Impact: EU Women’s Cash Cup 3",
+    "duration": { "start": "2026-03-21", "end": "2026-03-22" },
+    "links": [
+        { "name": "B4I", "url": "https://b4impact.com/event/brace-for-impact-eu-womens-cash-cup-3" },
+        { "name": "Faceit", "url": "https://www.faceit.com/en/championship/0353a8f9-215d-4365-840f-f0c2f474a442" }
+    ],
+    "participants": [{ "shorthand": "big", "lineup": { "roster": "big-equipa-2026-1" } }],
+    "brackets": [
+        {
+            "slug": "r2",
+            "name": "Round 2",
+            "matches": [
+                {
+                    "id": 2,
+                    "date": "2026-03-21",
+                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "valori" } },
+                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-7c95fbf0-e14d-4b0e-a905-8573243922cd" }],
+                    "maps": [{ "id": 1, "map": "anc", "result": "13:4" }]
+                }
+            ]
+        },
+        {
+            "slug": "r3",
+            "name": "Round 3",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2026-03-21",
+                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "mafioSOSS" } },
+                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-0bed5188-c1ae-4e0f-9ae0-a58a6b746394" }],
+                    "maps": [{ "id": 1, "map": "mrg", "result": "13:6" }]
+                }
+            ]
+        }
+    ]
+}
