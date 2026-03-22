@@ -125,6 +125,7 @@
                                     "id": 1,
                                     "date": "2026-03-21",
                                     "lineups": { "team1": { "name": "Leo" }, "team2": { "shorthand": "big" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2391537/leo-vs-big-equipa-nodwin-clutch-series-6" }],
                                     "maps": [
                                         {
                                             "id": 1,
