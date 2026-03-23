@@ -1,0 +1,7 @@
+{
+    "$schema": "../schemas/talent.schema.json",
+    "slug": "pgfbailey",
+    "nickname": "pgfbailey",
+    "name": "Jessica Bailey",
+    "socials": [{ "name": "Twitter", "url": "https://x.com/pgfbailey" }]
+}

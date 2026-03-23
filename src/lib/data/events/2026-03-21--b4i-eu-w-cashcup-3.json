@@ -17,7 +17,7 @@
                 {
                     "id": 2,
                     "date": "2026-03-21",
-                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "valori" } },
+                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "valoris" } },
                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-7c95fbf0-e14d-4b0e-a905-8573243922cd" }],
                     "maps": [{ "id": 1, "map": "anc", "result": "13:4" }]
                 }
@@ -32,7 +32,107 @@
                     "date": "2026-03-21",
                     "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "mafioSOSS" } },
                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-0bed5188-c1ae-4e0f-9ae0-a58a6b746394" }],
-                    "maps": [{ "id": 1, "map": "mrg", "result": "13:6" }]
+                    "maps": [
+                        {
+                            "id": 1,
+                            "map": "mrg",
+                            "result": "13:6",
+                            "rewatches": [
+                                {
+                                    "casters": ["popilop"],
+                                    "language": "en",
+                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2728120476" }, "duration": "01:18:21-01:53:23" }]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r4",
+            "name": "Round 4",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2026-03-22",
+                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "Overpeek" } },
+                    "maps": [
+                        {
+                            "id": 1,
+                            "map": "mrg",
+                            "result": "13:4",
+                            "rewatches": [
+                                {
+                                    "casters": ["pgfbailey"],
+                                    "language": "en",
+                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/pgfbailey/video/2728999656" }, "duration": "00:19:56-01:11:15" }]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "map": "anc",
+                            "result": "13:5",
+                            "rewatches": [
+                                {
+                                    "casters": ["pgfbailey"],
+                                    "language": "en",
+                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/pgfbailey/video/2728999656" }, "duration": "01:08:26-01:39:15" }]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r5",
+            "name": "Grand finals",
+            "tags": ["transparent"],
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2026-03-22",
+                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "mupajuku" } },
+                    "maps": [
+                        {
+                            "id": 1,
+                            "map": "mrg",
+                            "result": "19:22",
+                            "rewatches": [
+                                {
+                                    "casters": ["pgfbailey"],
+                                    "language": "en",
+                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/pgfbailey/video/2728999656" }, "duration": "01:55:28-03:17:43" }]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "map": "anc",
+                            "result": "13:5",
+                            "rewatches": [
+                                {
+                                    "casters": ["pgfbailey"],
+                                    "language": "en",
+                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/pgfbailey/video/2728999656" }, "duration": "03:29:04-03:59:20" }]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "map": "d2",
+                            "result": "13:8",
+                            "rewatches": [
+                                {
+                                    "casters": ["pgfbailey"],
+                                    "language": "en",
+                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/pgfbailey/video/2728999656" }, "duration": "04:05:37-04:48:40" }]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
