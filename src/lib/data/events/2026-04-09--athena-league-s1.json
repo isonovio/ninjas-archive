@@ -18,27 +18,59 @@
                     "slug": "d1",
                     "name": "Division 1",
                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/championship/93df69ac-a6d4-4799-85a2-379748a4b2c4/Athena%2520League%2520Division%25201" }],
-                    "matches": [
+                    "brackets": [
                         {
-                            "id": 6,
-                            "date": "2026-04-13",
-                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "OOMFIE AIMERS" } },
-                            "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-e53dc282-37cb-4ce3-8eb6-d5f5c45fe90b" }],
-                            "maps": [
+                            "slug": "r1",
+                            "name": "Round 1",
+                            "matches": [
                                 {
                                     "id": 1,
-                                    "map": "inf",
-                                    "result": "13:5",
-                                    "rewatches": [
+                                    "date": "2026-04-13",
+                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "OOMFIE AIMERS" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-e53dc282-37cb-4ce3-8eb6-d5f5c45fe90b" }],
+                                    "maps": [
                                         {
-                                            "casters": ["affinity"],
-                                            "language": "en",
-                                            "parts": [
-                                                { "link": { "name": "Part 1", "url": "https://youtu.be/zlY3Q0U1gxU" }, "duration": "00:06:39-00:52:06" },
-                                                { "link": { "name": "Part 2", "url": "https://youtu.be/IEnieAfCzsA" }, "duration": "00:00:00-00:06:06" }
+                                            "id": 1,
+                                            "map": "inf",
+                                            "result": "13:5",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": [
+                                                        { "link": { "name": "Part 1", "url": "https://youtu.be/zlY3Q0U1gxU" }, "duration": "00:06:39-00:52:06" },
+                                                        { "link": { "name": "Part 2", "url": "https://youtu.be/IEnieAfCzsA" }, "duration": "00:00:00-00:06:06" }
+                                                    ]
+                                                }
                                             ]
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r2",
+                            "name": "Round 2",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-04-09",
+                                    "lineups": { "team1": { "name": "SixSeven" }, "team2": { "shorthand": "lhc" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-16c58fcd-109d-4cd0-9f83-9ebe0218aace" }],
+                                    "maps": [{ "id": 1, "map": "anc", "result": "9:13" }]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r6",
+                            "name": "Round 6",
+                            "matches": [
+                                {
+                                    "id": 2,
+                                    "date": "2026-04-15",
+                                    "lineups": { "team1": { "name": "KAJO" }, "team2": { "shorthand": "lhc" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-8213f0ba-782e-4411-adb6-3137698ba349" }],
+                                    "maps": [{ "id": 1, "map": "anc", "result": "8:13" }]
                                 }
                             ]
                         }
