@@ -3,5 +3,5 @@
     "slug": "big-equipa-2026-1",
     "team": "big-equipa",
     "players": ["aim", "astra", "emmsan", "hanka", "sosya"],
-    "duration": { "start": "2026-01-23", "end": "2026-12-31" }
+    "duration": { "start": "2026-01-23", "end": "2026-04-01" }
 }

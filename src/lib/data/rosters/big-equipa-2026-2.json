@@ -1,0 +1,7 @@
+{
+    "$schema": "../schemas/roster.schema.json",
+    "slug": "big-equipa-2026-2",
+    "team": "big-equipa",
+    "players": ["aim", "astra", "hanka", "sosya", "wieenn"],
+    "duration": { "start": "2026-04-15", "end": "2026-12-31" }
+}

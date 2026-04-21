@@ -7,7 +7,10 @@
         { "name": "Rules", "url": "https://drive.google.com/file/d/1wkrDHUMRMCJyugCJ5W0xoN-jojwD2M4V/view" },
         { "name": "Liquipedia", "url": "https://liquipedia.net/counterstrike/Athena_League/Season_1" }
     ],
-    "participants": [{ "shorthand": "lhc", "lineup": { "roster": "let-her-cook-2026-1" } }],
+    "participants": [
+        { "shorthand": "lhc", "lineup": { "roster": "let-her-cook-2026-1" } },
+        { "shorthand": "big", "lineup": { "roster": "big-equipa-2026-2" } }
+    ],
     "brackets": [
         {
             "slug": "s1",
@@ -20,7 +23,7 @@
                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/championship/93df69ac-a6d4-4799-85a2-379748a4b2c4/Athena%2520League%2520Division%25201" }],
                     "brackets": [
                         {
-                            "slug": "r1",
+                            "slug": "r01",
                             "name": "Round 1",
                             "matches": [
                                 {
@@ -49,7 +52,7 @@
                             ]
                         },
                         {
-                            "slug": "r2",
+                            "slug": "r02",
                             "name": "Round 2",
                             "matches": [
                                 {
@@ -58,11 +61,31 @@
                                     "lineups": { "team1": { "name": "SixSeven" }, "team2": { "shorthand": "lhc" } },
                                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-16c58fcd-109d-4cd0-9f83-9ebe0218aace" }],
                                     "maps": [{ "id": 1, "map": "anc", "result": "9:13" }]
+                                },
+                                {
+                                    "id": 2,
+                                    "date": "2026-04-21",
+                                    "lineups": { "team1": { "name": "IDA NexGen MSC" }, "team2": { "shorthand": "big" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-f59992bf-603f-4c84-abeb-9e65b722822a" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "anc",
+                                            "result": "10:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": [],
+                                                    "language": "fr",
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2753560433" }, "duration": "00:18:45-01:01:41" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "slug": "r6",
+                            "slug": "r06",
                             "name": "Round 6",
                             "matches": [
                                 {
@@ -71,6 +94,37 @@
                                     "lineups": { "team1": { "name": "KAJO" }, "team2": { "shorthand": "lhc" } },
                                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-8213f0ba-782e-4411-adb6-3137698ba349" }],
                                     "maps": [{ "id": 1, "map": "anc", "result": "8:13" }]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r11",
+                            "name": "Round 10",
+                            "matches": [
+                                {
+                                    "id": 2,
+                                    "date": "2026-04-21",
+                                    "lineups": { "team1": { "name": "NoKami" }, "team2": { "shorthand": "big" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-e1a081a2-d7d6-46eb-b791-ff8b9b14e7f4" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "mrg",
+                                            "result": "3:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2753560433" }, "duration": "00:46:00-01:50:07" }]
+                                                },
+                                                {
+                                                    "casters": [],
+                                                    "language": "fr",
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2753584138" }, "duration": "00:36:22-01:11:46" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         }
