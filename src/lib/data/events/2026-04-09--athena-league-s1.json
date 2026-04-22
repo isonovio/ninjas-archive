@@ -93,7 +93,20 @@
                                     "date": "2026-04-15",
                                     "lineups": { "team1": { "name": "KAJO" }, "team2": { "shorthand": "lhc" } },
                                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-8213f0ba-782e-4411-adb6-3137698ba349" }],
-                                    "maps": [{ "id": 1, "map": "anc", "result": "8:13" }]
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "anc",
+                                            "result": "8:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://youtu.be/bReDXKm1PpE" }, "duration": "00:31:07-01:03:58" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
