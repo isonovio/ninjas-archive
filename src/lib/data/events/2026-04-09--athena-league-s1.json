@@ -85,6 +85,19 @@
                             ]
                         },
                         {
+                            "slug": "r04",
+                            "name": "Round 4",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-04-24",
+                                    "lineups": { "team1": { "name": "Clutchain Female" }, "team2": { "shorthand": "lhc" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-4ff4a357-af4d-4939-871a-2533ddee42a3" }],
+                                    "maps": [{ "id": 1, "map": "d2", "result": "13:4" }]
+                                }
+                            ]
+                        },
+                        {
                             "slug": "r06",
                             "name": "Round 6",
                             "matches": [
@@ -107,6 +120,19 @@
                                             ]
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r07",
+                            "name": "Round 7",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-04-24",
+                                    "lineups": { "team1": { "team": "peekaboo" }, "team2": { "shorthand": "lhc" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-4685bf82-5c97-481f-9cde-2d09c318c0ce" }],
+                                    "maps": [{ "id": 1, "map": "anb", "result": "10:13" }]
                                 }
                             ]
                         },
