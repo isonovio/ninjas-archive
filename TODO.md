@@ -1,7 +1,7 @@
 ## short-term
 - Code
     - [ ] inside each module, use simplistic names instead of flatnames
-    - [ ] rename `official-` types to `OfficalEvent`, `OfficalBracket`, etc.
+    - [ ] rename `official-` types to `OfficialEvent`, `OfficialBracket`, etc.
     - [ ] rename: `record`, `record-genre`, `record-filter`; `timeline` = `record` grouped by `date`
     - [ ] replace `Raw` types with `zod` schemas for runtime validation
     - [ ] extract as many reusable components as possible, avoid code duplication
@@ -15,6 +15,8 @@
     - [ ] `h1` title of each page
     - [ ] MAYBE: exact time of timeline entries
     - [ ] Links: add svg icons based on the domain
+- Data
+    - [ ] Roster reword: all rosters of the same core should be in the same data file; change of player/team = new roster.
 - Filter
     - [ ] UI: in player filter section, add links to specific pages of the player
     - [ ] UI: allow search in player filter sections | `searchterm.tolowercase`, show player name if slug.substring(searchterm) or player is in filter
