@@ -92,6 +92,19 @@
                             ]
                         },
                         {
+                            "slug": "r03",
+                            "name": "Round 3",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-04-30",
+                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "IDA NexGen MSC" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-6beb7319-2bca-4bbd-8d6d-7b2b1386172d" }],
+                                    "maps": [{ "id": 1, "map": "anb", "result": "13:8" }]
+                                }
+                            ]
+                        },
+                        {
                             "slug": "r04",
                             "name": "Round 4",
                             "matches": [
@@ -100,7 +113,20 @@
                                     "date": "2026-04-24",
                                     "lineups": { "team1": { "name": "Clutchain Female" }, "team2": { "shorthand": "lhc" } },
                                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-4ff4a357-af4d-4939-871a-2533ddee42a3" }],
-                                    "maps": [{ "id": 1, "map": "d2", "result": "13:4" }]
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "d2",
+                                            "result": "13:4",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://youtu.be/URFMywqV0j8" }, "duration": "02:08:55-02:44:40" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -139,7 +165,20 @@
                                     "date": "2026-04-24",
                                     "lineups": { "team1": { "team": "peekaboo" }, "team2": { "shorthand": "lhc" } },
                                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-4685bf82-5c97-481f-9cde-2d09c318c0ce" }],
-                                    "maps": [{ "id": 1, "map": "anb", "result": "10:13" }]
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "anb",
+                                            "result": "10:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://youtu.be/URFMywqV0j8" }, "duration": "01:09:32-02:04:21" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
