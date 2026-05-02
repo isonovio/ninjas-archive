@@ -1,0 +1,13 @@
+{
+    "$schema": "../schemas/newspiece.schema.json",
+
+    "slug": "big-pause-equipa-project",
+    "title": "BIG pause EQUIPA project",
+    "date": "2026-05-01",
+    "related": { "players": ["aim", "astra", "hanka", "sosya", "wieenn"], "teams": ["big-equipa"] },
+    "links": [
+        { "name": "BIG Tweet", "url": "https://x.com/BIGCLANgg/status/2050243857691164721" },
+        { "name": "BIG Twitter Article", "url": "https://x.com/BIGCLANgg/status/2050246923404120289" },
+        { "name": "HLTV News", "url": "https://www.hltv.org/news/44496/big-pause-equipa-project" }
+    ]
+}
