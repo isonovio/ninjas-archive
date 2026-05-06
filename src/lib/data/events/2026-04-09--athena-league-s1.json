@@ -131,6 +131,19 @@
                             ]
                         },
                         {
+                            "slug": "r05",
+                            "name": "Round 5",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-05-05",
+                                    "lineups": { "team1": { "name": "KOHTOPA" }, "team2": { "shorthand": "big" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-ddff70ea-1009-4985-a148-37bf94515784" }],
+                                    "maps": [{ "id": 1, "map": "mrg", "result": "11:13" }]
+                                }
+                            ]
+                        },
+                        {
                             "slug": "r06",
                             "name": "Round 6",
                             "matches": [
