@@ -127,6 +127,13 @@
                                             ]
                                         }
                                     ]
+                                },
+                                {
+                                    "id": 2,
+                                    "date": "2026-05-07",
+                                    "lineups": { "team1": { "name": "KAJO" }, "team2": { "shorthand": "big" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-f3575e14-874a-4627-9e39-125a88a0bd9a" }],
+                                    "maps": [{ "id": 1, "map": "anc", "result": "6:13" }]
                                 }
                             ]
                         },
@@ -192,6 +199,19 @@
                                             ]
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r09",
+                            "name": "Round 9",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-05-06",
+                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "Royal Legion Reign" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-e8598a14-49cd-4671-a006-963ee5e30d10" }],
+                                    "maps": [{ "id": 1, "map": "mrg", "result": "13:6" }]
                                 }
                             ]
                         },
