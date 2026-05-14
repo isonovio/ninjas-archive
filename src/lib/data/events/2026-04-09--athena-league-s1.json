@@ -203,6 +203,19 @@
                             ]
                         },
                         {
+                            "slug": "r08",
+                            "name": "Round 8",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2026-05-11",
+                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "KOHTOPA" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-34430498-e2df-4b4f-bb57-abf8a97f9d76" }],
+                                    "maps": [{ "id": 1, "map": "mrg", "result": "13:7" }]
+                                }
+                            ]
+                        },
+                        {
                             "slug": "r09",
                             "name": "Round 9",
                             "matches": [
@@ -212,6 +225,14 @@
                                     "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "Royal Legion Reign" } },
                                     "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-e8598a14-49cd-4671-a006-963ee5e30d10" }],
                                     "maps": [{ "id": 1, "map": "mrg", "result": "13:6" }]
+                                },
+                                {
+                                    "id": 3,
+                                    "date": "2026-05-14",
+                                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "hindsight" } },
+                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-30278bcb-2856-4bf9-a957-47340c565efe" }],
+                                    "maps": [],
+                                    "note": "hindsight forfeited the match."
                                 }
                             ]
                         },
