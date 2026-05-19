@@ -1,0 +1,9 @@
+{
+    "$schema": "../schemas/player.schema.json",
+
+    "slug": "kyossa",
+    "nickname": "kyossa",
+    "name": "Oleksandra Tykhonska",
+    "birthday": "2004-04-28",
+    "nationality": "ua"
+}

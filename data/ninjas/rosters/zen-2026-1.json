@@ -1,0 +1,7 @@
+{
+    "$schema": "../schemas/roster.schema.json",
+    "slug": "zen-2026-1",
+    "team": "zen",
+    "players": ["aim", "kyossa", "suns1de", "vilga", "zana"],
+    "duration": { "start": "2026-05-19", "end": "2026-12-31" }
+}

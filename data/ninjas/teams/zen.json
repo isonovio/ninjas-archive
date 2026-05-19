@@ -1,0 +1,5 @@
+{
+    "$schema": "../schemas/team.schema.json",
+    "slug": "zen",
+    "name": "ZEN"
+}
