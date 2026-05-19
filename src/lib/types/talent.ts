@@ -8,7 +8,7 @@ type TalentRaw = {
     socials?: ExternalLink[];
 };
 
-const talentsBlob = import.meta.glob<TalentRaw>("$lib/data/talents/*.json", {
+const talentsBlob = import.meta.glob<TalentRaw>("$data/**/talents/*.json", {
     eager: true,
 });
 

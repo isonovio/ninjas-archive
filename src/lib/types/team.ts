@@ -3,7 +3,7 @@ type TeamRaw = {
     name: string;
 };
 
-const teamsBlob = import.meta.glob<TeamRaw>("$lib/data/teams/*.json", {
+const teamsBlob = import.meta.glob<TeamRaw>("$data/**/teams/*.json", {
     eager: true,
 });
 

@@ -9,7 +9,7 @@ type PlayerRaw = {
     tags?: string[];
 };
 
-const playersBlob = import.meta.glob<PlayerRaw>("$lib/data/players/*.json", {
+const playersBlob = import.meta.glob<PlayerRaw>("$data/**/players/*.json", {
     eager: true,
 });
 

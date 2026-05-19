@@ -21,7 +21,7 @@ type CSEventRaw = {
     note?: string;
 };
 
-const csEventsBlob = import.meta.glob<CSEventRaw>("$lib/data/events/*.json", {
+const csEventsBlob = import.meta.glob<CSEventRaw>("$data/**/events/*.json", {
     eager: true,
 });
 

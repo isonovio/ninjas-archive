@@ -10,6 +10,9 @@ const config = {
             precompress: false,
             strict: true,
         }),
+        alias: {
+            $data: "./data",
+        },
     },
 };
 
