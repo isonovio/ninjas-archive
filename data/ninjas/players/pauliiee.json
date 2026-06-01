@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/player.schema.json",
+    "$schema": "../../schemas/player.schema.json",
 
     "slug": "pauliiee",
     "nickname": "pauliiee",

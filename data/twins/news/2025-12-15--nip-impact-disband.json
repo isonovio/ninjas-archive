@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/newspiece.schema.json",
+    "$schema": "../../schemas/newspiece.schema.json",
 
     "slug": "nip-impact-disband",
     "title": "NIP part ways with Impact roster",

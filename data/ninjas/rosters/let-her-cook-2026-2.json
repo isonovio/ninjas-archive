@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/roster.schema.json",
+    "$schema": "../../schemas/roster.schema.json",
     "slug": "let-her-cook-2026-2",
     "team": "let-her-cook",
     "players": ["goosebreeder", "jennyr", "pauliiee", "spike", "vilga"],

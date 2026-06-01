@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/official-event.schema.json",
+    "$schema": "../../schemas/official-event.schema.json",
 
     "slug": "b4i-eu-w-cashcup-4",
     "name": "Brace For Impact: EU Women’s Cash Cup 4",

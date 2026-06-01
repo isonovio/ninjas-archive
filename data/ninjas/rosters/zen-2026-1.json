@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/roster.schema.json",
+    "$schema": "../../schemas/roster.schema.json",
     "slug": "zen-2026-1",
     "team": "zen",
     "players": ["aim", "kyossa", "suns1de", "vilga", "zana"],

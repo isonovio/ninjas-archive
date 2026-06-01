@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/roster.schema.json",
+    "$schema": "../../schemas/roster.schema.json",
     "slug": "big-equipa-2026-2",
     "team": "big-equipa",
     "players": ["aim", "astra", "hanka", "sosya", "wieenn"],

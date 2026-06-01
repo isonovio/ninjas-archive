@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/talent.schema.json",
+    "$schema": "../../schemas/talent.schema.json",
     "slug": "pgfbailey",
     "nickname": "pgfbailey",
     "name": "Jessica Bailey",

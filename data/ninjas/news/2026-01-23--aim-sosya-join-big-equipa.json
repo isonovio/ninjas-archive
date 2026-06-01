@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/newspiece.schema.json",
+    "$schema": "../../schemas/newspiece.schema.json",
 
     "slug": "aim-sosya-join-big-equipa",
     "title": "BIG EQUIPA add aiM and sosya",

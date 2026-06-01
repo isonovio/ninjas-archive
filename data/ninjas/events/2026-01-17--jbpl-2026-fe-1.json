@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/official-event.schema.json",
+    "$schema": "../../schemas/official-event.schema.json",
 
     "slug": "jbpl-2026-fe-1",
     "name": "JB Pro League 2026 Female #1",

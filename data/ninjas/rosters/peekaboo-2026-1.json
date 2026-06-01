@@ -1,5 +1,5 @@
 {
-    "$schema": "../schemas/roster.schema.json",
+    "$schema": "../../schemas/roster.schema.json",
     "slug": "peekaboo-2026-1",
     "team": "peekaboo",
     "players": ["hikomi", "julih", "leti", "nem1za", "zana"],
