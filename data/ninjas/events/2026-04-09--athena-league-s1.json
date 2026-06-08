@@ -13,14 +13,13 @@
     ],
     "brackets": [
         {
-            "slug": "s1",
-            "name": "League",
-            "tags": ["transparent"],
+            "slug": "d1",
+            "name": "Division 1",
             "brackets": [
                 {
-                    "slug": "d1",
-                    "name": "Division 1",
-                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/championship/93df69ac-a6d4-4799-85a2-379748a4b2c4/Athena%2520League%2520Division%25201" }],
+                    "slug": "s1",
+                    "name": "Regular Season",
+                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/championship/93df69ac-a6d4-4799-85a2-379748a4b2c4" }],
                     "brackets": [
                         {
                             "slug": "r01",
@@ -312,6 +311,11 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "slug": "s2",
+                    "name": "Playoffs",
+                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/championship/541044a4-fb99-42e2-b4ec-1581c81d99d7" }]
                 }
             ]
         }
