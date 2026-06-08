@@ -1,0 +1,9 @@
+{
+    "$schema": "../../schemas/newspiece.schema.json",
+
+    "slug": "vilga-join-midas-gaming-as-coach",
+    "title": "vilga join Midas Gaming as coach",
+    "date": "2026-06-06",
+    "related": { "players": ["vilga"] },
+    "links": [{ "name": "vilga Tweet", "url": "https://x.com/vilgaCS/status/2063248479871287365" }]
+}
