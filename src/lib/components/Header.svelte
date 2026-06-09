@@ -3,6 +3,7 @@
         <a href="/" class="home"> Ninjas Archive </a>
         <a href="/officials"> Officials </a>
         <a href="/news"> News </a>
+        <a href="/twins"> The Twins </a>
     </nav>
 
     <nav></nav>
