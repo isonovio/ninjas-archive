@@ -9,8 +9,7 @@
 <div class="relative">
     <div class="absolute -top-3 left-6 z-20 grid grid-cols-[193px_60px_auto] font-medium text-base">
         <div class="relative inline-block ml-auto pl-2 bg-white text-nowrap text-right team-name team-{match.outcomes[0]}">
-            <!-- {match.lineups[0].teamname} -->
-            CPH Flames Shieldmaidens
+            {match.lineups[0].teamname}
             <div class="absolute -bottom-2 right-0">
                 <LinkPlayers players={match.lineups[0].players} />
             </div>
@@ -68,8 +67,7 @@
                             {map.map}
                         </span>
                         <span class="inline-block w-36 text-right team-name team-{map.outcomes[0]}">
-                            <!-- {match.lineups[0].teamname} -->
-                            CPH Flames Shieldmaidens
+                            {match.lineups[0].teamname}
                         </span>
                         <span class="inline-block w-6 text-right font-bold font-mono team-score team-{map.outcomes[0]}">
                             {map.results[0]}
