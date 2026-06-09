@@ -1,0 +1,16 @@
+{
+    "$schema": "../../schemas/newspiece.schema.json",
+
+    "slug": "cph-flames-revamp-female-roster",
+    "title": "CPH Flames revamp female roster",
+    "date": "2022-08-23",
+    "related": { "players": ["josefine", "nayay", "nayomy", "qiyarah", "ramziin"], "teams": ["cfs"] },
+    "links": [
+        { "name": "CPH Flames Tweet", "url": "https://x.com/CPHFlames/status/1562107582105505793" },
+        { "name": "Josefine Retweet", "url": "https://x.com/JosefineCSGO/status/1562115256461279232" },
+        { "name": "nayay Retweet", "url": "https://x.com/nayaycs/status/1562108317375365120" },
+        { "name": "Nayomy Retweet", "url": "https://x.com/Nayomy_cs/status/1562114825689436160" },
+        { "name": "Qiyarah Retweet", "url": "https://x.com/Qiyarahcs/status/1562115153944055808" },
+        { "name": "ramziiN Retweet", "url": "https://x.com/ramziiNCS/status/1562108384349929472" }
+    ]
+}

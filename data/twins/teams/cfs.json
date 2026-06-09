@@ -1,0 +1,5 @@
+{
+    "$schema": "../../schemas/team.schema.json",
+    "slug": "cfs",
+    "name": "CPH Flames Shieldmaidens"
+}
