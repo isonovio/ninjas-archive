@@ -12,7 +12,8 @@
         "name": { "type": "string" },
         "birthday": { "type": "string", "format": "date" },
         "nationality": { "$ref": "nationality.schema.json" },
-        "tags": { "type": "array", "items": { "$ref": "#/$defs/tag" } }
+        "tags": { "type": "array", "items": { "$ref": "#/$defs/tag" } },
+        "links": { "type": "array", "items": { "$ref": "extern-link.schema.json" } }
     },
 
     "$defs": {

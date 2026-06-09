@@ -1,4 +1,5 @@
 import { Temporal } from "$lib/utils/temporal";
+import { type ExternalLink } from "./externlink";
 
 type PlayerRaw = {
     slug: string;
@@ -7,6 +8,7 @@ type PlayerRaw = {
     birthday?: string;
     nationality: string;
     tags?: string[];
+    links?: ExternalLink[];
 };
 
 const playersBlob = import.meta.glob<PlayerRaw>("$data/**/players/*.json", {
@@ -24,6 +26,7 @@ export type Player = {
     birthday?: Temporal.PlainDate;
     nationality: string;
     tags: PlayerTag[];
+    links: ExternalLink[];
 };
 
 const playerFromRaw = (raw: PlayerRaw): Player => {
@@ -34,6 +37,7 @@ const playerFromRaw = (raw: PlayerRaw): Player => {
             : undefined,
         tags:
             raw.tags?.map((tag) => tag as PlayerTag satisfies PlayerTag) || [],
+        links: raw.links || [],
     };
 };
 
