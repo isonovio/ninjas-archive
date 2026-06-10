@@ -17,7 +17,7 @@
             "name": "R1",
             "matches": [
                 {
-                    "id": 4,
+                    "id": 3,
                     "date": "2022-12-03",
                     "lineups": { "team1": { "shorthand": "cfs" }, "team2": { "name": "VisAVis" } },
                     "maps": [{ "id": 1, "map": "anc", "result": "16:5", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17006482" }] }]
@@ -41,7 +41,7 @@
             "name": "R3",
             "matches": [
                 {
-                    "id": 2,
+                    "id": 1,
                     "date": "2022-12-03",
                     "lineups": { "team1": { "name": "9Pandas Fearless" }, "team2": { "shorthand": "cfs" } },
                     "maps": [

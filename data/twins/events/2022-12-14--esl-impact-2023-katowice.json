@@ -60,7 +60,7 @@
                                     "name": "R3",
                                     "matches": [
                                         {
-                                            "id": 4,
+                                            "id": 3,
                                             "date": "2022-12-14",
                                             "lineups": { "team1": { "name": "Astralis W" }, "team2": { "shorthand": "cfs" } },
                                             "maps": [{ "id": 1, "map": "ovp", "result": "16:6", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17010716" }] }]
@@ -96,7 +96,7 @@
                                     "name": "R3",
                                     "matches": [
                                         {
-                                            "id": 4,
+                                            "id": 2,
                                             "date": "2022-12-17",
                                             "lineups": { "team1": { "team": "nipi" }, "team2": { "shorthand": "cfs" } },
                                             "maps": [{ "id": 1, "map": "ovp", "result": "19:16", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17011428" }] }]
