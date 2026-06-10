@@ -1,0 +1,7 @@
+{
+    "$schema": "../../schemas/roster.schema.json",
+    "slug": "nipi-2023-2",
+    "team": "nipi",
+    "players": ["aim", "astra", "jenkon", "nayomy", "qiyarah"],
+    "duration": { "start": "2023-07-19", "end": "2023-12-19" }
+}

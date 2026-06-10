@@ -1,0 +1,7 @@
+{
+    "$schema": "../../schemas/roster.schema.json",
+    "slug": "nipi-2024-1",
+    "team": "nipi",
+    "players": ["aim", "jenkon", "nayomy", "qiyarah", "ramziin"],
+    "duration": { "start": "2024-02-21", "end": "2024-05-17" }
+}
