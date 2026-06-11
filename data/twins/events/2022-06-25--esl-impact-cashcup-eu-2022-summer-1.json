@@ -43,7 +43,7 @@
             "matches": [
                 {
                     "id": 1,
-                    "date": "2022-06-26",
+                    "date": "2022-06-25",
                     "lineups": { "team1": { "shorthand": "nsc" }, "team2": { "name": "MostValuablePlayers" } },
                     "maps": [
                         { "id": 1, "map": "inf", "result": "16:14", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/16937300" }] },

@@ -1,0 +1,58 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-cashcup-eu-2023-winter-3",
+    "name": "ESL Impact Cash Cup: Europe - Winter 2023 #3",
+    "duration": { "start": "2023-02-04", "end": "2023-02-05" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_Cash_Cup/Europe/2023/Winter/3" },
+        { "name": "ESEA", "url": "https://play.esea.net/events/2189" },
+        { "name": "Brackets", "url": "https://play.esea.net/index.php?s=events&d=brackets&id=2189" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-1" } }],
+    "brackets": [
+        {
+            "slug": "r2",
+            "name": "R2",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-02-04",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Queend" } },
+                    "maps": [{ "id": 1, "map": "mrg", "result": "16:7", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17028250" }] }]
+                }
+            ]
+        },
+        {
+            "slug": "r3",
+            "name": "R3",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-02-04",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "TFW" } },
+                    "maps": [
+                        { "id": 1, "map": "ovp", "result": "16:3", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17028282" }] },
+                        { "id": 2, "map": "mrg", "result": "19:17", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17028297" }] }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r4",
+            "name": "R4",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-02-05",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Capybara Gay" } },
+                    "maps": [
+                        { "id": 1, "map": "inf", "result": "16:11", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17028424" }] },
+                        { "id": 2, "map": "vtg", "result": "16:9", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17028461" }] }
+                    ]
+                }
+            ]
+        }
+    ]
+}

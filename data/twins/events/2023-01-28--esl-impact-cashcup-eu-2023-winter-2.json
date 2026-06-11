@@ -1,0 +1,58 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-cashcup-eu-2023-winter-2",
+    "name": "ESL Impact Cash Cup: Europe - Winter 2023 #2",
+    "duration": { "start": "2023-01-28", "end": "2023-01-29" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_Cash_Cup/Europe/2023/Winter/2" },
+        { "name": "ESEA", "url": "https://play.esea.net/events/2188" },
+        { "name": "Brackets", "url": "https://play.esea.net/index.php?s=events&d=brackets&id=2188" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-1" } }],
+    "brackets": [
+        {
+            "slug": "r2",
+            "name": "R2",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-01-28",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "ASTRONUTS" } },
+                    "maps": [{ "id": 1, "map": "ovp", "result": "16:14", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17024858" }] }]
+                }
+            ]
+        },
+        {
+            "slug": "r3",
+            "name": "R3",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-01-28",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "MostValuablePlayers" } },
+                    "maps": [
+                        { "id": 1, "map": "vtg", "result": "16:4", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17024925" }] },
+                        { "id": 2, "map": "ovp", "result": "16:11", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17024941" }] }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r4",
+            "name": "R4",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-01-29",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Angels" } },
+                    "maps": [
+                        { "id": 1, "map": "mrg", "result": "16:11", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17025109" }] },
+                        { "id": 2, "map": "ovp", "result": "16:10", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17025150" }] }
+                    ]
+                }
+            ]
+        }
+    ]
+}

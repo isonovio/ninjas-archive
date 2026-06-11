@@ -1,0 +1,59 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-cashcup-eu-2023-spring-4",
+    "name": "ESL Impact Cash Cup: Europe - Spring 2023 #4",
+    "duration": { "start": "2023-05-27", "end": "2023-05-28" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_Cash_Cup/Europe/2023/Spring/4" },
+        { "name": "ESEA", "url": "https://play.esea.net/events/2442" },
+        { "name": "Brackets", "url": "https://play.esea.net/index.php?s=events&d=brackets&id=2442" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-1" } }],
+    "brackets": [
+        {
+            "slug": "r2",
+            "name": "R2",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-05-27",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "It's crazy it's party" } },
+                    "maps": [{ "id": 1, "map": "inf", "result": "16:10", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17064044" }] }]
+                }
+            ]
+        },
+        {
+            "slug": "r3",
+            "name": "R3",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-05-27",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "East Legends" } },
+                    "maps": [
+                        { "id": 1, "map": "vtg", "result": "10:16", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17064061" }] },
+                        { "id": 2, "map": "ovp", "result": "16:7", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17064073" }] },
+                        { "id": 3, "map": "mrg", "result": "19:17", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17064078" }] }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r4",
+            "name": "R4",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-05-28",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "YeYO" } },
+                    "maps": [
+                        { "id": 1, "map": "anb", "result": "16:9", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17064160" }] },
+                        { "id": 2, "map": "ovp", "result": "16:5", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17064170" }] }
+                    ]
+                }
+            ]
+        }
+    ]
+}

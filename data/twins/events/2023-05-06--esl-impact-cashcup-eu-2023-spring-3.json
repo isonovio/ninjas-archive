@@ -1,0 +1,58 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-cashcup-eu-2023-spring-3",
+    "name": "ESL Impact Cash Cup: Europe - Spring 2023 #3",
+    "duration": { "start": "2023-05-06", "end": "2023-05-07" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_Cash_Cup/Europe/2023/Spring/3" },
+        { "name": "ESEA", "url": "https://play.esea.net/events/2432" },
+        { "name": "Brackets", "url": "https://play.esea.net/index.php?s=events&d=brackets&id=2432" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-1" } }],
+    "brackets": [
+        {
+            "slug": "r2",
+            "name": "R2",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-05-06",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "cute" } },
+                    "maps": [{ "id": 1, "map": "ovp", "result": "16:5", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17058602" }] }]
+                }
+            ]
+        },
+        {
+            "slug": "r3",
+            "name": "R3",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-05-06",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "YeYO" } },
+                    "maps": [
+                        { "id": 1, "map": "mrg", "result": "16:8", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17058618" }] },
+                        { "id": 2, "map": "ovp", "result": "16:6", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17058633" }] }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r4",
+            "name": "R4",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-05-07",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Astralis W" } },
+                    "maps": [
+                        { "id": 1, "map": "anc", "result": "16:6", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17058767" }] },
+                        { "id": 2, "map": "inf", "result": "16:10", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17058772" }] }
+                    ]
+                }
+            ]
+        }
+    ]
+}
