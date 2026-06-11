@@ -14,7 +14,7 @@
     "brackets": [
         {
             "slug": "r2b1",
-            "name": "Upper Round of 32",
+            "name": "UB 1",
             "matches": [
                 {
                     "id": 11,
@@ -60,7 +60,7 @@
         },
         {
             "slug": "r2b2",
-            "name": "Lower Round 1",
+            "name": "LB 1",
             "matches": [
                 {
                     "id": 4,
@@ -80,7 +80,7 @@
         },
         {
             "slug": "r3b2",
-            "name": "Lower Round 2",
+            "name": "LB 2",
             "matches": [
                 {
                     "id": 4,

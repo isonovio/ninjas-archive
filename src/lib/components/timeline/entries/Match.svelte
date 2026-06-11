@@ -7,7 +7,7 @@
 </script>
 
 <div class="relative">
-    <div class="absolute -top-3 left-6 z-20 grid grid-cols-[193px_60px_auto] font-medium text-base">
+    <div class="absolute -top-3 left-6 z-20 grid grid-cols-[193px_60px_200px] font-medium text-base">
         <div class="relative inline-block ml-auto pl-2 bg-white text-nowrap text-right team-name team-{match.outcomes[0]}">
             {match.lineups[0].teamname}
             <div class="absolute -bottom-2 right-0">
@@ -17,7 +17,7 @@
         <div class="inline-block bg-white text-center font-bold font-mono">
             <span class="team-score team-{match.outcomes[0]}">{match.results[0]}</span><span>-</span><span class="team-score team-{match.outcomes[1]}">{match.results[1]}</span>
         </div>
-        <div class="relative inline-block pr-2 bg-white team-name team-{match.outcomes[1]}">
+        <div class="relative inline-block mr-auto pr-2 bg-white team-name team-{match.outcomes[1]}">
             {match.lineups[1].teamname}
             <div class="absolute -bottom-2 left-0">
                 <LinkPlayers players={match.lineups[1].players} />

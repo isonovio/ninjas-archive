@@ -9,7 +9,7 @@
     const ps = $derived(players.filter((p) => p.tags.includes("ninja")));
 </script>
 
-<div class="flex gap-1.5">
+<div class="flex gap-1.5 text-nowrap">
     {#each ps as player}
         <a href={`/player/${player.slug}`} class="z-10 text-xs font-normal text-gray-500 hover:text-gray-200 font-sc">
             {player.nickname}
