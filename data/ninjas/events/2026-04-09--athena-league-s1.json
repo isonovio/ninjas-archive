@@ -19,7 +19,7 @@
                 {
                     "slug": "s1",
                     "name": "Regular Season",
-                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/championship/93df69ac-a6d4-4799-85a2-379748a4b2c4" }],
+                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/championship/93df69ac-a6d4-4799-85a2-379748a4b2c4" }],
                     "brackets": [
                         {
                             "slug": "r01",
@@ -29,7 +29,7 @@
                                     "id": 1,
                                     "date": "2026-04-13",
                                     "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "OOMFIE AIMERS" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-e53dc282-37cb-4ce3-8eb6-d5f5c45fe90b" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-e53dc282-37cb-4ce3-8eb6-d5f5c45fe90b" }],
                                     "maps": [
                                         {
                                             "id": 1,
@@ -52,7 +52,7 @@
                                     "id": 2,
                                     "date": "2026-04-26",
                                     "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "SixSeven" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-a30ed885-f8d6-4c6d-b63d-69a334bfadd4" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-a30ed885-f8d6-4c6d-b63d-69a334bfadd4" }],
                                     "maps": [{ "id": 1, "map": "mrg", "result": "13:7" }]
                                 }
                             ]
@@ -65,14 +65,14 @@
                                     "id": 1,
                                     "date": "2026-04-09",
                                     "lineups": { "team1": { "name": "SixSeven" }, "team2": { "shorthand": "lhc" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-16c58fcd-109d-4cd0-9f83-9ebe0218aace" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-16c58fcd-109d-4cd0-9f83-9ebe0218aace" }],
                                     "maps": [{ "id": 1, "map": "anc", "result": "9:13" }]
                                 },
                                 {
                                     "id": 2,
                                     "date": "2026-04-21",
                                     "lineups": { "team1": { "name": "IDA NexGen MSC" }, "team2": { "shorthand": "big" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-f59992bf-603f-4c84-abeb-9e65b722822a" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-f59992bf-603f-4c84-abeb-9e65b722822a" }],
                                     "maps": [
                                         {
                                             "id": 1,
@@ -98,7 +98,7 @@
                                     "id": 1,
                                     "date": "2026-04-30",
                                     "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "IDA NexGen MSC" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-6beb7319-2bca-4bbd-8d6d-7b2b1386172d" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-6beb7319-2bca-4bbd-8d6d-7b2b1386172d" }],
                                     "maps": [{ "id": 1, "map": "anb", "result": "13:8" }]
                                 }
                             ]
@@ -111,7 +111,7 @@
                                     "id": 1,
                                     "date": "2026-04-24",
                                     "lineups": { "team1": { "name": "Clutchain Female" }, "team2": { "shorthand": "lhc" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-4ff4a357-af4d-4939-871a-2533ddee42a3" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-4ff4a357-af4d-4939-871a-2533ddee42a3" }],
                                     "maps": [
                                         {
                                             "id": 1,
@@ -131,7 +131,7 @@
                                     "id": 2,
                                     "date": "2026-05-07",
                                     "lineups": { "team1": { "name": "KAJO" }, "team2": { "shorthand": "big" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-f3575e14-874a-4627-9e39-125a88a0bd9a" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-f3575e14-874a-4627-9e39-125a88a0bd9a" }],
                                     "maps": [{ "id": 1, "map": "anc", "result": "6:13" }]
                                 }
                             ]
@@ -147,7 +147,7 @@
                                         "team1": { "team": "let-her-cook", "players": ["aim", "jennyr", "joanana", "spike", "vilga"] },
                                         "team2": { "name": "LowCortisol" }
                                     },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-48252f12-301d-427d-b9d0-af8485242e49" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-48252f12-301d-427d-b9d0-af8485242e49" }],
                                     "maps": [{ "id": 1, "map": "mrg", "result": "4:13" }]
                                 }
                             ]
@@ -160,7 +160,7 @@
                                     "id": 2,
                                     "date": "2026-04-15",
                                     "lineups": { "team1": { "name": "KAJO" }, "team2": { "shorthand": "lhc" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-8213f0ba-782e-4411-adb6-3137698ba349" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-8213f0ba-782e-4411-adb6-3137698ba349" }],
                                     "maps": [
                                         {
                                             "id": 1,
@@ -186,14 +186,14 @@
                                     "id": 1,
                                     "date": "2026-05-05",
                                     "lineups": { "team1": { "name": "KOHTOPA" }, "team2": { "shorthand": "big" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-ddff70ea-1009-4985-a148-37bf94515784" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-ddff70ea-1009-4985-a148-37bf94515784" }],
                                     "maps": [{ "id": 1, "map": "mrg", "result": "11:13" }]
                                 },
                                 {
                                     "id": 2,
                                     "date": "2026-04-24",
                                     "lineups": { "team1": { "team": "peekaboo" }, "team2": { "shorthand": "lhc" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-4685bf82-5c97-481f-9cde-2d09c318c0ce" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-4685bf82-5c97-481f-9cde-2d09c318c0ce" }],
                                     "maps": [
                                         {
                                             "id": 1,
@@ -219,7 +219,7 @@
                                     "id": 1,
                                     "date": "2026-05-11",
                                     "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "KOHTOPA" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-34430498-e2df-4b4f-bb57-abf8a97f9d76" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-34430498-e2df-4b4f-bb57-abf8a97f9d76" }],
                                     "maps": [{ "id": 1, "map": "mrg", "result": "13:7" }]
                                 }
                             ]
@@ -232,14 +232,14 @@
                                     "id": 1,
                                     "date": "2026-05-06",
                                     "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "Royal Legion Reign" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-e8598a14-49cd-4671-a006-963ee5e30d10" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-e8598a14-49cd-4671-a006-963ee5e30d10" }],
                                     "maps": [{ "id": 1, "map": "mrg", "result": "13:6" }]
                                 },
                                 {
                                     "id": 3,
                                     "date": "2026-05-14",
                                     "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "hindsight" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-30278bcb-2856-4bf9-a957-47340c565efe" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-30278bcb-2856-4bf9-a957-47340c565efe" }],
                                     "maps": [],
                                     "note": "hindsight forfeited the match."
                                 }
@@ -253,7 +253,7 @@
                                     "id": 2,
                                     "date": "2026-04-21",
                                     "lineups": { "team1": { "name": "NoKami" }, "team2": { "shorthand": "big" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-e1a081a2-d7d6-46eb-b791-ff8b9b14e7f4" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-e1a081a2-d7d6-46eb-b791-ff8b9b14e7f4" }],
                                     "maps": [
                                         {
                                             "id": 1,
@@ -278,7 +278,7 @@
                                     "id": 3,
                                     "date": "2026-05-20",
                                     "lineups": { "team1": { "name": "hindsight" }, "team2": { "shorthand": "lhc" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-98d5e091-676a-40a3-b8db-02046c098e2a" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-98d5e091-676a-40a3-b8db-02046c098e2a" }],
                                     "maps": [],
                                     "note": "hindsight forfeited the match."
                                 }
@@ -292,7 +292,7 @@
                                     "id": 1,
                                     "date": "2026-04-22",
                                     "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "OOMFIE AIMERS" } },
-                                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-49f7051d-c3ff-4ba7-a9c1-d34622b9bcba" }],
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-49f7051d-c3ff-4ba7-a9c1-d34622b9bcba" }],
                                     "maps": [
                                         {
                                             "id": 1,
@@ -315,7 +315,7 @@
                 {
                     "slug": "s2",
                     "name": "Playoffs",
-                    "links": [{ "name": "Faceit", "url": "https://www.faceit.com/en/championship/541044a4-fb99-42e2-b4ec-1581c81d99d7" }]
+                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/championship/541044a4-fb99-42e2-b4ec-1581c81d99d7" }]
                 }
             ]
         }

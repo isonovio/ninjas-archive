@@ -6,7 +6,7 @@
     "links": [
         { "name": "ESL", "url": "https://pro.eslgaming.com/csgo/ecl/" },
         { "name": "Rules", "url": "https://drive.google.com/drive/folders/1ahfZG_LSokjOPjyvh31dEESexzmZiICI" },
-        { "name": "Faceit", "url": "https://www.faceit.com/en/championship/e60df5bb-0b65-47c3-bfed-5d73b94d6d65" },
+        { "name": "FACEIT", "url": "https://www.faceit.com/en/championship/e60df5bb-0b65-47c3-bfed-5d73b94d6d65" },
         { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Challenger_League/Season_51/Europe/Cup_3" },
         { "name": "HLTV", "url": "https://www.hltv.org/events/9051/nodwin-clutch-series-6" }
     ],
@@ -25,7 +25,7 @@
                             "name": "HLTV",
                             "url": "https://www.hltv.org/matches/2392742/big-equipa-vs-the-last-resort-esl-challenger-league-season-51-europe-cup-3"
                         },
-                        { "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-fe33d9b9-edeb-4fe4-a89e-108d5f073082" }
+                        { "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-fe33d9b9-edeb-4fe4-a89e-108d5f073082" }
                     ],
                     "maps": [
                         {
@@ -71,7 +71,7 @@
                             "name": "HLTV",
                             "url": "https://www.hltv.org/matches/2392752/exsad-vs-big-equipa-esl-challenger-league-season-51-europe-cup-3"
                         },
-                        { "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-6bdbf53c-ed96-46bc-b138-558eb280bfb9" }
+                        { "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-6bdbf53c-ed96-46bc-b138-558eb280bfb9" }
                     ],
                     "note": "EXSAD forfeited the match.",
                     "maps": []
@@ -91,7 +91,7 @@
                             "name": "HLTV",
                             "url": "https://www.hltv.org/matches/2392762/grindas-vs-big-equipa-esl-challenger-league-season-51-europe-cup-3"
                         },
-                        { "name": "Faceit", "url": "https://www.faceit.com/en/cs2/room/1-8ca7966d-a9ac-4da7-a6d3-719fac921b7d" }
+                        { "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-8ca7966d-a9ac-4da7-a6d3-719fac921b7d" }
                     ],
                     "maps": [
                         {
