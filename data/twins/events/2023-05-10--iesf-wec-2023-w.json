@@ -1,0 +1,310 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "iesf-wec-2023-w",
+    "name": "IESF Women WEC 2023",
+    "duration": { "start": "2023-05-10", "end": "2023-09-01" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/IESF/World_Esports_Championships/2023/Female" },
+        { "name": "Rules", "url": "https://iesf.org/storage/2023/08/wec23-csgo-female-rulebook.pdf" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nlw", "lineup": { "roster": "nlw-2023" } }],
+    "brackets": [
+        {
+            "slug": "s1",
+            "name": "Qualifers",
+            "tags": ["transparent"],
+            "brackets": [
+                {
+                    "slug": "d1eu",
+                    "name": "European Qualifier",
+                    "links": [
+                        { "name": "1", "url": "https://www.challengermode.com/s/iesf/tournaments/51486eeb-03f3-4318-84a9-08db44c3796a" },
+                        { "name": "2", "url": "https://www.challengermode.com/s/iesf/tournaments/04dd74d5-6b7e-4231-0fa9-08db674e6172" },
+                        { "name": "3", "url": "https://www.challengermode.com/s/iesf/tournaments/f0f2d41c-994e-415a-25b1-08db44c5a43a" },
+                        { "name": "4", "url": "https://www.challengermode.com/s/iesf/tournaments/b64c4bc6-cbf2-4828-7bf4-08db6bfde25f" },
+                        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/IESF/World_Esports_Championships/2023/Female/Europe" }
+                    ],
+                    "brackets": [
+                        {
+                            "slug": "s1",
+                            "name": "Group Stage",
+                            "tags": ["transparent"],
+                            "brackets": [
+                                {
+                                    "slug": "ga",
+                                    "name": "Group A",
+                                    "matches": [
+                                        {
+                                            "id": 2,
+                                            "date": "2023-06-09",
+                                            "lineups": { "team1": { "name": "France Women" }, "team2": { "shorthand": "nlw" } },
+                                            "maps": [
+                                                {
+                                                    "id": 1,
+                                                    "map": "ovp",
+                                                    "result": "16:11",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/c8eb559d-0a86-4174-8555-08db5bcf0c9a" }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 4,
+                                            "date": "2023-06-09",
+                                            "lineups": { "team1": { "name": "Czechia Women" }, "team2": { "shorthand": "nlw" } },
+                                            "maps": [
+                                                {
+                                                    "id": 1,
+                                                    "map": "mrg",
+                                                    "result": "2:16",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/96bbabc0-ee38-44f6-2252-08db5bcbd7fc" }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 5,
+                                            "date": "2023-06-09",
+                                            "lineups": { "team1": { "name": "Austria Women" }, "team2": { "shorthand": "nlw" } },
+                                            "maps": [
+                                                {
+                                                    "id": 1,
+                                                    "map": "inf",
+                                                    "result": "2:16",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/5b732533-5ce1-4970-8659-08db5bcf0c9a" }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "s2",
+                            "name": "Playoffs",
+                            "brackets": [
+                                {
+                                    "slug": "r1",
+                                    "name": "Quarterfinals",
+                                    "matches": [
+                                        {
+                                            "id": 2,
+                                            "date": "2023-06-10",
+                                            "lineups": { "team1": { "name": "Portugal Women" }, "team2": { "shorthand": "nlw" } },
+                                            "maps": [
+                                                {
+                                                    "id": 1,
+                                                    "map": "vtg",
+                                                    "result": "12:16",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/a1ae7411-4eb6-4a39-2d10-08db5bcbd7fc" }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 2,
+                                                    "map": "ovp",
+                                                    "result": "16:11",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/6e1a3ddc-7f5b-4060-2dca-08db5bcbd7fc" }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 3,
+                                                    "map": "mrg",
+                                                    "result": "12:16",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/5195bd6b-f234-404f-2e7d-08db5bcbd7fc" }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "slug": "r2",
+                                    "name": "Semifinals",
+                                    "matches": [
+                                        {
+                                            "id": 1,
+                                            "date": "2023-06-11",
+                                            "lineups": { "team1": { "name": "France Women" }, "team2": { "shorthand": "nlw" } },
+                                            "maps": [
+                                                {
+                                                    "id": 1,
+                                                    "map": "inf",
+                                                    "result": "7:16",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/37e6040b-8243-43c1-37f5-08db5bcbd7fc" }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 2,
+                                                    "map": "anb",
+                                                    "result": "6:16",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/d095f386-11a7-4401-9914-08db5bcf0c9a" }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "slug": "r3",
+                                    "name": "Grand Final",
+                                    "tags": ["transparent"],
+                                    "matches": [
+                                        {
+                                            "id": 1,
+                                            "date": "2023-06-14",
+                                            "lineups": { "team1": { "shorthand": "nlw" }, "team2": { "name": "Sweden Women" } },
+                                            "maps": [
+                                                {
+                                                    "id": 1,
+                                                    "map": "mrg",
+                                                    "result": "16:9",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/8b060155-2c20-4384-4d38-08db5bcbd7fc" }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 2,
+                                                    "map": "anc",
+                                                    "result": "16:10",
+                                                    "links": [
+                                                        { "name": "Challengermode", "url": "https://www.challengermode.com/s/iesf/games/f137c9dc-203e-4c1e-aa6c-08db5bcf0c9a" }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "s2",
+            "name": "Finals",
+            "tags": ["lan"],
+            "brackets": [
+                {
+                    "slug": "s1",
+                    "name": "Group Stage",
+                    "tags": ["transparent"],
+                    "brackets": [
+                        {
+                            "slug": "gb",
+                            "name": "Group B",
+                            "matches": [
+                                {
+                                    "id": 4,
+                                    "date": "2023-08-28",
+                                    "lineups": { "team1": { "shorthand": "nlw" }, "team2": { "name": "Hong Kong Women" } },
+                                    "maps": [
+                                        { "id": 1, "map": "inf", "result": "16:4" },
+                                        { "id": 2, "map": "mrg", "result": "16:9" }
+                                    ]
+                                },
+                                {
+                                    "id": 6,
+                                    "date": "2023-08-28",
+                                    "lineups": { "team1": { "name": "South Africa Women" }, "team2": { "shorthand": "nlw" } },
+                                    "maps": [
+                                        { "id": 1, "map": "inf", "result": "8:16" },
+                                        { "id": 2, "map": "ovp", "result": "9:16" }
+                                    ]
+                                },
+                                {
+                                    "id": 8,
+                                    "date": "2023-08-29",
+                                    "lineups": { "team1": { "shorthand": "nlw" }, "team2": { "name": "USA Women" } },
+                                    "maps": [
+                                        { "id": 1, "map": "inf", "result": "16:12" },
+                                        { "id": 2, "map": "nuke", "result": "16:12" }
+                                    ]
+                                },
+                                {
+                                    "id": 10,
+                                    "date": "2023-08-30",
+                                    "lineups": { "team1": { "name": "Brazil Women" }, "team2": { "shorthand": "nlw" } },
+                                    "maps": [
+                                        { "id": 1, "map": "anb", "result": "5:16" },
+                                        { "id": 2, "map": "vtg", "result": "5:16" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "slug": "s2",
+                    "name": "Playoffs",
+                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/7361/iesf-women-world-championship-2023" }],
+                    "brackets": [
+                        {
+                            "slug": "r1b1",
+                            "name": "Opening",
+                            "matches": [
+                                {
+                                    "id": 2,
+                                    "date": "2023-08-30",
+                                    "lineups": { "team1": { "name": "Australia Women" }, "team2": { "shorthand": "nlw" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366413/australia-fe-vs-netherlands-fe-iesf-women-world-championship-2023" }],
+                                    "maps": [
+                                        { "id": 1, "map": "inf", "result": "7:16" },
+                                        { "id": 2, "map": "anb", "result": "11:16" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r2b1",
+                            "name": "Upper final",
+                            "tags": ["transparent"],
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2023-08-31",
+                                    "lineups": { "team1": { "name": "Argentina Women" }, "team2": { "shorthand": "nlw" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366415/argentina-fe-vs-netherlands-fe-iesf-women-world-championship-2023" }],
+                                    "maps": [
+                                        { "id": 1, "map": "mrg", "result": "19:17" },
+                                        { "id": 2, "map": "ovp", "result": "6:16" },
+                                        { "id": 2, "map": "inf", "result": "14:16" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r3",
+                            "name": "Grand final",
+                            "tags": ["transparent"],
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2023-09-01",
+                                    "lineups": { "team1": { "shorthand": "nlw" }, "team2": { "name": "Argentina Women" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366417/netherlands-fe-vs-argentina-fe-iesf-women-world-championship-2023" }],
+                                    "maps": [
+                                        { "id": 1, "map": "mrg", "result": "13:16" },
+                                        { "id": 2, "map": "ovp", "result": "16:1" },
+                                        { "id": 2, "map": "inf", "result": "16:14" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

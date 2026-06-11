@@ -1,0 +1,174 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "gamers-without-borders-2023-w",
+    "name": "Gamers Without Borders Women 2023",
+    "duration": { "start": "2023-04-27", "end": "2023-04-29" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/Gamers_Without_Borders/2023/Female" },
+        { "name": "HLTV", "url": "https://www.hltv.org/events/7156/gamers-without-borders-women-charity-invitational-2023" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-1" } }],
+    "brackets": [
+        {
+            "slug": "r1",
+            "name": "Quarter-finals",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-04-27",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "BIG EQUIPA" } },
+                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2364030/nip-impact-vs-big-equipa-gamers-without-borders-women-charity-invitational-2023" }],
+                    "maps": [
+                        {
+                            "id": 1,
+                            "map": "inf",
+                            "result": "16:11",
+                            "rewatches": [
+                                {
+                                    "language": "en",
+                                    "casters": ["bdog", "lucyluce"],
+                                    "tags": ["official"],
+                                    "parts": [
+                                        { "link": { "name": "1st Half", "url": "https://youtu.be/3PJlgrYNt_Y" }, "duration": "00:00:00-00:42:55" },
+                                        { "link": { "name": "2nd Half", "url": "https://youtu.be/3PJlgrYNt_Y" }, "duration": "00:45:55-01:06:51" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "map": "vtg",
+                            "result": "16:4",
+                            "rewatches": [
+                                {
+                                    "language": "en",
+                                    "casters": ["bdog", "lucyluce"],
+                                    "tags": ["official"],
+                                    "parts": [
+                                        { "link": { "name": "1st Half", "url": "https://youtu.be/3PJlgrYNt_Y" }, "duration": "01:11:51-01:48:50" },
+                                        { "link": { "name": "2nd Half", "url": "https://youtu.be/3PJlgrYNt_Y" }, "duration": "01:51:50-02:01:03" },
+                                        { "link": { "name": "Analysis", "url": "https://youtu.be/3PJlgrYNt_Y" }, "duration": "02:06:02-02:14:13" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r2",
+            "name": "Semi-finals",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-04-28",
+                    "lineups": { "team1": { "name": "Nigma Galaxy" }, "team2": { "shorthand": "nipi" } },
+                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2364032/nigma-galaxy-vs-nip-impact-gamers-without-borders-women-charity-invitational-2023" }],
+                    "maps": [
+                        {
+                            "id": 1,
+                            "map": "mrg",
+                            "result": "15:19",
+                            "rewatches": [
+                                {
+                                    "language": "en",
+                                    "casters": ["naorimizuki", "tom-pickering"],
+                                    "tags": ["official"],
+                                    "parts": [
+                                        { "link": { "name": "Analysis", "url": "https://youtu.be/vM1tdFEdNH8" }, "duration": "00:00:00-00:19:28" },
+                                        { "link": { "name": "1st Half", "url": "https://youtu.be/vM1tdFEdNH8" }, "duration": "00:29:28-01:02:34" },
+                                        { "link": { "name": "2nd Half", "url": "https://youtu.be/vM1tdFEdNH8" }, "duration": "01:05:34-01:41:22" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "map": "ovp",
+                            "result": "3:16",
+                            "rewatches": [
+                                {
+                                    "language": "en",
+                                    "casters": ["naorimizuki", "tom-pickering"],
+                                    "tags": ["official"],
+                                    "parts": [
+                                        { "link": { "name": "1st Half", "url": "https://youtu.be/vM1tdFEdNH8" }, "duration": "01:46:22-02:20:57" },
+                                        { "link": { "name": "2nd Half", "url": "https://youtu.be/vM1tdFEdNH8" }, "duration": "02:23:57-02:33:30" },
+                                        { "link": { "name": "Analysis", "url": "https://youtu.be/vM1tdFEdNH8" }, "duration": "02:38:30-02:47:49" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r3",
+            "name": "Grand Final",
+            "tags": ["transparent"],
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-04-29",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "NAVI Javelins" } },
+                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2364033/navi-javelins-vs-nip-impact-gamers-without-borders-women-charity-invitational-2023" }],
+                    "maps": [
+                        {
+                            "id": 1,
+                            "map": "anc",
+                            "result": "17:19",
+                            "rewatches": [
+                                {
+                                    "language": "en",
+                                    "casters": ["bdog", "lucyluce"],
+                                    "tags": ["official"],
+                                    "parts": [
+                                        { "link": { "name": "1st Half", "url": "https://youtu.be/w9HVdnDi1RQ" }, "duration": "00:00:00-00:44:05" },
+                                        { "link": { "name": "2nd Half", "url": "https://youtu.be/w9HVdnDi1RQ" }, "duration": "00:47:05-01:34:36" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "map": "vtg",
+                            "result": "16:19",
+                            "rewatches": [
+                                {
+                                    "language": "en",
+                                    "casters": ["bdog", "lucyluce"],
+                                    "tags": ["official"],
+                                    "parts": [
+                                        { "link": { "name": "1st Half", "url": "https://youtu.be/w9HVdnDi1RQ" }, "duration": "01:39:36-02:17:51" },
+                                        { "link": { "name": "2nd Half", "url": "https://youtu.be/w9HVdnDi1RQ" }, "duration": "02:20:51-03:02:54" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "map": "anb",
+                            "result": "13:16",
+                            "rewatches": [
+                                {
+                                    "language": "en",
+                                    "casters": ["bdog", "lucyluce"],
+                                    "tags": ["official"],
+                                    "parts": [
+                                        { "link": { "name": "1st Half", "url": "https://youtu.be/w9HVdnDi1RQ" }, "duration": "03:07:54-03:46:01" },
+                                        { "link": { "name": "2nd Half", "url": "https://youtu.be/w9HVdnDi1RQ" }, "duration": "03:49:01-04:14:50" },
+                                        { "link": { "name": "Analysis", "url": "https://youtu.be/w9HVdnDi1RQ" }, "duration": "04:19:50-04:30:21" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

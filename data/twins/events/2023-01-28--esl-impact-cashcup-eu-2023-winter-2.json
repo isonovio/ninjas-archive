@@ -7,7 +7,8 @@
     "links": [
         { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_Cash_Cup/Europe/2023/Winter/2" },
         { "name": "ESEA", "url": "https://play.esea.net/events/2188" },
-        { "name": "Brackets", "url": "https://play.esea.net/index.php?s=events&d=brackets&id=2188" }
+        { "name": "Brackets", "url": "https://play.esea.net/index.php?s=events&d=brackets&id=2188" },
+        { "name": "HLTV", "url": "https://www.hltv.org/events/7040/esl-impact-winter-2023-cash-cup-2-europe" }
     ],
     "tags": ["impact"],
     "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-1" } }],
@@ -47,6 +48,7 @@
                     "id": 1,
                     "date": "2023-01-29",
                     "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Angels" } },
+                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2361531/nip-impact-vs-angels-esl-impact-winter-2023-cash-cup-2-europe" }],
                     "maps": [
                         { "id": 1, "map": "mrg", "result": "16:11", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17025109" }] },
                         { "id": 2, "map": "ovp", "result": "16:10", "links": [{ "name": "ESEA", "url": "https://play.esea.net/match/17025150" }] }

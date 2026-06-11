@@ -1,0 +1,65 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-cashcup-eu-2023-summer-6",
+    "name": "ESL Impact Cash Cup: Europe - Summer 2023 #6",
+    "duration": { "start": "2023-09-16", "end": "2023-09-17" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_Cash_Cup/Europe/2023/Summer/6" },
+        { "name": "FACEIT", "url": "https://www.faceit.com/en/championship/7a09fde7-992b-4670-b08a-4d9efd036d2e" },
+        { "name": "HLTV", "url": "https://www.hltv.org/events/7427/esl-impact-summer-2023-cash-cup-6-europe" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-2" } }],
+    "brackets": [
+        {
+            "slug": "r2",
+            "name": "Round 2",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-09-16",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "TEAM POOMA" } },
+                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/csgo/room/1-fe6306df-7fe2-4302-943e-12f2db723585" }],
+                    "maps": [{ "id": 1, "map": "anc", "result": "16:12" }]
+                }
+            ]
+        },
+        {
+            "slug": "r3",
+            "name": "Semi-finals",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-09-16",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "It's crazy it's party" } },
+                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/csgo/room/1-aeb35fc4-7541-41e4-a934-37b528ffa7b3" }],
+                    "maps": [
+                        { "id": 1, "map": "anc", "result": "16:8" },
+                        { "id": 2, "map": "vtg", "result": "16:4" }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r3",
+            "name": "Grand finals",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-09-16",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "shinigami" } },
+                    "links": [
+                        { "name": "FACEIT", "url": "https://www.faceit.com/en/csgo/room/1-50fe6eaa-cdc6-4f7c-b5c0-ba2a4768807d" },
+                        { "name": "HLTV", "url": "https://www.hltv.org/matches/2366827/nip-impact-vs-shinigami-esl-impact-summer-2023-cash-cup-6-europe" }
+                    ],
+                    "maps": [
+                        { "id": 1, "map": "mrg", "result": "9:16" },
+                        { "id": 2, "map": "vtg", "result": "16:9" },
+                        { "id": 3, "map": "ovp", "result": "16:7" }
+                    ]
+                }
+            ]
+        }
+    ]
+}

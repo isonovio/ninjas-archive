@@ -1,0 +1,9 @@
+{
+    "$schema": "../../schemas/talent.schema.json",
+    "slug": "hedje",
+    "nickname": "Hedje",
+    "socials": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/Hedje" },
+        { "name": "Twitter", "url": "https://x.com/Hedjee" }
+    ]
+}

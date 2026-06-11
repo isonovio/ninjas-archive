@@ -1,0 +1,255 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-league-s4",
+    "name": "ESL Impact League Season 4",
+    "duration": { "start": "2023-08-18", "end": "2023-12-10" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_League/Season_4" },
+        { "name": "ESL", "url": "https://pro.eslgaming.com/csgo/impact/season4/" },
+        { "name": "Rules", "url": "https://drive.google.com/drive/folders/1v4L7HzKChaQuzb6rjFeXk9lBRgw5GrG-" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-2" } }],
+    "brackets": [
+        {
+            "slug": "s1",
+            "name": "Regular Season",
+            "tags": ["transparent"],
+            "brackets": [
+                {
+                    "slug": "d1eu",
+                    "name": "Europe",
+                    "links": [{ "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_League/Season_4/Europe" }],
+                    "brackets": [
+                        {
+                            "slug": "s2",
+                            "name": "Main Event",
+                            "tags": ["transparent"],
+                            "brackets": [
+                                {
+                                    "slug": "s1",
+                                    "name": "Group Stage",
+                                    "tags": ["transparent"],
+                                    "brackets": [
+                                        {
+                                            "slug": "ga",
+                                            "name": "Group A",
+                                            "matches": [
+                                                {
+                                                    "id": 1,
+                                                    "date": "2023-09-13",
+                                                    "lineups": { "team1": { "name": "Nigma Galaxy" }, "team2": { "shorthand": "nipi" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2366666/nigma-galaxy-vs-nip-impact-esl-impact-league-season-4-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "ovp",
+                                                            "result": "16:5",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1924505465" },
+                                                                            "duration": "00:27:38-01:30:35"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/Q91SiG3TmgE" },
+                                                                            "duration": "00:00:00-00:45:21"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "inf",
+                                                            "result": "16:4",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1924505465" },
+                                                                            "duration": "01:36:35-03:17:39"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/O1MlqHsTcow" },
+                                                                            "duration": "00:00:00-01:22:48"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 6,
+                                                    "date": "2023-09-20",
+                                                    "lineups": { "team1": { "name": "1win Gang" }, "team2": { "shorthand": "nipi" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2366766/1win-gang-vs-nip-impact-esl-impact-league-season-4-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        { "id": 1, "map": "mrg", "result": "16:12" },
+                                                        { "id": 2, "map": "vtg", "result": "1:16" },
+                                                        { "id": 3, "map": "ovp", "result": "9:16" }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 7,
+                                                    "date": "2023-09-28",
+                                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "VP.Angels" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2366909/nip-impact-vs-vpangels-esl-impact-league-season-4-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "nuke",
+                                                            "result": "18:22",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1936586307" },
+                                                                            "duration": "00:17:16-02:11:03"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/RtoLsU_dTG0" },
+                                                                            "duration": "00:00:00-01:37:16"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        { "id": 2, "map": "anc", "result": "16:7" },
+                                                        { "id": 3, "map": "ovp", "result": "16:10" }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 11,
+                                                    "date": "2023-10-18",
+                                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "ENCE Athena" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2367079/nip-impact-vs-ence-athena-esl-impact-league-season-4-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "anb",
+                                                            "result": "13:11",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1954175993" },
+                                                                            "duration": "00:32:33-01:43:20"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/RWkIwwpkSmM" },
+                                                                            "duration": "00:00:00-00:55:40"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "vtg",
+                                                            "result": "10:13",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1954175993" },
+                                                                            "duration": "01:55:20-02:47:11"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/2gBfrjpvFDM" },
+                                                                            "duration": "00:00:00-00:49:03"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 3,
+                                                            "map": "mrg",
+                                                            "result": "13:7",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1954175993" },
+                                                                            "duration": "02:59:10-03:43:35"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/MvtNMcxQios" },
+                                                                            "duration": "00:00:00-00:39:51"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 13,
+                                                    "date": "2023-10-25",
+                                                    "lineups": { "team1": { "name": "BIG EQUIPA" }, "team2": { "shorthand": "nipi" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2367265/big-equipa-vs-nip-impact-esl-impact-league-season-4-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        { "id": 1, "map": "anb", "result": "13:10" },
+                                                        { "id": 2, "map": "anc", "result": "14:16" },
+                                                        { "id": 3, "map": "vtg", "result": "13:4" }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

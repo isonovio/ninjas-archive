@@ -1,0 +1,9 @@
+{
+    "$schema": "../../schemas/talent.schema.json",
+    "slug": "naorimizuki",
+    "nickname": "NaoriMizuki",
+    "socials": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/NaoriMizuki" },
+        { "name": "Twitter", "url": "https://x.com/NaoriMizuki" }
+    ]
+}

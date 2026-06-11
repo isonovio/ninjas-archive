@@ -1,0 +1,97 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "fastcup-fe-aurora",
+    "name": "FASTCUP FEMALE AURORA",
+    "duration": { "start": "2023-03-04", "end": "2023-03-05" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/FASTCUP/AURORA" },
+        { "name": "FASTCUP", "url": "https://csgo.fastcup.net/tournaments/1944" },
+        { "name": "HLTV", "url": "https://www.hltv.org/events/7106/fastcup-aurora-2023" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-1" } }],
+    "brackets": [
+        {
+            "slug": "b1r1",
+            "name": "WB 1",
+            "matches": [
+                {
+                    "id": 14,
+                    "date": "2023-03-04",
+                    "lineups": { "team1": { "name": "Back2Back.Junior" }, "team2": { "shorthand": "nipi" } },
+                    "links": [{ "name": "FASTCUP", "url": "https://csgo.fastcup.net/matches/10142599" }],
+                    "maps": [{ "id": 1, "map": "ovp", "result": "1:16" }]
+                }
+            ]
+        },
+        {
+            "slug": "b1r2",
+            "name": "WB 2",
+            "matches": [
+                {
+                    "id": 8,
+                    "date": "2023-03-04",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "East Legends" } },
+                    "links": [{ "name": "FASTCUP", "url": "https://csgo.fastcup.net/matches/10142584" }],
+                    "maps": [{ "id": 1, "map": "anb", "result": "16:13" }]
+                }
+            ]
+        },
+        {
+            "slug": "b1r3",
+            "name": "WB 3",
+            "matches": [
+                {
+                    "id": 4,
+                    "date": "2023-03-04",
+                    "lineups": { "team1": { "name": "SquarePants" }, "team2": { "shorthand": "nipi" } },
+                    "links": [{ "name": "FASTCUP", "url": "https://csgo.fastcup.net/matches/10142576" }],
+                    "maps": [{ "id": 1, "map": "ovp", "result": "11:16" }]
+                }
+            ]
+        },
+        {
+            "slug": "b1r4",
+            "name": "WB 4",
+            "matches": [
+                {
+                    "id": 4,
+                    "date": "2023-03-04",
+                    "lineups": { "team1": { "name": "BIG EQUIPA" }, "team2": { "shorthand": "nipi" } },
+                    "links": [{ "name": "FASTCUP", "url": "https://csgo.fastcup.net/matches/10142572" }],
+                    "maps": [{ "id": 1, "map": "vtg", "result": "16:8" }]
+                }
+            ]
+        },
+        {
+            "slug": "b2r6",
+            "name": "LB 6",
+            "matches": [
+                {
+                    "id": 4,
+                    "date": "2023-03-04",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "FIFTY FIVE POWER" } },
+                    "links": [{ "name": "FASTCUP", "url": "https://csgo.fastcup.net/matches/10142627" }],
+                    "maps": [{ "id": 1, "map": "mrg", "result": "16:7" }]
+                }
+            ]
+        },
+        {
+            "slug": "b2r7",
+            "name": "LB 7",
+            "matches": [
+                {
+                    "id": 4,
+                    "date": "2023-03-05",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "9Pandas Fearless" } },
+                    "links": [
+                        { "name": "FASTCUP", "url": "https://csgo.fastcup.net/matches/10142629" },
+                        { "name": "HLTV", "url": "https://www.hltv.org/matches/2362602/nip-impact-vs-9-pandas-fearless-fastcup-aurora-2023" }
+                    ],
+                    "maps": [{ "id": 1, "map": "ovp", "result": "5:16" }]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "leon-x-teamplay-s1",
+    "name": "LEON x TEAMPLAY Season 1",
+    "duration": { "start": "2023-04-29", "end": "2023-06-25" },
+    "links": [{ "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/TEAMPLAY/Season_1" }],
+    "brackets": [
+        {
+            "slug": "s2",
+            "name": "Main Event",
+            "tags": ["transparent"],
+            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/7255/leon-teamplay-season-1" }],
+            "brackets": [
+                {
+                    "slug": "s2",
+                    "name": "Group Stage",
+                    "tags": ["transparent"],
+                    "brackets": [
+                        {
+                            "slug": "ga",
+                            "name": "Group A",
+                            "brackets": [
+                                {
+                                    "slug": "r1b1",
+                                    "name": "Opening round",
+                                    "matches": [
+                                        {
+                                            "id": 2,
+                                            "date": "2023-06-12",
+                                            "lineups": {
+                                                "team1": { "team": "nipi", "players": ["astra", "jenkon", "kezziwow", "nayomy", "qiyarah"] },
+                                                "team2": { "name": "JANO" }
+                                            },
+                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2365068/nip-impact-vs-jano-leon-teamplay-season-1" }],
+                                            "maps": [{ "id": 1, "map": "mrg", "result": "8:16" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "slug": "r1b2",
+                                    "name": "Lower round 1",
+                                    "matches": [
+                                        {
+                                            "id": 1,
+                                            "date": "2023-06-13",
+                                            "lineups": {
+                                                "team1": { "name": "Insilio" },
+                                                "team2": { "team": "nipi", "players": ["astra", "jenkon", "kaoday", "nayomy", "qiyarah"] }
+                                            },
+                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2365068/nip-impact-vs-jano-leon-teamplay-season-1" }],
+                                            "maps": [
+                                                { "id": 1, "map": "anb", "result": "16:3" },
+                                                { "id": 1, "map": "ovp", "result": "16:2" }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

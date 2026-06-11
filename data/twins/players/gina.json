@@ -1,0 +1,14 @@
+{
+    "$schema": "../../schemas/player.schema.json",
+
+    "slug": "gina",
+    "nickname": "Gina",
+    "name": "Melania Mylioti",
+    "birthday": "1991-09-17",
+    "nationality": "nl",
+    "links": [
+        { "name": "Profile", "url": "https://www.melania.gg/" },
+        { "name": "HLTV", "url": "https://www.hltv.org/player/1510/gina" },
+        { "name": "Twitter", "url": "https://x.com/MelaniaMylioti" }
+    ]
+}

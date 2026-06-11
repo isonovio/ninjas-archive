@@ -1,0 +1,315 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-league-s3",
+    "name": "ESL Impact League Season 3",
+    "duration": { "start": "2023-02-17", "end": "2023-06-04" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_League/Season_3" },
+        { "name": "ESL", "url": "https://pro.eslgaming.com/csgo/impact/dallas/" },
+        { "name": "Rules", "url": "https://drive.google.com/drive/folders/1v4L7HzKChaQuzb6rjFeXk9lBRgw5GrG-" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-1" } }],
+    "brackets": [
+        {
+            "slug": "s1",
+            "name": "Regular Season",
+            "tags": ["transparent"],
+            "brackets": [
+                {
+                    "slug": "d1eu",
+                    "name": "Europe",
+                    "links": [{ "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_League/Season_3/Europe" }],
+                    "brackets": [
+                        {
+                            "slug": "s2",
+                            "name": "Main Event",
+                            "tags": ["transparent"],
+                            "brackets": [
+                                {
+                                    "slug": "s1",
+                                    "name": "Group Stage",
+                                    "tags": ["transparent"],
+                                    "brackets": [
+                                        {
+                                            "slug": "ga",
+                                            "name": "Group A",
+                                            "matches": [
+                                                {
+                                                    "id": 3,
+                                                    "date": "2023-03-09",
+                                                    "lineups": { "team1": { "name": "Nigma Galaxy" }, "team2": { "shorthand": "nipi" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2362621/nigma-galaxy-vs-nip-impact-esl-impact-league-season-3-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "mrg",
+                                                            "result": "14:16",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "vearless"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1760194746" },
+                                                                            "duration": "00:29:02-01:48:01"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/lhzMUp8Sv_U" },
+                                                                            "duration": "00:00:00-00:57:15"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "vtg",
+                                                            "result": "17:19",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "vearless"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1760194746" },
+                                                                            "duration": "01:55:03-03:16:37"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/Sgt3o89imqY" },
+                                                                            "duration": "00:00:00-01:12:33"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 5,
+                                                    "date": "2023-03-15",
+                                                    "lineups": { "team1": { "name": "Aces" }, "team2": { "shorthand": "nipi" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2362744/aces-vs-nip-impact-esl-impact-league-season-3-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        { "id": 1, "map": "anb", "result": "11:16" },
+                                                        { "id": 2, "map": "inf", "result": "17:19" }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 9,
+                                                    "date": "2023-03-29",
+                                                    "lineups": { "team1": { "name": "Astralis W" }, "team2": { "shorthand": "nipi" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2363337/astralis-w-vs-nip-impact-esl-impact-league-season-3-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "anb",
+                                                            "result": "16:14",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1779057681" },
+                                                                            "duration": "00:27:55-01:45:02"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/7nOm4uM9Gv8" },
+                                                                            "duration": "00:00:00-00:57:49"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "inf",
+                                                            "result": "9:16",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1779057681" },
+                                                                            "duration": "01:53:01-02:42:12"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/ZXNr_fSsIuo" },
+                                                                            "duration": "00:00:00-00:44:39"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 3,
+                                                            "map": "ovp",
+                                                            "result": "9:16",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1779057681" },
+                                                                            "duration": "02:52:10-03:48:15"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/rp7JCsyOu5A" },
+                                                                            "duration": "00:00:00-00:51:04"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 12,
+                                                    "date": "2023-04-06",
+                                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Spirit Female" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2363502/nip-impact-vs-spirit-fe-esl-impact-league-season-3-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "mrg",
+                                                            "result": "16:14",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "vearless"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1786346049" },
+                                                                            "duration": "00:34:16-01:53:33"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/ZBCPWq-6jck" },
+                                                                            "duration": "00:00:00-01:02:54"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "ovp",
+                                                            "result": "19:16",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "vearless"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1786346049" },
+                                                                            "duration": "02:02:32-03:29:55"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/R2DFBaz1eNg" },
+                                                                            "duration": "00:00:00-01:23:01"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 15,
+                                                    "date": "2023-04-12",
+                                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "BIG EQUIPA" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2363594/nip-impact-vs-big-equipa-esl-impact-league-season-3-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "vtg",
+                                                            "result": "10:16",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "hedje"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1791766234" },
+                                                                            "duration": "00:30:41-04:42:54"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/2jyRPc4smH0" },
+                                                                            "duration": "00:00:00-00:51:12"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "ovp",
+                                                            "result": "7:16",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "hedje"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/1791766234" },
+                                                                            "duration": "01:51:53-02:57:50"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/OS5Gi5Vs6ts" },
+                                                                            "duration": "00:00:00-00:48:27"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

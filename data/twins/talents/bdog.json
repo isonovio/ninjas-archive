@@ -1,0 +1,9 @@
+{
+    "$schema": "../../schemas/talent.schema.json",
+    "slug": "bdog",
+    "nickname": "BDog",
+    "socials": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/BDog" },
+        { "name": "Twitter", "url": "https://x.com/BDogCS" }
+    ]
+}

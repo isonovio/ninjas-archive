@@ -1,0 +1,29 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-cashcup-eu-2023-summer-4",
+    "name": "ESL Impact Cash Cup: Europe - Summer 2023 #4",
+    "duration": { "start": "2023-08-12", "end": "2023-08-12" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_Cash_Cup/Europe/2023/Summer/4" },
+        { "name": "FACEIT", "url": "https://www.faceit.com/en/championship/c497b599-4203-4bfc-b65b-af8b2d29073e" },
+        { "name": "HLTV", "url": "https://www.hltv.org/events/7351/esl-impact-summer-2023-cash-cup-4-europe" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-2" } }],
+    "brackets": [
+        {
+            "slug": "r2",
+            "name": "Round 2",
+            "matches": [
+                {
+                    "id": 3,
+                    "date": "2023-08-12",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Let Her Cook" } },
+                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/csgo/room/1-30f7d9ad-dcf0-442d-b733-cc3b921be91a" }],
+                    "maps": [{ "id": 1, "map": "anc", "result": "11:16" }]
+                }
+            ]
+        }
+    ]
+}

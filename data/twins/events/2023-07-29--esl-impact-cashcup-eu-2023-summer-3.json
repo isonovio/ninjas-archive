@@ -1,0 +1,52 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-cashcup-eu-2023-summer-3",
+    "name": "ESL Impact Cash Cup: Europe - Summer 2023 #3",
+    "duration": { "start": "2023-07-29", "end": "2023-07-30" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_Cash_Cup/Europe/2023/Summer/3" },
+        { "name": "FACEIT", "url": "https://www.faceit.com/en/championship/7d4a9d5b-3fe4-4f88-a128-6c5acd171ed1" },
+        { "name": "HLTV", "url": "https://www.hltv.org/events/7334/esl-impact-summer-2023-cash-cup-3-europe" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2023-2" } }],
+    "brackets": [
+        {
+            "slug": "r2",
+            "name": "Semi-finals",
+            "matches": [
+                {
+                    "id": 2,
+                    "date": "2023-07-29",
+                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "YeYO" } },
+                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/csgo/room/1-af23e55a-a9d1-46d9-a1a5-641f9859a20b" }],
+                    "maps": [
+                        { "id": 1, "map": "nuke", "result": "17:19" },
+                        { "id": 2, "map": "anc", "result": "16:10" },
+                        { "id": 3, "map": "mrg", "result": "16:10" }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "r3",
+            "name": "Grand finals",
+            "matches": [
+                {
+                    "id": 1,
+                    "date": "2023-07-29",
+                    "lineups": { "team1": { "name": "NAVI Javelins" }, "team2": { "shorthand": "nipi" } },
+                    "links": [
+                        { "name": "FACEIT", "url": "https://www.faceit.com/en/csgo/room/1-1847794f-a7d0-4d54-8f1b-a0c42bdb0e2c" },
+                        { "name": "HLTV", "url": "https://www.hltv.org/matches/2365691/navi-javelins-vs-nip-impact-esl-impact-summer-2023-cash-cup-3-europe" }
+                    ],
+                    "maps": [
+                        { "id": 1, "map": "nuke", "result": "16:4" },
+                        { "id": 2, "map": "mrg", "result": "16:6" }
+                    ]
+                }
+            ]
+        }
+    ]
+}
