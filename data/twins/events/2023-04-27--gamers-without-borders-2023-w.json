@@ -108,11 +108,10 @@
         },
         {
             "slug": "r3",
-            "name": "Grand Final",
-            "tags": ["transparent"],
             "matches": [
                 {
                     "id": 1,
+                    "name": "Grand Final",
                     "date": "2023-04-29",
                     "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "NAVI Javelins" } },
                     "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2364033/navi-javelins-vs-nip-impact-gamers-without-borders-women-charity-invitational-2023" }],

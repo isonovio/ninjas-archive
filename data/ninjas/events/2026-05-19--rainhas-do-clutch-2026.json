@@ -12,9 +12,7 @@
     "participants": [{ "shorthand": "zen", "lineup": { "roster": "zen-2026-1" } }],
     "brackets": [
         {
-            "slug": "s1",
-            "name": "Qualifiers",
-            "tags": ["transparent"],
+            "slug": "s1--qualifiers",
             "links": [
                 { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/FERJEE/Rainhas_do_Clutch/2026/Europe" },
                 { "name": "FACEIT", "url": "https://www.faceit.com/en/championship/6e278785-4881-4a42-9b25-1f927050412b" }

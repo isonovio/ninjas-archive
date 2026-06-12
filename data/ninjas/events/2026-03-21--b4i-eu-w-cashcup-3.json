@@ -88,11 +88,10 @@
         },
         {
             "slug": "r5",
-            "name": "Grand finals",
-            "tags": ["transparent"],
             "matches": [
                 {
                     "id": 1,
+                    "name": "Grand Final",
                     "date": "2026-03-22",
                     "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "mupajuku" } },
                     "maps": [

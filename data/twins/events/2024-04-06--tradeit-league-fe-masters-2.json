@@ -62,11 +62,10 @@
         },
         {
             "slug": "r4",
-            "name": "Grand final",
-            "tags": ["transparent"],
             "matches": [
                 {
                     "id": 1,
+                    "name": "Grand Final",
                     "date": "2024-04-07",
                     "lineups": { "team1": { "name": "Pigeons" }, "team2": { "shorthand": "nipi" } },
                     "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-7ef03d42-e212-43c3-bd99-acf200a2ec93" }],

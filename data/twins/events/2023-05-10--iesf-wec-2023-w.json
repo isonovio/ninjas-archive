@@ -12,13 +12,11 @@
     "participants": [{ "shorthand": "nlw", "lineup": { "roster": "nlw-2023" } }],
     "brackets": [
         {
-            "slug": "s1",
-            "name": "Qualifers",
-            "tags": ["transparent"],
+            "slug": "s1--qualifiers",
             "brackets": [
                 {
                     "slug": "d1eu",
-                    "name": "European Qualifier",
+                    "name": "European Q.",
                     "links": [
                         { "name": "1", "url": "https://www.challengermode.com/s/iesf/tournaments/51486eeb-03f3-4318-84a9-08db44c3796a" },
                         { "name": "2", "url": "https://www.challengermode.com/s/iesf/tournaments/04dd74d5-6b7e-4231-0fa9-08db674e6172" },
@@ -28,9 +26,8 @@
                     ],
                     "brackets": [
                         {
-                            "slug": "s1",
-                            "name": "Group Stage",
-                            "tags": ["transparent"],
+                            "slug": "s1--group-stage",
+
                             "brackets": [
                                 {
                                     "slug": "ga",
@@ -158,7 +155,6 @@
                                 {
                                     "slug": "r3",
                                     "name": "Grand Final",
-                                    "tags": ["transparent"],
                                     "matches": [
                                         {
                                             "id": 1,
@@ -197,9 +193,7 @@
             "tags": ["lan"],
             "brackets": [
                 {
-                    "slug": "s1",
-                    "name": "Group Stage",
-                    "tags": ["transparent"],
+                    "slug": "s1--group-stage",
                     "brackets": [
                         {
                             "slug": "gb",
@@ -249,57 +243,40 @@
                     "slug": "s2",
                     "name": "Playoffs",
                     "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/7361/iesf-women-world-championship-2023" }],
-                    "brackets": [
+                    "matches": [
                         {
-                            "slug": "r1b1",
-                            "name": "Opening",
-                            "matches": [
-                                {
-                                    "id": 2,
-                                    "date": "2023-08-30",
-                                    "lineups": { "team1": { "name": "Australia Women" }, "team2": { "shorthand": "nlw" } },
-                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366413/australia-fe-vs-netherlands-fe-iesf-women-world-championship-2023" }],
-                                    "maps": [
-                                        { "id": 1, "map": "inf", "result": "7:16" },
-                                        { "id": 2, "map": "anb", "result": "11:16" }
-                                    ]
-                                }
+                            "id": 2,
+                            "name": "Opening Match 2",
+                            "date": "2023-08-30",
+                            "lineups": { "team1": { "name": "Australia Women" }, "team2": { "shorthand": "nlw" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366413/australia-fe-vs-netherlands-fe-iesf-women-world-championship-2023" }],
+                            "maps": [
+                                { "id": 1, "map": "inf", "result": "7:16" },
+                                { "id": 2, "map": "anb", "result": "11:16" }
                             ]
                         },
                         {
-                            "slug": "r2b1",
-                            "name": "Upper final",
-                            "tags": ["transparent"],
-                            "matches": [
-                                {
-                                    "id": 1,
-                                    "date": "2023-08-31",
-                                    "lineups": { "team1": { "name": "Argentina Women" }, "team2": { "shorthand": "nlw" } },
-                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366415/argentina-fe-vs-netherlands-fe-iesf-women-world-championship-2023" }],
-                                    "maps": [
-                                        { "id": 1, "map": "mrg", "result": "19:17" },
-                                        { "id": 2, "map": "ovp", "result": "6:16" },
-                                        { "id": 2, "map": "inf", "result": "14:16" }
-                                    ]
-                                }
+                            "id": 3,
+                            "name": "Upper Final",
+                            "date": "2023-08-31",
+                            "lineups": { "team1": { "name": "Argentina Women" }, "team2": { "shorthand": "nlw" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366415/argentina-fe-vs-netherlands-fe-iesf-women-world-championship-2023" }],
+                            "maps": [
+                                { "id": 1, "map": "mrg", "result": "19:17" },
+                                { "id": 2, "map": "ovp", "result": "6:16" },
+                                { "id": 2, "map": "inf", "result": "14:16" }
                             ]
                         },
                         {
-                            "slug": "r3",
-                            "name": "Grand final",
-                            "tags": ["transparent"],
-                            "matches": [
-                                {
-                                    "id": 1,
-                                    "date": "2023-09-01",
-                                    "lineups": { "team1": { "shorthand": "nlw" }, "team2": { "name": "Argentina Women" } },
-                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366417/netherlands-fe-vs-argentina-fe-iesf-women-world-championship-2023" }],
-                                    "maps": [
-                                        { "id": 1, "map": "mrg", "result": "13:16" },
-                                        { "id": 2, "map": "ovp", "result": "16:1" },
-                                        { "id": 2, "map": "inf", "result": "16:14" }
-                                    ]
-                                }
+                            "id": 5,
+                            "date": "2023-09-01",
+                            "name": "Grand Final",
+                            "lineups": { "team1": { "shorthand": "nlw" }, "team2": { "name": "Argentina Women" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366417/netherlands-fe-vs-argentina-fe-iesf-women-world-championship-2023" }],
+                            "maps": [
+                                { "id": 1, "map": "mrg", "result": "13:16" },
+                                { "id": 2, "map": "ovp", "result": "16:1" },
+                                { "id": 2, "map": "inf", "result": "16:14" }
                             ]
                         }
                     ]

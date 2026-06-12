@@ -7,11 +7,9 @@
     "participants": [{ "shorthand": "big", "lineup": { "roster": "big-equipa-2026-1" } }],
     "brackets": [
         {
-            "slug": "e2m",
-            "name": "Main Event",
+            "slug": "e2",
             "duration": { "start": "2026-03-17", "end": "2026-04-02" },
             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/9051/nodwin-clutch-series-6" }],
-            "tags": ["transparent"],
             "brackets": [
                 {
                     "slug": "s1g",

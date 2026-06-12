@@ -8,14 +8,11 @@
     "brackets": [
         {
             "slug": "s2",
-            "name": "Main Event",
-            "tags": ["transparent"],
             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/7255/leon-teamplay-season-1" }],
             "brackets": [
                 {
-                    "slug": "s2",
-                    "name": "Group Stage",
-                    "tags": ["transparent"],
+                    "slug": "s2--group-stage",
+
                     "brackets": [
                         {
                             "slug": "ga",
@@ -23,7 +20,7 @@
                             "brackets": [
                                 {
                                     "slug": "r1b1",
-                                    "name": "Opening round",
+                                    "name": "Opening Round",
                                     "matches": [
                                         {
                                             "id": 2,
@@ -39,7 +36,7 @@
                                 },
                                 {
                                     "slug": "r1b2",
-                                    "name": "Lower round 1",
+                                    "name": "Lower Round 1",
                                     "matches": [
                                         {
                                             "id": 1,

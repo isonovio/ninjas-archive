@@ -12,6 +12,7 @@ import {
 import {
     type MatchRaw,
     type Match,
+    type MatchTag,
     matchFromRaw,
     type MatchContext,
 } from "./official-match";
@@ -19,17 +20,15 @@ import { type CSEvent } from "./official-event";
 
 export type BracketRaw = {
     slug: string;
-    name: string;
+    name?: string;
     duration?: DateRangeRaw;
     links?: ExternalLink[];
     participants?: LineupShorthandRaw[];
     brackets?: BracketRaw[];
     matches?: MatchRaw[];
     note?: string;
-    tags?: BracketTag[];
+    tags?: MatchTag[];
 };
-
-type BracketTag = "transparent" | "lan";
 
 export type Bracket = {
     slug: string;
@@ -55,18 +54,19 @@ export const processRawBracket = (
 
     const bracket: Bracket = {
         slug: raw.slug,
-        name: raw.name,
+        name: raw.name ?? "",
         duration: raw.duration ? dateRangeFromRaw(raw.duration) : undefined,
         links,
         note: raw.note,
         event: ctx.event,
         parents: ctx.brackets,
-        isTransparent: raw.tags ? raw.tags.includes("transparent") : false,
+        isTransparent: raw.name ? false : true,
     };
 
     const newCtx: MatchContext = {
         event: ctx.event,
         brackets: [...ctx.brackets, bracket],
+        tags: new Set([...ctx.tags, ...(raw.tags ?? [])]),
         lineupShorthands: new Map<string, Lineup>([
             ...ctx.lineupShorthands,
             ...(raw.participants ?? []).map(lineupShorthandFromRaw),

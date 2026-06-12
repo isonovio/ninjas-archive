@@ -15,9 +15,7 @@
     ],
     "brackets": [
         {
-            "slug": "e1q",
-            "name": "Open Qualifiers",
-            "tags": ["transparent"],
+            "slug": "s1--qualifers",
             "brackets": [
                 {
                     "slug": "q1",
@@ -334,11 +332,10 @@
                         },
                         {
                             "slug": "r5",
-                            "name": "Final",
-                            "tags": ["transparent"],
                             "matches": [
                                 {
                                     "id": 1,
+                                    "name": "Grand Final",
                                     "date": "2026-01-18",
                                     "lineups": { "team1": { "shorthand": "big" }, "team2": { "team": "pigeons" } },
                                     "maps": [
@@ -647,11 +644,10 @@
                         },
                         {
                             "slug": "r5",
-                            "name": "Final",
-                            "tags": ["transparent"],
                             "matches": [
                                 {
                                     "id": 1,
+                                    "name": "Grand Final",
                                     "date": "2026-01-25",
                                     "lineups": { "team1": { "name": "hindsight" }, "team2": { "shorthand": "pkb" } },
                                     "maps": [
@@ -870,11 +866,10 @@
                         },
                         {
                             "slug": "r5",
-                            "name": "Final",
-                            "tags": ["transparent"],
                             "matches": [
                                 {
                                     "id": 1,
+                                    "name": "Grand Final",
                                     "date": "2026-02-01",
                                     "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "team": "fingers-crossed-fe" } },
                                     "maps": [
@@ -919,174 +914,136 @@
             ]
         },
         {
-            "slug": "e2m",
-            "name": "Main Event",
-            "tags": ["transparent"],
+            "slug": "s2",
             "participants": [{ "shorthand": "lhc", "lineup": { "roster": "let-her-cook-2026-1" } }],
             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/8929/jb-pro-league-female-season-1" }],
             "brackets": [
                 {
-                    "slug": "s1g",
-                    "name": "Group Stage",
+                    "slug": "s1--group-stage",
+
                     "duration": { "start": "2026-02-09", "end": "2026-02-12" },
-                    "tags": ["transparent"],
                     "brackets": [
                         {
                             "slug": "ga",
                             "name": "Group A",
-                            "brackets": [
+                            "matches": [
                                 {
-                                    "slug": "r1",
-                                    "name": "Opening round",
-                                    "matches": [
+                                    "id": 2,
+                                    "name": "Opening Match 2",
+                                    "date": "2026-02-09",
+                                    "lineups": {
+                                        "team1": { "team": "peekaboo", "players": ["angelka", "hikomi", "julih", "leti", "nem1za", "zana"] },
+                                        "team2": { "team": "fingers-crossed-fe" }
+                                    },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390089/peekaboo-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "d2",
+                                            "result": "13:9",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["lucyluce"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2693315503" }, "duration": "03:49:25-04:33:26" }]
+                                                }
+                                            ],
+                                            "note": "Angelka stood in for Zana."
+                                        },
                                         {
                                             "id": 2,
-                                            "date": "2026-02-09",
-                                            "lineups": {
-                                                "team1": { "team": "peekaboo", "players": ["angelka", "hikomi", "julih", "leti", "nem1za", "zana"] },
-                                                "team2": { "team": "fingers-crossed-fe" }
-                                            },
-                                            "links": [
-                                                { "name": "HLTV", "url": "https://www.hltv.org/matches/2390089/peekaboo-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }
-                                            ],
-                                            "maps": [
+                                            "map": "anc",
+                                            "result": "13:11",
+                                            "rewatches": [
                                                 {
-                                                    "id": 1,
-                                                    "map": "d2",
-                                                    "result": "13:9",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["lucyluce"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2693315503" }, "duration": "03:49:25-04:33:26" }
-                                                            ]
-                                                        }
-                                                    ],
-                                                    "note": "Angelka stood in for Zana."
-                                                },
-                                                {
-                                                    "id": 2,
-                                                    "map": "anc",
-                                                    "result": "13:11",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["lucyluce"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2693315503" }, "duration": "04:41:17-05:28:33" }
-                                                            ]
-                                                        }
-                                                    ]
+                                                    "casters": ["lucyluce"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2693315503" }, "duration": "04:41:17-05:28:33" }]
                                                 }
                                             ]
                                         }
                                     ]
                                 },
                                 {
-                                    "slug": "r2",
-                                    "name": "Winner's match",
-                                    "tags": ["transparent"],
-                                    "matches": [
+                                    "id": 3,
+                                    "name": "Winner's Match",
+                                    "date": "2026-02-11",
+                                    "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "pkb" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390092/pigeons-vs-peekaboo-jb-pro-league-female-season-1" }],
+                                    "maps": [
                                         {
                                             "id": 1,
-                                            "date": "2026-02-11",
-                                            "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "pkb" } },
-                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390092/pigeons-vs-peekaboo-jb-pro-league-female-season-1" }],
-                                            "maps": [
+                                            "map": "anc",
+                                            "result": "13:7",
+                                            "rewatches": [
                                                 {
-                                                    "id": 1,
-                                                    "map": "anc",
-                                                    "result": "13:7",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "00:33:51-01:14:44" }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "00:33:51-01:14:44" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "d2",
+                                            "result": "13:5",
+                                            "rewatches": [
                                                 {
-                                                    "id": 2,
-                                                    "map": "d2",
-                                                    "result": "13:5",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "01:23:57-01:59:59" }
-                                                            ]
-                                                        }
-                                                    ]
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "01:23:57-01:59:59" }]
                                                 }
                                             ]
                                         }
                                     ]
                                 },
                                 {
-                                    "slug": "r4",
-                                    "name": "Decider match",
-                                    "tags": ["transparent"],
-                                    "matches": [
+                                    "id": 5,
+                                    "name": "Decider Match",
+                                    "date": "2026-02-12",
+                                    "lineups": { "team1": { "shorthand": "pkb" }, "team2": { "team": "fingers-crossed-fe" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390096/peekaboo-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }],
+                                    "maps": [
                                         {
                                             "id": 1,
-                                            "date": "2026-02-12",
-                                            "lineups": { "team1": { "shorthand": "pkb" }, "team2": { "team": "fingers-crossed-fe" } },
-                                            "links": [
-                                                { "name": "HLTV", "url": "https://www.hltv.org/matches/2390096/peekaboo-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }
-                                            ],
-                                            "maps": [
+                                            "map": "ovp",
+                                            "result": "0:13",
+                                            "rewatches": [
                                                 {
-                                                    "id": 1,
-                                                    "map": "ovp",
-                                                    "result": "0:13",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["sxstem"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695886486" }, "duration": "03:29:53-03:57:27" }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
+                                                    "casters": ["sxstem"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695886486" }, "duration": "03:29:53-03:57:27" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "anc",
+                                            "result": "13:11",
+                                            "rewatches": [
                                                 {
-                                                    "id": 2,
-                                                    "map": "anc",
-                                                    "result": "13:11",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["sxstem"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695886486" }, "duration": "04:08:54-04:55:36" }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
+                                                    "casters": ["sxstem"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695886486" }, "duration": "04:08:54-04:55:36" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 3,
+                                            "map": "d2",
+                                            "result": "2:13",
+                                            "rewatches": [
                                                 {
-                                                    "id": 3,
-                                                    "map": "d2",
-                                                    "result": "2:13",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["sxstem"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695886486" }, "duration": "05:10:58-05:41:58" }
-                                                            ]
-                                                        }
-                                                    ]
+                                                    "casters": ["sxstem"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695886486" }, "duration": "05:10:58-05:41:58" }]
                                                 }
                                             ]
                                         }
@@ -1097,196 +1054,168 @@
                         {
                             "slug": "gb",
                             "name": "Group B",
-                            "brackets": [
+                            "matches": [
                                 {
-                                    "slug": "r1",
-                                    "name": "Opening round",
-                                    "matches": [
+                                    "id": 1,
+                                    "name": "Opening Match 1",
+                                    "date": "2026-02-10",
+                                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "confidence" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390090/big-equipa-vs-confidence-jb-pro-league-female-season-1" }],
+                                    "maps": [
                                         {
                                             "id": 1,
-                                            "date": "2026-02-10",
-                                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "name": "confidence" } },
-                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390090/big-equipa-vs-confidence-jb-pro-league-female-season-1" }],
-                                            "maps": [
+                                            "map": "anb",
+                                            "result": "19:17",
+                                            "rewatches": [
                                                 {
-                                                    "id": 1,
-                                                    "map": "anb",
-                                                    "result": "19:17",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "Part 1", "url": "https://www.twitch.tv/videos/2694143260" }, "duration": "00:32:33-00:49:20" },
-                                                                { "link": { "name": "Part 2", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "00:00:00-01:09:45" }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": 2,
-                                                    "map": "anc",
-                                                    "result": "13:6",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "01:20:55-02:05:43" }
-                                                            ]
-                                                        }
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        { "link": { "name": "Part 1", "url": "https://www.twitch.tv/videos/2694143260" }, "duration": "00:32:33-00:49:20" },
+                                                        { "link": { "name": "Part 2", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "00:00:00-01:09:45" }
                                                     ]
                                                 }
                                             ]
                                         },
                                         {
                                             "id": 2,
-                                            "date": "2026-02-10",
-                                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "hindsight" } },
-                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390091/let-her-cook-vs-hindsight-jb-pro-league-female-season-1" }],
-                                            "maps": [
+                                            "map": "anc",
+                                            "result": "13:6",
+                                            "rewatches": [
                                                 {
-                                                    "id": 1,
-                                                    "map": "mrg",
-                                                    "result": "13:9",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "02:58:59-03:51:14" }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": 2,
-                                                    "map": "anc",
-                                                    "result": "16:19",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "04:01:27-05:11:19" }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": 3,
-                                                    "map": "anb",
-                                                    "result": "13:4",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "05:21:05-05:56:49" }
-                                                            ]
-                                                        }
-                                                    ]
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "01:20:55-02:05:43" }]
                                                 }
                                             ]
                                         }
                                     ]
                                 },
                                 {
-                                    "slug": "r2",
-                                    "name": "Winner's match",
-                                    "tags": ["transparent"],
-                                    "matches": [
-                                        {
-                                            "id": 3,
-                                            "date": "2026-02-11",
-                                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "shorthand": "lhc" } },
-                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390093/big-equipa-vs-let-her-cook-jb-pro-league-female-season-1" }],
-                                            "maps": [
-                                                {
-                                                    "id": 1,
-                                                    "map": "mrg",
-                                                    "result": "13:5",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "03:50:14-04:29:23" }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "id": 2,
-                                                    "map": "inf",
-                                                    "result": "16:13",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                { "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "04:38:47-05:41:38" }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "slug": "r4",
-                                    "name": "Decider match",
-                                    "tags": ["transparent"],
-                                    "matches": [
+                                    "id": 2,
+                                    "name": "Opening Match 2",
+                                    "date": "2026-02-10",
+                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "hindsight" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390091/let-her-cook-vs-hindsight-jb-pro-league-female-season-1" }],
+                                    "maps": [
                                         {
                                             "id": 1,
-                                            "date": "2026-02-12",
-                                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "hindsight" } },
-                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390097/let-her-cook-vs-hindsight-jb-pro-league-female-season-1" }],
-                                            "maps": [
+                                            "map": "mrg",
+                                            "result": "13:9",
+                                            "rewatches": [
                                                 {
-                                                    "id": 1,
-                                                    "map": "mrg",
-                                                    "result": "13:6",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "parts": []
-                                                        }
-                                                    ]
-                                                },
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "02:58:59-03:51:14" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "anc",
+                                            "result": "16:19",
+                                            "rewatches": [
                                                 {
-                                                    "id": 2,
-                                                    "map": "inf",
-                                                    "result": "7:13",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "parts": []
-                                                        }
-                                                    ]
-                                                },
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "04:01:27-05:11:19" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 3,
+                                            "map": "anb",
+                                            "result": "13:4",
+                                            "rewatches": [
                                                 {
-                                                    "id": 3,
-                                                    "map": "anc",
-                                                    "result": "16:1",
-                                                    "rewatches": [
-                                                        {
-                                                            "casters": ["affinity"],
-                                                            "language": "en",
-                                                            "parts": []
-                                                        }
-                                                    ]
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2694180474" }, "duration": "05:21:05-05:56:49" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 3,
+                                    "name": "Winner's Match",
+                                    "date": "2026-02-11",
+                                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "shorthand": "lhc" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390093/big-equipa-vs-let-her-cook-jb-pro-league-female-season-1" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "mrg",
+                                            "result": "13:5",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "03:50:14-04:29:23" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "inf",
+                                            "result": "16:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2695017729" }, "duration": "04:38:47-05:41:38" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 5,
+                                    "name": "Decider Match",
+                                    "date": "2026-02-12",
+                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "name": "hindsight" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390097/let-her-cook-vs-hindsight-jb-pro-league-female-season-1" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "mrg",
+                                            "result": "13:6",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "inf",
+                                            "result": "7:13",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 3,
+                                            "map": "anc",
+                                            "result": "16:1",
+                                            "rewatches": [
+                                                {
+                                                    "casters": ["affinity"],
+                                                    "language": "en",
+                                                    "parts": []
                                                 }
                                             ]
                                         }
@@ -1300,281 +1229,253 @@
                     "slug": "s2p",
                     "name": "Playoffs",
                     "duration": { "start": "2026-02-13", "end": "2026-02-15" },
-                    "brackets": [
+                    "matches": [
                         {
-                            "slug": "r1",
-                            "name": "Opening round",
-                            "matches": [
+                            "id": 1,
+                            "name": "Opening Match 1",
+                            "date": "2026-02-13",
+                            "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "lhc" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390098/pigeons-vs-let-her-cook-jb-pro-league-female-season-1" }],
+                            "maps": [
                                 {
                                     "id": 1,
-                                    "date": "2026-02-13",
-                                    "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "lhc" } },
-                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390098/pigeons-vs-let-her-cook-jb-pro-league-female-season-1" }],
-                                    "maps": [
+                                    "map": "inf",
+                                    "result": "13:7",
+                                    "rewatches": [
                                         {
-                                            "id": 1,
-                                            "map": "inf",
-                                            "result": "13:7",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["bdog"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "00:12:59-01:09:51" }]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "id": 2,
-                                            "map": "d2",
-                                            "result": "13:4",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["bdog"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "01:19:52-01:52:20" }]
-                                                }
-                                            ]
+                                            "casters": ["bdog"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "00:12:59-01:09:51" }]
                                         }
                                     ]
                                 },
                                 {
                                     "id": 2,
-                                    "date": "2026-02-13",
-                                    "lineups": { "team1": { "shorthand": "big" }, "team2": { "team": "fingers-crossed-fe" } },
-                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390099/big-equipa-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }],
-                                    "maps": [
+                                    "map": "d2",
+                                    "result": "13:4",
+                                    "rewatches": [
                                         {
-                                            "id": 1,
-                                            "map": "ovp",
-                                            "result": "13:5",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["bdog"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "03:28:18-04:12:24" }]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "id": 2,
-                                            "map": "anc",
-                                            "result": "9:13",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["bdog"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "04:23:39-05:11:56" }]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "id": 3,
-                                            "map": "mrg",
-                                            "result": "13:6",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["bdog"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "05:24:05-06:04:01" }]
-                                                }
-                                            ]
+                                            "casters": ["bdog"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "01:19:52-01:52:20" }]
                                         }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "slug": "r2",
-                            "name": "Lower final",
-                            "tags": ["transparent"],
-                            "matches": [
+                            "id": 2,
+                            "name": "Opening Match 2",
+                            "date": "2026-02-13",
+                            "lineups": { "team1": { "shorthand": "big" }, "team2": { "team": "fingers-crossed-fe" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390099/big-equipa-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }],
+                            "maps": [
                                 {
                                     "id": 1,
-                                    "date": "2026-02-14",
-                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "team": "fingers-crossed-fe" } },
-                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390100/let-her-cook-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }],
-                                    "maps": [
+                                    "map": "ovp",
+                                    "result": "13:5",
+                                    "rewatches": [
                                         {
-                                            "id": 1,
-                                            "map": "anb",
-                                            "result": "13:11",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["affinity"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "00:41:27-01:34:40" }]
-                                                }
-                                            ]
-                                        },
+                                            "casters": ["bdog"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "03:28:18-04:12:24" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "anc",
+                                    "result": "9:13",
+                                    "rewatches": [
                                         {
-                                            "id": 2,
-                                            "map": "nuke",
-                                            "result": "13:8",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["affinity"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "01:44:13-02:26:32" }]
-                                                }
-                                            ]
+                                            "casters": ["bdog"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "04:23:39-05:11:56" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 3,
+                                    "map": "mrg",
+                                    "result": "13:6",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["bdog"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2696747192" }, "duration": "05:24:05-06:04:01" }]
                                         }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "slug": "r3",
-                            "name": "Upper final",
-                            "tags": ["transparent"],
-                            "matches": [
+                            "id": 3,
+                            "name": "Upper Final",
+                            "date": "2026-02-14",
+                            "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "big" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390101/pigeons-vs-big-equipa-jb-pro-league-female-season-1" }],
+                            "maps": [
                                 {
                                     "id": 1,
-                                    "date": "2026-02-14",
-                                    "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "big" } },
-                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390101/pigeons-vs-big-equipa-jb-pro-league-female-season-1" }],
-                                    "maps": [
+                                    "map": "inf",
+                                    "result": "13:10",
+                                    "rewatches": [
                                         {
-                                            "id": 1,
-                                            "map": "inf",
-                                            "result": "13:10",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["affinity"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "04:12:36-05:02:34" }]
-                                                }
-                                            ]
-                                        },
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "04:12:36-05:02:34" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "anc",
+                                    "result": "13:11",
+                                    "rewatches": [
                                         {
-                                            "id": 2,
-                                            "map": "anc",
-                                            "result": "13:11",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["affinity"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "05:12:45-05:57:02" }]
-                                                }
-                                            ]
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "05:12:45-05:57:02" }]
                                         }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "slug": "r4",
-                            "name": "Consolidation final",
-                            "tags": ["transparent"],
-                            "matches": [
+                            "id": 4,
+                            "name": "Lower Final",
+                            "date": "2026-02-14",
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "team": "fingers-crossed-fe" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390100/let-her-cook-vs-fingers-crossed-fe-jb-pro-league-female-season-1" }],
+                            "maps": [
                                 {
                                     "id": 1,
-                                    "date": "2026-02-14",
-                                    "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "shorthand": "big" } },
-                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390102/let-her-cook-vs-big-equipa-jb-pro-league-female-season-1" }],
-                                    "maps": [
+                                    "map": "anb",
+                                    "result": "13:11",
+                                    "rewatches": [
                                         {
-                                            "id": 1,
-                                            "map": "inf",
-                                            "result": "16:13",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["waly"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "07:41:18-08:51:31" }]
-                                                }
-                                            ]
-                                        },
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "00:41:27-01:34:40" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "nuke",
+                                    "result": "13:8",
+                                    "rewatches": [
                                         {
-                                            "id": 2,
-                                            "map": "anc",
-                                            "result": "6:13",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["waly"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "09:00:26-09:37:07" }]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "id": 3,
-                                            "map": "d2",
-                                            "result": "13:9",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["waly"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "09:49:40-10:37:16" }]
-                                                }
-                                            ]
+                                            "casters": ["affinity"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "01:44:13-02:26:32" }]
                                         }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "slug": "r5",
-                            "name": "Grand final",
-                            "tags": ["transparent"],
-                            "matches": [
+                            "id": 5,
+                            "name": "Consolidation Final",
+                            "date": "2026-02-14",
+                            "lineups": { "team1": { "shorthand": "lhc" }, "team2": { "shorthand": "big" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390102/let-her-cook-vs-big-equipa-jb-pro-league-female-season-1" }],
+                            "maps": [
                                 {
                                     "id": 1,
-                                    "date": "2026-02-15",
-                                    "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "lhc" } },
-                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390103/pigeons-vs-let-her-cook-jb-pro-league-female-season-1" }],
-                                    "maps": [
+                                    "map": "inf",
+                                    "result": "16:13",
+                                    "rewatches": [
                                         {
-                                            "id": 1,
-                                            "map": "ovp",
-                                            "result": "13:2",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["lucyluce", "bdog"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "00:09:56-00:47:09" }]
-                                                }
-                                            ]
-                                        },
+                                            "casters": ["waly"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "07:41:18-08:51:31" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "anc",
+                                    "result": "6:13",
+                                    "rewatches": [
                                         {
-                                            "id": 2,
-                                            "map": "anc",
-                                            "result": "4:13",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["lucyluce", "bdog"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "00:55:17-01:28:25" }]
-                                                }
-                                            ]
-                                        },
+                                            "casters": ["waly"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "09:00:26-09:37:07" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 3,
+                                    "map": "d2",
+                                    "result": "13:9",
+                                    "rewatches": [
                                         {
-                                            "id": 3,
-                                            "map": "d2",
-                                            "result": "13:11",
-                                            "rewatches": [
-                                                {
-                                                    "casters": ["lucyluce", "bdog"],
-                                                    "language": "en",
-                                                    "tags": ["official"],
-                                                    "parts": [
-                                                        { "link": { "name": "Part 1", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "01:40:37-02:13:03" },
-                                                        { "link": { "name": "Part 2", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "02:20:34-02:43:25" }
-                                                    ]
-                                                }
+                                            "casters": ["waly"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2697472473" }, "duration": "09:49:40-10:37:16" }]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "name": "Grand Final",
+                            "date": "2026-02-15",
+                            "lineups": { "team1": { "team": "pigeons" }, "team2": { "shorthand": "lhc" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2390103/pigeons-vs-let-her-cook-jb-pro-league-female-season-1" }],
+                            "maps": [
+                                {
+                                    "id": 1,
+                                    "map": "ovp",
+                                    "result": "13:2",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["lucyluce", "bdog"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "00:09:56-00:47:09" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "anc",
+                                    "result": "4:13",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["lucyluce", "bdog"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "VOD", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "00:55:17-01:28:25" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 3,
+                                    "map": "d2",
+                                    "result": "13:11",
+                                    "rewatches": [
+                                        {
+                                            "casters": ["lucyluce", "bdog"],
+                                            "language": "en",
+                                            "tags": ["official"],
+                                            "parts": [
+                                                { "link": { "name": "Part 1", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "01:40:37-02:13:03" },
+                                                { "link": { "name": "Part 2", "url": "https://www.twitch.tv/videos/2698577631" }, "duration": "02:20:34-02:43:25" }
                                             ]
                                         }
                                     ]

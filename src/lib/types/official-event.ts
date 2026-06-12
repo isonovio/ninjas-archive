@@ -9,14 +9,14 @@ import {
     lineupShorthandFromRaw,
 } from "./official-lineup";
 import { type BracketRaw, processRawBracket } from "./official-bracket";
-import { type Match, type MatchContext } from "./official-match";
+import { type Match, type MatchContext, type MatchTag } from "./official-match";
 
 type CSEventRaw = {
     slug: string;
     name: string;
     duration: DateRangeRaw;
     links?: ExternalLink[];
-    tags?: string[];
+    tags?: MatchTag[];
     participants?: LineupShorthandRaw[];
     brackets: BracketRaw[];
     note?: string;
@@ -28,14 +28,11 @@ const csEventsBlob = import.meta.glob<CSEventRaw>("$data/**/events/*.json", {
 
 const csEventsRaw = Object.values(csEventsBlob) satisfies CSEventRaw[];
 
-export type CSEventTag = "impact";
-
 export type CSEvent = {
     slug: string;
     name: string;
     duration: DateRange;
     links: ExternalLink[];
-    tags: CSEventTag[];
     note?: string;
 };
 
@@ -45,15 +42,13 @@ const processRawCSEvent = (raw: CSEventRaw): [CSEvent, Match[]] => {
         name: raw.name,
         duration: dateRangeFromRaw(raw.duration),
         links: raw.links ?? [],
-        tags:
-            raw.tags?.map((tag) => tag as CSEventTag satisfies CSEventTag) ||
-            [],
         note: raw.note,
     };
 
     const ctx: MatchContext = {
         event,
         brackets: [],
+        tags: new Set(raw.tags ?? []),
         lineupShorthands: new Map(
             (raw.participants ?? []).map(lineupShorthandFromRaw),
         ),

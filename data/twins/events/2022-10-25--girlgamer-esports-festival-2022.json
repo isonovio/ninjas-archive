@@ -10,8 +10,6 @@
     "brackets": [
         {
             "slug": "s1",
-            "name": "Regular Season",
-            "tags": ["transparent"],
             "brackets": [
                 {
                     "slug": "d1",
@@ -19,9 +17,7 @@
                     "links": [{ "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/GIRLGAMER_Esports_Festival/2022/Ceuta" }],
                     "brackets": [
                         {
-                            "slug": "s1",
-                            "name": "Qualifiers",
-                            "tags": ["transparent"],
+                            "slug": "s1--qualifiers",
                             "brackets": [
                                 {
                                     "slug": "q1",
@@ -120,36 +116,24 @@
                             ]
                         },
                         {
-                            "slug": "s2",
-                            "name": "Main Event",
-                            "tags": ["transparent", "lan"],
-                            "brackets": [
+                            "slug": "s2--finals",
+                            "tags": ["lan"],
+                            "matches": [
                                 {
-                                    "slug": "r1b1",
-                                    "name": "Upper Semifinals",
-                                    "matches": [
-                                        {
-                                            "id": 1,
-                                            "date": "2022-11-17",
-                                            "lineups": { "team1": { "name": "NAVI Javelins" }, "team2": { "shorthand": "cfs" } },
-                                            "maps": [{ "id": 1, "map": "d2", "result": "16:11" }]
-                                        }
-                                    ]
+                                    "id": 1,
+                                    "name": "Opening Match 1",
+                                    "date": "2022-11-17",
+                                    "lineups": { "team1": { "name": "NAVI Javelins" }, "team2": { "shorthand": "cfs" } },
+                                    "maps": [{ "id": 1, "map": "d2", "result": "16:11" }]
                                 },
                                 {
-                                    "slug": "r1b1",
-                                    "name": "Lower Semifinal",
-                                    "tags": ["transparent"],
-                                    "matches": [
-                                        {
-                                            "id": 1,
-                                            "date": "2022-11-17",
-                                            "lineups": { "team1": { "shorthand": "cfs" }, "team2": { "name": "9Pandas Fearless" } },
-                                            "maps": [
-                                                { "id": 1, "map": "ovp", "result": "14:16" },
-                                                { "id": 2, "map": "d2", "result": "4:16" }
-                                            ]
-                                        }
+                                    "id": 4,
+                                    "name": "Lower Final",
+                                    "date": "2022-11-17",
+                                    "lineups": { "team1": { "shorthand": "cfs" }, "team2": { "name": "9Pandas Fearless" } },
+                                    "maps": [
+                                        { "id": 1, "map": "ovp", "result": "14:16" },
+                                        { "id": 2, "map": "d2", "result": "4:16" }
                                     ]
                                 }
                             ]

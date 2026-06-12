@@ -14,8 +14,6 @@
     "brackets": [
         {
             "slug": "s1",
-            "name": "Regular Season",
-            "tags": ["transparent"],
             "brackets": [
                 {
                     "slug": "d1eu",
@@ -23,9 +21,7 @@
                     "links": [{ "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_League/Season_2/Europe" }],
                     "brackets": [
                         {
-                            "slug": "s1",
-                            "name": "Qualifiers",
-                            "tags": ["transparent"],
+                            "slug": "s1--qualifiers",
                             "brackets": [
                                 {
                                     "slug": "q1",

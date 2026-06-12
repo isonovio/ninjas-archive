@@ -13,9 +13,7 @@
     "participants": [{ "shorthand": "cfs", "lineup": { "roster": "cfs-2022-2" } }],
     "brackets": [
         {
-            "slug": "s1",
-            "name": "Qualifiers",
-            "tags": ["transparent"],
+            "slug": "s1--qualifiers",
             "brackets": [
                 {
                     "slug": "d1eu",

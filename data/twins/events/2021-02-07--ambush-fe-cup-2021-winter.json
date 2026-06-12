@@ -9,9 +9,7 @@
     "participants": [{ "shorthand": "nsc", "lineup": { "roster": "nsc-2021-1" } }],
     "brackets": [
         {
-            "slug": "p1q",
-            "name": "Open Qualifiers",
-            "tags": ["transparent"],
+            "slug": "p1--qualifiers",
             "brackets": [
                 {
                     "slug": "q1",

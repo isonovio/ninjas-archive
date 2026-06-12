@@ -16,6 +16,7 @@ import { Genre } from "./timeline-genre";
 
 export type MatchRaw = {
     id: number;
+    name?: string;
     date: string;
     lineups: {
         team1: LineupRaw;
@@ -25,6 +26,8 @@ export type MatchRaw = {
     maps: MatchMapRaw[];
     note?: string;
 };
+
+export type MatchTag = "impact" | "lan";
 
 export interface Match extends EntryBase {
     genre: Genre.MATCH;
@@ -37,6 +40,7 @@ export interface Match extends EntryBase {
     links: ExternalLink[];
     results: [number, number];
     outcomes: [Outcome, Outcome];
+    tags: Set<MatchTag>;
     maps: MatchMap[];
     note?: string;
 
@@ -47,6 +51,7 @@ export interface Match extends EntryBase {
 export type MatchContext = {
     event: CSEvent;
     brackets: Bracket[];
+    tags: Set<MatchTag>;
     lineupShorthands: ReadonlyMap<string, Lineup>;
 };
 
@@ -56,10 +61,7 @@ export const matchFromRaw = (raw: MatchRaw, ctx: MatchContext): Match => {
         lineupFromRaw(raw.lineups.team2, ctx.lineupShorthands),
     ];
 
-    const name =
-        ctx.brackets.length > 0 && ctx.brackets.at(-1)?.isTransparent
-            ? ctx.brackets.at(-1)!.name
-            : `M${raw.id}`;
+    const name = raw.name ?? `Match ${raw.id}`;
 
     const related: Related = {
         players: [...lineups[0].players, ...lineups[1].players],
@@ -86,6 +88,7 @@ export const matchFromRaw = (raw: MatchRaw, ctx: MatchContext): Match => {
         links: raw.links ?? [],
         results,
         outcomes,
+        tags: ctx.tags,
         maps,
         note: raw.note,
 

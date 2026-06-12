@@ -14,8 +14,6 @@
     "brackets": [
         {
             "slug": "s1",
-            "name": "Regular Season",
-            "tags": ["transparent"],
             "brackets": [
                 {
                     "slug": "d1eu",
@@ -24,13 +22,9 @@
                     "brackets": [
                         {
                             "slug": "s2",
-                            "name": "Main Event",
-                            "tags": ["transparent"],
                             "brackets": [
                                 {
-                                    "slug": "s1",
-                                    "name": "Group Stage",
-                                    "tags": ["transparent"],
+                                    "slug": "s1--group-stage",
                                     "brackets": [
                                         {
                                             "slug": "gb",
@@ -321,43 +315,36 @@
             "tags": ["lan"],
             "brackets": [
                 {
-                    "slug": "s1-group-stage",
-                    "name": "",
-                    "tags": ["transparent"],
+                    "slug": "s1--group-stage",
                     "brackets": [
                         {
                             "slug": "gb",
                             "name": "Group B",
-                            "brackets": [
+                            "matches": [
                                 {
-                                    "slug": "r1b1",
-                                    "name": "Opening",
-                                    "matches": [
+                                    "id": 1,
+                                    "name": "Opening Match 1",
+                                    "date": "2024-11-22",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "BIG EQUIPA" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2377541/nip-impact-vs-big-equipa-esl-impact-league-season-6-finals" }],
+                                    "maps": [
                                         {
                                             "id": 1,
-                                            "date": "2024-11-22",
-                                            "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "BIG EQUIPA" } },
-                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2377541/nip-impact-vs-big-equipa-esl-impact-league-season-6-finals" }],
-                                            "maps": [
+                                            "map": "d2",
+                                            "result": "11:13",
+                                            "rewatches": [
                                                 {
-                                                    "id": 1,
-                                                    "map": "d2",
-                                                    "result": "11:13",
-                                                    "rewatches": [
+                                                    "language": "en",
+                                                    "casters": ["james-bardolph", "naorimizuki"],
+                                                    "tags": ["official"],
+                                                    "parts": [
                                                         {
-                                                            "language": "en",
-                                                            "casters": ["james-bardolph", "naorimizuki"],
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                {
-                                                                    "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308071702" },
-                                                                    "duration": "03:38:27-04:54:04"
-                                                                },
-                                                                {
-                                                                    "link": { "name": "YouTube", "url": "https://youtu.be/5vDvyIj8U5o" },
-                                                                    "duration": "00:00:00-00:49:34"
-                                                                }
-                                                            ]
+                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308071702" },
+                                                            "duration": "03:38:27-04:54:04"
+                                                        },
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://youtu.be/5vDvyIj8U5o" },
+                                                            "duration": "00:00:00-00:49:34"
                                                         }
                                                     ]
                                                 }
@@ -366,56 +353,51 @@
                                     ]
                                 },
                                 {
-                                    "slug": "r1b2",
-                                    "name": "Elimination match",
-                                    "matches": [
+                                    "id": 4,
+                                    "name": "Elimination Match",
+                                    "date": "2024-11-22",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "K27 Female" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2377576/nip-impact-vs-k27-fe-esl-impact-league-season-6-finals" }],
+                                    "maps": [
                                         {
                                             "id": 1,
-                                            "date": "2024-11-22",
-                                            "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "K27 Female" } },
-                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2377576/nip-impact-vs-k27-fe-esl-impact-league-season-6-finals" }],
-                                            "maps": [
+                                            "map": "mrg",
+                                            "result": "13:5",
+                                            "rewatches": [
                                                 {
-                                                    "id": 1,
-                                                    "map": "mrg",
-                                                    "result": "13:5",
-                                                    "rewatches": [
+                                                    "language": "en",
+                                                    "casters": ["bdog", "lucyluce"],
+                                                    "tags": ["official"],
+                                                    "parts": [
                                                         {
-                                                            "language": "en",
-                                                            "casters": ["bdog", "lucyluce"],
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                {
-                                                                    "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308071702" },
-                                                                    "duration": "10:01:26-10:55:57"
-                                                                },
-                                                                {
-                                                                    "link": { "name": "YouTube", "url": "https://youtu.be/Z9g_qOdp-iI" },
-                                                                    "duration": "00:00:00-00:37:37"
-                                                                }
-                                                            ]
+                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308071702" },
+                                                            "duration": "10:01:26-10:55:57"
+                                                        },
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://youtu.be/Z9g_qOdp-iI" },
+                                                            "duration": "00:00:00-00:37:37"
                                                         }
                                                     ]
-                                                },
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "inf",
+                                            "result": "13:9",
+                                            "rewatches": [
                                                 {
-                                                    "id": 2,
-                                                    "map": "inf",
-                                                    "result": "13:9",
-                                                    "rewatches": [
+                                                    "language": "en",
+                                                    "casters": ["bdog", "lucyluce"],
+                                                    "tags": ["official"],
+                                                    "parts": [
                                                         {
-                                                            "language": "en",
-                                                            "casters": ["bdog", "lucyluce"],
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                {
-                                                                    "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308071702" },
-                                                                    "duration": "11:14:27-12:23:50"
-                                                                },
-                                                                {
-                                                                    "link": { "name": "YouTube", "url": "https://youtu.be/Z9g_qOdp-iI" },
-                                                                    "duration": "00:37:37-01:25:34"
-                                                                }
-                                                            ]
+                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308071702" },
+                                                            "duration": "11:14:27-12:23:50"
+                                                        },
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://youtu.be/Z9g_qOdp-iI" },
+                                                            "duration": "00:37:37-01:25:34"
                                                         }
                                                     ]
                                                 }
@@ -424,56 +406,51 @@
                                     ]
                                 },
                                 {
-                                    "slug": "r2b2",
-                                    "name": "Decider match",
-                                    "matches": [
+                                    "id": 5,
+                                    "name": "Decider Match",
+                                    "date": "2024-11-23",
+                                    "lineups": { "team1": { "name": "BIG EQUIPA" }, "team2": { "shorthand": "nipi" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2377578/big-equipa-vs-nip-impact-esl-impact-league-season-6-finals" }],
+                                    "maps": [
                                         {
                                             "id": 1,
-                                            "date": "2024-11-23",
-                                            "lineups": { "team1": { "name": "BIG EQUIPA" }, "team2": { "shorthand": "nipi" } },
-                                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2377578/big-equipa-vs-nip-impact-esl-impact-league-season-6-finals" }],
-                                            "maps": [
+                                            "map": "mrg",
+                                            "result": "13:11",
+                                            "rewatches": [
                                                 {
-                                                    "id": 1,
-                                                    "map": "mrg",
-                                                    "result": "13:11",
-                                                    "rewatches": [
+                                                    "language": "en",
+                                                    "casters": ["bdog", "lucyluce"],
+                                                    "tags": ["official"],
+                                                    "parts": [
                                                         {
-                                                            "language": "en",
-                                                            "casters": ["bdog", "lucyluce"],
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                {
-                                                                    "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308935023" },
-                                                                    "duration": "04:15:39-05:25:07"
-                                                                },
-                                                                {
-                                                                    "link": { "name": "YouTube", "url": "https://youtu.be/WS3PxswYpFU" },
-                                                                    "duration": "00:00:00-00:46:26"
-                                                                }
-                                                            ]
+                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308935023" },
+                                                            "duration": "04:15:39-05:25:07"
+                                                        },
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://youtu.be/WS3PxswYpFU" },
+                                                            "duration": "00:00:00-00:46:26"
                                                         }
                                                     ]
-                                                },
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "vtg",
+                                            "result": "13:4",
+                                            "rewatches": [
                                                 {
-                                                    "id": 2,
-                                                    "map": "vtg",
-                                                    "result": "13:4",
-                                                    "rewatches": [
+                                                    "language": "en",
+                                                    "casters": ["bdog", "lucyluce"],
+                                                    "tags": ["official"],
+                                                    "parts": [
                                                         {
-                                                            "language": "en",
-                                                            "casters": ["bdog", "lucyluce"],
-                                                            "tags": ["official"],
-                                                            "parts": [
-                                                                {
-                                                                    "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308935023" },
-                                                                    "duration": "05:34:39-06:19:59"
-                                                                },
-                                                                {
-                                                                    "link": { "name": "YouTube", "url": "https://youtu.be/WS3PxswYpFU" },
-                                                                    "duration": "00:46:26-01:17:47"
-                                                                }
-                                                            ]
+                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2308935023" },
+                                                            "duration": "05:34:39-06:19:59"
+                                                        },
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://youtu.be/WS3PxswYpFU" },
+                                                            "duration": "00:46:26-01:17:47"
                                                         }
                                                     ]
                                                 }

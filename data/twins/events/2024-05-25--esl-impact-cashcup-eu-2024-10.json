@@ -56,11 +56,10 @@
         },
         {
             "slug": "r4",
-            "name": "Grand final",
-            "tags": ["transparent"],
             "matches": [
                 {
                     "id": 1,
+                    "name": "Grand Final",
                     "date": "2024-05-26",
                     "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Crescent" } },
                     "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-ecdea9a2-2b2d-4f2c-ab71-e2e5de1f0209" }],

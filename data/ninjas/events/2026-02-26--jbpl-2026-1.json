@@ -13,13 +13,11 @@
     "participants": [{ "shorthand": "big", "lineup": { "roster": "big-equipa-2026-1" } }],
     "brackets": [
         {
-            "slug": "s2m",
-            "name": "Main Event",
+            "slug": "s2",
             "duration": { "start": "2026-02-26", "end": "2026-03-01" },
-            "tags": ["transparent"],
             "brackets": [
                 {
-                    "slug": "p",
+                    "slug": "s2",
                     "name": "Playoffs",
                     "brackets": [
                         {

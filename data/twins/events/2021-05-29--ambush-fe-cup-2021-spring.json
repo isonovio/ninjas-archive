@@ -9,15 +9,11 @@
     "participants": [{ "shorthand": "nsc", "lineup": { "roster": "nsc-2021-1" } }],
     "brackets": [
         {
-            "slug": "p2m",
-            "name": "Main Event",
+            "slug": "s2",
             "links": [{ "name": "Challengermode", "url": "https://www.challengermode.com/s/ACL/tournaments/ec16f8d0-d7c0-41dd-eafc-08d91eab5d22" }],
-            "tags": ["transparent"],
             "brackets": [
                 {
-                    "slug": "s1g",
-                    "name": "Group Stage",
-                    "tags": ["transparent"],
+                    "slug": "s1--group-stage",
                     "brackets": [
                         {
                             "slug": "g4",

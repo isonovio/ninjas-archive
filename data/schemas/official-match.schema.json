@@ -6,6 +6,7 @@
     "additionalProperties": false,
     "properties": {
         "id": { "type": "number" },
+        "name": { "type": "string" },
         "date": { "type": "string", "format": "date" },
         "lineups": { "$ref": "#/$defs/lineups" },
         "links": { "type": "array", "items": { "$ref": "extern-link.schema.json" } },
@@ -22,6 +23,10 @@
                 "team1": { "$ref": "official-lineup.schema.json" },
                 "team2": { "$ref": "official-lineup.schema.json" }
             }
+        },
+        "tag": {
+            "type": "string",
+            "enum": ["impact", "lan"]
         }
     }
 }

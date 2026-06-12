@@ -93,11 +93,10 @@
         },
         {
             "slug": "r5",
-            "name": "Grand finals",
-            "tags": ["transparent"],
             "matches": [
                 {
                     "id": 1,
+                    "name": "Grand Final",
                     "date": "2026-01-18",
                     "lineups": { "team1": { "name": "mix" }, "team2": { "shorthand": "pkb" } },
                     "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-4278b716-4121-4243-9ff1-f35c19059b38" }],
