@@ -52,7 +52,7 @@
                 {
                     "id": 1,
                     "date": "2024-05-19",
-                    "lineups": { "team1": { "name": "pigeons" }, "team2": { "shorthand": "nipi" } },
+                    "lineups": { "team1": { "name": "Pigeons" }, "team2": { "shorthand": "nipi" } },
                     "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-05619703-15b1-45e6-8169-e668e9f81d1d" }],
                     "maps": [
                         { "id": 1, "map": "inf", "result": "13:9" },
