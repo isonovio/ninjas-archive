@@ -18,7 +18,10 @@
                 {
                     "slug": "d1eu",
                     "name": "Europe",
-                    "links": [{ "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_League/Season_5/Europe" }],
+                    "links": [
+                        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_League/Season_5/Europe" },
+                        { "name": "HLTV", "url": "https://www.hltv.org/events/7669/esl-impact-league-season-5-europe" }
+                    ],
                     "brackets": [
                         {
                             "slug": "s2",

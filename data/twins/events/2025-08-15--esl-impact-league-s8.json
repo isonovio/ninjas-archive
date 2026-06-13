@@ -1,0 +1,370 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "esl-impact-league-s8",
+    "name": "ESL Impact League Season 8",
+    "duration": { "start": "2025-08-15", "end": "2025-11-30" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_League/Season_8" },
+        { "name": "ESL", "url": "https://pro.eslgaming.com/csgo/impact/season8/" },
+        { "name": "Rules", "url": "https://drive.google.com/drive/u/0/folders/1-rG6-yalB6y9giVeQNi5rGXuBWyMYprC" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2025-1" } }],
+    "brackets": [
+        {
+            "slug": "s1",
+            "brackets": [
+                {
+                    "slug": "d1eu",
+                    "name": "Europe",
+                    "links": [
+                        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/ESL/Impact_League/Season_8/Europe" },
+                        { "name": "HLTV", "url": "https://www.hltv.org/events/8235/esl-impact-league-season-8-europe" }
+                    ],
+                    "brackets": [
+                        {
+                            "slug": "s2",
+                            "brackets": [
+                                {
+                                    "slug": "s1--group-stage",
+                                    "brackets": [
+                                        {
+                                            "slug": "ga",
+                                            "name": "Group A",
+                                            "matches": [
+                                                {
+                                                    "id": 1,
+                                                    "date": "2025-09-10",
+                                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "888aura" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2385137/nip-impact-vs-888aura-esl-impact-league-season-8-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "mrg",
+                                                            "result": "13:9"
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "trn",
+                                                            "result": "13:4"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 5,
+                                                    "date": "2025-09-24",
+                                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Flame Sharks fe" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2385971/nip-impact-vs-flame-sharks-fe-esl-impact-league-season-8-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "trn",
+                                                            "result": "13:7",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2574718692" },
+                                                                            "duration": "00:15:24-01:10:36"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/4oZTlYx-Mp8" },
+                                                                            "duration": "00:00:00-00:39:10"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "inf",
+                                                            "result": "13:6",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2574718692" },
+                                                                            "duration": "01:21:55-02:19:31"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/4oZTlYx-Mp8" },
+                                                                            "duration": "00:39:10-01:18:57"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 7,
+                                                    "date": "2025-10-01",
+                                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "hindsight" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2386157/nip-impact-vs-hindsight-esl-impact-league-season-8-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "anc",
+                                                            "result": "13:10"
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "inf",
+                                                            "result": "13:5"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 10,
+                                                    "date": "2025-10-09",
+                                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "AKA HERO KAJO" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2386292/nip-impact-vs-aka-hero-kajo-esl-impact-league-season-8-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "trn",
+                                                            "result": "13:6",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2587381528" },
+                                                                            "duration": "00:18:13-01:06:07"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/vUC9UDrg9XM" },
+                                                                            "duration": "00:00:00-00:31:49"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "inf",
+                                                            "result": "13:6",
+                                                            "rewatches": [
+                                                                {
+                                                                    "language": "en",
+                                                                    "casters": ["bdog", "lucyluce"],
+                                                                    "tags": ["official"],
+                                                                    "parts": [
+                                                                        {
+                                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2587381528" },
+                                                                            "duration": "01:16:13-02:06:37"
+                                                                        },
+                                                                        {
+                                                                            "link": { "name": "YouTube", "url": "https://youtu.be/vUC9UDrg9XM" },
+                                                                            "duration": "00:31:49-01:12:17"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "id": 13,
+                                                    "date": "2025-10-24",
+                                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Let Her Cook" } },
+                                                    "links": [
+                                                        {
+                                                            "name": "HLTV",
+                                                            "url": "https://www.hltv.org/matches/2386972/nip-impact-vs-let-her-cook-esl-impact-league-season-8-europe"
+                                                        }
+                                                    ],
+                                                    "maps": [
+                                                        {
+                                                            "id": 1,
+                                                            "map": "mrg",
+                                                            "result": "16:14"
+                                                        },
+                                                        {
+                                                            "id": 2,
+                                                            "map": "ovp",
+                                                            "result": "13:7"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "s2",
+            "name": "Finals",
+            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/8233/esl-impact-league-season-8-finals" }],
+            "tags": ["lan"],
+            "brackets": [
+                {
+                    "slug": "s1--group-stage",
+                    "brackets": [
+                        {
+                            "slug": "gb",
+                            "name": "Group B",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "name": "Opening Match 1",
+                                    "date": "2025-11-28",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Imperial Valkyries" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2388227/imperial-valkyries-vs-nip-impact-esl-impact-league-season-8-finals" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "anc",
+                                            "result": "13:11",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["grimyrannarr", "naorimizuki"],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2629917536" },
+                                                            "duration": "03:21:48-04:43:05"
+                                                        },
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://youtu.be/Evf1MEUndKE" },
+                                                            "duration": "00:00:00-00:59:51"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 3,
+                                    "name": "Winner's Match",
+                                    "date": "2025-11-28",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Atrix" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2388230/nip-impact-vs-atrix-esl-impact-league-season-8-finals" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "trn",
+                                            "result": "13:7",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["bdog", "lucyluce"],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2465460219" },
+                                                            "duration": "07:46:48-08:47:27"
+                                                        },
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://youtu.be/9pB7IkKSdZY" },
+                                                            "duration": "00:00:00-00:39:14"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "slug": "s2",
+                    "name": "Playoffs",
+                    "matches": [
+                        {
+                            "id": 2,
+                            "name": "Semifinal 2",
+                            "date": "2025-11-30",
+                            "lineups": { "team1": { "name": "BIG EQUIPA" }, "team2": { "shorthand": "nipi" } },
+                            "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2388236/big-equipa-vs-nip-impact-esl-impact-league-season-8-finals" }],
+                            "maps": [
+                                {
+                                    "id": 1,
+                                    "map": "mrg",
+                                    "result": "13:9",
+                                    "rewatches": [
+                                        {
+                                            "language": "en",
+                                            "casters": ["grimyrannarr", "naorimizuki"],
+                                            "tags": ["official"],
+                                            "parts": [
+                                                {
+                                                    "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2631688191" },
+                                                    "duration": "02:54:44-04:00:21"
+                                                },
+                                                {
+                                                    "link": { "name": "YouTube", "url": "https://youtu.be/7F8krN0BC2o" },
+                                                    "duration": "00:00:00-00:46:15"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "inf",
+                                    "result": "13:8",
+                                    "rewatches": [
+                                        {
+                                            "language": "en",
+                                            "casters": ["grimyrannarr", "naorimizuki"],
+                                            "tags": ["official"],
+                                            "parts": [
+                                                {
+                                                    "link": { "name": "Twitch", "url": "https://www.twitch.tv/videos/2631688191" },
+                                                    "duration": "04:06:44-05:07:37"
+                                                },
+                                                {
+                                                    "link": { "name": "YouTube", "url": "https://youtu.be/7F8krN0BC2o" },
+                                                    "duration": "00:46:15-01:33:01"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

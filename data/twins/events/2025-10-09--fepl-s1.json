@@ -1,0 +1,433 @@
+{
+    "$schema": "../../schemas/official-event.schema.json",
+
+    "slug": "fepl-s1",
+    "name": "Female Pro League Season 1",
+    "duration": { "start": "2025-10-09", "end": "2025-11-15" },
+    "links": [
+        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/Female_Pro_League/Season_1" },
+        { "name": "Rules", "url": "https://drive.google.com/drive/folders/1BN60R_yfRTpx5wHbmIJn_Hxh64lG_0Ao" }
+    ],
+    "tags": ["impact"],
+    "participants": [{ "shorthand": "nipi", "lineup": { "roster": "nipi-2025-1" } }],
+    "brackets": [
+        {
+            "slug": "s1--qualifiers",
+            "brackets": [
+                {
+                    "slug": "q2",
+                    "name": "Open Qualifier #2",
+                    "links": [
+                        { "name": "Liquip.", "url": "https://liquipedia.net/counterstrike/Female_Pro_League/Season_1/Qualifier/Open/2" },
+                        { "name": "FACEIT", "url": "https://www.faceit.com/en/championship/83a221b0-5d4a-4108-8b45-95c35429380f" }
+                    ],
+                    "brackets": [
+                        {
+                            "slug": "r1",
+                            "name": "Round of 32",
+                            "matches": [
+                                {
+                                    "id": 12,
+                                    "date": "2025-10-10",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Team SinSaint" } },
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-bca1a610-0f90-4acf-b946-009cd7154f84" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "mrg",
+                                            "result": "13:3",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["affinity"],
+                                                    "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/8SwigzDpYhQ" }, "duration": "00:01:09-00:29:54" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r2",
+                            "name": "Round of 16",
+                            "matches": [
+                                {
+                                    "id": 6,
+                                    "date": "2025-10-10",
+                                    "lineups": { "team1": { "name": "IDA NexGen MSC" }, "team2": { "shorthand": "nipi" } },
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-b50b7876-5b07-4be6-9de3-e401c01afc5e" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "ovp",
+                                            "result": "1:13",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["affinity"],
+                                                    "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/8SwigzDpYhQ" }, "duration": "00:29:54-01:01:01" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r3",
+                            "name": "Round of 8",
+                            "matches": [
+                                {
+                                    "id": 3,
+                                    "date": "2025-10-10",
+                                    "lineups": { "team1": { "name": "requiem" }, "team2": { "shorthand": "nipi" } },
+                                    "links": [{ "name": "FACEIT", "url": "https://www.faceit.com/en/cs2/room/1-773f767b-870d-4569-9368-b099654e2ef4" }],
+                                    "maps": [{ "id": 1, "map": "d2", "result": "4:13" }]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "slug": "s2--main-stage",
+            "brackets": [
+                {
+                    "slug": "s1",
+                    "name": "Group Stage",
+                    "brackets": [
+                        {
+                            "slug": "r1b1",
+                            "name": "Bracket 0:0",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2025-10-18",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "NoKami" } },
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "anc",
+                                            "result": "13:9",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/9w8-8ouct-U" },
+                                                            "duration": "03:08:42-03:58:07"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r2b1",
+                            "name": "Bracket 1:0",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2025-10-21",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "Overpeek" } },
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "trn",
+                                            "result": "13:5",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/r7MBvq_ij94" },
+                                                            "duration": "04:34:50-05:39:54"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["affinity"],
+                                                    "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/C0HIHzeFzic" }, "duration": "03:10:32-03:58:33" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r3b1",
+                            "name": "Bracket 2:0",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "date": "2025-10-24",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "BIG EQUIPA" } },
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "inf",
+                                            "result": "16:13",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/ePkQ9u9ni2A" },
+                                                            "duration": "03:11:26-04:29:03"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["affinity"],
+                                                    "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/p3DOUye4bpY" }, "duration": "00:04:51-01:40:01" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "d2",
+                                            "result": "13:7",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/ePkQ9u9ni2A" },
+                                                            "duration": "04:29:03-05:39:08"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["affinity"],
+                                                    "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/p3DOUye4bpY" }, "duration": "01:40:01-02:36:04" }]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "slug": "s2",
+                    "name": "Playoffs",
+                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/events/8827/female-pro-league-season-1" }],
+                    "brackets": [
+                        {
+                            "slug": "r1",
+                            "name": "Opening Round",
+                            "matches": [
+                                {
+                                    "id": 4,
+                                    "date": "2025-11-04",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "NoKami" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2387699/nip-impact-vs-nokami-female-pro-league-season-1" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "mrg",
+                                            "result": "13:6",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official", "incomplete"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/leDcBV9yWE0" },
+                                                            "duration": "00:00:00-00:05:31"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "ovp",
+                                            "result": "13:9",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/leDcBV9yWE0" },
+                                                            "duration": "00:05:31-01:17:37"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r2b1",
+                            "name": "Upper Semifinals",
+                            "matches": [
+                                {
+                                    "id": 2,
+                                    "date": "2025-11-07",
+                                    "lineups": { "team1": { "name": "Nemesis Impact" }, "team2": { "shorthand": "nipi" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2387715/nip-impact-vs-nemesis-impact-female-pro-league-season-1" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "ovp",
+                                            "result": "9:13",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/3ng3vt5R-d8" },
+                                                            "duration": "03:30:31-04:29:50"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["affinity"],
+                                                    "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/8dTQUfdcfrs" }, "duration": "00:29:20-01:37:59" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "d2",
+                                            "result": "8:13",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/3ng3vt5R-d8" },
+                                                            "duration": "04:29:50-05:38:40"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["affinity"],
+                                                    "parts": [
+                                                        { "link": { "name": "Part 1", "url": "https://youtu.be/8dTQUfdcfrs" }, "duration": "01:37:59-01:45:52" },
+                                                        { "link": { "name": "Part 2", "url": "https://youtu.be/8dTQUfdcfrs" }, "duration": "00:00:00-00:35:14" }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r4b1",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "name": "Upper Final",
+                                    "date": "2025-11-09",
+                                    "lineups": { "team1": { "name": "Imperial Valkyries" }, "team2": { "shorthand": "nipi" } },
+                                    "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2387720/imperial-valkyries-vs-nip-impact-female-pro-league-season-1" }],
+                                    "maps": [
+                                        {
+                                            "id": 1,
+                                            "map": "inf",
+                                            "result": "8:13",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/pDBLAt8i1ZE" },
+                                                            "duration": "03:06:36-04:07:53"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "mrg",
+                                            "result": "13:11",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/pDBLAt8i1ZE" },
+                                                            "duration": "04:07:53-05:02:46"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 3,
+                                            "map": "d2",
+                                            "result": "13:10",
+                                            "rewatches": [
+                                                {
+                                                    "language": "ru",
+                                                    "casters": [],
+                                                    "tags": ["official"],
+                                                    "parts": [
+                                                        {
+                                                            "link": { "name": "YouTube", "url": "https://www.youtube.com/live/pDBLAt8i1ZE" },
+                                                            "duration": "05:02:46-06:08:01"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "r5",
+                            "matches": [
+                                {
+                                    "id": 1,
+                                    "name": "Consolidation Final",
+                                    "date": "2025-11-15",
+                                    "lineups": { "team1": { "shorthand": "nipi" }, "team2": { "name": "BIG EQUIPA" } },
+                                    "maps": [],
+                                    "note": "NIP Impact forfeited the match due to traveling issues."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
