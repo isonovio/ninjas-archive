@@ -1,7 +1,7 @@
 {
     "$schema": "../../schemas/official-event.schema.json",
 
-    "slug": "elife-fe-1",
+    "slug": "elite-fe-1",
     "name": "ELITE FE #1",
     "duration": { "start": "2024-04-27", "end": "2024-04-27" },
     "links": [
