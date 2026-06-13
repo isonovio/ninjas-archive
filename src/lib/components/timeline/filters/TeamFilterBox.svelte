@@ -1,7 +1,7 @@
 <script lang="ts">
     import { type Entry } from "$lib/types/timeline";
     import { compareTeam } from "$lib/types/team";
-    import { filterHasTeam } from "$lib/types/timeline-filter";
+    import { queryTeamFilter } from "$lib/types/timeline-filter";
     import FilterBox from "./FilterBox.svelte";
     import FilterItem from "./FilterItem.svelte";
 
@@ -15,7 +15,7 @@
     const candidates = $derived([...new Set(timeline.flatMap((i) => i.related.teams))].toSorted(compareTeam));
 
     function toggleTeam(teamSlug: string): void {
-        if (filterHasTeam(params, teamSlug)) {
+        if (queryTeamFilter(params, teamSlug)) {
             params.delete("team", teamSlug);
         } else {
             params.append("team", teamSlug);
@@ -27,7 +27,7 @@
 {#if candidates.length > 1}
     <FilterBox label="Teams">
         {#each candidates as team}
-            <FilterItem active={filterHasTeam(params, team.slug)} onclick={() => toggleTeam(team.slug)}>
+            <FilterItem active={queryTeamFilter(params, team.slug)} onclick={() => toggleTeam(team.slug)}>
                 {team.name}
             </FilterItem>
         {/each}

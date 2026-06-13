@@ -1,7 +1,7 @@
 <script lang="ts">
     import { type Entry } from "$lib/types/timeline";
     import { Genre, compareGenre, displayGenre } from "$lib/types/timeline-genre";
-    import { filterHasGenre } from "$lib/types/timeline-filter";
+    import { queryGenreFilter } from "$lib/types/timeline-filter";
     import FilterBox from "./FilterBox.svelte";
     import FilterItem from "./FilterItem.svelte";
 
@@ -15,7 +15,7 @@
     const candidates = $derived([...new Set(timeline.map((i) => i.genre))].toSorted(compareGenre));
 
     function toggleGenre(genre: Genre): void {
-        if (filterHasGenre(params, genre)) {
+        if (queryGenreFilter(params, genre)) {
             params.delete("genre", genre);
         } else {
             params.append("genre", genre);
@@ -27,7 +27,7 @@
 {#if candidates.length > 1}
     <FilterBox label="Genres">
         {#each candidates as genre}
-            <FilterItem active={filterHasGenre(params, genre)} onclick={() => toggleGenre(genre)}>
+            <FilterItem active={queryGenreFilter(params, genre)} onclick={() => toggleGenre(genre)}>
                 {displayGenre(genre)}
             </FilterItem>
         {/each}

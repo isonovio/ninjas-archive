@@ -114,28 +114,31 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     return new AndFilter(filters);
 }
 
-export function filterHasGenre(params: URLSearchParams, genre: Genre): boolean {
+export function queryGenreFilter(
+    params: URLSearchParams,
+    genre: Genre,
+): boolean {
     return params.getAll("genre").includes(genre);
 }
 
-export function filterHasPlayer(
+export function queryPlayerFilter(
     params: URLSearchParams,
     playerSlug: string,
 ): boolean {
     return params.getAll("player").includes(playerSlug);
 }
 
-export function filterHasTeam(
+export function queryTeamFilter(
     params: URLSearchParams,
     teamSlug: string,
 ): boolean {
     return params.getAll("team").includes(teamSlug);
 }
 
-export function filterHasFromDate(params: URLSearchParams): boolean {
+export function queryFromDateFilter(params: URLSearchParams): boolean {
     return params.get("from") !== null;
 }
 
-export function filterHasToDate(params: URLSearchParams): boolean {
+export function queryToDateFilter(params: URLSearchParams): boolean {
     return params.get("to") !== null;
 }
