@@ -13,19 +13,21 @@
             "brackets": [
                 {
                     "slug": "q1",
-                    "name": "Open Qualifier #1",
+                    "name": "Open Q. #1",
+                    "format": "single-elimination",
                     "duration": { "start": "2021-02-07", "end": "2021-02-07" },
                     "links": [{ "name": "Esportal", "url": "https://esportal.com/en/tournament/1121/ambush-female-winter-cup-1/info" }]
                 },
                 {
                     "slug": "q2",
-                    "name": "Open Qualifier #2",
+                    "name": "Open Q. #2",
+                    "format": "single-elimination",
                     "duration": { "start": "2021-02-14", "end": "2021-02-14" },
                     "links": [{ "name": "Esportal", "url": "https://esportal.com/en/tournament/1122/ambush-female-winter-cup-2/info" }],
                     "brackets": [
                         {
                             "slug": "r2",
-                            "name": "R2",
+                            "name": "Quarterfinals",
                             "matches": [
                                 {
                                     "id": 3,
@@ -38,7 +40,7 @@
                         },
                         {
                             "slug": "r3",
-                            "name": "R3",
+                            "name": "Semifinals",
                             "matches": [
                                 {
                                     "id": 2,
@@ -53,13 +55,14 @@
                 },
                 {
                     "slug": "q3",
-                    "name": "Open Qualifier #3",
+                    "name": "Open Q. #3",
                     "duration": { "start": "2021-02-20", "end": "2021-02-20" },
+                    "format": "single-elimination",
                     "links": [{ "name": "Esportal", "url": "https://esportal.com/en/tournament/1123/ambush-female-winter-cup-3/info" }],
                     "brackets": [
                         {
                             "slug": "r2",
-                            "name": "R2",
+                            "name": "Quarterfinals",
                             "matches": [
                                 {
                                     "id": 7,

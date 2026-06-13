@@ -18,6 +18,7 @@
                         {
                             "slug": "g4",
                             "name": "Group D",
+                            "format": "round-robin",
                             "matches": [
                                 {
                                     "id": 2,
