@@ -22,6 +22,8 @@ export const allTeams: ReadonlyMap<string, Team> = new Map(
     teamsRaw.map((team) => [team.slug, teamFromRaw(team)]),
 );
 
-export function teamCompare(a: Team, b: Team): number {
-    return a.slug.localeCompare(b.slug);
+export namespace Team {
+    export function compare(a: Team, b: Team): number {
+        return a.slug.localeCompare(b.slug);
+    }
 }

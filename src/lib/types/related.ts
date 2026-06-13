@@ -14,15 +14,17 @@ export type Related = {
     teams: Team[];
 };
 
-export function relatedFromRaw(raw: RelatedRaw): Related {
-    const players: Player[] =
-        raw.players?.map((slug) => allPlayers.get(slug)!) ?? [];
-    const teams: Team[] = raw.teams?.map((slug) => allTeams.get(slug)!) ?? [];
-    const events: CSEvent[] =
-        raw.events?.map((slug) => allCSEvents.get(slug)!) ?? [];
-    return {
-        players: players,
-        events: events,
-        teams: teams,
-    };
+export namespace Related {
+    export function fromRaw(raw: RelatedRaw): Related {
+        const players: Player[] =
+            raw.players?.map((slug) => allPlayers.get(slug)!) ?? [];
+        const teams: Team[] = raw.teams?.map((slug) => allTeams.get(slug)!) ?? [];
+        const events: CSEvent[] =
+            raw.events?.map((slug) => allCSEvents.get(slug)!) ?? [];
+        return {
+            players: players,
+            events: events,
+            teams: teams,
+        };
+    }
 }

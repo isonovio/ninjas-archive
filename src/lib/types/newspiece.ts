@@ -1,6 +1,6 @@
 import { Temporal } from "$lib/utils/temporal";
 import { type EntryBase } from "./timeline";
-import { type Related, type RelatedRaw, relatedFromRaw } from "./related";
+import { type RelatedRaw, Related } from "./related";
 import { type ExternalLink } from "./externlink";
 import { Genre } from "./timeline-genre";
 
@@ -31,12 +31,14 @@ export const allNewspieces: Newspiece[] = Object.values(newsRaw).map((v) => {
         ...v,
         genre: Genre.NEWSPIECE,
         date: Temporal.PlainDate.from(v.date),
-        related: relatedFromRaw(v.related),
+        related: Related.fromRaw(v.related),
     };
 });
 
-export function newspieceCompare(a: Newspiece, b: Newspiece): number {
-    const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
-    if (dateCmp !== 0) return dateCmp;
-    return a.slug.localeCompare(b.slug);
+export namespace Newspiece {
+    export function compare(a: Newspiece, b: Newspiece): number {
+        const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
+        if (dateCmp !== 0) return dateCmp;
+        return a.slug.localeCompare(b.slug);
+    }
 }

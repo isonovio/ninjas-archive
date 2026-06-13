@@ -1,9 +1,4 @@
-import { Temporal } from "$lib/utils/temporal";
-import {
-    type DateRange,
-    type DateRangeRaw,
-    dateRangeFromRaw,
-} from "./daterange";
+import { type DateRangeRaw, DateRange } from "./daterange";
 import { allPlayers, type Player } from "./player";
 import { allTeams, type Team } from "./team";
 
@@ -33,7 +28,7 @@ export const allRosters: ReadonlyMap<string, Roster> = Object.values(rostersRaw)
             ...v,
             team: allTeams.get(v.team)!,
             players: v.players.map((player) => allPlayers.get(player)!),
-            duration: v.duration ? dateRangeFromRaw(v.duration) : undefined,
+            duration: v.duration ? DateRange.fromRaw(v.duration) : undefined,
         };
     })
     .reduce((map, roster) => {

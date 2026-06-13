@@ -45,6 +45,8 @@ export const allPlayers: ReadonlyMap<string, Player> = new Map(
     playersRaw.map((raw) => [raw.slug, playerFromRaw(raw)]),
 );
 
-export function playerCompare(a: Player, b: Player): number {
-    return a.slug.localeCompare(b.slug);
+export namespace Player {
+    export function compare(a: Player, b: Player): number {
+        return a.slug.localeCompare(b.slug);
+    }
 }

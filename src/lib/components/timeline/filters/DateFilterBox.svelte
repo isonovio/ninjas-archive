@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Temporal } from "$lib/utils/temporal";
-    import { paramsFilterHasFromDate, paramsFilterHasToDate } from "$lib/types/timeline-filter";
+    import { EntryFilter } from "$lib/types/timeline-filter";
     import FilterBox from "./FilterBox.svelte";
 
     interface Props {
@@ -57,11 +57,11 @@
 <FilterBox label="Date">
     <form onsubmit={submitDateFilter}>
         <div class="mt-1 mx-2">
-            <label for="from" class="inline-block w-11 border-l-4 border-white pl-1 leading-none text-sm" class:filter-on={paramsFilterHasFromDate(params)}>from: </label>
+            <label for="from" class="inline-block w-11 border-l-4 border-white pl-1 leading-none text-sm" class:filter-on={EntryFilter.hasFromDate(params)}>from: </label>
             <input id="from" placeholder="yyyy-mm-dd" bind:value={fromDateInput} class="inline-block w-20 border-b border-dashed px-1 leading-none text-sm" />
         </div>
         <div class="mb-1 mx-2">
-            <label for="to" class="inline-block w-11 border-l-4 border-white pl-1 leading-none text-sm" class:filter-on={paramsFilterHasToDate(params)}>to: </label>
+            <label for="to" class="inline-block w-11 border-l-4 border-white pl-1 leading-none text-sm" class:filter-on={EntryFilter.hasToDate(params)}>to: </label>
             <input id="to" placeholder="yyyy-mm-dd" bind:value={toDateInput} class="inline-block w-20 border-b border-dashed px-1 leading-none text-sm" />
         </div>
         {#if dateInputError != ""}

@@ -1,10 +1,6 @@
 import { type ExternalLink } from "./externlink";
-import {
-    type Rewatch,
-    type RewatchRaw,
-    rewatchFromRaw,
-} from "./official-rewatch";
-import { Outcome, outcomesFromResults } from "./official-outcome";
+import { type RewatchRaw, Rewatch } from "./official-rewatch";
+import { Outcome } from "./official-outcome";
 
 export type MatchMapRaw = {
     id: number;
@@ -25,29 +21,31 @@ export type MatchMap = {
     note?: string;
 };
 
-export function matchMapFromRaw(raw: MatchMapRaw): MatchMap {
-    const resultPattern = /^[0-9]+:[0-9]+$/;
-    if (!resultPattern.test(raw.result)) {
-        throw new Error(`Invalid result format: ${raw.result}`);
-    }
-    const results = raw.result.split(":").map(Number) as [number, number];
+export namespace MatchMap {
+    export function fromRaw(raw: MatchMapRaw): MatchMap {
+        const resultPattern = /^[0-9]+:[0-9]+$/;
+        if (!resultPattern.test(raw.result)) {
+            throw new Error(`Invalid result format: ${raw.result}`);
+        }
+        const results = raw.result.split(":").map(Number) as [number, number];
 
-    return {
-        id: raw.id,
-        map: raw.map,
-        results,
-        outcomes: outcomesFromResults(results),
-        links: raw.links ?? [],
-        rewatches: raw.rewatches?.map(rewatchFromRaw) ?? [],
-        note: raw.note,
-    };
-}
-
-export function sumMapResults(maps: MatchMap[]): [number, number] {
-    const result: [number, number] = [0, 0];
-    for (const map of maps) {
-        result[0] += map.outcomes[0] == Outcome.WIN ? 1 : 0;
-        result[1] += map.outcomes[1] == Outcome.WIN ? 1 : 0;
+        return {
+            id: raw.id,
+            map: raw.map,
+            results,
+            outcomes: Outcome.fromResults(results),
+            links: raw.links ?? [],
+            rewatches: raw.rewatches?.map(Rewatch.fromRaw) ?? [],
+            note: raw.note,
+        };
     }
-    return result;
+
+    export function sumResults(maps: MatchMap[]): [number, number] {
+        const result: [number, number] = [0, 0];
+        for (const map of maps) {
+            result[0] += map.outcomes[0] == Outcome.WIN ? 1 : 0;
+            result[1] += map.outcomes[1] == Outcome.WIN ? 1 : 0;
+        }
+        return result;
+    }
 }

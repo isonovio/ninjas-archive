@@ -6,10 +6,6 @@ export interface EntryFilter {
     filter(e: Entry): boolean;
 }
 
-export function filterEntries(entries: Entry[], filters: EntryFilter): Entry[] {
-    return entries.filter((entry) => filters.filter(entry));
-}
-
 export class AndFilter implements EntryFilter {
     constructor(private filters: EntryFilter[]) {}
 
@@ -80,65 +76,62 @@ export class TeamFilter implements EntryFilter {
     }
 }
 
-export function filterFromParams(params: URLSearchParams): EntryFilter {
-    const genres = params
-        .getAll("genre")
-        .map((g) => g as Genre)
-        .map((genre) => new GenreFilter(genre));
-    const genreFilter = new OrFilter(genres);
-    const players = params
-        .getAll("player")
-        .map((p) => p as string)
-        .map((playerSlug) => new PlayerFilter(playerSlug));
-    const playerFilter = new OrFilter(players);
-    const teams = params
-        .getAll("team")
-        .map((t) => t as string)
-        .map((teamSlug) => new TeamFilter(teamSlug));
-    const teamFilter = new OrFilter(teams);
-    const from = params.get("from");
-    const fromDateFilter = from
-        ? new DateFromFilter(Temporal.PlainDate.from(from))
-        : undefined;
-    const to = params.get("to");
-    const toDateFilter = to
-        ? new DateToFilter(Temporal.PlainDate.from(to))
-        : undefined;
-    const filters = [
-        genreFilter,
-        playerFilter,
-        teamFilter,
-        fromDateFilter,
-        toDateFilter,
-    ].filter((f) => f !== undefined);
-    return new AndFilter(filters);
-}
+export namespace EntryFilter {
+    export function apply(entries: Entry[], filter: EntryFilter): Entry[] {
+        return entries.filter((entry) => filter.filter(entry));
+    }
 
-export function paramsFilterHasGenre(
-    params: URLSearchParams,
-    genre: Genre,
-): boolean {
-    return params.getAll("genre").includes(genre);
-}
+    export function fromParams(params: URLSearchParams): EntryFilter {
+        const genres = params
+            .getAll("genre")
+            .map((g) => g as Genre)
+            .map((genre) => new GenreFilter(genre));
+        const genreFilter = new OrFilter(genres);
+        const players = params
+            .getAll("player")
+            .map((p) => p as string)
+            .map((playerSlug) => new PlayerFilter(playerSlug));
+        const playerFilter = new OrFilter(players);
+        const teams = params
+            .getAll("team")
+            .map((t) => t as string)
+            .map((teamSlug) => new TeamFilter(teamSlug));
+        const teamFilter = new OrFilter(teams);
+        const from = params.get("from");
+        const fromDateFilter = from
+            ? new DateFromFilter(Temporal.PlainDate.from(from))
+            : undefined;
+        const to = params.get("to");
+        const toDateFilter = to
+            ? new DateToFilter(Temporal.PlainDate.from(to))
+            : undefined;
+        const filters = [
+            genreFilter,
+            playerFilter,
+            teamFilter,
+            fromDateFilter,
+            toDateFilter,
+        ].filter((f) => f !== undefined);
+        return new AndFilter(filters);
+    }
 
-export function paramsFilterHasPlayer(
-    params: URLSearchParams,
-    playerSlug: string,
-): boolean {
-    return params.getAll("player").includes(playerSlug);
-}
+    export function hasGenre(params: URLSearchParams, genre: Genre): boolean {
+        return params.getAll("genre").includes(genre);
+    }
 
-export function paramsFilterHasTeam(
-    params: URLSearchParams,
-    teamSlug: string,
-): boolean {
-    return params.getAll("team").includes(teamSlug);
-}
+    export function hasPlayer(params: URLSearchParams, playerSlug: string): boolean {
+        return params.getAll("player").includes(playerSlug);
+    }
 
-export function paramsFilterHasFromDate(params: URLSearchParams): boolean {
-    return params.get("from") !== null;
-}
+    export function hasTeam(params: URLSearchParams, teamSlug: string): boolean {
+        return params.getAll("team").includes(teamSlug);
+    }
 
-export function paramsFilterHasToDate(params: URLSearchParams): boolean {
-    return params.get("to") !== null;
+    export function hasFromDate(params: URLSearchParams): boolean {
+        return params.get("from") !== null;
+    }
+
+    export function hasToDate(params: URLSearchParams): boolean {
+        return params.get("to") !== null;
+    }
 }

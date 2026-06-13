@@ -1,14 +1,7 @@
-import {
-    type DateRangeRaw,
-    type DateRange,
-    dateRangeFromRaw,
-} from "./daterange";
+import { type DateRangeRaw, DateRange } from "./daterange";
 import { type ExternalLink } from "./externlink";
-import {
-    type LineupShorthandRaw,
-    lineupShorthandFromRaw,
-} from "./official-lineup";
-import { type BracketRaw, processRawBracket } from "./official-bracket";
+import { type LineupShorthandRaw, Lineup } from "./official-lineup";
+import { type BracketRaw, Bracket } from "./official-bracket";
 import { type Match, type MatchContext, type MatchTag } from "./official-match";
 
 type CSEventRaw = {
@@ -40,7 +33,7 @@ function processRawCSEvent(raw: CSEventRaw): [CSEvent, Match[]] {
     const event = {
         slug: raw.slug,
         name: raw.name,
-        duration: dateRangeFromRaw(raw.duration),
+        duration: DateRange.fromRaw(raw.duration),
         links: raw.links ?? [],
         note: raw.note,
     };
@@ -50,13 +43,13 @@ function processRawCSEvent(raw: CSEventRaw): [CSEvent, Match[]] {
         brackets: [],
         tags: new Set(raw.tags ?? []),
         lineupShorthands: new Map(
-            (raw.participants ?? []).map(lineupShorthandFromRaw),
+            (raw.participants ?? []).map(Lineup.shorthandFromRaw),
         ),
     };
 
     const matches = raw.brackets
-        .map((bracket) => processRawBracket(bracket, ctx))
-        .map(([child, ms]) => ms)
+        .map((bracket) => Bracket.fromRaw(bracket, ctx))
+        .map(([_, ms]) => ms)
         .flat();
 
     return [event, matches];
