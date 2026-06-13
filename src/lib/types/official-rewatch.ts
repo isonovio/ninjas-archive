@@ -17,7 +17,7 @@ export type Rewatch = {
     tags: RewatchTag[];
 };
 
-export const rewatchFromRaw = (raw: RewatchRaw): Rewatch => {
+export function rewatchFromRaw(raw: RewatchRaw): Rewatch {
     const casters = raw.casters.map((caster) => allTalents.get(caster)!);
     const parts = raw.parts.map((part) => videoFromRaw(part));
     const tags =
@@ -28,4 +28,4 @@ export const rewatchFromRaw = (raw: RewatchRaw): Rewatch => {
         parts,
         tags,
     };
-};
+}

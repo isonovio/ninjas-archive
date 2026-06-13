@@ -1,6 +1,6 @@
 export type TimeRange = [number, number];
 
-export const timeRangeFromString = (str: string): TimeRange => {
+export function timeRangeFromString(str: string): TimeRange {
     const pattern =
         /^[0-9]+:[0-5][0-9]:[0-5][0-9]-[0-9]+:[0-5][0-9]:[0-5][0-9]$/;
     if (!pattern.test(str)) {
@@ -14,4 +14,4 @@ export const timeRangeFromString = (str: string): TimeRange => {
     const start = startHour * 3600 + startMinute * 60 + startSecond;
     const end = endHour * 3600 + endMinute * 60 + endSecond;
     return [start, end];
-};
+}

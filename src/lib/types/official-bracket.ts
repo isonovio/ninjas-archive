@@ -22,24 +22,32 @@ export type BracketRaw = {
     slug: string;
     name?: string;
     duration?: DateRangeRaw;
+    format?: BracketFormat;
+    tags?: MatchTag[];
     links?: ExternalLink[];
     participants?: LineupShorthandRaw[];
     brackets?: BracketRaw[];
     matches?: MatchRaw[];
     note?: string;
-    tags?: MatchTag[];
 };
 
 export type Bracket = {
     slug: string;
     name: string;
     duration?: DateRange;
+    format?: BracketFormat;
     links: ExternalLink[];
     note?: string;
     event: CSEvent;
     parents: Bracket[];
     isTransparent: boolean;
 };
+
+export type BracketFormat =
+    | "single-elimination"
+    | "double-elimination"
+    | "round-robin"
+    | "swiss";
 
 export const processRawBracket = (
     raw: BracketRaw,
@@ -79,7 +87,7 @@ export const processRawBracket = (
     if (raw.brackets) {
         const matches = raw.brackets
             .map((b) => processRawBracket(b, newCtx))
-            .map(([child, ms]) => ms)
+            .map(([_, ms]) => ms)
             .flat();
         return [bracket, matches];
     } else if (raw.matches) {

@@ -36,7 +36,7 @@ export type CSEvent = {
     note?: string;
 };
 
-const processRawCSEvent = (raw: CSEventRaw): [CSEvent, Match[]] => {
+function processRawCSEvent(raw: CSEventRaw): [CSEvent, Match[]] {
     const event = {
         slug: raw.slug,
         name: raw.name,
@@ -60,7 +60,7 @@ const processRawCSEvent = (raw: CSEventRaw): [CSEvent, Match[]] => {
         .flat();
 
     return [event, matches];
-};
+}
 
 export const [allCSEvents, allMatches]: [
     ReadonlyMap<string, CSEvent>,

@@ -8,11 +8,19 @@
         "slug": { "$ref": "slug.schema.json" },
         "name": { "type": "string" },
         "duration": { "$ref": "daterange.schema.json" },
+        "format": { "$ref": "#/$defs/format" },
+        "tags": { "type": "array", "items": { "$ref": "official-match.schema.json#/$defs/tag" } },
         "links": { "type": "array", "items": { "$ref": "extern-link.schema.json" } },
         "participants": { "type": "array", "items": { "$ref": "official-lineup.schema.json#/$defs/shorthand" } },
         "brackets": { "type": "array", "items": { "$ref": "official-bracket.schema.json" } },
         "matches": { "type": "array", "items": { "$ref": "official-match.schema.json" } },
-        "note": { "type": "string" },
-        "tags": { "type": "array", "items": { "$ref": "official-match.schema.json#/$defs/tag" } }
+        "note": { "type": "string" }
+    },
+
+    "$defs": {
+        "format": {
+            "type": "string",
+            "enum": ["single-elimination", "double-elimination", "round-robin", "swiss"]
+        }
     }
 }

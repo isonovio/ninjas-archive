@@ -3,7 +3,7 @@ export enum Genre {
     MATCH = "match",
 }
 
-export const display = (genre: Genre): string => {
+export function display(genre: Genre): string {
     if (genre === Genre.MATCH) {
         return "Officials";
     } else if (genre === Genre.NEWSPIECE) {
@@ -11,8 +11,8 @@ export const display = (genre: Genre): string => {
     } else {
         throw new Error(`Unknown genre: ${genre}`);
     }
-};
+}
 
-export const compare = (a: Genre, b: Genre) => {
+export function compare(a: Genre, b: Genre): number {
     return a.localeCompare(b);
-};
+}

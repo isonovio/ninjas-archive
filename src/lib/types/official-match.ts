@@ -55,7 +55,7 @@ export type MatchContext = {
     lineupShorthands: ReadonlyMap<string, Lineup>;
 };
 
-export const matchFromRaw = (raw: MatchRaw, ctx: MatchContext): Match => {
+export function matchFromRaw(raw: MatchRaw, ctx: MatchContext): Match {
     const lineups: [Lineup, Lineup] = [
         lineupFromRaw(raw.lineups.team1, ctx.lineupShorthands),
         lineupFromRaw(raw.lineups.team2, ctx.lineupShorthands),
@@ -95,9 +95,9 @@ export const matchFromRaw = (raw: MatchRaw, ctx: MatchContext): Match => {
         event: ctx.event,
         brackets: ctx.brackets,
     };
-};
+}
 
-export const matchCompare = (a: Match, b: Match) => {
+export function matchCompare(a: Match, b: Match): number {
     const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
     if (dateCmp !== 0) return dateCmp;
     const slugs = [];
@@ -109,4 +109,4 @@ export const matchCompare = (a: Match, b: Match) => {
         if (bracketCmp !== 0) return bracketCmp;
     }
     return a.id - b.id;
-};
+}

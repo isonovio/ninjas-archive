@@ -29,7 +29,7 @@ export type Player = {
     links: ExternalLink[];
 };
 
-const playerFromRaw = (raw: PlayerRaw): Player => {
+function playerFromRaw(raw: PlayerRaw): Player {
     return {
         ...raw,
         birthday: raw.birthday
@@ -39,12 +39,12 @@ const playerFromRaw = (raw: PlayerRaw): Player => {
             raw.tags?.map((tag) => tag as PlayerTag satisfies PlayerTag) || [],
         links: raw.links || [],
     };
-};
+}
 
 export const allPlayers: ReadonlyMap<string, Player> = new Map(
     playersRaw.map((raw) => [raw.slug, playerFromRaw(raw)]),
 );
 
-export const playerCompare = (a: Player, b: Player) => {
+export function playerCompare(a: Player, b: Player): number {
     return a.slug.localeCompare(b.slug);
-};
+}

@@ -17,10 +17,10 @@ export type Lineup = {
 };
 
 // precedence: shorthand > name = players > team > roster
-export const lineupFromRaw = (
+export function lineupFromRaw(
     raw: LineupRaw,
     shorthands: ReadonlyMap<string, Lineup> = new Map(),
-): Lineup => {
+): Lineup {
     if (raw.shorthand) {
         return shorthands.get(raw.shorthand)!;
     }
@@ -49,16 +49,16 @@ export const lineupFromRaw = (
         players: players ?? [],
         team: team,
     };
-};
+}
 
 export type LineupShorthandRaw = {
     shorthand: string;
     lineup: LineupRaw;
 };
 
-export const lineupShorthandFromRaw = (
+export function lineupShorthandFromRaw(
     raw: LineupShorthandRaw,
-): [string, Lineup] => {
+): [string, Lineup] {
     const lineup = lineupFromRaw(raw.lineup);
     return [raw.shorthand, lineup];
-};
+}

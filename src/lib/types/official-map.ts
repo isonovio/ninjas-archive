@@ -25,7 +25,7 @@ export type MatchMap = {
     note?: string;
 };
 
-export const matchMapFromRaw = (raw: MatchMapRaw): MatchMap => {
+export function matchMapFromRaw(raw: MatchMapRaw): MatchMap {
     const resultPattern = /^[0-9]+:[0-9]+$/;
     if (!resultPattern.test(raw.result)) {
         throw new Error(`Invalid result format: ${raw.result}`);
@@ -41,13 +41,13 @@ export const matchMapFromRaw = (raw: MatchMapRaw): MatchMap => {
         rewatches: raw.rewatches?.map(rewatchFromRaw) ?? [],
         note: raw.note,
     };
-};
+}
 
-export const sumMapResults = (maps: MatchMap[]): [number, number] => {
+export function sumMapResults(maps: MatchMap[]): [number, number] {
     const result: [number, number] = [0, 0];
     for (const map of maps) {
         result[0] += map.outcomes[0] == Outcome.WIN ? 1 : 0;
         result[1] += map.outcomes[1] == Outcome.WIN ? 1 : 0;
     }
     return result;
-};
+}

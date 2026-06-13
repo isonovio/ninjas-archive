@@ -6,12 +6,9 @@ export interface EntryFilter {
     filter(e: Entry): boolean;
 }
 
-export const filterEntries = (
-    entries: Entry[],
-    filters: EntryFilter,
-): Entry[] => {
+export function filterEntries(entries: Entry[], filters: EntryFilter): Entry[] {
     return entries.filter((entry) => filters.filter(entry));
-};
+}
 
 export class AndFilter implements EntryFilter {
     constructor(private filters: EntryFilter[]) {}
@@ -83,7 +80,7 @@ export class TeamFilter implements EntryFilter {
     }
 }
 
-export const filterFromParams = (params: URLSearchParams): EntryFilter => {
+export function filterFromParams(params: URLSearchParams): EntryFilter {
     const genres = params
         .getAll("genre")
         .map((g) => g as Genre)
@@ -115,33 +112,33 @@ export const filterFromParams = (params: URLSearchParams): EntryFilter => {
         toDateFilter,
     ].filter((f) => f !== undefined);
     return new AndFilter(filters);
-};
+}
 
-export const paramsFilterHasGenre = (
+export function paramsFilterHasGenre(
     params: URLSearchParams,
     genre: Genre,
-): boolean => {
+): boolean {
     return params.getAll("genre").includes(genre);
-};
+}
 
-export const paramsFilterHasPlayer = (
+export function paramsFilterHasPlayer(
     params: URLSearchParams,
     playerSlug: string,
-): boolean => {
+): boolean {
     return params.getAll("player").includes(playerSlug);
-};
+}
 
-export const paramsFilterHasTeam = (
+export function paramsFilterHasTeam(
     params: URLSearchParams,
     teamSlug: string,
-): boolean => {
+): boolean {
     return params.getAll("team").includes(teamSlug);
-};
+}
 
-export const paramsFilterHasFromDate = (params: URLSearchParams): boolean => {
+export function paramsFilterHasFromDate(params: URLSearchParams): boolean {
     return params.get("from") !== null;
-};
+}
 
-export const paramsFilterHasToDate = (params: URLSearchParams): boolean => {
+export function paramsFilterHasToDate(params: URLSearchParams): boolean {
     return params.get("to") !== null;
-};
+}

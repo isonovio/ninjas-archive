@@ -14,7 +14,7 @@ export type Related = {
     teams: Team[];
 };
 
-export const relatedFromRaw = (raw: RelatedRaw): Related => {
+export function relatedFromRaw(raw: RelatedRaw): Related {
     const players: Player[] =
         raw.players?.map((slug) => allPlayers.get(slug)!) ?? [];
     const teams: Team[] = raw.teams?.map((slug) => allTeams.get(slug)!) ?? [];
@@ -25,4 +25,4 @@ export const relatedFromRaw = (raw: RelatedRaw): Related => {
         events: events,
         teams: teams,
     };
-};
+}

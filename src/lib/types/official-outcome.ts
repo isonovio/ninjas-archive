@@ -4,9 +4,9 @@ export enum Outcome {
     LOSE = "lose",
 }
 
-export const outcomesFromResults = (
+export function outcomesFromResults(
     results: [number, number],
-): [Outcome, Outcome] => {
+): [Outcome, Outcome] {
     if (results[0] > results[1]) {
         return [Outcome.WIN, Outcome.LOSE];
     } else if (results[0] < results[1]) {
@@ -14,4 +14,4 @@ export const outcomesFromResults = (
     } else {
         return [Outcome.DRAW, Outcome.DRAW];
     }
-};
+}

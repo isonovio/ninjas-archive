@@ -15,7 +15,7 @@ export type Entry = Newspiece | Match;
 
 export const allEntries: Entry[] = [...allNewspieces, ...allMatches];
 
-export const entryCompare = (a: Entry, b: Entry) => {
+export function entryCompare(a: Entry, b: Entry): number {
     const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
     if (dateCmp !== 0) return dateCmp;
 
@@ -28,14 +28,14 @@ export const entryCompare = (a: Entry, b: Entry) => {
         case Genre.MATCH:
             return matchCompare(a, b as Match);
     }
-};
+}
 
 export type dailyTimeline = {
     date: Temporal.PlainDate;
     entries: Entry[];
 };
 
-export const entriesGroupSortByDate = (entries: Entry[]): dailyTimeline[] => {
+export function entriesGroupSortByDate(entries: Entry[]): dailyTimeline[] {
     const map = new Map<string, dailyTimeline>();
     entries.forEach((entry) => {
         const dateKey = entry.date.toString();
@@ -50,4 +50,4 @@ export const entriesGroupSortByDate = (entries: Entry[]): dailyTimeline[] => {
             return { date, entries: sortedEntries };
         })
         .toSorted((a, b) => Temporal.PlainDate.compare(b.date, a.date));
-};
+}

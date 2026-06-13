@@ -18,10 +18,11 @@ const newsRaw = import.meta.glob<NewspieceRaw>("$data/**/news/*.json", {
 
 export interface Newspiece extends EntryBase {
     genre: Genre.NEWSPIECE;
+    related: Related;
+    date: Temporal.PlainDate;
+
     slug: string;
     title: string;
-    date: Temporal.PlainDate;
-    related: Related;
     links: ExternalLink[];
 }
 
@@ -34,8 +35,8 @@ export const allNewspieces: Newspiece[] = Object.values(newsRaw).map((v) => {
     };
 });
 
-export const newspieceCompare = (a: Newspiece, b: Newspiece) => {
+export function newspieceCompare(a: Newspiece, b: Newspiece): number {
     const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
     if (dateCmp !== 0) return dateCmp;
     return a.slug.localeCompare(b.slug);
-};
+}

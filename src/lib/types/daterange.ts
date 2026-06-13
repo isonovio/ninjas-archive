@@ -7,9 +7,9 @@ export type DateRangeRaw = {
 
 export type DateRange = [Temporal.PlainDate, Temporal.PlainDate];
 
-export const dateRangeFromRaw = (raw: DateRangeRaw): DateRange => {
+export function dateRangeFromRaw(raw: DateRangeRaw): DateRange {
     return [
         Temporal.PlainDate.from(raw.start),
         Temporal.PlainDate.from(raw.end),
     ];
-};
+}

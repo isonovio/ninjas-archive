@@ -23,12 +23,12 @@ export type Talent = {
     socials: ExternalLink[];
 };
 
-const talentFromRaw = (raw: TalentRaw): Talent => {
+function talentFromRaw(raw: TalentRaw): Talent {
     return {
         ...raw,
         socials: raw.socials ?? [],
     };
-};
+}
 
 export const allTalents: ReadonlyMap<string, Talent> = new Map(
     talentsRaw.map((talent) => [talent.slug, talentFromRaw(talent)]),
