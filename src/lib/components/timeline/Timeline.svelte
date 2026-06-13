@@ -3,8 +3,8 @@
     import { goto } from "$app/navigation";
     import { browser } from "$app/environment";
 
-    import { Entry, allEntries } from "$lib/types/timeline";
-    import { EntryFilter } from "$lib/types/timeline-filter";
+    import { allEntries, groupEntryByDate } from "$lib/types/timeline";
+    import { type EntryFilter, applyFilter, filterFromParams } from "$lib/types/timeline-filter";
 
     import Match from "./entries/Match.svelte";
     import Newspiece from "./entries/Newspiece.svelte";
@@ -15,11 +15,11 @@
     }
     let { prefilter }: Props = $props();
 
-    const prefilteredTimeline = $derived(prefilter ? EntryFilter.apply(allEntries, prefilter) : allEntries);
+    const prefilteredTimeline = $derived(prefilter ? applyFilter(allEntries, prefilter) : allEntries);
     const params = $derived(browser ? page.url.searchParams : new URLSearchParams());
-    const paramsFilter = $derived(EntryFilter.fromParams(params));
-    const filteredTimeline = $derived(EntryFilter.apply(prefilteredTimeline, paramsFilter));
-    const sortedTimeline = $derived(Entry.groupByDate(filteredTimeline));
+    const paramsFilter = $derived(filterFromParams(params));
+    const filteredTimeline = $derived(applyFilter(prefilteredTimeline, paramsFilter));
+    const sortedTimeline = $derived(groupEntryByDate(filteredTimeline));
 
     function refreshParams(): void {
         goto(`?${params.toString()}`, { noScroll: true, keepFocus: true });

@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { type Match } from "$lib/types/official-match";
+    import { type Omatch } from "$lib/types/official-match";
     import LinkExternal from "$lib/components/timeline/links/LinkExternal.svelte";
     import LinkRewatch from "$lib/components/timeline/links/LinkRewatch.svelte";
     import LinkPlayers from "$lib/components/timeline/links/LinkPlayers.svelte";
-    export let match: Match;
+    export let match: Omatch;
 </script>
 
 <div class="relative">

@@ -14,16 +14,12 @@ export type Team = {
     name: string;
 };
 
-const teamFromRaw = (raw: TeamRaw): Team => {
-    return { ...raw };
-};
+const teamFromRaw = (raw: TeamRaw): Team => ({ ...raw });
 
 export const allTeams: ReadonlyMap<string, Team> = new Map(
     teamsRaw.map((team) => [team.slug, teamFromRaw(team)]),
 );
 
-export namespace Team {
-    export function compare(a: Team, b: Team): number {
-        return a.slug.localeCompare(b.slug);
-    }
+export function compareTeam(a: Team, b: Team): number {
+    return a.slug.localeCompare(b.slug);
 }

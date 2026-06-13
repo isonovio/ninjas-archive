@@ -1,15 +1,20 @@
 import { Temporal } from "$lib/utils/temporal";
 import { type ExternalLink } from "./externlink";
-import { type LineupRaw, Lineup } from "./official-lineup";
-import { type MatchMapRaw, MatchMap } from "./official-map";
+import { type Lineup, type LineupRaw, lineupFromRaw } from "./official-lineup";
+import {
+    type Omap,
+    type OmapRaw,
+    omapFromRaw,
+    sumOmapResults,
+} from "./official-map";
 import { type EntryBase } from "./timeline";
 import { type Related } from "./related";
-import { type CSEvent } from "./official-event";
-import { type Bracket } from "./official-bracket";
-import { Outcome } from "./official-outcome";
+import { type Oevent } from "./official-event";
+import { type Obracket } from "./official-bracket";
+import { Outcome, outcomeFromResults } from "./official-outcome";
 import { Genre } from "./timeline-genre";
 
-export type MatchRaw = {
+export type OmatchRaw = {
     id: number;
     name?: string;
     date: string;
@@ -18,13 +23,13 @@ export type MatchRaw = {
         team2: LineupRaw;
     };
     links?: ExternalLink[];
-    maps: MatchMapRaw[];
+    maps: OmapRaw[];
     note?: string;
 };
 
-export type MatchTag = "impact" | "lan";
+export type OmatchTag = "impact" | "lan";
 
-export interface Match extends EntryBase {
+export interface Omatch extends EntryBase {
     genre: Genre.MATCH;
     related: Related;
     date: Temporal.PlainDate;
@@ -35,74 +40,68 @@ export interface Match extends EntryBase {
     links: ExternalLink[];
     results: [number, number];
     outcomes: [Outcome, Outcome];
-    tags: Set<MatchTag>;
-    maps: MatchMap[];
+    tags: Set<OmatchTag>;
+    maps: Omap[];
     note?: string;
 
-    event: CSEvent;
-    brackets: Bracket[];
+    event: Oevent;
+    brackets: Obracket[];
 }
 
-export type MatchContext = {
-    event: CSEvent;
-    brackets: Bracket[];
-    tags: Set<MatchTag>;
+export type OmatchContext = {
+    event: Oevent;
+    brackets: Obracket[];
+    tags: Set<OmatchTag>;
     lineupShorthands: ReadonlyMap<string, Lineup>;
 };
 
-export namespace Match {
-    export function fromRaw(raw: MatchRaw, ctx: MatchContext): Match {
-        const lineups: [Lineup, Lineup] = [
-            Lineup.fromRaw(raw.lineups.team1, ctx.lineupShorthands),
-            Lineup.fromRaw(raw.lineups.team2, ctx.lineupShorthands),
-        ];
+export function omatchFromRaw(raw: OmatchRaw, ctx: OmatchContext): Omatch {
+    const lineups: [Lineup, Lineup] = [
+        lineupFromRaw(raw.lineups.team1, ctx.lineupShorthands),
+        lineupFromRaw(raw.lineups.team2, ctx.lineupShorthands),
+    ];
 
-        const name = raw.name ?? `Match ${raw.id}`;
+    const name = raw.name ?? `Match ${raw.id}`;
 
-        const related: Related = {
-            players: [...lineups[0].players, ...lineups[1].players],
-            teams: lineups
-                .filter((lineup) => lineup.team !== undefined)
-                .map((lineup) => lineup.team!),
-            events: [ctx.event],
-        };
+    const related: Related = {
+        players: [...lineups[0].players, ...lineups[1].players],
+        teams: lineups.filter((l) => l.team !== undefined).map((l) => l.team!),
+        events: [ctx.event],
+    };
 
-        const maps = raw.maps
-            .map((map) => MatchMap.fromRaw(map))
-            .toSorted((a, b) => a.id - b.id);
-        const results = MatchMap.sumResults(maps);
-        const outcomes = Outcome.fromResults(results);
+    const maps = raw.maps.map(omapFromRaw).toSorted((a, b) => a.id - b.id);
+    const results = sumOmapResults(maps);
+    const outcomes = outcomeFromResults(results);
 
-        return {
-            genre: Genre.MATCH,
-            related,
-            date: Temporal.PlainDate.from(raw.date),
+    return {
+        genre: Genre.MATCH,
+        related,
+        date: Temporal.PlainDate.from(raw.date),
 
-            id: raw.id,
-            name,
-            lineups,
-            links: raw.links ?? [],
-            results,
-            outcomes,
-            tags: ctx.tags,
-            maps,
-            note: raw.note,
+        id: raw.id,
+        name,
+        lineups,
+        links: raw.links ?? [],
+        results,
+        outcomes,
+        tags: ctx.tags,
+        maps,
+        note: raw.note,
 
-            event: ctx.event,
-            brackets: ctx.brackets,
-        };
+        event: ctx.event,
+        brackets: ctx.brackets,
+    };
+}
+
+export function compareOmatch(a: Omatch, b: Omatch): number {
+    const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
+    if (dateCmp !== 0) return dateCmp;
+
+    const eventCmp = a.event.slug.localeCompare(b.event.slug);
+    if (eventCmp !== 0) return eventCmp;
+    for (let i = 0; i < Math.min(a.brackets.length, b.brackets.length); i++) {
+        const bracketCmp = a.brackets[i].slug.localeCompare(b.brackets[i].slug);
+        if (bracketCmp !== 0) return bracketCmp;
     }
-
-    export function compare(a: Match, b: Match): number {
-        const dateCmp = Temporal.PlainDate.compare(a.date, b.date);
-        if (dateCmp !== 0) return dateCmp;
-
-        const eventCmp = a.event.slug.localeCompare(b.event.slug);
-        if (eventCmp !== 0) return eventCmp;
-        for (let i = 0; i < Math.min(a.brackets.length, b.brackets.length); i++) {
-            const bracketCmp = a.brackets[i].slug.localeCompare(b.brackets[i].slug);
-            if (bracketCmp !== 0) return bracketCmp;
-        }
-        return a.id - b.id;
-    }
+    return a.id - b.id;
 }

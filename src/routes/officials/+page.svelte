@@ -1,7 +1,7 @@
 <script lang="ts">
+    import { Genre } from "$lib/types/timeline-genre";
     import { GenreFilter } from "$lib/types/timeline-filter";
     import Timeline from "$lib/components/timeline/Timeline.svelte";
-    import { Genre } from "$lib/types/timeline-genre";
 
     const prefilter = new GenreFilter(Genre.MATCH);
 </script>

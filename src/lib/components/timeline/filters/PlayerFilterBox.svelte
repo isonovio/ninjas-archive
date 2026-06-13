@@ -1,7 +1,7 @@
 <script lang="ts">
     import { type Entry } from "$lib/types/timeline";
-    import { Player } from "$lib/types/player";
-    import { EntryFilter } from "$lib/types/timeline-filter";
+    import { comparePlayer } from "$lib/types/player";
+    import { filterHasPlayer } from "$lib/types/timeline-filter";
     import FilterBox from "./FilterBox.svelte";
     import FilterItem from "./FilterItem.svelte";
 
@@ -12,12 +12,10 @@
     }
     let { params, timeline, onUpdate }: Props = $props();
 
-    const candidates = $derived(
-        [...new Set(timeline.flatMap((i) => i.related.players))].toSorted(Player.compare),
-    );
+    const candidates = $derived([...new Set(timeline.flatMap((i) => i.related.players))].toSorted(comparePlayer));
 
     function togglePlayer(playerSlug: string): void {
-        if (EntryFilter.hasPlayer(params, playerSlug)) {
+        if (filterHasPlayer(params, playerSlug)) {
             params.delete("player", playerSlug);
         } else {
             params.append("player", playerSlug);
@@ -29,7 +27,7 @@
 {#if candidates.length > 1}
     <FilterBox label="Players">
         {#each candidates as player}
-            <FilterItem active={EntryFilter.hasPlayer(params, player.slug)} onclick={() => togglePlayer(player.slug)}>
+            <FilterItem active={filterHasPlayer(params, player.slug)} onclick={() => togglePlayer(player.slug)}>
                 {player.nickname}
             </FilterItem>
         {/each}

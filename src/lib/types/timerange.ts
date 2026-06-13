@@ -1,7 +1,6 @@
-export type TimeRange = [number, number];
+export type Timerange = [number, number];
 
-export namespace TimeRange {
-    export function fromString(str: string): TimeRange {
+export function timerangeFromString(str: string): Timerange {
     const pattern =
         /^[0-9]+:[0-5][0-9]:[0-5][0-9]-[0-9]+:[0-5][0-9]:[0-5][0-9]$/;
     if (!pattern.test(str)) {
@@ -15,5 +14,4 @@ export namespace TimeRange {
     const start = startHour * 3600 + startMinute * 60 + startSecond;
     const end = endHour * 3600 + endMinute * 60 + endSecond;
     return [start, end];
-    }
 }

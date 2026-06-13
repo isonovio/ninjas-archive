@@ -1,6 +1,6 @@
-import { allPlayers, type Player } from "./player";
+import { type Player, allPlayers } from "./player";
 import { allTeams, type Team } from "./team";
-import { allCSEvents, type CSEvent } from "./official-event";
+import { type Oevent, allOevents } from "./official-event";
 
 export type RelatedRaw = {
     players?: string[];
@@ -10,21 +10,15 @@ export type RelatedRaw = {
 
 export type Related = {
     players: Player[];
-    events: CSEvent[];
+    events: Oevent[];
     teams: Team[];
 };
 
-export namespace Related {
-    export function fromRaw(raw: RelatedRaw): Related {
-        const players: Player[] =
-            raw.players?.map((slug) => allPlayers.get(slug)!) ?? [];
-        const teams: Team[] = raw.teams?.map((slug) => allTeams.get(slug)!) ?? [];
-        const events: CSEvent[] =
-            raw.events?.map((slug) => allCSEvents.get(slug)!) ?? [];
-        return {
-            players: players,
-            events: events,
-            teams: teams,
-        };
-    }
+export function relatedFromRaw(raw: RelatedRaw): Related {
+    const players: Player[] =
+        raw.players?.map((slug) => allPlayers.get(slug)!) ?? [];
+    const teams: Team[] = raw.teams?.map((slug) => allTeams.get(slug)!) ?? [];
+    const events: Oevent[] =
+        raw.events?.map((slug) => allOevents.get(slug)!) ?? [];
+    return { players, events, teams };
 }

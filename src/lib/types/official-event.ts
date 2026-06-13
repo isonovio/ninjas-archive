@@ -1,69 +1,80 @@
-import { type DateRangeRaw, DateRange } from "./daterange";
+import {
+    type Daterange,
+    type DaterangeRaw,
+    daterangeFromRaw,
+} from "./daterange";
 import { type ExternalLink } from "./externlink";
-import { type LineupShorthandRaw, Lineup } from "./official-lineup";
-import { type BracketRaw, Bracket } from "./official-bracket";
-import { type Match, type MatchContext, type MatchTag } from "./official-match";
+import {
+    type LineupShorthand,
+    processLineupShorthand,
+} from "./official-lineup";
+import { type ObracketRaw, obracketFromRaw } from "./official-bracket";
+import {
+    type Omatch,
+    type OmatchTag,
+    type OmatchContext,
+} from "./official-match";
 
-type CSEventRaw = {
+type OeventRaw = {
     slug: string;
     name: string;
-    duration: DateRangeRaw;
+    duration: DaterangeRaw;
     links?: ExternalLink[];
-    tags?: MatchTag[];
-    participants?: LineupShorthandRaw[];
-    brackets: BracketRaw[];
+    tags?: OmatchTag[];
+    participants?: LineupShorthand[];
+    brackets: ObracketRaw[];
     note?: string;
 };
 
-const csEventsBlob = import.meta.glob<CSEventRaw>("$data/**/events/*.json", {
+const oeventBlob = import.meta.glob<OeventRaw>("$data/**/events/*.json", {
     eager: true,
 });
 
-const csEventsRaw = Object.values(csEventsBlob) satisfies CSEventRaw[];
+const oeventsRaw = Object.values(oeventBlob) satisfies OeventRaw[];
 
-export type CSEvent = {
+export type Oevent = {
     slug: string;
     name: string;
-    duration: DateRange;
+    duration: Daterange;
     links: ExternalLink[];
     note?: string;
 };
 
-function processRawCSEvent(raw: CSEventRaw): [CSEvent, Match[]] {
+function processOeventRaw(raw: OeventRaw): [Oevent, Omatch[]] {
     const event = {
         slug: raw.slug,
         name: raw.name,
-        duration: DateRange.fromRaw(raw.duration),
+        duration: daterangeFromRaw(raw.duration),
         links: raw.links ?? [],
         note: raw.note,
     };
 
-    const ctx: MatchContext = {
+    const ctx: OmatchContext = {
         event,
         brackets: [],
         tags: new Set(raw.tags ?? []),
         lineupShorthands: new Map(
-            (raw.participants ?? []).map(Lineup.shorthandFromRaw),
+            (raw.participants ?? []).map(processLineupShorthand),
         ),
     };
 
     const matches = raw.brackets
-        .map((bracket) => Bracket.fromRaw(bracket, ctx))
+        .map((b) => obracketFromRaw(b, ctx))
         .map(([_, ms]) => ms)
         .flat();
 
     return [event, matches];
 }
 
-export const [allCSEvents, allMatches]: [
-    ReadonlyMap<string, CSEvent>,
-    Match[],
+export const [allOevents, allOmatches]: [
+    ReadonlyMap<string, Oevent>,
+    Omatch[],
 ] = (() => {
-    const csEvents: Map<string, CSEvent> = new Map();
-    const allMatches: Match[] = [];
+    const csEvents: Map<string, Oevent> = new Map();
+    const allMatches: Omatch[] = [];
 
-    csEventsRaw.forEach((raw) => {
-        const [csEvent, matches] = processRawCSEvent(raw);
+    oeventsRaw.forEach((raw) => {
+        const [csEvent, matches] = processOeventRaw(raw);
         csEvents.set(csEvent.slug, csEvent);
         allMatches.push(...matches);
     });

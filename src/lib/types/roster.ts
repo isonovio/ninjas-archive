@@ -1,25 +1,29 @@
-import { type DateRangeRaw, DateRange } from "./daterange";
-import { allPlayers, type Player } from "./player";
+import {
+    type Daterange,
+    type DaterangeRaw,
+    daterangeFromRaw,
+} from "./daterange";
+import { type Player, allPlayers } from "./player";
 import { allTeams, type Team } from "./team";
 
 type RosterRaw = {
     slug: string;
     team: string;
     players: string[];
-    duration?: DateRangeRaw;
+    duration?: DaterangeRaw;
 };
 
-const rostersBlob = import.meta.glob<RosterRaw>("$data/**/rosters/*.json", {
+const rosterBlob = import.meta.glob<RosterRaw>("$data/**/rosters/*.json", {
     eager: true,
 });
 
-const rostersRaw = Object.values(rostersBlob) satisfies RosterRaw[];
+const rostersRaw = Object.values(rosterBlob) satisfies RosterRaw[];
 
 export type Roster = {
     slug: string;
     team: Team;
     players: Player[];
-    duration?: DateRange;
+    duration?: Daterange;
 };
 
 export const allRosters: ReadonlyMap<string, Roster> = Object.values(rostersRaw)
@@ -27,8 +31,8 @@ export const allRosters: ReadonlyMap<string, Roster> = Object.values(rostersRaw)
         return {
             ...v,
             team: allTeams.get(v.team)!,
-            players: v.players.map((player) => allPlayers.get(player)!),
-            duration: v.duration ? DateRange.fromRaw(v.duration) : undefined,
+            players: v.players.map((slug) => allPlayers.get(slug)!),
+            duration: v.duration ? daterangeFromRaw(v.duration) : undefined,
         };
     })
     .reduce((map, roster) => {

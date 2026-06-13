@@ -1,17 +1,15 @@
 import { Temporal } from "$lib/utils/temporal";
 
-export type DateRangeRaw = {
+export type DaterangeRaw = {
     start: string;
     end: string;
 };
 
-export type DateRange = [Temporal.PlainDate, Temporal.PlainDate];
+export type Daterange = [Temporal.PlainDate, Temporal.PlainDate];
 
-export namespace DateRange {
-    export function fromRaw(raw: DateRangeRaw): DateRange {
-        return [
-            Temporal.PlainDate.from(raw.start),
-            Temporal.PlainDate.from(raw.end),
-        ];
-    }
+export function daterangeFromRaw(raw: DaterangeRaw): Daterange {
+    return [
+        Temporal.PlainDate.from(raw.start),
+        Temporal.PlainDate.from(raw.end),
+    ];
 }

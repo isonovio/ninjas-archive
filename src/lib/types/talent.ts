@@ -1,4 +1,3 @@
-import { Temporal } from "$lib/utils/temporal";
 import { type ExternalLink } from "./externlink";
 
 type TalentRaw = {

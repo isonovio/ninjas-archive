@@ -1,5 +1,5 @@
 import { type ExternalLink } from "./externlink";
-import { TimeRange } from "./timerange";
+import { timerangeFromString, type Timerange } from "./timerange";
 
 export type VideoRaw = {
     link: ExternalLink;
@@ -8,18 +8,16 @@ export type VideoRaw = {
 
 export type Video = {
     link: ExternalLink;
-    duration: TimeRange;
+    duration: Timerange;
 };
 
-export namespace Video {
-    export function fromRaw(raw: VideoRaw): Video {
-        const duration = TimeRange.fromString(raw.duration);
-        const url = urlToTimed(raw.link.url, duration[0]);
-        return {
-            link: { ...raw.link, url: url },
-            duration: duration,
-        };
-    }
+export function videoFromRaw(raw: VideoRaw): Video {
+    const duration = timerangeFromString(raw.duration);
+    const url = urlToTimed(raw.link.url, duration[0]);
+    return {
+        link: { ...raw.link, url: url },
+        duration: duration,
+    };
 }
 
 function urlToTimed(url: string, start: number): string {

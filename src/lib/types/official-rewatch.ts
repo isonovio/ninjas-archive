@@ -1,7 +1,7 @@
 import { type Talent, allTalents } from "./talent";
-import { type VideoRaw, Video } from "./video";
+import { type Video, type VideoRaw, videoFromRaw } from "./video";
 
-export type RewatchTag = "official" | "incomplete";
+type RewatchTag = "official" | "incomplete";
 
 export type RewatchRaw = {
     casters: string[];
@@ -17,17 +17,15 @@ export type Rewatch = {
     tags: RewatchTag[];
 };
 
-export namespace Rewatch {
-    export function fromRaw(raw: RewatchRaw): Rewatch {
-        const casters = raw.casters.map((caster) => allTalents.get(caster)!);
-        const parts = raw.parts.map((part) => Video.fromRaw(part));
-        const tags =
-            raw.tags?.map((tag) => tag as RewatchTag satisfies RewatchTag) || [];
-        return {
-            casters,
-            language: raw.language,
-            parts,
-            tags,
-        };
-    }
+export function rewatchFromRaw(raw: RewatchRaw): Rewatch {
+    const casters = raw.casters.map((caster) => allTalents.get(caster)!);
+    const parts = raw.parts.map(videoFromRaw);
+    const tags =
+        raw.tags?.map((tag) => tag as RewatchTag satisfies RewatchTag) || [];
+    return {
+        casters,
+        language: raw.language,
+        parts,
+        tags,
+    };
 }

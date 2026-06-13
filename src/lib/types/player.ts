@@ -11,13 +11,13 @@ type PlayerRaw = {
     links?: ExternalLink[];
 };
 
-const playersBlob = import.meta.glob<PlayerRaw>("$data/**/players/*.json", {
+const playerBlob = import.meta.glob<PlayerRaw>("$data/**/players/*.json", {
     eager: true,
 });
 
-const playersRaw = Object.values(playersBlob) satisfies PlayerRaw[];
+const playersRaw = Object.values(playerBlob) satisfies PlayerRaw[];
 
-export type PlayerTag = "twin" | "ninja";
+type PlayerTag = "twin" | "ninja";
 
 export type Player = {
     slug: string;
@@ -45,8 +45,6 @@ export const allPlayers: ReadonlyMap<string, Player> = new Map(
     playersRaw.map((raw) => [raw.slug, playerFromRaw(raw)]),
 );
 
-export namespace Player {
-    export function compare(a: Player, b: Player): number {
-        return a.slug.localeCompare(b.slug);
-    }
+export function comparePlayer(a: Player, b: Player): number {
+    return a.slug.localeCompare(b.slug);
 }
