@@ -231,8 +231,32 @@
                             "lineups": { "team1": { "name": "Australia Women" }, "team2": { "shorthand": "nlw" } },
                             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366413/australia-fe-vs-netherlands-fe-iesf-women-world-championship-2023" }],
                             "maps": [
-                                { "id": 1, "map": "inf", "result": "7:16" },
-                                { "id": 2, "map": "anb", "result": "11:16" }
+                                {
+                                    "id": 1,
+                                    "map": "inf",
+                                    "result": "7:16",
+                                    "rewatches": [
+                                        {
+                                            "language": "en",
+                                            "casters": ["bdog", "lucyluce"],
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/s5DcKW3mvII" }, "duration": "04:16:59-05:03:00" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "anb",
+                                    "result": "11:16",
+                                    "rewatches": [
+                                        {
+                                            "language": "en",
+                                            "casters": ["bdog", "lucyluce"],
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/s5DcKW3mvII" }, "duration": "05:17:03-06:06:32" }]
+                                        }
+                                    ]
+                                }
                             ]
                         },
                         {
@@ -242,9 +266,48 @@
                             "lineups": { "team1": { "name": "Argentina Women" }, "team2": { "shorthand": "nlw" } },
                             "links": [{ "name": "HLTV", "url": "https://www.hltv.org/matches/2366415/argentina-fe-vs-netherlands-fe-iesf-women-world-championship-2023" }],
                             "maps": [
-                                { "id": 1, "map": "mrg", "result": "19:17" },
-                                { "id": 2, "map": "ovp", "result": "6:16" },
-                                { "id": 2, "map": "inf", "result": "14:16" }
+                                {
+                                    "id": 1,
+                                    "map": "mrg",
+                                    "result": "19:17",
+                                    "rewatches": [
+                                        {
+                                            "language": "en",
+                                            "casters": ["bdog", "lucyluce"],
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/UGax2Kenimc" }, "duration": "03:46:55-04:51:42" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "ovp",
+                                    "result": "6:16",
+                                    "rewatches": [
+                                        {
+                                            "language": "en",
+                                            "casters": ["bdog", "lucyluce"],
+                                            "tags": ["official"],
+                                            "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/UGax2Kenimc" }, "duration": "05:02:52-05:53:09" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "map": "inf",
+                                    "result": "14:16",
+                                    "rewatches": [
+                                        {
+                                            "language": "en",
+                                            "casters": ["bdog", "lucyluce"],
+                                            "tags": ["official"],
+                                            "parts": [
+                                                { "link": { "name": "Game", "url": "https://youtu.be/UGax2Kenimc" }, "duration": "06:05:51-07:10:21" },
+                                                { "link": { "name": "Interview", "url": "https://youtu.be/UGax2Kenimc" }, "duration": "07:17:17-07:19:42" }
+                                            ]
+                                        }
+                                    ]
+                                }
                             ]
                         },
                         {
@@ -273,7 +336,7 @@
                                 {
                                     "id": 2,
                                     "map": "ovp",
-                                    "result": "16:1",
+                                    "result": "16:6",
                                     "rewatches": [
                                         {
                                             "language": "en",
