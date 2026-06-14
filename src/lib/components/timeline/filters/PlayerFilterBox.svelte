@@ -14,11 +14,15 @@
 
     const candidates = $derived([...new Set(timeline.flatMap((i) => i.related.players))].toSorted(comparePlayer));
 
-    function togglePlayer(playerSlug: string): void {
-        if (queryPlayerFilter(params, playerSlug)) {
-            params.delete("player", playerSlug);
-        } else {
+    function cyclePlayer(playerSlug: string): void {
+        const state = queryPlayerFilter(params, playerSlug);
+        if (state === "none") {
             params.append("player", playerSlug);
+        } else if (state === "yes") {
+            params.delete("player", playerSlug);
+            params.append("player-not", playerSlug);
+        } else {
+            params.delete("player-not", playerSlug);
         }
         onUpdate();
     }
@@ -27,7 +31,7 @@
 {#if candidates.length > 1}
     <FilterBox label="Players">
         {#each candidates as player}
-            <FilterItem active={queryPlayerFilter(params, player.slug)} onclick={() => togglePlayer(player.slug)}>
+            <FilterItem state={queryPlayerFilter(params, player.slug)} onclick={() => cyclePlayer(player.slug)}>
                 {player.nickname}
             </FilterItem>
         {/each}

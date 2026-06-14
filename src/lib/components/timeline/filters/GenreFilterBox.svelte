@@ -14,11 +14,15 @@
 
     const candidates = $derived([...new Set(timeline.map((i) => i.genre))].toSorted(compareGenre));
 
-    function toggleGenre(genre: Genre): void {
-        if (queryGenreFilter(params, genre)) {
-            params.delete("genre", genre);
-        } else {
+    function cycleGenre(genre: Genre): void {
+        const state = queryGenreFilter(params, genre);
+        if (state === "none") {
             params.append("genre", genre);
+        } else if (state === "yes") {
+            params.delete("genre", genre);
+            params.append("genre-not", genre);
+        } else {
+            params.delete("genre-not", genre);
         }
         onUpdate();
     }
@@ -27,7 +31,7 @@
 {#if candidates.length > 1}
     <FilterBox label="Genres">
         {#each candidates as genre}
-            <FilterItem active={queryGenreFilter(params, genre)} onclick={() => toggleGenre(genre)}>
+            <FilterItem state={queryGenreFilter(params, genre)} onclick={() => cycleGenre(genre)}>
                 {displayGenre(genre)}
             </FilterItem>
         {/each}

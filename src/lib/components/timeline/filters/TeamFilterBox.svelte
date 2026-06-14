@@ -14,11 +14,15 @@
 
     const candidates = $derived([...new Set(timeline.flatMap((i) => i.related.teams))].toSorted(compareTeam));
 
-    function toggleTeam(teamSlug: string): void {
-        if (queryTeamFilter(params, teamSlug)) {
-            params.delete("team", teamSlug);
-        } else {
+    function cycleTeam(teamSlug: string): void {
+        const state = queryTeamFilter(params, teamSlug);
+        if (state === "none") {
             params.append("team", teamSlug);
+        } else if (state === "yes") {
+            params.delete("team", teamSlug);
+            params.append("team-not", teamSlug);
+        } else {
+            params.delete("team-not", teamSlug);
         }
         onUpdate();
     }
@@ -27,7 +31,7 @@
 {#if candidates.length > 1}
     <FilterBox label="Teams">
         {#each candidates as team}
-            <FilterItem active={queryTeamFilter(params, team.slug)} onclick={() => toggleTeam(team.slug)}>
+            <FilterItem state={queryTeamFilter(params, team.slug)} onclick={() => cycleTeam(team.slug)}>
                 {team.name}
             </FilterItem>
         {/each}

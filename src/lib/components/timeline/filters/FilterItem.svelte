@@ -1,15 +1,16 @@
 <script lang="ts">
     import type { Snippet } from "svelte";
+    import type { FilterState } from "$lib/types/timeline-filter";
 
     interface Props {
-        active: boolean;
+        state: FilterState;
         onclick: () => void;
         children: Snippet;
     }
-    let { active, onclick, children }: Props = $props();
+    let { state, onclick, children }: Props = $props();
 </script>
 
-<button class="filter" class:filter-on={active} {onclick}>
+<button class="filter" class:filter-yes={state === "yes"} class:filter-no={state === "no"} {onclick}>
     {@render children()}
 </button>
 
@@ -24,12 +25,20 @@
             @apply border-green-700 text-green-700 font-semibold font-sc;
         }
     }
-    button.filter-on {
+    button.filter-yes {
         & {
             @apply border-green-700 text-green-700 font-semibold font-sc;
         }
         &:hover {
-            @apply border-gray-200 text-gray-400 font-normal font-no-sc;
+            @apply border-red-600 text-red-600 font-semibold font-sc line-through;
+        }
+    }
+    button.filter-no {
+        & {
+            @apply border-red-600 text-red-600 font-semibold font-sc line-through;
+        }
+        &:hover {
+            @apply border-gray-200 text-gray-400 font-normal font-no-sc no-underline;
         }
     }
 </style>

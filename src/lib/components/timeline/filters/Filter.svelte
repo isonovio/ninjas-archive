@@ -16,8 +16,11 @@
 
     function clearFilter(): void {
         params.delete("genre");
+        params.delete("genre-not");
         params.delete("player");
+        params.delete("player-not");
         params.delete("team");
+        params.delete("team-not");
         params.delete("from");
         params.delete("to");
         onUpdate();

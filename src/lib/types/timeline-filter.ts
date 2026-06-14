@@ -83,19 +83,23 @@ export function applyFilter(entries: Entry[], filter: EntryFilter): Entry[] {
 export function filterFromParams(params: URLSearchParams): EntryFilter {
     const genres = params
         .getAll("genre")
-        .map((g) => g as Genre)
-        .map((genre) => new GenreFilter(genre));
+        .map((genre) => new GenreFilter(genre as Genre));
     const genreFilter = new OrFilter(genres);
+    const notGenres = params
+        .getAll("genre-not")
+        .map((genre) => new NotFilter(new GenreFilter(genre as Genre)));
     const players = params
         .getAll("player")
-        .map((p) => p as string)
-        .map((playerSlug) => new PlayerFilter(playerSlug));
+        .map((slug) => new PlayerFilter(slug));
     const playerFilter = new OrFilter(players);
-    const teams = params
-        .getAll("team")
-        .map((t) => t as string)
-        .map((teamSlug) => new TeamFilter(teamSlug));
+    const notPlayers = params
+        .getAll("player-not")
+        .map((slug) => new NotFilter(new PlayerFilter(slug)));
+    const teams = params.getAll("team").map((slug) => new TeamFilter(slug));
     const teamFilter = new OrFilter(teams);
+    const notTeams = params
+        .getAll("team-not")
+        .map((slug) => new NotFilter(new TeamFilter(slug)));
     const from = params.get("from");
     const fromDateFilter = from
         ? new DateFromFilter(Temporal.PlainDate.from(from))
@@ -106,33 +110,44 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
         : undefined;
     const filters = [
         genreFilter,
+        ...notGenres,
         playerFilter,
+        ...notPlayers,
         teamFilter,
+        ...notTeams,
         fromDateFilter,
         toDateFilter,
     ].filter((f) => f !== undefined);
     return new AndFilter(filters);
 }
 
+export type FilterState = "none" | "yes" | "no";
+
 export function queryGenreFilter(
     params: URLSearchParams,
     genre: Genre,
-): boolean {
-    return params.getAll("genre").includes(genre);
+): FilterState {
+    if (params.getAll("genre").includes(genre)) return "yes";
+    if (params.getAll("genre-not").includes(genre)) return "no";
+    return "none";
 }
 
 export function queryPlayerFilter(
     params: URLSearchParams,
     playerSlug: string,
-): boolean {
-    return params.getAll("player").includes(playerSlug);
+): FilterState {
+    if (params.getAll("player").includes(playerSlug)) return "yes";
+    if (params.getAll("player-not").includes(playerSlug)) return "no";
+    return "none";
 }
 
 export function queryTeamFilter(
     params: URLSearchParams,
     teamSlug: string,
-): boolean {
-    return params.getAll("team").includes(teamSlug);
+): FilterState {
+    if (params.getAll("team").includes(teamSlug)) return "yes";
+    if (params.getAll("team-not").includes(teamSlug)) return "no";
+    return "none";
 }
 
 export function queryFromDateFilter(params: URLSearchParams): boolean {
