@@ -4,7 +4,7 @@
     const navs: [string, string][] = [["/credits/", "Credits"]];
 </script>
 
-<footer class="px-20 py-10 flex justify-between">
+<footer class="border-t border-gray-200 px-20 pb-8 pt-4 flex justify-between">
     <div class="flex gap-10">
         <div>Ninjas Archive © {currentYear}</div>
         <div>Crafted by WYND with ♥︎</div>
