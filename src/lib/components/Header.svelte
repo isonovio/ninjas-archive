@@ -10,8 +10,8 @@
     ];
 </script>
 
-<header>
-    <nav>
+<header class="px-4 py-3 flex justify-between">
+    <nav class="flex gap-8">
         <a href="/" class="home"> Ninjas Archive </a>
         {#each navs as [route, title]}
             {#if currentPath === route}
@@ -27,15 +27,6 @@
 
 <style lang="postcss">
     @reference "$lib/styles/global.css";
-
-    header {
-        @apply px-4 py-3;
-        @apply flex justify-between;
-    }
-
-    nav {
-        @apply flex gap-8;
-    }
 
     a {
         @apply text-nowrap text-2xl font-medium font-sc text-prim-500;
