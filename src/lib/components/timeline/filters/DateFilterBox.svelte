@@ -58,11 +58,11 @@
     <form onsubmit={submitDateFilter}>
         <div class="mt-1 mx-2">
             <label for="from" class="inline-block w-11 border-l-4 border-white pl-1 leading-none text-sm" class:filter-on={queryFromDateFilter(params)}>from: </label>
-            <input id="from" placeholder="yyyy-mm-dd" bind:value={fromDateInput} class="inline-block w-20 border-b border-dashed px-1 leading-none text-sm" />
+            <input id="from" placeholder="yyyy-mm-dd" bind:value={fromDateInput} class="inline-block w-24 border-b border-dashed px-1 leading-none text-sm" />
         </div>
         <div class="mb-1 mx-2">
             <label for="to" class="inline-block w-11 border-l-4 border-white pl-1 leading-none text-sm" class:filter-on={queryToDateFilter(params)}>to: </label>
-            <input id="to" placeholder="yyyy-mm-dd" bind:value={toDateInput} class="inline-block w-20 border-b border-dashed px-1 leading-none text-sm" />
+            <input id="to" placeholder="yyyy-mm-dd" bind:value={toDateInput} class="inline-block w-24 border-b border-dashed px-1 leading-none text-sm" />
         </div>
         {#if dateInputError != ""}
             <div class="text-red-500">

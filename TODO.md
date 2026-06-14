@@ -1,8 +1,6 @@
 ## short-term
 - `Omatch` can own `OmatchNewspiece[]`
 - Code
-    - [ ] inside each module, use simplistic names instead of flatnames
-    - [ ] rename `official-` types to `OfficialEvent`, `OfficialBracket`, etc.
     - [ ] rename: `record`, `record-genre`, `record-filter`; `timeline` = `record` grouped by `date`
     - [ ] replace `Raw` types with `zod` schemas for runtime validation
     - [ ] extract as many reusable components as possible, avoid code duplication
@@ -14,45 +12,31 @@
     - [ ] ParamFilter
     - [ ] add hover texts to clickables
     - [ ] `h1` title of each page
-    - [ ] MAYBE: exact time of timeline entries
     - [ ] Links: add svg icons based on the domain
 - Data
-    - [ ] Event rework: decouple brackets from matches. Events own matches and brackets directly. Brackets refer to matches by slug.
     - [ ] Roster rework: all rosters of the same core should be in the same data file; change of player/team = new roster.
 - Filter
     - [ ] UI: in player filter section, add links to specific pages of the player
     - [ ] UI: allow search in player filter sections | `searchterm.tolowercase`, show player name if slug.substring(searchterm) or player is in filter
     - [ ] UI: 1st click include (style: green), 2nd click exclude (style: red + strikethrough)
-    - [ ] feat: player filter: can be ANY mode or OR mode
-    - [ ] feat: more filter dimensions: team, event, talent
-    - [ ] UI: each filter box is default collapsed. non-selectedoptions are only shown when hovered
+    - [ ] feat: player filter: can be ANY mode or ALL mode
+    - [ ] feat: more filter dimensions: event
+    - [ ] UI: each filter box is default collapsed. non-selected options are only shown when hovered
     - [ ] feat: add button on `from` and `to` in `Date` filter
     - [ ] feat: separate `from` and `to` logic
     - [ ] MAYBE: remove confirm button, add text: `press enter to confirm`
     - [ ] feat: sanitize params
+    - [ ] feat: advanced search with customize query language
 - Search
     - [ ] add a search section above filter section
     - [ ] add a `search_name" field to every timeline item to allow text-based searching
     - [ ] filter: item => streamterm.toWords.map(toLower).all(isSubstring of item.search_name)
 - Content
-    - [ ] Why? Page
-    - [ ] Credits Page
-    - [ ] Vlogs/YouTube Videos (including montages) as a Genre in Timeline | color-code: rosy red
-    - [ ] Streams as a Genre in Timeline | color-code: purple
     - [ ] Event Pages
-    - [ ] Add a team type independent of roster
-    - [ ] Editorial Page: Articles Written by me
-    - [ ] `wynd` mode: show something related to me only
-- Editor UI
-    - [ ] on `/event/[slug]`: a button to open an event data editor, can output json to clipboard
 
 ## long-term
+### UI
 - Summary Mode: can show more items on the timeline
-- Dynamic UI
-    - Filter/Search sidebar only show in full when hovered 
-- Narrow-Screen UI
-- Advanced Searching/Filtering: Allows complex logic AND and OR
+- Editor UI: on `/event/[slug]`: a button to open an event data editor, can output json to clipboard
 - structured timeline: date -> genre -> (if genre == match) event -> item
-- `involves` takes not only `player`s but everything that inherits `entity`, including matches, events, teams, etc. 
-    - Make filterable but date something of involves. A match involves its event, but not an independent event field
 - Chat spam generator
