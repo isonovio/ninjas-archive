@@ -24,6 +24,10 @@
     function refreshParams(): void {
         goto(`?${params.toString()}`, { noScroll: true, keepFocus: true });
     }
+
+    const recordCount = $derived(filteredTimeline.length);
+    const matchCount = $derived(filteredTimeline.filter((record) => record.genre == "match").length);
+    const newspieceCount = $derived(filteredTimeline.filter((record) => record.genre == "newspiece").length);
 </script>
 
 <div class="h-full w-7xl mx-auto flex gap-4">
@@ -32,9 +36,15 @@
     </div>
 
     <div class="h-full overflow-y-auto pt-6 pl-6 flex-1 flex flex-col gap-4">
-        {#if sortedTimeline.length === 0}
+        {#if recordCount === 0}
             <div class="text-5xl text-yellow-900 font-sc font-bold">History has not witnessed anything yet.</div>
         {:else}
+            {#if matchCount > 0}
+                {matchCount} matches.
+            {/if}
+            {#if newspieceCount > 0}
+                {newspieceCount} newspieces.
+            {/if}
             {#each sortedTimeline as dailyTimeline}
                 <div class="relative border-t-2 border-l-2">
                     <div class="absolute -top-5.5 -left-6 p-2 bg-white font-bold text-base text-yellow-900">
