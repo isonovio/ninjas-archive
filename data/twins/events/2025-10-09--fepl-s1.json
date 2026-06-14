@@ -310,6 +310,7 @@
                                                 {
                                                     "language": "en",
                                                     "casters": ["affinity"],
+                                                    "tags": ["incomplete"],
                                                     "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/8dTQUfdcfrs" }, "duration": "00:29:20-01:37:59" }]
                                                 }
                                             ]
@@ -335,7 +336,7 @@
                                                     "casters": ["affinity"],
                                                     "parts": [
                                                         { "link": { "name": "Part 1", "url": "https://youtu.be/8dTQUfdcfrs" }, "duration": "01:37:59-01:45:52" },
-                                                        { "link": { "name": "Part 2", "url": "https://youtu.be/8dTQUfdcfrs" }, "duration": "00:00:00-00:35:14" }
+                                                        { "link": { "name": "Part 2", "url": "https://youtu.be/dhnwjEUt8sw" }, "duration": "00:00:00-00:35:14" }
                                                     ]
                                                 }
                                             ]
