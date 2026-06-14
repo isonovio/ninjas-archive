@@ -202,8 +202,32 @@
                                     "date": "2023-08-29",
                                     "lineups": { "team1": { "shorthand": "nlw" }, "team2": { "name": "USA Women" } },
                                     "maps": [
-                                        { "id": 1, "map": "inf", "result": "16:12" },
-                                        { "id": 2, "map": "nuke", "result": "16:12" }
+                                        {
+                                            "id": 1,
+                                            "map": "inf",
+                                            "result": "16:12",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["bdog", "lucyluce"],
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/oagM6ktBUhI" }, "duration": "00:19:15-01:26:43" }]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": 2,
+                                            "map": "nuke",
+                                            "result": "16:12",
+                                            "rewatches": [
+                                                {
+                                                    "language": "en",
+                                                    "casters": ["bdog", "lucyluce"],
+                                                    "tags": ["official"],
+                                                    "parts": [{ "link": { "name": "YouTube", "url": "https://youtu.be/oagM6ktBUhI" }, "duration": "01:36:43-02:33:05" }]
+                                                }
+                                            ]
+                                        }
                                     ]
                                 },
                                 {
