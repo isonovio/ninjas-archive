@@ -1,5 +1,6 @@
 <script lang="ts" generics="Candidate">
     import type { FilterState } from "$lib/types/timeline-filter";
+    import { suppressAfterClick } from "$lib/actions/suppressAfterClick";
 
     interface Props {
         candidates: Candidate[];
@@ -18,7 +19,7 @@
     </div>
     {#each candidates as candidate}
         {@const state = getState(candidate)}
-        <button class="filter" class:hidden={compact} class:filter-yes={state === "yes"} class:filter-no={state === "no"} onclick={getHandler(candidate)}>
+        <button use:suppressAfterClick class="filter" class:hidden={compact} class:filter-yes={state === "yes"} class:filter-no={state === "no"} onclick={getHandler(candidate)}>
             {display(candidate)}
         </button>
     {/each}
