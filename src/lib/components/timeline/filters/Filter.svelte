@@ -18,20 +18,20 @@
     const hasFilter = $derived(params.size > 0);
 
     function clearFilter(): void {
+        params.delete("from");
+        params.delete("to");
+        params.delete("year");
+        params.delete("year-not");
         params.delete("genre");
         params.delete("genre-not");
         params.delete("match-tag");
         params.delete("match-tag-not");
-        params.delete("player");
-        params.delete("player-not");
         params.delete("team");
         params.delete("team-not");
+        params.delete("player");
+        params.delete("player-not");
         params.delete("oevent");
         params.delete("oevent-not");
-        params.delete("year");
-        params.delete("year-not");
-        params.delete("from");
-        params.delete("to");
         onUpdate();
     }
 </script>

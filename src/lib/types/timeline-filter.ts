@@ -106,6 +106,21 @@ export function applyFilter(entries: Entry[], filter: EntryFilter): Entry[] {
 }
 
 export function filterFromParams(params: URLSearchParams): EntryFilter {
+    const from = params.get("from");
+    const fromDateFilter = from
+        ? new DateFromFilter(Temporal.PlainDate.from(from))
+        : undefined;
+    const to = params.get("to");
+    const toDateFilter = to
+        ? new DateToFilter(Temporal.PlainDate.from(to))
+        : undefined;
+    const years = params
+        .getAll("year")
+        .map((y) => new YearFilter(Number(y)));
+    const yearFilter = new OrFilter(years);
+    const notYears = params
+        .getAll("year-not")
+        .map((y) => new NotFilter(new YearFilter(Number(y))));
     const genres = params
         .getAll("genre")
         .map((genre) => new GenreFilter(genre as Genre));
@@ -120,6 +135,11 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const notMatchTags = params
         .getAll("match-tag-not")
         .map((tag) => new NotFilter(new OmatchTagFilter(tag as OmatchTag)));
+    const teams = params.getAll("team").map((slug) => new TeamFilter(slug));
+    const teamFilter = new OrFilter(teams);
+    const notTeams = params
+        .getAll("team-not")
+        .map((slug) => new NotFilter(new TeamFilter(slug)));
     const players = params
         .getAll("player")
         .map((slug) => new PlayerFilter(slug));
@@ -127,18 +147,6 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const notPlayers = params
         .getAll("player-not")
         .map((slug) => new NotFilter(new PlayerFilter(slug)));
-    const teams = params.getAll("team").map((slug) => new TeamFilter(slug));
-    const teamFilter = new OrFilter(teams);
-    const notTeams = params
-        .getAll("team-not")
-        .map((slug) => new NotFilter(new TeamFilter(slug)));
-    const years = params
-        .getAll("year")
-        .map((y) => new YearFilter(Number(y)));
-    const yearFilter = new OrFilter(years);
-    const notYears = params
-        .getAll("year-not")
-        .map((y) => new NotFilter(new YearFilter(Number(y))));
     const oevents = params
         .getAll("oevent")
         .map((slug) => new OeventFilter(slug));
@@ -146,29 +154,21 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const notOevents = params
         .getAll("oevent-not")
         .map((slug) => new NotFilter(new OeventFilter(slug)));
-    const from = params.get("from");
-    const fromDateFilter = from
-        ? new DateFromFilter(Temporal.PlainDate.from(from))
-        : undefined;
-    const to = params.get("to");
-    const toDateFilter = to
-        ? new DateToFilter(Temporal.PlainDate.from(to))
-        : undefined;
     const filters = [
+        fromDateFilter,
+        toDateFilter,
+        yearFilter,
+        ...notYears,
         genreFilter,
         ...notGenres,
         matchTagFilter,
         ...notMatchTags,
-        yearFilter,
-        ...notYears,
         teamFilter,
         ...notTeams,
         playerFilter,
         ...notPlayers,
         oeventFilter,
         ...notOevents,
-        fromDateFilter,
-        toDateFilter,
     ].filter((f) => f !== undefined);
     return new AndFilter(filters);
 }
