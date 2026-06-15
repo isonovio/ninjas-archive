@@ -3,7 +3,8 @@
     import LinkExternal from "$lib/components/timeline/links/LinkExternal.svelte";
     import StreamingSVG from "$lib/assets/streaming.svelte";
 
-    export let rewatch: Rewatch;
+    interface Props { rewatch: Rewatch }
+    let { rewatch }: Props = $props();
 </script>
 
 <div class="text-nowrap text-pink-800 flex gap-1">

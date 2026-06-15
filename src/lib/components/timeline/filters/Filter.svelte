@@ -1,13 +1,13 @@
 <script lang="ts">
     import { type Entry } from "$lib/types/timeline";
-    import DateFilterBox from "./DateFilterBox.svelte";
-    import YearFilterBox from "./YearFilterBox.svelte";
-    import GenreFilterBox from "./GenreFilterBox.svelte";
-    import OmatchTagFilterBox from "./OmatchTagFilterBox.svelte";
-    import PlayerFilterBox from "./PlayerFilterBox.svelte";
-    import TeamFilterBox from "./TeamFilterBox.svelte";
-    import OeventFilterBox from "./OeventFilterBox.svelte";
+    import { Genre, compareGenre, displayGenre } from "$lib/types/timeline-genre";
+    import { type Omatch, type OmatchTag, displayOmatchTag } from "$lib/types/official-match";
+    import { compareTeam } from "$lib/types/team";
+    import { comparePlayer } from "$lib/types/player";
+    import { compareOevent } from "$lib/types/official-event";
     import { hasFilter, clearFilter } from "$lib/types/timeline-filter";
+    import DateFilterBox from "./DateFilterBox.svelte";
+    import CycleFilterBox from "./CycleFilterBox.svelte";
 
     interface Props {
         params: URLSearchParams;
@@ -32,10 +32,66 @@
         {/if}
     </div>
     <DateFilterBox {params} {onUpdate} />
-    <YearFilterBox {params} {timeline} {onUpdate} />
-    <GenreFilterBox {params} {timeline} {onUpdate} />
-    <OmatchTagFilterBox {params} {timeline} {onUpdate} />
-    <TeamFilterBox {params} {timeline} {onUpdate} />
-    <PlayerFilterBox {params} {timeline} {onUpdate} />
-    <OeventFilterBox {params} {timeline} {onUpdate} />
+    <CycleFilterBox
+        label="Year"
+        {params}
+        {timeline}
+        {onUpdate}
+        paramKey="year"
+        getCandidates={(tl) => [...new Set(tl.map((i) => i.date.year))].toSorted((a, b) => b - a)}
+        toParamValue={String}
+        display={String}
+    />
+    <CycleFilterBox
+        label="Genres"
+        {params}
+        {timeline}
+        {onUpdate}
+        paramKey="genre"
+        getCandidates={(tl) => [...new Set(tl.map((i) => i.genre))].toSorted(compareGenre)}
+        toParamValue={(genre) => genre}
+        display={displayGenre}
+        compact={false}
+    />
+    <CycleFilterBox
+        label="Match Types"
+        {params}
+        {timeline}
+        {onUpdate}
+        paramKey="match-tag"
+        getCandidates={(tl) => [...new Set(tl.filter((i): i is Omatch => i.genre === Genre.MATCH).flatMap((i) => [...i.tags]))].toSorted()}
+        toParamValue={(tag) => tag}
+        display={displayOmatchTag}
+        compact={false}
+    />
+    <CycleFilterBox
+        label="Teams"
+        {params}
+        {timeline}
+        {onUpdate}
+        paramKey="team"
+        getCandidates={(tl) => [...new Set(tl.flatMap((i) => i.related.teams))].toSorted(compareTeam)}
+        toParamValue={(team) => team.slug}
+        display={(team) => team.name}
+    />
+    <CycleFilterBox
+        label="Players"
+        {params}
+        {timeline}
+        {onUpdate}
+        paramKey="player"
+        getCandidates={(tl) => [...new Set(tl.flatMap((i) => i.related.players))].toSorted(comparePlayer)}
+        toParamValue={(player) => player.slug}
+        display={(player) => player.nickname}
+    />
+    <CycleFilterBox
+        label="Events"
+        {params}
+        {timeline}
+        {onUpdate}
+        paramKey="oevent"
+        getCandidates={(tl) => [...new Set(tl.flatMap((i) => i.related.events))].toSorted(compareOevent)}
+        toParamValue={(event) => event.slug}
+        display={(event) => event.name}
+    />
 </div>

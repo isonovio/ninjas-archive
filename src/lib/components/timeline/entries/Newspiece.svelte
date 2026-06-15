@@ -4,7 +4,8 @@
     import LinkPlayers from "$lib/components/timeline/links/LinkPlayers.svelte";
     import Text from "../Text.svelte";
 
-    export let newspiece: Newspiece;
+    interface Props { newspiece: Newspiece }
+    let { newspiece }: Props = $props();
 </script>
 
 <div class="pt-1 flex justify-between gap-4">

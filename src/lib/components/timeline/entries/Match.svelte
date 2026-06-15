@@ -3,7 +3,8 @@
     import LinkExternal from "$lib/components/timeline/links/LinkExternal.svelte";
     import LinkRewatch from "$lib/components/timeline/links/LinkRewatch.svelte";
     import LinkPlayers from "$lib/components/timeline/links/LinkPlayers.svelte";
-    export let match: Omatch;
+    interface Props { match: Omatch }
+    let { match }: Props = $props();
 </script>
 
 <div class="relative">

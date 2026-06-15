@@ -2,7 +2,8 @@
     import { allPlayers } from "$lib/types/player";
     import { allTeams } from "$lib/types/team";
 
-    export let text: string;
+    interface Props { text: string }
+    let { text }: Props = $props();
 </script>
 
 <div>
