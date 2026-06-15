@@ -4,6 +4,7 @@
     "slug": "b4i-eu-w-cashcup-4",
     "name": "Brace For Impact: EU Women’s Cash Cup 4",
     "duration": { "start": "2026-04-18", "end": "2026-04-19" },
+    "tags": ["impact"],
     "links": [
         { "name": "B4I", "url": "https://b4impact.com/event/brace-for-impact-eu-womens-cash-cup-4" },
         { "name": "FACEIT", "url": "https://www.faceit.com/en/championship/4a4680e5-95da-4008-9c75-898b886bd881" }

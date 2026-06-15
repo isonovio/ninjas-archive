@@ -9,6 +9,7 @@
         { "name": "GitHub", "url": "https://github.com/VANTAGL/JB-Pro-League-2026-female-1" },
         { "name": "L.p.", "url": "https://liquipedia.net/counterstrike/JB_Pro_League/Female/Season_1" }
     ],
+    "tags": ["impact"],
     "participants": [
         { "shorthand": "big", "lineup": { "roster": "big-equipa-2026-1" } },
         { "shorthand": "pkb", "lineup": { "roster": "peekaboo-2026-1" } }

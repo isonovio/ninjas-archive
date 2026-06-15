@@ -8,6 +8,7 @@
         { "name": "B4I", "url": "https://b4impact.com/event/brace-for-impact-eu-womens-cash-cup-2" },
         { "name": "FACEIT", "url": "https://www.faceit.com/en/championship/38f376c3-22ae-4a0f-bcb5-db2563c4dd71" }
     ],
+    "tags": ["impact"],
     "participants": [
         { "shorthand": "pkb", "lineup": { "roster": "peekaboo-2026-1" } },
         { "shorthand": "lhc", "lineup": { "roster": "let-her-cook-2026-1" } }

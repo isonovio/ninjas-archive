@@ -4,6 +4,7 @@
     "slug": "rainhas-do-clutch-2026",
     "name": "Rainhas do Clutch 2026",
     "duration": { "start": "2026-05-19", "end": "2026-06-26" },
+    "tags": ["impact"],
     "links": [
         { "name": "Ferjee", "url": "https://www.ferjee.org/en/events/6cfe22c9-4c3a-4b75-b149-0d1ae5e4450c" },
         { "name": "Rules", "url": "https://docs.google.com/document/d/1vs6ixM6wXFQkC732NyXThgxK4hPuUBAkJAkNN3iHW9g/edit" },

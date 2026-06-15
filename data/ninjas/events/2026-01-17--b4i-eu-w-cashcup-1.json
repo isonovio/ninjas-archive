@@ -8,6 +8,7 @@
         { "name": "B4I", "url": "https://b4impact.com/event/brace-for-impact-eu-womens-cash-cup-1" },
         { "name": "FACEIT", "url": "https://www.faceit.com/en/championship/d7517859-49c1-45d6-b976-b218421f2195" }
     ],
+    "tags": ["impact"],
     "participants": [{ "shorthand": "pkb", "lineup": { "roster": "peekaboo-2026-1" } }],
     "brackets": [
         {
