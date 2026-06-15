@@ -43,7 +43,7 @@
         display={String}
     />
     <CycleFilterBox
-        label="Genres"
+        label="Genre"
         {params}
         {timeline}
         {onUpdate}
@@ -54,7 +54,7 @@
         compact={false}
     />
     <CycleFilterBox
-        label="Match Types"
+        label="Match Type"
         {params}
         {timeline}
         {onUpdate}
@@ -65,7 +65,7 @@
         compact={false}
     />
     <CycleFilterBox
-        label="Teams"
+        label="Team"
         {params}
         {timeline}
         {onUpdate}
@@ -75,7 +75,7 @@
         display={(team) => team.name}
     />
     <CycleFilterBox
-        label="Players"
+        label="Player"
         {params}
         {timeline}
         {onUpdate}
@@ -85,7 +85,7 @@
         display={(player) => player.nickname}
     />
     <CycleFilterBox
-        label="Events"
+        label="Event"
         {params}
         {timeline}
         {onUpdate}
