@@ -25,9 +25,7 @@
         onUpdate();
     }
 
-    const candidates = $derived(
-        [...new Set(timeline.map((i) => i.date.year))].toSorted((a, b) => b - a),
-    );
+    const candidates = $derived([...new Set(timeline.map((i) => i.date.year))].toSorted((a, b) => b - a));
     function getState(year: number): FilterState {
         return queryYearFilter(params, year);
     }

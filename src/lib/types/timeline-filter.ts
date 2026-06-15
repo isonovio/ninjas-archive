@@ -1,6 +1,7 @@
 import { Temporal } from "$lib/utils/temporal";
 import { type Entry } from "./timeline";
 import { Genre } from "./timeline-genre";
+import { type OmatchTag } from "./official-match";
 
 export interface EntryFilter {
     filter(e: Entry): boolean;
@@ -76,6 +77,14 @@ export class TeamFilter implements EntryFilter {
     }
 }
 
+export class OmatchTagFilter implements EntryFilter {
+    constructor(private tag: OmatchTag) {}
+
+    filter(e: Entry): boolean {
+        return e.genre === Genre.MATCH && e.tags.has(this.tag);
+    }
+}
+
 export class YearFilter implements EntryFilter {
     constructor(private year: number) {}
 
@@ -104,6 +113,13 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const notGenres = params
         .getAll("genre-not")
         .map((genre) => new NotFilter(new GenreFilter(genre as Genre)));
+    const matchTags = params
+        .getAll("match-tag")
+        .map((tag) => new OmatchTagFilter(tag as OmatchTag));
+    const matchTagFilter = new OrFilter(matchTags);
+    const notMatchTags = params
+        .getAll("match-tag-not")
+        .map((tag) => new NotFilter(new OmatchTagFilter(tag as OmatchTag)));
     const players = params
         .getAll("player")
         .map((slug) => new PlayerFilter(slug));
@@ -141,6 +157,8 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const filters = [
         genreFilter,
         ...notGenres,
+        matchTagFilter,
+        ...notMatchTags,
         yearFilter,
         ...notYears,
         teamFilter,
@@ -156,6 +174,15 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
 }
 
 export type FilterState = "none" | "yes" | "no";
+
+export function queryOmatchTagFilter(
+    params: URLSearchParams,
+    tag: OmatchTag,
+): FilterState {
+    if (params.getAll("match-tag").includes(tag)) return "yes";
+    if (params.getAll("match-tag-not").includes(tag)) return "no";
+    return "none";
+}
 
 export function queryGenreFilter(
     params: URLSearchParams,

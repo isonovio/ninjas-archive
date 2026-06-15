@@ -25,9 +25,7 @@
         onUpdate();
     }
 
-    const candidates = $derived(
-        [...new Set(timeline.flatMap((i) => i.related.events))].toSorted(compareOevent),
-    );
+    const candidates = $derived([...new Set(timeline.flatMap((i) => i.related.events))].toSorted(compareOevent));
     function getState(event: Oevent): FilterState {
         return queryOeventFilter(params, event.slug);
     }

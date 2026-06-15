@@ -3,6 +3,7 @@
     import DateFilterBox from "./DateFilterBox.svelte";
     import YearFilterBox from "./YearFilterBox.svelte";
     import GenreFilterBox from "./GenreFilterBox.svelte";
+    import OmatchTagFilterBox from "./OmatchTagFilterBox.svelte";
     import PlayerFilterBox from "./PlayerFilterBox.svelte";
     import TeamFilterBox from "./TeamFilterBox.svelte";
     import OeventFilterBox from "./OeventFilterBox.svelte";
@@ -19,6 +20,8 @@
     function clearFilter(): void {
         params.delete("genre");
         params.delete("genre-not");
+        params.delete("match-tag");
+        params.delete("match-tag-not");
         params.delete("player");
         params.delete("player-not");
         params.delete("team");
@@ -43,6 +46,7 @@
     <DateFilterBox {params} {onUpdate} />
     <YearFilterBox {params} {timeline} {onUpdate} />
     <GenreFilterBox {params} {timeline} {onUpdate} />
+    <OmatchTagFilterBox {params} {timeline} {onUpdate} />
     <TeamFilterBox {params} {timeline} {onUpdate} />
     <PlayerFilterBox {params} {timeline} {onUpdate} />
     <OeventFilterBox {params} {timeline} {onUpdate} />

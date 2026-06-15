@@ -29,6 +29,15 @@ export type OmatchRaw = {
 
 export type OmatchTag = "impact" | "lan";
 
+export function displayOmatchTag(tag: OmatchTag): string {
+    switch (tag) {
+        case "impact":
+            return "Impact";
+        case "lan":
+            return "LAN";
+    }
+}
+
 export interface Omatch extends EntryBase {
     genre: Genre.MATCH;
     related: Related;
