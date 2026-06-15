@@ -20,7 +20,7 @@
     </div>
     {#each candidates as candidate}
         {@const state = getState(candidate)}
-        <div class:hidden={compact} class="group-hover/box:flex leading-none group/button flex items-center">
+        <div class:hidden={compact && state === "disregard"} class="group-hover/box:flex leading-none group/button flex items-center">
             {#if state === "exclude"}
                 <button onclick={getAltHandler(candidate)} class="alt-action peer/include text-green-700 order-2">✔</button>
             {:else}
