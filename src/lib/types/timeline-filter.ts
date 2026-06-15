@@ -183,32 +183,28 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     return new AndFilter(filters);
 }
 
-export type FilterState = "none" | "yes" | "no";
+export type FilterState = "disregard" | "include" | "exclude";
 
 export function queryParamKey(
     params: URLSearchParams,
     key: string,
     value: string,
 ): FilterState {
-    if (params.getAll(key).includes(value)) return "yes";
-    if (params.getAll(`${key}-not`).includes(value)) return "no";
-    return "none";
+    if (params.getAll(key).includes(value)) return "include";
+    if (params.getAll(`${key}-not`).includes(value)) return "exclude";
+    return "disregard";
 }
 
-export function cycleParamKey(
+export function setParamKey(
     params: URLSearchParams,
     key: string,
     value: string,
+    state: FilterState,
 ): void {
-    const state = queryParamKey(params, key, value);
-    if (state === "none") {
-        params.append(key, value);
-    } else if (state === "yes") {
-        params.delete(key, value);
-        params.append(`${key}-not`, value);
-    } else {
-        params.delete(`${key}-not`, value);
-    }
+    params.delete(key, value);
+    params.delete(`${key}-not`, value);
+    if (state === "include") params.append(key, value);
+    else if (state === "exclude") params.append(`${key}-not`, value);
 }
 
 export function queryDateParam(

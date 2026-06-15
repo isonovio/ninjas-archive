@@ -12,7 +12,7 @@
     <div class="absolute -top-4 -left-4 bg-white px-2 text-base font-semibold">
         {label}
     </div>
-    <div class="border rounded-lg pt-3 pb-3 pl-2 pr-4 text-nowrap group">
+    <div class="border rounded-lg pt-3 pb-3 pl-2 pr-4 text-nowrap group/box">
         {@render children()}
     </div>
 </div>

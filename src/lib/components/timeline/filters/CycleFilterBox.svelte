@@ -1,7 +1,7 @@
 <script lang="ts" generics="T">
     import type { Entry } from "$lib/types/timeline";
     import type { FilterState } from "$lib/types/timeline-filter";
-    import { queryParamKey, cycleParamKey } from "$lib/types/timeline-filter";
+    import { queryParamKey, setParamKey } from "$lib/types/timeline-filter";
     import FilterBox from "./FilterBox.svelte";
     import CandidatesBox from "./CandidatesBox.svelte";
 
@@ -24,9 +24,18 @@
         return queryParamKey(params, paramKey, toParamValue(item));
     }
 
-    function getHandler(item: T): () => void {
+    function getMainHandler(item: T): () => void {
         return () => {
-            cycleParamKey(params, paramKey, toParamValue(item));
+            const current = queryParamKey(params, paramKey, toParamValue(item));
+            setParamKey(params, paramKey, toParamValue(item), current === "disregard" ? "include" : "disregard");
+            onUpdate();
+        };
+    }
+
+    function getAltHandler(item: T): () => void {
+        return () => {
+            const current = queryParamKey(params, paramKey, toParamValue(item));
+            setParamKey(params, paramKey, toParamValue(item), current === "exclude" ? "include" : "exclude");
             onUpdate();
         };
     }
@@ -34,6 +43,6 @@
 
 {#if candidates.length > 1}
     <FilterBox {label}>
-        <CandidatesBox {candidates} {getState} {getHandler} {display} {compact} />
+        <CandidatesBox {candidates} {getState} {getMainHandler} {getAltHandler} {display} {compact} />
     </FilterBox>
 {/if}

@@ -5,12 +5,13 @@
     interface Props {
         candidates: Candidate[];
         getState: (c: Candidate) => FilterState;
-        getHandler: (c: Candidate) => () => void;
+        getMainHandler: (c: Candidate) => () => void;
+        getAltHandler: (c: Candidate) => () => void;
         display: (c: Candidate) => string;
         compact?: boolean;
     }
 
-    let { candidates, getState, getHandler, display, compact = true }: Props = $props();
+    let { candidates, getState, getMainHandler, getAltHandler, display, compact = true }: Props = $props();
 </script>
 
 <div class="flex flex-col items-start gap-2">
@@ -19,37 +20,59 @@
     </div>
     {#each candidates as candidate}
         {@const state = getState(candidate)}
-        <button use:suppressAfterClick class="filter" class:hidden={compact} class:filter-yes={state === "yes"} class:filter-no={state === "no"} onclick={getHandler(candidate)}>
-            {display(candidate)}
-        </button>
+        <div class:hidden={compact} class="group-hover/box:flex leading-none group/button flex items-center">
+            {#if state === "exclude"}
+                <button onclick={getAltHandler(candidate)} class="alt-action peer/include text-green-700 order-2">✔</button>
+            {:else}
+                <button onclick={getAltHandler(candidate)} class="alt-action peer/exclude text-red-700 order-2">✘</button>
+            {/if}
+            <button
+                use:suppressAfterClick
+                onclick={getMainHandler(candidate)}
+                class="candidate order-1"
+                class:filter-include={state === "include"}
+                class:filter-exclude={state === "exclude"}
+            >
+                {display(candidate)}
+            </button>
+        </div>
     {/each}
 </div>
 
 <style lang="postcss">
     @reference "$lib/styles/global.css";
 
-    button.filter {
-        & {
-            @apply group-hover:block cursor-pointer border-x-4 border-white leading-none px-1 text-sm;
-        }
-        &:hover {
-            @apply border-green-700 text-green-700 font-semibold font-sc;
-        }
+    @utility candidate-faint {
+        @apply border-gray-200 text-gray-400 font-normal font-no-sc no-underline;
     }
-    button.filter-yes {
-        & {
-            @apply block border-green-700 text-green-700 font-semibold font-sc;
-        }
-        &:hover {
-            @apply border-red-700 text-red-700 font-semibold font-sc line-through;
-        }
+    @utility candidate-include {
+        @apply border-green-700 text-green-700 font-semibold font-sc no-underline;
     }
-    button.filter-no {
+    @utility candidate-exclude {
+        @apply border-red-700 text-red-700 font-semibold font-sc line-through;
+    }
+
+    button.alt-action {
+        @apply hidden group-hover/button:block  px-2;
+    }
+
+    button.candidate {
         & {
-            @apply block border-red-700 text-red-700 font-semibold font-sc line-through;
+            @apply cursor-pointer border-x-4 border-white leading-none px-1 text-sm;
+            @apply hover:candidate-include;
+            @apply peer-hover/exclude:candidate-exclude;
         }
-        &:hover {
-            @apply border-gray-200 text-gray-400 font-normal font-no-sc no-underline;
+        &.filter-include {
+            @apply block;
+            @apply candidate-include;
+            @apply hover:candidate-faint;
+            @apply peer-hover/exclude:candidate-exclude;
+        }
+        &.filter-exclude {
+            @apply block;
+            @apply candidate-exclude;
+            @apply hover:candidate-faint;
+            @apply peer-hover/include:candidate-include;
         }
     }
 </style>
