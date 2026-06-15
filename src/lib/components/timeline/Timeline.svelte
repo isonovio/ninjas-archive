@@ -41,7 +41,7 @@
                 {matchCount} matches.
             {/if}
             {#if newspieceCount > 0}
-                {newspieceCount} newspieces.
+                {newspieceCount} news stories.
             {/if}
             {#each sortedTimeline as dailyTimeline}
                 <div class="relative border-t-2 border-l-2">
