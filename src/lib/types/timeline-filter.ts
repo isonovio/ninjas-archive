@@ -105,6 +105,26 @@ export function applyFilter(entries: Entry[], filter: EntryFilter): Entry[] {
     return entries.filter((entry) => filter.filter(entry));
 }
 
+const FILTER_PARAMS = [
+    "from", "to",
+    "year", "year-not",
+    "genre", "genre-not",
+    "match-tag", "match-tag-not",
+    "team", "team-not",
+    "player", "player-not",
+    "oevent", "oevent-not",
+] as const;
+
+export function hasFilter(params: URLSearchParams): boolean {
+    return FILTER_PARAMS.some((key) => params.has(key));
+}
+
+export function clearFilter(params: URLSearchParams): void {
+    for (const key of FILTER_PARAMS) {
+        params.delete(key);
+    }
+}
+
 export function filterFromParams(params: URLSearchParams): EntryFilter {
     const from = params.get("from");
     const fromDateFilter = from
