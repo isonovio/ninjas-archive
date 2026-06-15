@@ -40,12 +40,12 @@
             @apply block border-green-700 text-green-700 font-semibold font-sc;
         }
         &:hover {
-            @apply border-red-600 text-red-600 font-semibold font-sc line-through;
+            @apply border-red-700 text-red-700 font-semibold font-sc line-through;
         }
     }
     button.filter-no {
         & {
-            @apply block border-red-600 text-red-600 font-semibold font-sc line-through;
+            @apply block border-red-700 text-red-700 font-semibold font-sc line-through;
         }
         &:hover {
             @apply border-gray-200 text-gray-400 font-normal font-no-sc no-underline;

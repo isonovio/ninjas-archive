@@ -59,13 +59,16 @@
 </script>
 
 <FilterBox label="Date">
-    <form onsubmit={submitDateFilter} class="">
+    <form onsubmit={submitDateFilter}>
         {#each ["from", "to"] as const as key}
             <div>
                 <label for={key} class="inline-block w-11 leading-none text-sm">
                     {#if queryDateFilter(params, key)}
                         <button type="button" onclick={(e) => clearDateFilter(e, key)}>
-                            <span class="border-l-4 pl-1 border-black font-semibold font-sc cursor-pointer hover:border-gray-400 hover:text-gray-400 hover:font-no-sc">{key}:</span>
+                            <span
+                                class="cursor-pointer border-l-4 pl-1 border-green-700 font-semibold font-sc text-green-700 hover:border-gray-400 hover:text-gray-400 hover:font-no-sc"
+                                >{key}:</span
+                            >
                         </button>
                     {:else}
                         <span class="border-l-4 pl-1 border-white">{key}:</span>
