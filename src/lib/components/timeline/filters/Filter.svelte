@@ -4,6 +4,7 @@
     import GenreFilterBox from "./GenreFilterBox.svelte";
     import PlayerFilterBox from "./PlayerFilterBox.svelte";
     import TeamFilterBox from "./TeamFilterBox.svelte";
+    import OeventFilterBox from "./OeventFilterBox.svelte";
 
     interface Props {
         params: URLSearchParams;
@@ -21,6 +22,8 @@
         params.delete("player-not");
         params.delete("team");
         params.delete("team-not");
+        params.delete("oevent");
+        params.delete("oevent-not");
         params.delete("from");
         params.delete("to");
         onUpdate();
@@ -38,4 +41,5 @@
     <GenreFilterBox {params} {timeline} {onUpdate} />
     <TeamFilterBox {params} {timeline} {onUpdate} />
     <PlayerFilterBox {params} {timeline} {onUpdate} />
+    <OeventFilterBox {params} {timeline} {onUpdate} />
 </div>

@@ -76,6 +76,14 @@ export class TeamFilter implements EntryFilter {
     }
 }
 
+export class OeventFilter implements EntryFilter {
+    constructor(private oeventSlug: string) {}
+
+    filter(e: Entry): boolean {
+        return e.related.events.some((event) => event.slug === this.oeventSlug);
+    }
+}
+
 export function applyFilter(entries: Entry[], filter: EntryFilter): Entry[] {
     return entries.filter((entry) => filter.filter(entry));
 }
@@ -100,6 +108,13 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const notTeams = params
         .getAll("team-not")
         .map((slug) => new NotFilter(new TeamFilter(slug)));
+    const oevents = params
+        .getAll("oevent")
+        .map((slug) => new OeventFilter(slug));
+    const oeventFilter = new OrFilter(oevents);
+    const notOevents = params
+        .getAll("oevent-not")
+        .map((slug) => new NotFilter(new OeventFilter(slug)));
     const from = params.get("from");
     const fromDateFilter = from
         ? new DateFromFilter(Temporal.PlainDate.from(from))
@@ -111,10 +126,12 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const filters = [
         genreFilter,
         ...notGenres,
-        playerFilter,
-        ...notPlayers,
         teamFilter,
         ...notTeams,
+        playerFilter,
+        ...notPlayers,
+        oeventFilter,
+        ...notOevents,
         fromDateFilter,
         toDateFilter,
     ].filter((f) => f !== undefined);
@@ -147,6 +164,15 @@ export function queryTeamFilter(
 ): FilterState {
     if (params.getAll("team").includes(teamSlug)) return "yes";
     if (params.getAll("team-not").includes(teamSlug)) return "no";
+    return "none";
+}
+
+export function queryOeventFilter(
+    params: URLSearchParams,
+    oeventSlug: string,
+): FilterState {
+    if (params.getAll("oevent").includes(oeventSlug)) return "yes";
+    if (params.getAll("oevent-not").includes(oeventSlug)) return "no";
     return "none";
 }
 

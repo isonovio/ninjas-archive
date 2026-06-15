@@ -1,3 +1,4 @@
+import { Temporal } from "$lib/utils/temporal";
 import {
     type Daterange,
     type DaterangeRaw,
@@ -64,6 +65,14 @@ function processOeventRaw(raw: OeventRaw): [Oevent, Omatch[]] {
         .flat();
 
     return [event, matches];
+}
+
+export function compareOevent(a: Oevent, b: Oevent): number {
+    const endCmp = Temporal.PlainDate.compare(b.duration[1], a.duration[1]);
+    if (endCmp !== 0) return endCmp;
+    const startCmp = Temporal.PlainDate.compare(b.duration[0], a.duration[0]);
+    if (startCmp !== 0) return startCmp;
+    return a.slug.localeCompare(b.slug);
 }
 
 export const [allOevents, allOmatches]: [
