@@ -1,6 +1,7 @@
 <script lang="ts">
     import { type Entry } from "$lib/types/timeline";
     import DateFilterBox from "./DateFilterBox.svelte";
+    import YearFilterBox from "./YearFilterBox.svelte";
     import GenreFilterBox from "./GenreFilterBox.svelte";
     import PlayerFilterBox from "./PlayerFilterBox.svelte";
     import TeamFilterBox from "./TeamFilterBox.svelte";
@@ -24,6 +25,8 @@
         params.delete("team-not");
         params.delete("oevent");
         params.delete("oevent-not");
+        params.delete("year");
+        params.delete("year-not");
         params.delete("from");
         params.delete("to");
         onUpdate();
@@ -38,6 +41,7 @@
         {/if}
     </div>
     <DateFilterBox {params} {onUpdate} />
+    <YearFilterBox {params} {timeline} {onUpdate} />
     <GenreFilterBox {params} {timeline} {onUpdate} />
     <TeamFilterBox {params} {timeline} {onUpdate} />
     <PlayerFilterBox {params} {timeline} {onUpdate} />

@@ -76,6 +76,14 @@ export class TeamFilter implements EntryFilter {
     }
 }
 
+export class YearFilter implements EntryFilter {
+    constructor(private year: number) {}
+
+    filter(e: Entry): boolean {
+        return e.date.year === this.year;
+    }
+}
+
 export class OeventFilter implements EntryFilter {
     constructor(private oeventSlug: string) {}
 
@@ -108,6 +116,13 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const notTeams = params
         .getAll("team-not")
         .map((slug) => new NotFilter(new TeamFilter(slug)));
+    const years = params
+        .getAll("year")
+        .map((y) => new YearFilter(Number(y)));
+    const yearFilter = new OrFilter(years);
+    const notYears = params
+        .getAll("year-not")
+        .map((y) => new NotFilter(new YearFilter(Number(y))));
     const oevents = params
         .getAll("oevent")
         .map((slug) => new OeventFilter(slug));
@@ -126,6 +141,8 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const filters = [
         genreFilter,
         ...notGenres,
+        yearFilter,
+        ...notYears,
         teamFilter,
         ...notTeams,
         playerFilter,
@@ -164,6 +181,15 @@ export function queryTeamFilter(
 ): FilterState {
     if (params.getAll("team").includes(teamSlug)) return "yes";
     if (params.getAll("team-not").includes(teamSlug)) return "no";
+    return "none";
+}
+
+export function queryYearFilter(
+    params: URLSearchParams,
+    year: number,
+): FilterState {
+    if (params.getAll("year").includes(String(year))) return "yes";
+    if (params.getAll("year-not").includes(String(year))) return "no";
     return "none";
 }
 
