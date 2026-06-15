@@ -59,21 +59,14 @@ export class GenreFilter implements EntryFilter {
     }
 }
 
-export class PlayerFilter implements EntryFilter {
-    constructor(private playerSlug: string) {}
+export class RelatedSlugFilter implements EntryFilter {
+    constructor(
+        private key: "players" | "teams" | "events",
+        private slug: string,
+    ) {}
 
     filter(e: Entry): boolean {
-        return e.related.players.some(
-            (player) => player.slug === this.playerSlug,
-        );
-    }
-}
-
-export class TeamFilter implements EntryFilter {
-    constructor(private teamSlug: string) {}
-
-    filter(e: Entry): boolean {
-        return e.related.teams.some((team) => team.slug === this.teamSlug);
+        return e.related[this.key].some((item) => item.slug === this.slug);
     }
 }
 
@@ -93,26 +86,25 @@ export class YearFilter implements EntryFilter {
     }
 }
 
-export class OeventFilter implements EntryFilter {
-    constructor(private oeventSlug: string) {}
-
-    filter(e: Entry): boolean {
-        return e.related.events.some((event) => event.slug === this.oeventSlug);
-    }
-}
-
 export function applyFilter(entries: Entry[], filter: EntryFilter): Entry[] {
     return entries.filter((entry) => filter.filter(entry));
 }
 
 const FILTER_PARAMS = [
-    "from", "to",
-    "year", "year-not",
-    "genre", "genre-not",
-    "match-tag", "match-tag-not",
-    "team", "team-not",
-    "player", "player-not",
-    "oevent", "oevent-not",
+    "from",
+    "to",
+    "year",
+    "year-not",
+    "genre",
+    "genre-not",
+    "match-tag",
+    "match-tag-not",
+    "team",
+    "team-not",
+    "player",
+    "player-not",
+    "oevent",
+    "oevent-not",
 ] as const;
 
 export function hasFilter(params: URLSearchParams): boolean {
@@ -126,6 +118,17 @@ export function clearFilter(params: URLSearchParams): void {
 }
 
 export function filterFromParams(params: URLSearchParams): EntryFilter {
+    function buildGroup(
+        key: string,
+        factory: (raw: string) => EntryFilter,
+    ): [EntryFilter, EntryFilter[]] {
+        const yes = params.getAll(key).map(factory);
+        const no = params
+            .getAll(`${key}-not`)
+            .map((v) => new NotFilter(factory(v)));
+        return [new OrFilter(yes), no];
+    }
+
     const from = params.get("from");
     const fromDateFilter = from
         ? new DateFromFilter(Temporal.PlainDate.from(from))
@@ -134,46 +137,32 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
     const toDateFilter = to
         ? new DateToFilter(Temporal.PlainDate.from(to))
         : undefined;
-    const years = params
-        .getAll("year")
-        .map((y) => new YearFilter(Number(y)));
-    const yearFilter = new OrFilter(years);
-    const notYears = params
-        .getAll("year-not")
-        .map((y) => new NotFilter(new YearFilter(Number(y))));
-    const genres = params
-        .getAll("genre")
-        .map((genre) => new GenreFilter(genre as Genre));
-    const genreFilter = new OrFilter(genres);
-    const notGenres = params
-        .getAll("genre-not")
-        .map((genre) => new NotFilter(new GenreFilter(genre as Genre)));
-    const matchTags = params
-        .getAll("match-tag")
-        .map((tag) => new OmatchTagFilter(tag as OmatchTag));
-    const matchTagFilter = new OrFilter(matchTags);
-    const notMatchTags = params
-        .getAll("match-tag-not")
-        .map((tag) => new NotFilter(new OmatchTagFilter(tag as OmatchTag)));
-    const teams = params.getAll("team").map((slug) => new TeamFilter(slug));
-    const teamFilter = new OrFilter(teams);
-    const notTeams = params
-        .getAll("team-not")
-        .map((slug) => new NotFilter(new TeamFilter(slug)));
-    const players = params
-        .getAll("player")
-        .map((slug) => new PlayerFilter(slug));
-    const playerFilter = new OrFilter(players);
-    const notPlayers = params
-        .getAll("player-not")
-        .map((slug) => new NotFilter(new PlayerFilter(slug)));
-    const oevents = params
-        .getAll("oevent")
-        .map((slug) => new OeventFilter(slug));
-    const oeventFilter = new OrFilter(oevents);
-    const notOevents = params
-        .getAll("oevent-not")
-        .map((slug) => new NotFilter(new OeventFilter(slug)));
+
+    const [yearFilter, notYears] = buildGroup(
+        "year",
+        (y) => new YearFilter(Number(y)),
+    );
+    const [genreFilter, notGenres] = buildGroup(
+        "genre",
+        (g) => new GenreFilter(g as Genre),
+    );
+    const [matchTagFilter, notMatchTags] = buildGroup(
+        "match-tag",
+        (tag) => new OmatchTagFilter(tag as OmatchTag),
+    );
+    const [teamFilter, notTeams] = buildGroup(
+        "team",
+        (slug) => new RelatedSlugFilter("teams", slug),
+    );
+    const [playerFilter, notPlayers] = buildGroup(
+        "player",
+        (slug) => new RelatedSlugFilter("players", slug),
+    );
+    const [oeventFilter, notOevents] = buildGroup(
+        "oevent",
+        (slug) => new RelatedSlugFilter("events", slug),
+    );
+
     const filters = [
         fromDateFilter,
         toDateFilter,
@@ -189,67 +178,40 @@ export function filterFromParams(params: URLSearchParams): EntryFilter {
         ...notPlayers,
         oeventFilter,
         ...notOevents,
-    ].filter((f) => f !== undefined);
+    ].filter((f): f is EntryFilter => f !== undefined);
+
     return new AndFilter(filters);
 }
 
 export type FilterState = "none" | "yes" | "no";
 
-export function queryOmatchTagFilter(
+export function queryParamKey(
     params: URLSearchParams,
-    tag: OmatchTag,
+    key: string,
+    value: string,
 ): FilterState {
-    if (params.getAll("match-tag").includes(tag)) return "yes";
-    if (params.getAll("match-tag-not").includes(tag)) return "no";
+    if (params.getAll(key).includes(value)) return "yes";
+    if (params.getAll(`${key}-not`).includes(value)) return "no";
     return "none";
 }
 
-export function queryGenreFilter(
+export function cycleParamKey(
     params: URLSearchParams,
-    genre: Genre,
-): FilterState {
-    if (params.getAll("genre").includes(genre)) return "yes";
-    if (params.getAll("genre-not").includes(genre)) return "no";
-    return "none";
+    key: string,
+    value: string,
+): void {
+    const state = queryParamKey(params, key, value);
+    if (state === "none") {
+        params.append(key, value);
+    } else if (state === "yes") {
+        params.delete(key, value);
+        params.append(`${key}-not`, value);
+    } else {
+        params.delete(`${key}-not`, value);
+    }
 }
 
-export function queryPlayerFilter(
-    params: URLSearchParams,
-    playerSlug: string,
-): FilterState {
-    if (params.getAll("player").includes(playerSlug)) return "yes";
-    if (params.getAll("player-not").includes(playerSlug)) return "no";
-    return "none";
-}
-
-export function queryTeamFilter(
-    params: URLSearchParams,
-    teamSlug: string,
-): FilterState {
-    if (params.getAll("team").includes(teamSlug)) return "yes";
-    if (params.getAll("team-not").includes(teamSlug)) return "no";
-    return "none";
-}
-
-export function queryYearFilter(
-    params: URLSearchParams,
-    year: number,
-): FilterState {
-    if (params.getAll("year").includes(String(year))) return "yes";
-    if (params.getAll("year-not").includes(String(year))) return "no";
-    return "none";
-}
-
-export function queryOeventFilter(
-    params: URLSearchParams,
-    oeventSlug: string,
-): FilterState {
-    if (params.getAll("oevent").includes(oeventSlug)) return "yes";
-    if (params.getAll("oevent-not").includes(oeventSlug)) return "no";
-    return "none";
-}
-
-export function queryDateFilter(
+export function queryDateParam(
     params: URLSearchParams,
     key: "from" | "to",
 ): boolean {

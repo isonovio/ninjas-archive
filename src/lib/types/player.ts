@@ -35,8 +35,7 @@ function playerFromRaw(raw: PlayerRaw): Player {
         birthday: raw.birthday
             ? Temporal.PlainDate.from(raw.birthday)
             : undefined,
-        tags:
-            raw.tags?.map((tag) => tag as PlayerTag satisfies PlayerTag) || [],
+        tags: raw.tags?.map((tag) => tag as PlayerTag) ?? [],
         links: raw.links || [],
     };
 }

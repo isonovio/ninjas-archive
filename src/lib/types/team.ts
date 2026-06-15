@@ -1,23 +1,16 @@
-type TeamRaw = {
-    slug: string;
-    name: string;
-};
-
-const teamsBlob = import.meta.glob<TeamRaw>("$data/**/teams/*.json", {
-    eager: true,
-});
-
-const teamsRaw = Object.values(teamsBlob) satisfies TeamRaw[];
-
 export type Team = {
     slug: string;
     name: string;
 };
 
-const teamFromRaw = (raw: TeamRaw): Team => ({ ...raw });
+const teamsBlob = import.meta.glob<Team>("$data/**/teams/*.json", {
+    eager: true,
+});
+
+const teamsRaw = Object.values(teamsBlob) satisfies Team[];
 
 export const allTeams: ReadonlyMap<string, Team> = new Map(
-    teamsRaw.map((team) => [team.slug, teamFromRaw(team)]),
+    teamsRaw.map((team) => [team.slug, team]),
 );
 
 export function compareTeam(a: Team, b: Team): number {

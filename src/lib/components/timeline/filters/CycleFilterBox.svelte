@@ -1,6 +1,7 @@
 <script lang="ts" generics="T">
     import type { Entry } from "$lib/types/timeline";
     import type { FilterState } from "$lib/types/timeline-filter";
+    import { queryParamKey, cycleParamKey } from "$lib/types/timeline-filter";
     import FilterBox from "./FilterBox.svelte";
     import CandidatesBox from "./CandidatesBox.svelte";
 
@@ -20,24 +21,12 @@
     const candidates = $derived(getCandidates(timeline));
 
     function getState(item: T): FilterState {
-        const value = toParamValue(item);
-        if (params.getAll(paramKey).includes(value)) return "yes";
-        if (params.getAll(`${paramKey}-not`).includes(value)) return "no";
-        return "none";
+        return queryParamKey(params, paramKey, toParamValue(item));
     }
 
     function getHandler(item: T): () => void {
         return () => {
-            const value = toParamValue(item);
-            const state = getState(item);
-            if (state === "none") {
-                params.append(paramKey, value);
-            } else if (state === "yes") {
-                params.delete(paramKey, value);
-                params.append(`${paramKey}-not`, value);
-            } else {
-                params.delete(`${paramKey}-not`, value);
-            }
+            cycleParamKey(params, paramKey, toParamValue(item));
             onUpdate();
         };
     }

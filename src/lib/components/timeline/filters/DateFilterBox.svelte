@@ -1,7 +1,7 @@
 <script lang="ts">
     import { Temporal } from "$lib/utils/temporal";
     import FilterBox from "./FilterBox.svelte";
-    import { queryDateFilter } from "$lib/types/timeline-filter";
+    import { queryDateParam } from "$lib/types/timeline-filter";
 
     interface Props {
         params: URLSearchParams;
@@ -63,7 +63,7 @@
         {#each ["from", "to"] as const as key}
             <div>
                 <label for={key} class="inline-block w-11 leading-none text-sm">
-                    {#if queryDateFilter(params, key)}
+                    {#if queryDateParam(params, key)}
                         <button type="button" onclick={(e) => clearDateFilter(e, key)}>
                             <span
                                 class="cursor-pointer border-l-4 pl-1 border-green-700 font-semibold font-sc text-green-700 hover:border-gray-400 hover:text-gray-400 hover:font-no-sc"

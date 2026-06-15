@@ -1,12 +1,12 @@
 <script lang="ts">
-    import { PlayerFilter } from "$lib/types/timeline-filter";
+    import { RelatedSlugFilter } from "$lib/types/timeline-filter";
     import Timeline from "$lib/components/timeline/Timeline.svelte";
     import type { PageProps } from "./$types";
 
     let { data }: PageProps = $props();
     let { player } = $derived(data);
 
-    const prefilter = $derived(new PlayerFilter(player.slug));
+    const prefilter = $derived(new RelatedSlugFilter("players", player.slug));
 </script>
 
 <svelte:head>

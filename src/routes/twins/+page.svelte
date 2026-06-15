@@ -1,10 +1,11 @@
 <script lang="ts">
-    import { PlayerFilter, OrFilter } from "$lib/types/timeline-filter";
+    import { RelatedSlugFilter, OrFilter } from "$lib/types/timeline-filter";
     import Timeline from "$lib/components/timeline/Timeline.svelte";
 
-    const nayomyFilter = new PlayerFilter("nayomy");
-    const qiyarahFilter = new PlayerFilter("qiyarah");
-    const prefilter = new OrFilter([nayomyFilter, qiyarahFilter]);
+    const prefilter = new OrFilter([
+        new RelatedSlugFilter("players", "nayomy"),
+        new RelatedSlugFilter("players", "qiyarah"),
+    ]);
 </script>
 
 <svelte:head>
