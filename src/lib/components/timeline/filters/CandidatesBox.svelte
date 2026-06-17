@@ -53,7 +53,7 @@
     }
 
     button.alt-action {
-        @apply hidden group-hover/button:block  px-2;
+        @apply hidden group-hover/button:block cursor-pointer px-2;
     }
 
     button.candidate {
